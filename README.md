@@ -22,6 +22,7 @@
 <sup>5</sup>King Abdullah University of Science and Technology (KAUST)
 
 [![Project Page](https://img.shields.io/badge/Project-Page-176B63?logo=googlechrome&logoColor=white)](https://amazingren.github.io/Gaussian-JEPA/)
+[![arXiv](https://img.shields.io/badge/arXiv-2608.15651-B31B1B?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.15651)
 [![Code](https://img.shields.io/badge/Code-GitHub-181717?logo=github&logoColor=white)](https://github.com/Amazingren/Gaussian-JEPA)
 [![Documentation](https://img.shields.io/badge/Docs-Getting_Started-176B63?logo=readthedocs&logoColor=white)](docs/getting_started.md)
 <br>
@@ -34,8 +35,6 @@
 [![Classification](https://img.shields.io/badge/Task-Classification-457B9D)](docs/results/classification.md)
 [![Part Segmentation](https://img.shields.io/badge/Task-Part_Segmentation-E9A23B)](docs/results/partseg.md)
 [![Shape Completion](https://img.shields.io/badge/Task-Shape_Completion-C05A7A)](docs/results/completion.md)
-
-<!-- Add the public arXiv badge to the first row once its identifier is available. -->
 
 </div>
 
@@ -245,12 +244,22 @@ and [Point-MAE](https://github.com/Pang-Yatian/Point-MAE). We thank their
 authors for releasing code and data. Third-party provenance and license terms
 are recorded in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
-## License and citation
+## Citation
+
+```bibtex
+@article{ren2026gaussian,
+  title   = {Gaussian-JEPA: Joint-Embedding Predictive Learning for 3D Gaussian Splats},
+  author  = {Ren, Bin and Ma, Qi and Li, Yue and Han, Zongyan and Li, Yidi and Fu, Yuqian and Anwer, Rao Muhammad and Gevers, Theo and Khan, Fahad Shahbaz and Khan, Salman},
+  journal = {arXiv preprint arXiv:2608.15651},
+  year    = {2026}
+}
+```
+
+## License
 
 This repository is released under the
 [Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE).
-Third-party components remain subject to their original terms. The paper link
-and BibTeX entry will be added when the public manuscript becomes available.
+Third-party components remain subject to their original terms.
 
 Please use [`CONTRIBUTING.md`](CONTRIBUTING.md) for bug reports and proposed
 extensions.

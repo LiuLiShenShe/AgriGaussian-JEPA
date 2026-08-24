@@ -87,6 +87,14 @@ python tools/extract_features.py \
 
 ## Citation
 
-The archival paper citation will be added when the public manuscript is
-available. Until then, please cite the repository and retain the license and
-upstream attribution notices.
+```bibtex
+@article{ren2026gaussian,
+  title   = {Gaussian-JEPA: Joint-Embedding Predictive Learning for 3D Gaussian Splats},
+  author  = {Ren, Bin and Ma, Qi and Li, Yue and Han, Zongyan and Li, Yidi and Fu, Yuqian and Anwer, Rao Muhammad and Gevers, Theo and Khan, Fahad Shahbaz and Khan, Salman},
+  journal = {arXiv preprint arXiv:2608.15651},
+  year    = {2026}
+}
+```
+
+Please retain the repository license and upstream attribution notices when
+redistributing derived code or checkpoints.
