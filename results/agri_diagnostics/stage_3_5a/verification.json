@@ -1,0 +1,31 @@
+{
+  "protected_sha256_files_checked": 86,
+  "query_index_conditions_checked": 144,
+  "random_init_spatial_permutation_invariance": true,
+  "pilot_trained_spatial_permutation_invariance": true,
+  "feature_invariance_groups_checked": 10,
+  "retrieval_rows_independently_recomputed": 1728,
+  "existing_output_overwrite_rejected": true,
+  "all_csv_numeric_fields_finite": true,
+  "cross_process_reproduction": {
+    "reference_directory": "/tmp/agri-stage35a-reproduction-20261015",
+    "csv_byte_identical": [
+      "feature_statistics.csv",
+      "pooling_comparison.csv",
+      "retrieval_per_plant.csv",
+      "retrieval_per_query.csv",
+      "retrieval_protocol_comparison.csv",
+      "spatial_token_pair_statistics.csv"
+    ],
+    "npz_all_arrays_elementwise_identical": [
+      "pilot_trained_features.npz",
+      "pilot_trained_retrieval_features.npz",
+      "random_init_features.npz",
+      "random_init_retrieval_features.npz",
+      "sampling_indices.npz"
+    ],
+    "arrays_compared": 1064,
+    "passed": true
+  },
+  "all_checks_passed": true
+}
