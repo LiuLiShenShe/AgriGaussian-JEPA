@@ -1,0 +1,587 @@
+{
+  "stage": "3.5-B",
+  "created_at_utc": "2026-10-15T08:43:07.767599+00:00",
+  "written_before_any_stage35b_inference": true,
+  "branch": "agri/plant-gs-experiments",
+  "plant_ids": [
+    "DouBanLv2",
+    "XianKeLai1",
+    "XianKeLai2",
+    "XiangPiShu2"
+  ],
+  "biological_sample_size": 4,
+  "gallery_candidates": 4,
+  "checkpoint": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/checkpoint_last.pt",
+  "checkpoint_sha256": "2f0c5b372db37d40308640f0c89a1cc9327ca037a4c94e26a21ff55b6f3c065c",
+  "config": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/agri/plant_gs/jepa/pilot_config.yaml",
+  "config_sha256": "d6d3c37165e88c996f36e8ee2af482ed19ef85745d3db5c7cfe81f9cfb6fc0fc",
+  "split": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/split.json",
+  "split_sha256": "6744ddf74fed9f2f6eb258ed6308b5e077a8eb00dcef2f4bcb6cd493ccdfc6c6",
+  "assets": [
+    {
+      "plant_id": "DouBanLv2",
+      "ply": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/DouBanLv2/final/point_cloud.ply",
+      "sha256": "bab7a85dcb9ea88d12bee256028e9723031be272853ba68a44d124b018b943c3",
+      "gaussian_count": 275735
+    },
+    {
+      "plant_id": "XianKeLai1",
+      "ply": "/fj/AgriGaussian-JEPA/data/plant_gs/XianKeLai1_fg_20261014/final/point_cloud.ply",
+      "sha256": "cfb17dc53260fa2597115a5afff3ceae8003930df459f02dab87181c39d116ae",
+      "gaussian_count": 287079
+    },
+    {
+      "plant_id": "XianKeLai2",
+      "ply": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XianKeLai2/final/point_cloud.ply",
+      "sha256": "b7b0b63cc3e870f36fd455158b61deb088b5186c45b0e808f0edaa471da5ab99",
+      "gaussian_count": 305367
+    },
+    {
+      "plant_id": "XiangPiShu2",
+      "ply": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XiangPiShu2/final/point_cloud.ply",
+      "sha256": "1ccc683390e6c02024307529a66de66de1aa7caee56edeb671999381d82ab2f8",
+      "gaussian_count": 292511
+    }
+  ],
+  "runtime_seed": 35200000,
+  "new_seeds": [
+    35200000,
+    35201001,
+    35201002,
+    35201100,
+    35201101,
+    35201102,
+    35201110,
+    35201111,
+    35201112,
+    35201120,
+    35201121,
+    35201122,
+    35202001,
+    35202002,
+    35202100,
+    35202101,
+    35202102,
+    35202110,
+    35202111,
+    35202112,
+    35202120,
+    35202121,
+    35202122,
+    35203001,
+    35203002,
+    35203100,
+    35203101,
+    35203102,
+    35203110,
+    35203111,
+    35203112,
+    35203120,
+    35203121,
+    35203122
+  ],
+  "historical_seed_audit": {
+    "used_seeds": [
+      4101,
+      4102,
+      4103,
+      351000,
+      351001,
+      351002,
+      351100,
+      351101,
+      351102,
+      351200,
+      351201,
+      351202,
+      20261015,
+      20261016,
+      20261017,
+      20261018,
+      20261019,
+      20261020,
+      20261021,
+      20261022,
+      20261023,
+      20261024,
+      20261025,
+      20261026,
+      20261027,
+      20261028,
+      20261029,
+      20261030,
+      20261031,
+      20261032,
+      20261033,
+      20261034
+    ],
+    "evidence": [
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/run_config.json",
+        "sha256": "e231342d1022dc8b03c70374af097aa57d1d22f8e286cf39bf401e2229c8088c",
+        "seeds": [
+          20261015
+        ],
+        "method": "recursive saved JSON seed fields"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/sanity/run_config.json",
+        "sha256": "eab3a51456c48ea0c32740fbfe55800d042de925b782c481597e7117fe62514c",
+        "seeds": [
+          20261015
+        ],
+        "method": "recursive saved JSON seed fields"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/split.json",
+        "sha256": "6744ddf74fed9f2f6eb258ed6308b5e077a8eb00dcef2f4bcb6cd493ccdfc6c6",
+        "seeds": [
+          20261015
+        ],
+        "method": "recursive saved JSON seed fields"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_001.npz",
+        "sha256": "3959341b9e44bdfc94305de965597f9d00e82cd4a7e544d980c11c58abc07e95",
+        "seeds": [
+          20261015
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_002.npz",
+        "sha256": "be16b5b6142e99079c014624c5b51c1cf37d3912dae1391cce5cfc93a26bb9b1",
+        "seeds": [
+          20261016
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_003.npz",
+        "sha256": "a1eb412cd5c3a52cfed9ee4fbba3c86e7153f268d1cf59a1e477124e59d8f66b",
+        "seeds": [
+          20261017
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_004.npz",
+        "sha256": "fafaa6522b269744237dd5c58cc40bd177fe2527d818edbd30a3ad38dcec5fc1",
+        "seeds": [
+          20261018
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_005.npz",
+        "sha256": "11d460d73b72e2e2c91e28b8c2d70a04fdb895bcf852a54f88185443dc59de2d",
+        "seeds": [
+          20261019
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_006.npz",
+        "sha256": "001882e4ab594b0960693010736aaba0e2aefbc9b71fd1c0ae4d83d689a74ea7",
+        "seeds": [
+          20261020
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_007.npz",
+        "sha256": "40789e9a16be352059b84b762e4fcdabf369dad745376931e9e9a07affb9d1e8",
+        "seeds": [
+          20261021
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_008.npz",
+        "sha256": "49de86c60d028eab408abd82bbd3f61866df4a3a84eed81962e326fb032ad077",
+        "seeds": [
+          20261022
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_009.npz",
+        "sha256": "c4dab55650b0546f8f1e452a0e2ee9e124ed717bd5ed2867c1d5160ea4cb99ca",
+        "seeds": [
+          20261023
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_010.npz",
+        "sha256": "45f13c3913e5701e25cf4efea3bbb6811e4179ba8b9c99593ba6613b1ab341ca",
+        "seeds": [
+          20261024
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_011.npz",
+        "sha256": "ea051e6f648280ea638788ff4abe01065c64735f1b10b5b47ccb4f9e74a8a06e",
+        "seeds": [
+          20261025
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_012.npz",
+        "sha256": "aae89449349ebab52b18047a05d4476edda582671c5af4bc4cbcf6f77a0bbd91",
+        "seeds": [
+          20261026
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_013.npz",
+        "sha256": "e2692cd6aa768e3a960c678acf17ede4240c2a0bdc4dd8fe16315f9293d9b668",
+        "seeds": [
+          20261027
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_014.npz",
+        "sha256": "e4432da362e6d7211eae68c61ba9cb9e474c47f4a7e74c6b8107af4996e5f773",
+        "seeds": [
+          20261028
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_015.npz",
+        "sha256": "5f33783f0df614032ecb80d316c73785536cab40c0c3bc21944d51cd43f3b040",
+        "seeds": [
+          20261029
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_016.npz",
+        "sha256": "3434977aeb0c92ec2d294edfd53f07b9acc264b5c7a08eec45ded27bd03c8784",
+        "seeds": [
+          20261030
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_017.npz",
+        "sha256": "1654d7e5067c117144f850ca6904c7830bbcc0d5b52c43b83d632c17338452dc",
+        "seeds": [
+          20261031
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_018.npz",
+        "sha256": "7e0a8030a57a5017c2796619810377dec819bdabf3d7e3659cd72bb961827050",
+        "seeds": [
+          20261032
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_019.npz",
+        "sha256": "4fa62a0fb7a5daee79340cebdb717d1d6ebc32f99524d7b363fcfde8a265bfff",
+        "seeds": [
+          20261033
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_020.npz",
+        "sha256": "c3696acfdddfc178d3ccd99683f2f1465538e6bd9856c9231a093b23611b482d",
+        "seeds": [
+          20261034
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/evaluation_comparison.json",
+        "sha256": "5b9e804701f9bcd6890656845e2603de1e09fa8a7961cc4cf423fb67b6110d54",
+        "seeds": [
+          4101,
+          4102,
+          4103
+        ],
+        "method": "recursive saved JSON seed fields"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/pilot_trained_metrics.json",
+        "sha256": "5ee99917bdf1558356201ea71da1c17abd7dfd4d2a943f1c45350f14b7b72ab8",
+        "seeds": [
+          4101,
+          4102,
+          4103
+        ],
+        "method": "recursive saved JSON seed fields"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/random_init_metrics.json",
+        "sha256": "0f7248ecc8a52a43adfd013fdc7572e64faf6edb58608329735f8539324054fe",
+        "seeds": [
+          4101,
+          4102,
+          4103
+        ],
+        "method": "recursive saved JSON seed fields"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/fixed_test_sampling_indices.npz",
+        "sha256": "ea57d0ffbfa6ad6eced0887c5b4ae38131128ed5a07f101ba6348fb47b3140c6",
+        "seeds": [
+          4101,
+          4102,
+          4103
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/pilot_trained_embeddings.npz",
+        "sha256": "44e32efa8b33eb58c75c21d5217f692b32134f723eea6d3154af7be15177cf80",
+        "seeds": [
+          4101,
+          4102,
+          4103
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/random_init_embeddings.npz",
+        "sha256": "75d5a2704d162687435bc5506c364d47cb4ec2f75c16ca47c3271408db42b84a",
+        "seeds": [
+          4101,
+          4102,
+          4103
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_diagnostics/stage_3_5a/diagnostic_summary.json",
+        "sha256": "689f562e7672012c452b9c8e42d2914843b7c875dd9ce158cc3cd6e4cca4aeeb",
+        "seeds": [
+          20261015
+        ],
+        "method": "recursive saved JSON seed fields"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_diagnostics/stage_3_5a/sampling_plan.json",
+        "sha256": "c4868237852c199c41b8e902b75b6ceaa35dc494c24b32f472b28421e25d84ee",
+        "seeds": [
+          4101,
+          351000,
+          351001,
+          351002,
+          351100,
+          351101,
+          351102,
+          351200,
+          351201,
+          351202,
+          20261015
+        ],
+        "method": "recursive saved JSON seed fields"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_diagnostics/stage_3_5a/sampling_indices.npz",
+        "sha256": "c53dc1137ac489db2fca9f7d2ec15cff90b540bd7dee92f2ad18b2e75f8dc04e",
+        "seeds": [
+          4101,
+          4102,
+          4103
+        ],
+        "method": "saved NPZ seed arrays"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/sanity/run_config.json",
+        "sha256": "eab3a51456c48ea0c32740fbfe55800d042de925b782c481597e7117fe62514c",
+        "seeds": [
+          20261015,
+          20261016
+        ],
+        "method": "PlantGaussianDataset: base seed + zero-based epoch; also DataLoader shuffle; sanity has no saved index archive"
+      },
+      {
+        "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/run_config.json",
+        "sha256": "e231342d1022dc8b03c70374af097aa57d1d22f8e286cf39bf401e2229c8088c",
+        "seeds": [
+          20261015,
+          20261016,
+          20261017,
+          20261018,
+          20261019,
+          20261020,
+          20261021,
+          20261022,
+          20261023,
+          20261024,
+          20261025,
+          20261026,
+          20261027,
+          20261028,
+          20261029,
+          20261030,
+          20261031,
+          20261032,
+          20261033,
+          20261034
+        ],
+        "method": "PlantGaussianDataset: base seed + zero-based epoch; also DataLoader shuffle; sanity has no saved index archive"
+      }
+    ],
+    "source_derived_evaluation_seeds": [
+      4101,
+      4102,
+      4103,
+      351000,
+      351001,
+      351002,
+      351100,
+      351101,
+      351102,
+      351200,
+      351201,
+      351202,
+      20261015
+    ],
+    "reviewed_source_sha256": {
+      "dataset.py": "2ead23e77a9c1f52fac7877c758a255754e121ac873435e54ed1c24e85c05430",
+      "pilot_train.py": "bcab31fdad44f1a369a00bc657ab1dece890f0fe2be04bf81e64a622c56ea25b",
+      "pilot_eval.py": "21c372915c9a9824598211a67086995ea102cb27a1434b18cfa89d48649649c8",
+      "diagnose_stage35a.py": "5fdd8d9494d73323a8f9648850df6145b50196cc362afe7350b96c986b52f665",
+      "pilot_config.yaml": "d6d3c37165e88c996f36e8ee2af482ed19ef85745d3db5c7cfe81f9cfb6fc0fc"
+    },
+    "scope": "all saved Stage 3/3.5-A JSON and NPZ seed fields, both training runs epoch formula, and historical evaluation source constants"
+  },
+  "schemes": [
+    {
+      "id": "scheme_1",
+      "gallery_seed": 35201001,
+      "resampling_seed": 35201002,
+      "query_seeds": [
+        [
+          35201100,
+          35201101,
+          35201102
+        ],
+        [
+          35201110,
+          35201111,
+          35201112
+        ],
+        [
+          35201120,
+          35201121,
+          35201122
+        ]
+      ]
+    },
+    {
+      "id": "scheme_2",
+      "gallery_seed": 35202001,
+      "resampling_seed": 35202002,
+      "query_seeds": [
+        [
+          35202100,
+          35202101,
+          35202102
+        ],
+        [
+          35202110,
+          35202111,
+          35202112
+        ],
+        [
+          35202120,
+          35202121,
+          35202122
+        ]
+      ]
+    },
+    {
+      "id": "scheme_3",
+      "gallery_seed": 35203001,
+      "resampling_seed": 35203002,
+      "query_seeds": [
+        [
+          35203100,
+          35203101,
+          35203102
+        ],
+        [
+          35203110,
+          35203111,
+          35203112
+        ],
+        [
+          35203120,
+          35203121,
+          35203122
+        ]
+      ]
+    }
+  ],
+  "num_gaussians": 1024,
+  "token_shape": [
+    64,
+    384
+  ],
+  "missing_ratios": [
+    0.3,
+    0.55,
+    0.7
+  ],
+  "directions": {
+    "X": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "Y": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "Z": [
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "normalization": "dataset.normalize_gaussians(full PLY, pretrain); no partial renormalization or attribute changes",
+  "occlusion": "pilot_eval.spatial_cap_keep_mask on full normalized PLY; remove round(N * ratio) largest projections, stable-sort ties",
+  "query_sampling": "RandomState(query_seed).choice(kept original row IDs minus correct gallery IDs, 1024, replace=False); overlap must equal zero",
+  "complete_resampling": "one full-asset probe per plant per scheme; independent seed, exclude gallery IDs, 1024 without replacement",
+  "pooling": {
+    "mean_max": "L2(concat(token mean, token max)), 768 dimensions",
+    "mean": "L2(token mean), 384 dimensions"
+  },
+  "precision": "official float32 encoder and torch mean/max; shared tokens; cast pooled vectors to float64 before L2, cosine, margin and drift",
+  "retrieval_ties": "stable descending cosine, gallery ordered by fixed plant IDs; exact ties choose first ID, separately recorded",
+  "paired_outcomes": "win/loss refer to Mean hit and Mean+Max miss or reverse; both hit or both miss is a hit tie; margin ties use abs(delta)<=1e-12",
+  "drift_primary": "Euclidean distance of independently resampled L2-normalized full-asset embeddings; also report cosine distance",
+  "decision_rule": {
+    "scope": "conservative descriptive rule, not a statistical significance test",
+    "stable_r1_gain": "overall Mean R@1 strictly higher; no scheme lower and at least two schemes higher; at least two plants higher and no plant lower; no missing-ratio aggregate lower",
+    "tradeoffs": "report margin and resampling drift separately; do not equate higher R@1 with improvement in these metrics",
+    "action": "if stable_r1_gain false retain original Mean+Max; otherwise Mean is a candidate only, disclose all tradeoffs"
+  },
+  "statistics": "plant is independent unit n=4; all 108 queries are repeated measurements; report per-plant paired deltas without query-level p-values",
+  "no_training": true,
+  "no_centering_whitening_projection": true,
+  "runtime_precision": {
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "cuda_matmul_tf32": false,
+    "cudnn_tf32": true
+  },
+  "source_sha256": {
+    "pooling_stage35b.py": "5ebada75aef65acaeb6b2073b645e3eadc9a5ccf8d6ebea7ab7163ca310b78a3",
+    "pooling_stage35b_report.py": "b6346871ddf756ef47aa6eaaa99c9d6d951d25e455563a62616ba5668b45d077",
+    "verify_stage35b.py": "05600c5dc97b29eee2f2abf1ee2b32b953be86dddc8010b1613ffee49a539c0b"
+  }
+}
