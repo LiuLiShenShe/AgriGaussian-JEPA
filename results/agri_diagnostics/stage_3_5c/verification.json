@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "independent_score_formula": "float64 L2 then batched numpy.einsum",
+  "saved_score_max_abs_error": 2.9976021664879227e-15,
+  "score_atol": 1e-12,
+  "queries_checked": 36,
+  "gallery_candidates": 19,
+  "hard_negative_rows_checked": 648,
+  "numeric_csv_cells_finite": 11008,
+  "all_json_numeric_literals_finite": true,
+  "all_original_index_intersections_zero": true,
+  "all_summary_tables_reconciled": true,
+  "protected_files_unchanged": true,
+  "protected_file_count": 162,
+  "independent_process_reproduction": {
+    "directory": "/tmp/agri-stage35c-reproduction-20261015",
+    "byte_identical_files": [
+      "axis_errors.csv",
+      "candidate_error_summary.csv",
+      "confusion_matrix.csv",
+      "focus_candidate_statistics.csv",
+      "hard_negative_ranking.csv",
+      "occlusion_errors.csv",
+      "per_plant_errors.csv",
+      "query_error_details.csv",
+      "summary.json",
+      "analysis_checks.json",
+      "error_analysis.md",
+      "error_case_manifest.json",
+      "protected_artifacts_before.json",
+      "protected_artifacts_after.json"
+    ],
+    "npz_arrays_elementwise_identical": 3,
+    "plot_png_pixels_identical": [
+      "confusion_matrix.png",
+      "error_cases.png"
+    ],
+    "pdf_byte_comparison_excluded_reason": "PDF creation-time metadata can differ; PNG pixels compared instead."
+  }
+}

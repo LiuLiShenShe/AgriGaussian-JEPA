@@ -1,0 +1,262 @@
+{
+  "selection_rule": "minimum margin per requested candidate, then per uncovered query plant; ties by query key",
+  "all_errors_in_numeric_tables": true,
+  "image_caveat": "Existing first-view complete-asset RGB/render references, NOT partial-query renders or sampled-gallery renders.",
+  "cases": [
+    {
+      "query_key": "q107",
+      "query_plant_id": "XianKeLai2",
+      "incorrect_candidate": "CaoMei1",
+      "column": 0,
+      "role": "Query identity / full RGB reference",
+      "image_plant_id": "XianKeLai2",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XianKeLai2/final/preview.jpg",
+      "source_sha256": "c61a5c38e15e4238bcb20bd19ea97c8ead348e59b3d0de5867046b7b8d5f27af",
+      "crop_box_xyxy": [
+        0,
+        0,
+        360,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q107",
+      "query_plant_id": "XianKeLai2",
+      "incorrect_candidate": "CaoMei1",
+      "column": 1,
+      "role": "Correct identity / full render",
+      "image_plant_id": "XianKeLai2",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XianKeLai2/final/preview.jpg",
+      "source_sha256": "c61a5c38e15e4238bcb20bd19ea97c8ead348e59b3d0de5867046b7b8d5f27af",
+      "crop_box_xyxy": [
+        360,
+        0,
+        720,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q107",
+      "query_plant_id": "XianKeLai2",
+      "incorrect_candidate": "CaoMei1",
+      "column": 2,
+      "role": "Incorrect Top-1 / full render",
+      "image_plant_id": "CaoMei1",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/CaoMei1/final/preview.jpg",
+      "source_sha256": "06d692fc01d621c3721933fca79ca8769d101ef0e040492405d550d0a03c603c",
+      "crop_box_xyxy": [
+        360,
+        0,
+        720,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q115",
+      "query_plant_id": "XiangPiShu2",
+      "incorrect_candidate": "XiangPiShu1",
+      "column": 0,
+      "role": "Query identity / full RGB reference",
+      "image_plant_id": "XiangPiShu2",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XiangPiShu2/final/preview.jpg",
+      "source_sha256": "e0cc5a73b2a96a360299a5967c41f1f9c4e9a02b52967a9b8d2ef40708880dbf",
+      "crop_box_xyxy": [
+        0,
+        0,
+        360,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q115",
+      "query_plant_id": "XiangPiShu2",
+      "incorrect_candidate": "XiangPiShu1",
+      "column": 1,
+      "role": "Correct identity / full render",
+      "image_plant_id": "XiangPiShu2",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XiangPiShu2/final/preview.jpg",
+      "source_sha256": "e0cc5a73b2a96a360299a5967c41f1f9c4e9a02b52967a9b8d2ef40708880dbf",
+      "crop_box_xyxy": [
+        360,
+        0,
+        720,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q115",
+      "query_plant_id": "XiangPiShu2",
+      "incorrect_candidate": "XiangPiShu1",
+      "column": 2,
+      "role": "Incorrect Top-1 / full render",
+      "image_plant_id": "XiangPiShu1",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XiangPiShu1/final/preview.jpg",
+      "source_sha256": "345bacf688aaa55cf721b813da9627bbb128d4d8925e8aa859a98243e17821da",
+      "crop_box_xyxy": [
+        360,
+        0,
+        720,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q007",
+      "query_plant_id": "DouBanLv2",
+      "incorrect_candidate": "WanNianQing1",
+      "column": 0,
+      "role": "Query identity / full RGB reference",
+      "image_plant_id": "DouBanLv2",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/DouBanLv2/final/preview.jpg",
+      "source_sha256": "5f7b64c133e5eac49e10d88e153963576c877ed241cf48bb31b6dd924504d6fa",
+      "crop_box_xyxy": [
+        0,
+        0,
+        360,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q007",
+      "query_plant_id": "DouBanLv2",
+      "incorrect_candidate": "WanNianQing1",
+      "column": 1,
+      "role": "Correct identity / full render",
+      "image_plant_id": "DouBanLv2",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/DouBanLv2/final/preview.jpg",
+      "source_sha256": "5f7b64c133e5eac49e10d88e153963576c877ed241cf48bb31b6dd924504d6fa",
+      "crop_box_xyxy": [
+        360,
+        0,
+        720,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q007",
+      "query_plant_id": "DouBanLv2",
+      "incorrect_candidate": "WanNianQing1",
+      "column": 2,
+      "role": "Incorrect Top-1 / full render",
+      "image_plant_id": "WanNianQing1",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/WanNianQing1/final/preview.jpg",
+      "source_sha256": "a1ad9535567377b624316e441e90dfbf0d9152f99d5123e4f7a1ed2739cb88a3",
+      "crop_box_xyxy": [
+        360,
+        0,
+        720,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q027",
+      "query_plant_id": "DouBanLv2",
+      "incorrect_candidate": "WanNianQing2",
+      "column": 0,
+      "role": "Query identity / full RGB reference",
+      "image_plant_id": "DouBanLv2",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/DouBanLv2/final/preview.jpg",
+      "source_sha256": "5f7b64c133e5eac49e10d88e153963576c877ed241cf48bb31b6dd924504d6fa",
+      "crop_box_xyxy": [
+        0,
+        0,
+        360,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q027",
+      "query_plant_id": "DouBanLv2",
+      "incorrect_candidate": "WanNianQing2",
+      "column": 1,
+      "role": "Correct identity / full render",
+      "image_plant_id": "DouBanLv2",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/DouBanLv2/final/preview.jpg",
+      "source_sha256": "5f7b64c133e5eac49e10d88e153963576c877ed241cf48bb31b6dd924504d6fa",
+      "crop_box_xyxy": [
+        360,
+        0,
+        720,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q027",
+      "query_plant_id": "DouBanLv2",
+      "incorrect_candidate": "WanNianQing2",
+      "column": 2,
+      "role": "Incorrect Top-1 / full render",
+      "image_plant_id": "WanNianQing2",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/WanNianQing2/final/preview.jpg",
+      "source_sha256": "6afd6f80e88739c80339bdbc9e75a196b5f1ae07107b01a5837fb7a1f10ad7be",
+      "crop_box_xyxy": [
+        360,
+        0,
+        720,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q051",
+      "query_plant_id": "XianKeLai1",
+      "incorrect_candidate": "XianKeLai3",
+      "column": 0,
+      "role": "Query identity / full RGB reference",
+      "image_plant_id": "XianKeLai1",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/XianKeLai1_fg_20261014/final/preview.jpg",
+      "source_sha256": "9d4f9103a8d2b7b3c6153a1e621404c0568e5acdf70eed1b1d444355600a644f",
+      "crop_box_xyxy": [
+        0,
+        0,
+        360,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q051",
+      "query_plant_id": "XianKeLai1",
+      "incorrect_candidate": "XianKeLai3",
+      "column": 1,
+      "role": "Correct identity / full render",
+      "image_plant_id": "XianKeLai1",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/XianKeLai1_fg_20261014/final/preview.jpg",
+      "source_sha256": "9d4f9103a8d2b7b3c6153a1e621404c0568e5acdf70eed1b1d444355600a644f",
+      "crop_box_xyxy": [
+        360,
+        0,
+        720,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    },
+    {
+      "query_key": "q051",
+      "query_plant_id": "XianKeLai1",
+      "incorrect_candidate": "XianKeLai3",
+      "column": 2,
+      "role": "Incorrect Top-1 / full render",
+      "image_plant_id": "XianKeLai3",
+      "source_preview": "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XianKeLai3/final/preview.jpg",
+      "source_sha256": "34fd8e2d5d5fa19c9c25fd27169cb38e5811b61f90394f093428efdcfac96b79",
+      "crop_box_xyxy": [
+        360,
+        0,
+        720,
+        662
+      ],
+      "is_actual_occluded_query_render": false
+    }
+  ]
+}

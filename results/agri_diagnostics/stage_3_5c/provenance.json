@@ -1,0 +1,9 @@
+{
+  "created_at_utc": "2026-10-15T09:47:41.951699+00:00",
+  "python": "/home/test/biosoft/enter/envs/gaussian_jepa/bin/python",
+  "numpy": "1.26.4",
+  "source": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_diagnostics/stage_3_5a",
+  "output": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_diagnostics/stage_3_5c",
+  "git_head": "271ec3b87b425cacf56250fc5892fd47c1ab1543",
+  "analysis_script_sha256": "267aadee337ba420f47d2fe3154371aa2ab69de93e9ba840ca794efd3b0656fe"
+}

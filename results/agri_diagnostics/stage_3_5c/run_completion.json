@@ -1,0 +1,11 @@
+{
+  "stage": "3.5-C",
+  "complete": true,
+  "verification_passed": true,
+  "no_model_forward_or_training": true,
+  "no_new_sampling_or_candidate_expansion": true,
+  "official_mean_max_preserved": true,
+  "next_stage_started": false,
+  "error_analysis_sha256": "1db306f1f1db9a3de8161e817ba73a058ab031421d15696acd8aa373d4f6492c",
+  "summary_sha256": "c3c8f351472828a06bc63486aacc5047ee7543a554003178594373f4f2987312"
+}

@@ -1,0 +1,5 @@
+query_plant_id,CaoMei1,CaoMei2,ChangShouHua1,ChangShouHua2,ChangShouHua3,DouBanLv1,DouBanLv2,DouBanLv3,HongZhang,KongQueZhuYu,WanNianQing1,WanNianQing2,WangWenCao1,WangWenCao2,XianKeLai1,XianKeLai2,XianKeLai3,XiangPiShu1,XiangPiShu2
+DouBanLv2,1,0,0,0,0,0,4,0,0,0,2,2,0,0,0,0,0,0,0
+XianKeLai1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,1,0,0
+XianKeLai2,4,0,0,0,0,0,0,0,0,0,0,0,0,2,0,3,0,0,0
+XiangPiShu2,0,0,0,0,0,1,0,0,2,0,0,0,0,0,0,1,0,4,1
