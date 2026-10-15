@@ -122,3 +122,35 @@ PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python -m pytest -q \
 
 已使用 Context7 获取 gsplat/COLMAP 文档，并与已安装版本源码/CLI 帮助对照。
 用户指定博查搜索此次返回 HTTP 403；未将搜索失败伪装成搜索成功。
+
+## 多植物批处理
+
+`batch.py` 复用上述单株脚本。RGB/SAM 根目录按植物同名子目录发现；RGB 的工具目录忽略，缺 SAM 记录 `missing_sam`。
+
+```bash
+python agri/plant_gs/foreground/batch.py \
+  --rgb-root /data/fj/F2DMAS/01-FFmepg \
+  --sam-root /data/fj/F2DMAS/03-SAM \
+  --output-root /fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014 \
+  --gpus 0 1 --steps 30000 \
+  --reuse XianKeLai1=/fj/AgriGaussian-JEPA/data/plant_gs/XianKeLai1_fg_20261014
+```
+
+- `--until prepare` 只配对；`--until dataset` 完成 SfM/前景初始化但不训练；默认走到最终 PLY。
+- `--only NAME ...` / `--exclude NAME ...` 选择本轮处理组，仍保留全体状态清单。
+- `--reuse NAME=WORKSPACE` 仅在全部 RGB/SAM 文件名和内容散列完全相同、原资产导出与 JEPA 兼容均通过时复用 `final` 目录链接；不修改原资产。
+- 批量配对允许最多 10% 显式损坏/无可靠 RGB 的 SAM 排除（可进一步调低 `--max-excluded-fraction`）；唯一性和全分辨率 99.9% 精确像素要求不变。其他异常/歧义拒绝。
+- `manifest.json` / `manifest.csv` 汇总状态和最终资产路径，每组 `job.json`、`logs/`、`source_fingerprints.json` 保存进度、命令与只读源证据。
+- `.batch.lock` 防多控制器，每组 `.reconstruction.lock` 防重复处理；每 GPU 最多一组。
+- 完整资产跳过，SfM 使用原 done 标记。中断训练创建新 retry 目录；已完成 retry 训练可直接接导出，不声称恢复了优化器状态。
+- `complete` 仅表示导出/兼容检查通过，不代表自动通过人工质量审核；IoU<0.90 或背景 alpha>0.03 会列出 `quality_warnings`。
+
+### 显式审核例外（非自动放宽）
+
+默认自动排除预算仍最多 10%。已实际检查的缺失 crop、重复 RGB 引起的歧义等，可在单株工作区保存
+`pairing_exclusion_review.json`：`approved: true`、具体 `reason`、
+`pairing_signature(preparation)`、与当前 `unmatched_masks` 完全相同的 `reviewed_exclusions`、
+恰等于已检查排除数的 `max_excluded_count`。签名绑定源路径、全部配对、排除记录和损坏 RGB；
+源文件内容另由 `source_fingerprints.json` 校验。快照改变即拒绝旧审核，不能用旧审批接纳新异常。
+此例外只允许**排除**审核过的帧，不允许接纳歧义配对，仍要求每组至少 30 个一对一且全分辨率精确像素 >=99.9% 的配对。
+审核、证据和实际排除比例保存在该审核文件及 `pairing_audit.json`，不默认把 10% 提高到所有组。
