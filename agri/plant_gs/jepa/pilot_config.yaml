@@ -1,0 +1,35 @@
+seed: 20261015
+num_gaussians: 1024
+batch_size: 2
+epochs: 20
+learning_rate: 0.0003
+weight_decay: 0.05
+ema_momentum_start: 0.996
+ema_momentum_end: 0.9999
+normalization: pretrain
+optimizer: AdamW
+scheduler: cosine
+
+# The model implementation and objective are the official Gaussian-JEPA code.
+model:
+  NAME: GaussianJEPA
+  num_targets: 4
+  target_sizes: [11, 9, 7, 5]
+  group_size: 32
+  num_group: 64
+  attribute: [xyz, opacity, scale, rotation, sh]
+  group_attribute: [xyz]
+  soft_knn: false
+  lambda_ground: 0.1
+  num_swd_projections: 256
+  transformer_config:
+    mask_ratio: 0.55
+    mask_type: block
+    trans_dim: 384
+    encoder_dims: 384
+    depth: 12
+    drop_path_rate: 0.1
+    num_heads: 6
+    decoder_depth: 4
+    decoder_num_heads: 6
+    pred_dim: 192

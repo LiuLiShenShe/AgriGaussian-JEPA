@@ -1,0 +1,6 @@
+{
+  "task": "memory",
+  "exit": 0,
+  "stdout": "               total        used        free      shared  buff/cache   available\nMem:     134729494528 68255477760  8147820544   497549312 60530937856 66474016768\nSwap:     8589930496  8522006528    67923968\n",
+  "stderr": ""
+}

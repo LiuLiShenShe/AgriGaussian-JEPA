@@ -1,0 +1,4251 @@
+{
+  "sample_dir": "data/external/PAA-Plant-Dataset/Broccoli/20260327-10",
+  "n_images": 102,
+  "cameras": {
+    "0": {
+      "model": "SIMPLE_PINHOLE",
+      "width": 2128,
+      "height": 3806,
+      "params": [
+        9917.213292454653,
+        1064.0,
+        1903.0
+      ]
+    },
+    "1": {
+      "model": "SIMPLE_PINHOLE",
+      "width": 3070,
+      "height": 2020,
+      "params": [
+        3360.826223934333,
+        1535.0,
+        1010.0
+      ]
+    }
+  },
+  "crops": {
+    "0": {
+      "dx": 16,
+      "dy": 24,
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "support_images": 99,
+      "total_images": 99,
+      "unanimous": true,
+      "offset_votes": {
+        "16,24": 99
+      },
+      "ncc_min": 0.9825575947761536,
+      "ncc_median": 0.9930174946784973,
+      "mean_abs_diff_max": 2.811674400794419,
+      "A_iou_min": 0.778711784192698,
+      "A_iou_median": 0.9958501366467651
+    },
+    "1": {
+      "dx": 440,
+      "dy": 80,
+      "camera_wxh": [
+        3070,
+        2020
+      ],
+      "support_images": 3,
+      "total_images": 3,
+      "unanimous": true,
+      "offset_votes": {
+        "440,80": 3
+      },
+      "ncc_min": 0.9883464574813843,
+      "ncc_median": 0.9955604076385498,
+      "mean_abs_diff_max": 5.767400425710323,
+      "A_iou_min": 0.9666446214111882,
+      "A_iou_median": 0.9767317308559096
+    }
+  },
+  "per_image": {
+    "1": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9959432685846646,
+        "intersection": 2187685,
+        "union": 2196596,
+        "mask_coverage": 0.26375446084104937,
+        "whitebg_nonwhite_coverage": 0.264828800154321,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9903182983398438,
+        "mean_abs_diff": 2.2884554726279704,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "2": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9963662179586003,
+        "intersection": 2274999,
+        "union": 2283296,
+        "mask_coverage": 0.274281322337963,
+        "whitebg_nonwhite_coverage": 0.2752816358024691,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.991241991519928,
+        "mean_abs_diff": 2.2171789744329296,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "3": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9958501366467651,
+        "intersection": 2220219,
+        "union": 2229471,
+        "mask_coverage": 0.26767734857253084,
+        "whitebg_nonwhite_coverage": 0.26879183545524693,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9906583428382874,
+        "mean_abs_diff": 2.241391708382886,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "4": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.995334004278395,
+        "intersection": 2221265,
+        "union": 2231678,
+        "mask_coverage": 0.26780611014660494,
+        "whitebg_nonwhite_coverage": 0.2690552662037037,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9904587864875793,
+        "mean_abs_diff": 2.311775151883914,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "5": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.994850890645633,
+        "intersection": 2297054,
+        "union": 2308943,
+        "mask_coverage": 0.2770095486111111,
+        "whitebg_nonwhite_coverage": 0.27830451871141976,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9903314113616943,
+        "mean_abs_diff": 2.362998643811315,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "6": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9947155337737055,
+        "intersection": 2287418,
+        "union": 2299570,
+        "mask_coverage": 0.27583598572530865,
+        "whitebg_nonwhite_coverage": 0.2771862943672839,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9904252886772156,
+        "mean_abs_diff": 2.442221554938318,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "7": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.994745226010164,
+        "intersection": 2211250,
+        "union": 2222931,
+        "mask_coverage": 0.26659553433641975,
+        "whitebg_nonwhite_coverage": 0.268003833912037,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9901623725891113,
+        "mean_abs_diff": 2.4746290812422544,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "8": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9954103364184703,
+        "intersection": 2263369,
+        "union": 2273805,
+        "mask_coverage": 0.27287917148919755,
+        "whitebg_nonwhite_coverage": 0.27413736979166664,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9896508455276489,
+        "mean_abs_diff": 2.390119824653594,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "9": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9955498778482255,
+        "intersection": 2196861,
+        "union": 2206681,
+        "mask_coverage": 0.2648662953317901,
+        "whitebg_nonwhite_coverage": 0.266039134837963,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9890413880348206,
+        "mean_abs_diff": 2.3361045644853067,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "10": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9953260900808991,
+        "intersection": 2181497,
+        "union": 2191741,
+        "mask_coverage": 0.2630101032021605,
+        "whitebg_nonwhite_coverage": 0.26424177758487655,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9895511269569397,
+        "mean_abs_diff": 2.2213029371247353,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "11": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9949758406706355,
+        "intersection": 2271499,
+        "union": 2282969,
+        "mask_coverage": 0.2738764708719136,
+        "whitebg_nonwhite_coverage": 0.2752250916280864,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9907209277153015,
+        "mean_abs_diff": 2.0390831914257532,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "12": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9944787215894265,
+        "intersection": 2267679,
+        "union": 2280269,
+        "mask_coverage": 0.27339891975308644,
+        "whitebg_nonwhite_coverage": 0.27491657021604937,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.989867627620697,
+        "mean_abs_diff": 2.1719122672024254,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "13": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9941093627457687,
+        "intersection": 2252452,
+        "union": 2265799,
+        "mask_coverage": 0.2715629822530864,
+        "whitebg_nonwhite_coverage": 0.27317214023919756,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9905771017074585,
+        "mean_abs_diff": 2.1125226689951364,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "14": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9939012889301854,
+        "intersection": 2286945,
+        "union": 2300978,
+        "mask_coverage": 0.27572157118055557,
+        "whitebg_nonwhite_coverage": 0.27741343557098763,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9918690323829651,
+        "mean_abs_diff": 2.071014454818075,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "15": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9951999604833381,
+        "intersection": 2417694,
+        "union": 2429355,
+        "mask_coverage": 0.2914850983796296,
+        "whitebg_nonwhite_coverage": 0.29289098668981484,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.993463397026062,
+        "mean_abs_diff": 2.1857499436979206,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "16": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9955674657112382,
+        "intersection": 2368006,
+        "union": 2378549,
+        "mask_coverage": 0.2854957561728395,
+        "whitebg_nonwhite_coverage": 0.2867644434799383,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9949290156364441,
+        "mean_abs_diff": 1.916611681594949,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "17": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9963144957601132,
+        "intersection": 2207812,
+        "union": 2215979,
+        "mask_coverage": 0.26618465470679015,
+        "whitebg_nonwhite_coverage": 0.2671620611496914,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9947339296340942,
+        "mean_abs_diff": 1.9064303477427147,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "18": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9963620913381487,
+        "intersection": 2169155,
+        "union": 2177075,
+        "mask_coverage": 0.2615235580632716,
+        "whitebg_nonwhite_coverage": 0.26247214988425926,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9946017861366272,
+        "mean_abs_diff": 1.8613486800948773,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "19": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9958223785166815,
+        "intersection": 2216132,
+        "union": 2225429,
+        "mask_coverage": 0.26718641493055556,
+        "whitebg_nonwhite_coverage": 0.2683027102623457,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9936907887458801,
+        "mean_abs_diff": 1.992638832367308,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "20": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.995340282635822,
+        "intersection": 2236661,
+        "union": 2247132,
+        "mask_coverage": 0.26966169945987656,
+        "whitebg_nonwhite_coverage": 0.2709190538194444,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9908080101013184,
+        "mean_abs_diff": 2.190678310002542,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "21": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9948142091971662,
+        "intersection": 2136654,
+        "union": 2147792,
+        "mask_coverage": 0.25760199652777777,
+        "whitebg_nonwhite_coverage": 0.25894483024691356,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9869126677513123,
+        "mean_abs_diff": 2.3697843202330575,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "22": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9947891772464872,
+        "intersection": 2166618,
+        "union": 2177967,
+        "mask_coverage": 0.26121467496141976,
+        "whitebg_nonwhite_coverage": 0.26258270640432096,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9853202700614929,
+        "mean_abs_diff": 2.517782443826329,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "23": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9953096525963793,
+        "intersection": 2197795,
+        "union": 2208152,
+        "mask_coverage": 0.2649734760802469,
+        "whitebg_nonwhite_coverage": 0.26622190875771606,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9847763180732727,
+        "mean_abs_diff": 2.546368754584833,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "24": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9957077584848149,
+        "intersection": 2255295,
+        "union": 2265017,
+        "mask_coverage": 0.2719071903935185,
+        "whitebg_nonwhite_coverage": 0.27307641300154323,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9850062131881714,
+        "mean_abs_diff": 2.6172920889322624,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "25": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9952220491556121,
+        "intersection": 2072741,
+        "union": 2082692,
+        "mask_coverage": 0.24990547839506172,
+        "whitebg_nonwhite_coverage": 0.25108711902006176,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9869126081466675,
+        "mean_abs_diff": 2.3818860159463293,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "26": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9952090359568236,
+        "intersection": 2104267,
+        "union": 2114397,
+        "mask_coverage": 0.25369960455246915,
+        "whitebg_nonwhite_coverage": 0.2549163290895062,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9864088296890259,
+        "mean_abs_diff": 2.490674391904617,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "27": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9948499691385646,
+        "intersection": 2156590,
+        "union": 2167754,
+        "mask_coverage": 0.2600083188657407,
+        "whitebg_nonwhite_coverage": 0.26134874131944447,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9861953854560852,
+        "mean_abs_diff": 2.524424401782175,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "28": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.994203885344253,
+        "intersection": 2088027,
+        "union": 2100200,
+        "mask_coverage": 0.25173984857253084,
+        "whitebg_nonwhite_coverage": 0.25320650077160495,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9849889278411865,
+        "mean_abs_diff": 2.532532353940553,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "29": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9943881341793175,
+        "intersection": 2093191,
+        "union": 2105004,
+        "mask_coverage": 0.2523619550540123,
+        "whitebg_nonwhite_coverage": 0.2537861689814815,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9825575947761536,
+        "mean_abs_diff": 2.6571354818997044,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "30": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9945032799676813,
+        "intersection": 2119556,
+        "union": 2131271,
+        "mask_coverage": 0.2555424141589506,
+        "whitebg_nonwhite_coverage": 0.2569511959876543,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9832820892333984,
+        "mean_abs_diff": 2.5999899825101376,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "31": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.995333452818183,
+        "intersection": 2099212,
+        "union": 2109054,
+        "mask_coverage": 0.2530883487654321,
+        "whitebg_nonwhite_coverage": 0.2542739679783951,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9861165881156921,
+        "mean_abs_diff": 2.3952703948520804,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "32": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9950263864770363,
+        "intersection": 2116646,
+        "union": 2127226,
+        "mask_coverage": 0.25544077932098763,
+        "whitebg_nonwhite_coverage": 0.25621431327160493,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9879360795021057,
+        "mean_abs_diff": 2.290255657535852,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "33": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9780691802020743,
+        "intersection": 2021535,
+        "union": 2066863,
+        "mask_coverage": 0.24828125,
+        "whitebg_nonwhite_coverage": 0.2446293885030864,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9887598752975464,
+        "mean_abs_diff": 2.134276631871323,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "34": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9957301867429821,
+        "intersection": 2475209,
+        "union": 2485823,
+        "mask_coverage": 0.2984192949459877,
+        "whitebg_nonwhite_coverage": 0.29969895351080245,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9935297966003418,
+        "mean_abs_diff": 2.3770375755468547,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "35": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9959540542366359,
+        "intersection": 2432563,
+        "union": 2442445,
+        "mask_coverage": 0.29327775366512343,
+        "whitebg_nonwhite_coverage": 0.29446915991512346,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9944545030593872,
+        "mean_abs_diff": 2.225960699502303,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "36": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9966142132575866,
+        "intersection": 2376012,
+        "union": 2384084,
+        "mask_coverage": 0.2864597800925926,
+        "whitebg_nonwhite_coverage": 0.2874329668209877,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9945893883705139,
+        "mean_abs_diff": 2.169676893560754,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "37": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9970796531422621,
+        "intersection": 2303595,
+        "union": 2310342,
+        "mask_coverage": 0.277729190779321,
+        "whitebg_nonwhite_coverage": 0.2785421489197531,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9955387115478516,
+        "mean_abs_diff": 2.001043769763347,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "38": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9970367175869197,
+        "intersection": 2316552,
+        "union": 2323437,
+        "mask_coverage": 0.279291087962963,
+        "whitebg_nonwhite_coverage": 0.28012116608796295,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9957099556922913,
+        "mean_abs_diff": 1.9849626941104732,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "39": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.996969962483645,
+        "intersection": 2366705,
+        "union": 2373898,
+        "mask_coverage": 0.28533769772376544,
+        "whitebg_nonwhite_coverage": 0.28620490933641973,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9950708150863647,
+        "mean_abs_diff": 2.032642159458025,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "40": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9963483571075242,
+        "intersection": 2298210,
+        "union": 2306633,
+        "mask_coverage": 0.2770797164351852,
+        "whitebg_nonwhite_coverage": 0.2780952208719136,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.994969367980957,
+        "mean_abs_diff": 2.0058954203691046,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "41": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9961282662656851,
+        "intersection": 2443152,
+        "union": 2452648,
+        "mask_coverage": 0.29455439814814816,
+        "whitebg_nonwhite_coverage": 0.29569926697530863,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9935142993927002,
+        "mean_abs_diff": 2.3062680430055695,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "42": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9957836805050778,
+        "intersection": 2397399,
+        "union": 2407550,
+        "mask_coverage": 0.2890382667824074,
+        "whitebg_nonwhite_coverage": 0.29026210455246915,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9948415160179138,
+        "mean_abs_diff": 2.0870366355326047,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "43": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9962355396565655,
+        "intersection": 2453499,
+        "union": 2462770,
+        "mask_coverage": 0.29580186631944444,
+        "whitebg_nonwhite_coverage": 0.2969196084104938,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9935125708580017,
+        "mean_abs_diff": 2.3825263697867896,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "44": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9964432380573528,
+        "intersection": 2469843,
+        "union": 2478659,
+        "mask_coverage": 0.29777235243055555,
+        "whitebg_nonwhite_coverage": 0.2988352382330247,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9934899806976318,
+        "mean_abs_diff": 2.4828749076448347,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "45": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.8581702449403035,
+        "intersection": 2098615,
+        "union": 2445453,
+        "mask_coverage": 0.294551384066358,
+        "whitebg_nonwhite_coverage": 0.2532963204089506,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9898984432220459,
+        "mean_abs_diff": 2.131888197240342,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "46": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.778711784192698,
+        "intersection": 1878400,
+        "union": 2412189,
+        "mask_coverage": 0.29081428433641976,
+        "whitebg_nonwhite_coverage": 0.22647316261574074,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9866068959236145,
+        "mean_abs_diff": 2.0854989055665967,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "47": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.8698843195993693,
+        "intersection": 2133420,
+        "union": 2452533,
+        "mask_coverage": 0.29547092013888887,
+        "whitebg_nonwhite_coverage": 0.2574265769675926,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.988946259021759,
+        "mean_abs_diff": 2.3383143387896963,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "48": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9687480255937649,
+        "intersection": 2483930,
+        "union": 2564062,
+        "mask_coverage": 0.3082934268904321,
+        "whitebg_nonwhite_coverage": 0.3003090036651235,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9916098713874817,
+        "mean_abs_diff": 2.411326611984507,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "49": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9961118088976245,
+        "intersection": 2628243,
+        "union": 2638502,
+        "mask_coverage": 0.31686957465277776,
+        "whitebg_nonwhite_coverage": 0.3181064332561728,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9926654100418091,
+        "mean_abs_diff": 2.3065098373890587,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "50": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9965746119231272,
+        "intersection": 2756344,
+        "union": 2765818,
+        "mask_coverage": 0.33231385030864197,
+        "whitebg_nonwhite_coverage": 0.33345606674382716,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9917189478874207,
+        "mean_abs_diff": 2.7266929146302434,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "51": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.997066327520042,
+        "intersection": 2699245,
+        "union": 2707187,
+        "mask_coverage": 0.3254298080632716,
+        "whitebg_nonwhite_coverage": 0.326387321566358,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9915152192115784,
+        "mean_abs_diff": 2.811674400794419,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "52": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.997479803934205,
+        "intersection": 2631242,
+        "union": 2637890,
+        "mask_coverage": 0.317231143904321,
+        "whitebg_nonwhite_coverage": 0.31803264853395063,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9909175038337708,
+        "mean_abs_diff": 2.7755858791092285,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "53": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9976391202591186,
+        "intersection": 2484717,
+        "union": 2490597,
+        "mask_coverage": 0.29956561053240743,
+        "whitebg_nonwhite_coverage": 0.3002745225694444,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.990644097328186,
+        "mean_abs_diff": 2.6998220475650503,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "54": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.997338971773627,
+        "intersection": 2519744,
+        "union": 2526467,
+        "mask_coverage": 0.3037885802469136,
+        "whitebg_nonwhite_coverage": 0.30459912712191356,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9921934604644775,
+        "mean_abs_diff": 2.5232211917734433,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "55": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9966884502383218,
+        "intersection": 2468283,
+        "union": 2476484,
+        "mask_coverage": 0.29758427372685187,
+        "whitebg_nonwhite_coverage": 0.29857301311728396,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9936884641647339,
+        "mean_abs_diff": 2.3255450024825595,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "56": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9963050305263808,
+        "intersection": 2468538,
+        "union": 2477693,
+        "mask_coverage": 0.2976150173611111,
+        "whitebg_nonwhite_coverage": 0.2987187741126543,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9939882159233093,
+        "mean_abs_diff": 2.179617832350187,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "57": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9960009310332438,
+        "intersection": 2550356,
+        "union": 2560596,
+        "mask_coverage": 0.30747926311728396,
+        "whitebg_nonwhite_coverage": 0.3087138310185185,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9946816563606262,
+        "mean_abs_diff": 2.10279891300769,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "58": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9961700673250434,
+        "intersection": 2480325,
+        "union": 2489861,
+        "mask_coverage": 0.29903609664351855,
+        "whitebg_nonwhite_coverage": 0.3001857880015432,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9952130913734436,
+        "mean_abs_diff": 2.0679316690306955,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "59": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9955586021509631,
+        "intersection": 2515460,
+        "union": 2526682,
+        "mask_coverage": 0.303272087191358,
+        "whitebg_nonwhite_coverage": 0.3046250482253086,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9951942563056946,
+        "mean_abs_diff": 2.055740169854484,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "60": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9962830306647004,
+        "intersection": 2519274,
+        "union": 2528673,
+        "mask_coverage": 0.30373191550925926,
+        "whitebg_nonwhite_coverage": 0.30486508969907405,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9948728084564209,
+        "mean_abs_diff": 2.236842681454029,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "61": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9965916141273687,
+        "intersection": 2372485,
+        "union": 2380599,
+        "mask_coverage": 0.286034553433642,
+        "whitebg_nonwhite_coverage": 0.28701280381944444,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.99527508020401,
+        "mean_abs_diff": 2.0913986473672357,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "62": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9963329363530522,
+        "intersection": 2389310,
+        "union": 2398104,
+        "mask_coverage": 0.28806303047839504,
+        "whitebg_nonwhite_coverage": 0.28912326388888887,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9949705600738525,
+        "mean_abs_diff": 2.148785817670819,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "63": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9955768902457395,
+        "intersection": 2478414,
+        "union": 2489425,
+        "mask_coverage": 0.2988057002314815,
+        "whitebg_nonwhite_coverage": 0.30013322241512347,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9949918985366821,
+        "mean_abs_diff": 2.193439169718832,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "64": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.995130650538885,
+        "intersection": 2374327,
+        "union": 2385945,
+        "mask_coverage": 0.28625663097993825,
+        "whitebg_nonwhite_coverage": 0.28765733506944446,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9945791363716125,
+        "mean_abs_diff": 2.1896913361965082,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "65": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.995257724975145,
+        "intersection": 2497654,
+        "union": 2509555,
+        "mask_coverage": 0.3011253375771605,
+        "whitebg_nonwhite_coverage": 0.30256016107253086,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9947209358215332,
+        "mean_abs_diff": 2.142318033984067,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "66": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9952760830421977,
+        "intersection": 2507828,
+        "union": 2519731,
+        "mask_coverage": 0.30235194830246914,
+        "whitebg_nonwhite_coverage": 0.3037870129243827,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9950035810470581,
+        "mean_abs_diff": 2.208054374638646,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "67": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9957863653030863,
+        "intersection": 2039483,
+        "union": 2048113,
+        "mask_coverage": 0.24588734567901235,
+        "whitebg_nonwhite_coverage": 0.24692660108024692,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9935504198074341,
+        "mean_abs_diff": 2.1317075202457008,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "68": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9960156232404344,
+        "intersection": 1901600,
+        "union": 1909207,
+        "mask_coverage": 0.22926335841049383,
+        "whitebg_nonwhite_coverage": 0.23018000096450617,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9948834776878357,
+        "mean_abs_diff": 1.9334575683164823,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "69": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9911031753233897,
+        "intersection": 1922201,
+        "union": 1939456,
+        "mask_coverage": 0.23186619888117285,
+        "whitebg_nonwhite_coverage": 0.23370780285493828,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9951802492141724,
+        "mean_abs_diff": 2.0025858623173804,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "70": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9959386236936212,
+        "intersection": 2013027,
+        "union": 2021236,
+        "mask_coverage": 0.2429029224537037,
+        "whitebg_nonwhite_coverage": 0.24348102334104937,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9940495491027832,
+        "mean_abs_diff": 2.076777639382218,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "71": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9960250977787398,
+        "intersection": 2015403,
+        "union": 2023446,
+        "mask_coverage": 0.24324098186728396,
+        "whitebg_nonwhite_coverage": 0.24369586709104937,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9941844940185547,
+        "mean_abs_diff": 2.059346589674396,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "72": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9968407587971231,
+        "intersection": 2065155,
+        "union": 2071700,
+        "mask_coverage": 0.2490873360339506,
+        "whitebg_nonwhite_coverage": 0.2496654369212963,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9938492774963379,
+        "mean_abs_diff": 2.157112598890816,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "73": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9970301088162,
+        "intersection": 2082090,
+        "union": 2088292,
+        "mask_coverage": 0.2510502266589506,
+        "whitebg_nonwhite_coverage": 0.25174467110339505,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.994118869304657,
+        "mean_abs_diff": 2.1716084911437816,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "74": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9967750397555215,
+        "intersection": 2082281,
+        "union": 2089018,
+        "mask_coverage": 0.25107313368055556,
+        "whitebg_nonwhite_coverage": 0.25183232060185184,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9919928908348083,
+        "mean_abs_diff": 2.277226171050327,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "75": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9961950411018572,
+        "intersection": 2136148,
+        "union": 2144307,
+        "mask_coverage": 0.25754738136574074,
+        "whitebg_nonwhite_coverage": 0.2585182773919753,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9930372834205627,
+        "mean_abs_diff": 2.284921570544859,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "76": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9963424227780648,
+        "intersection": 2199943,
+        "union": 2208019,
+        "mask_coverage": 0.2652662037037037,
+        "whitebg_nonwhite_coverage": 0.26617211612654323,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9934395551681519,
+        "mean_abs_diff": 2.3313306996471734,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "77": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9950520306229119,
+        "intersection": 2030337,
+        "union": 2040433,
+        "mask_coverage": 0.2448072193287037,
+        "whitebg_nonwhite_coverage": 0.24597812982253087,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9938831329345703,
+        "mean_abs_diff": 2.2477009984235417,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "78": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9964834677960394,
+        "intersection": 2213128,
+        "union": 2220938,
+        "mask_coverage": 0.26699122299382716,
+        "whitebg_nonwhite_coverage": 0.26759428047839506,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9925692677497864,
+        "mean_abs_diff": 2.42214924627649,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "79": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9957433652941619,
+        "intersection": 2254592,
+        "union": 2264230,
+        "mask_coverage": 0.2721463879243827,
+        "whitebg_nonwhite_coverage": 0.2726575761959876,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9929773211479187,
+        "mean_abs_diff": 2.432815280120954,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "80": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9961438830943259,
+        "intersection": 2264247,
+        "union": 2273012,
+        "mask_coverage": 0.27308750482253086,
+        "whitebg_nonwhite_coverage": 0.27393928433641973,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9934238195419312,
+        "mean_abs_diff": 2.371129849386999,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "81": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9966380804044436,
+        "intersection": 2321493,
+        "union": 2329324,
+        "mask_coverage": 0.2799019820601852,
+        "whitebg_nonwhite_coverage": 0.28081573109567903,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9940916299819946,
+        "mean_abs_diff": 2.2960820173133833,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "82": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9967174786320566,
+        "intersection": 2321661,
+        "union": 2329307,
+        "mask_coverage": 0.27991753472222225,
+        "whitebg_nonwhite_coverage": 0.2808183834876543,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9930779933929443,
+        "mean_abs_diff": 2.2575923847980435,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "83": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.997249255930698,
+        "intersection": 2361210,
+        "union": 2367723,
+        "mask_coverage": 0.2847255979938272,
+        "whitebg_nonwhite_coverage": 0.2854100356867284,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9913434386253357,
+        "mean_abs_diff": 2.440230650852038,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "84": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.997327895602284,
+        "intersection": 2374533,
+        "union": 2380895,
+        "mask_coverage": 0.28637237172067903,
+        "whitebg_nonwhite_coverage": 0.28695758584104936,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9903275966644287,
+        "mean_abs_diff": 2.422772479016775,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "85": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9931420025518903,
+        "intersection": 2388002,
+        "union": 2404492,
+        "mask_coverage": 0.2893043499228395,
+        "whitebg_nonwhite_coverage": 0.28849440586419756,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9887722134590149,
+        "mean_abs_diff": 2.51396291569702,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "86": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9853462752102342,
+        "intersection": 2397582,
+        "union": 2433238,
+        "mask_coverage": 0.29273509837962963,
+        "whitebg_nonwhite_coverage": 0.28968436535493824,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9879580140113831,
+        "mean_abs_diff": 2.6417441067197682,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "87": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9911429735194357,
+        "intersection": 2430906,
+        "union": 2452629,
+        "mask_coverage": 0.2949995177469136,
+        "whitebg_nonwhite_coverage": 0.29377543885030866,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9890474081039429,
+        "mean_abs_diff": 2.728182244563063,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "88": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9968469916502742,
+        "intersection": 2393944,
+        "union": 2401516,
+        "mask_coverage": 0.28877845293209875,
+        "whitebg_nonwhite_coverage": 0.2893778935185185,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9914128184318542,
+        "mean_abs_diff": 2.5924193283392403,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "89": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9967680195036707,
+        "intersection": 2425319,
+        "union": 2433183,
+        "mask_coverage": 0.2925420765817901,
+        "whitebg_nonwhite_coverage": 0.2932148196373457,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9914374351501465,
+        "mean_abs_diff": 2.5119664143279903,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "90": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9891453248024737,
+        "intersection": 2520733,
+        "union": 2548395,
+        "mask_coverage": 0.3063451244212963,
+        "whitebg_nonwhite_coverage": 0.30480553144290123,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9924437999725342,
+        "mean_abs_diff": 2.5224521004297396,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "91": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9877523414411656,
+        "intersection": 2529452,
+        "union": 2560816,
+        "mask_coverage": 0.3077436583719136,
+        "whitebg_nonwhite_coverage": 0.3059557050540124,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9938241839408875,
+        "mean_abs_diff": 2.4084955804513912,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "92": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9930388734949439,
+        "intersection": 2434834,
+        "union": 2451902,
+        "mask_coverage": 0.2946369839891975,
+        "whitebg_nonwhite_coverage": 0.2945238956404321,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9944333434104919,
+        "mean_abs_diff": 2.2622796563795196,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "93": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9962617962511849,
+        "intersection": 2384715,
+        "union": 2393663,
+        "mask_coverage": 0.28768711419753085,
+        "whitebg_nonwhite_coverage": 0.28840977044753086,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9931967258453369,
+        "mean_abs_diff": 2.463408299058208,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "94": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9970111630957077,
+        "intersection": 2396093,
+        "union": 2403276,
+        "mask_coverage": 0.2889157744984568,
+        "whitebg_nonwhite_coverage": 0.28971185378086417,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9930174946784973,
+        "mean_abs_diff": 2.4103996854985597,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "95": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9971592491972292,
+        "intersection": 2380264,
+        "union": 2387045,
+        "mask_coverage": 0.2869900173611111,
+        "whitebg_nonwhite_coverage": 0.28777235243055554,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9940252900123596,
+        "mean_abs_diff": 2.2146778944866106,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "96": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9967453990421931,
+        "intersection": 2339806,
+        "union": 2347446,
+        "mask_coverage": 0.2820957513503086,
+        "whitebg_nonwhite_coverage": 0.2830146846064815,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9942505955696106,
+        "mean_abs_diff": 2.3152563325023015,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "97": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.996452608252692,
+        "intersection": 2323863,
+        "union": 2332136,
+        "mask_coverage": 0.28017252604166665,
+        "whitebg_nonwhite_coverage": 0.2811699459876543,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9938947558403015,
+        "mean_abs_diff": 2.316299279135832,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "98": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9960534007070613,
+        "intersection": 2305516,
+        "union": 2314651,
+        "mask_coverage": 0.27796055169753087,
+        "whitebg_nonwhite_coverage": 0.279061897183642,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9939362406730652,
+        "mean_abs_diff": 2.26609568620711,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "99": {
+      "camera_id": 0,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "camera_frame_shape_hw": [
+        3806,
+        2128
+      ],
+      "exif_orientation": null,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9962313718060406,
+        "intersection": 2276834,
+        "union": 2285447,
+        "mask_coverage": 0.27450255594135803,
+        "whitebg_nonwhite_coverage": 0.27554096739969136,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 16,
+        "dy": 24,
+        "ncc": 0.9944251775741577,
+        "mean_abs_diff": 2.2323801243123573,
+        "whitebg_raw_shape_hw": [
+          3840,
+          2160,
+          3
+        ]
+      }
+    },
+    "100": {
+      "camera_id": 1,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        3070,
+        2020
+      ],
+      "camera_frame_shape_hw": [
+        2020,
+        3070
+      ],
+      "exif_orientation": 6,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9666446214111882,
+        "intersection": 1634076,
+        "union": 1690462,
+        "mask_coverage": 0.19721764081790125,
+        "whitebg_nonwhite_coverage": 0.20359953703703704,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 440,
+        "dy": 80,
+        "ncc": 0.9959431290626526,
+        "mean_abs_diff": 4.87411450102665,
+        "whitebg_raw_shape_hw": [
+          2160,
+          3840,
+          3
+        ]
+      }
+    },
+    "101": {
+      "camera_id": 1,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        3070,
+        2020
+      ],
+      "camera_frame_shape_hw": [
+        2020,
+        3070
+      ],
+      "exif_orientation": 6,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9767317308559096,
+        "intersection": 1657755,
+        "union": 1697247,
+        "mask_coverage": 0.20015432098765432,
+        "whitebg_nonwhite_coverage": 0.20433569637345678,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 440,
+        "dy": 80,
+        "ncc": 0.9955604076385498,
+        "mean_abs_diff": 4.781751002461809,
+        "whitebg_raw_shape_hw": [
+          2160,
+          3840,
+          3
+        ]
+      }
+    },
+    "102": {
+      "camera_id": 1,
+      "camera_model": "SIMPLE_PINHOLE",
+      "camera_wxh": [
+        3070,
+        2020
+      ],
+      "camera_frame_shape_hw": [
+        2020,
+        3070
+      ],
+      "exif_orientation": 6,
+      "mask_shape_hw": [
+        3840,
+        2160
+      ],
+      "whitebg_display_shape_hw": [
+        3840,
+        2160,
+        3
+      ],
+      "A_mask_vs_whitebg": {
+        "iou": 0.9855090226237014,
+        "intersection": 1849422,
+        "union": 1876616,
+        "mask_coverage": 0.2231909481095679,
+        "whitebg_nonwhite_coverage": 0.2260323832947531,
+        "shapes_equal": true
+      },
+      "B_offset": {
+        "dx": 440,
+        "dy": 80,
+        "ncc": 0.9883464574813843,
+        "mean_abs_diff": 5.767400425710323,
+        "whitebg_raw_shape_hw": [
+          2160,
+          3840,
+          3
+        ]
+      }
+    }
+  },
+  "errors": []
+}

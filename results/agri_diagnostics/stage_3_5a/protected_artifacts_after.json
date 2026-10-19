@@ -1,0 +1,346 @@
+{
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/agri/plant_gs/jepa/dataset.py": {
+    "sha256": "2ead23e77a9c1f52fac7877c758a255754e121ac873435e54ed1c24e85c05430",
+    "bytes": 6774
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/agri/plant_gs/jepa/pilot_config.yaml": {
+    "sha256": "d6d3c37165e88c996f36e8ee2af482ed19ef85745d3db5c7cfe81f9cfb6fc0fc",
+    "bytes": 762
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/agri/plant_gs/jepa/pilot_data.py": {
+    "sha256": "53d2814b952074dc0f518ddc8e95fc6c12ba7f709a8a6fe96f8b2f42ac13e587",
+    "bytes": 7103
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/agri/plant_gs/jepa/pilot_eval.py": {
+    "sha256": "21c372915c9a9824598211a67086995ea102cb27a1434b18cfa89d48649649c8",
+    "bytes": 15373
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/agri/plant_gs/jepa/pilot_train.py": {
+    "sha256": "bcab31fdad44f1a369a00bc657ab1dece890f0fe2be04bf81e64a622c56ea25b",
+    "bytes": 17059
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/datasets/ModelNetGaussian.py": {
+    "sha256": "443446d2773121eb42b11998a40d89a35f8ad00ce2d07fa005d5b5a6226f00c1",
+    "bytes": 7675
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/datasets/ShapeNet55Gaussian.py": {
+    "sha256": "fb34c666509819678c4620c28e492920bd23d36c799a4c8977a069f726941be8",
+    "bytes": 6766
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/datasets/__init__.py": {
+    "sha256": "b98738f9ea230f6aa59c12c3b238d04af6efdd8895a4b204f9108d204f9f83d1",
+    "bytes": 110
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/datasets/build.py": {
+    "sha256": "f1588c3d29c00a29aef12adbcc9b4b7b9c269386ad2d52371b3e7a8d020e6642",
+    "bytes": 421
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/datasets/data_transforms.py": {
+    "sha256": "ee44a744302a05c58f149cd5c356c01e1df6f7deee1c53014d75bfbb1b93425b",
+    "bytes": 4320
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/datasets/io.py": {
+    "sha256": "b1c4dfadd6a36902d2f2aef60340e606ab80ed478b628533b99fda96b4a1ac5d",
+    "bytes": 1497
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/data_audit.json": {
+    "sha256": "b75fba207a4da38754148bc5b00742ce8866780864536691b081f69e5a17983f",
+    "bytes": 25217
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/initial_random.pt": {
+    "sha256": "99f8c18fca8dfae92586b30d4fe8c413e9c44a2e2f5033045a5fe48c55064e8e",
+    "bytes": 185243293
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/checkpoint_last.pt": {
+    "sha256": "2f0c5b372db37d40308640f0c89a1cc9327ca037a4c94e26a21ff55b6f3c065c",
+    "bytes": 380992953
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/run_config.json": {
+    "sha256": "e231342d1022dc8b03c70374af097aa57d1d22f8e286cf39bf401e2229c8088c",
+    "bytes": 2241
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_001.npz": {
+    "sha256": "3959341b9e44bdfc94305de965597f9d00e82cd4a7e544d980c11c58abc07e95",
+    "bytes": 49452
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_002.npz": {
+    "sha256": "be16b5b6142e99079c014624c5b51c1cf37d3912dae1391cce5cfc93a26bb9b1",
+    "bytes": 49447
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_003.npz": {
+    "sha256": "a1eb412cd5c3a52cfed9ee4fbba3c86e7153f268d1cf59a1e477124e59d8f66b",
+    "bytes": 49493
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_004.npz": {
+    "sha256": "fafaa6522b269744237dd5c58cc40bd177fe2527d818edbd30a3ad38dcec5fc1",
+    "bytes": 49410
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_005.npz": {
+    "sha256": "11d460d73b72e2e2c91e28b8c2d70a04fdb895bcf852a54f88185443dc59de2d",
+    "bytes": 49430
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_006.npz": {
+    "sha256": "001882e4ab594b0960693010736aaba0e2aefbc9b71fd1c0ae4d83d689a74ea7",
+    "bytes": 49463
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_007.npz": {
+    "sha256": "40789e9a16be352059b84b762e4fcdabf369dad745376931e9e9a07affb9d1e8",
+    "bytes": 49430
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_008.npz": {
+    "sha256": "49de86c60d028eab408abd82bbd3f61866df4a3a84eed81962e326fb032ad077",
+    "bytes": 49479
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_009.npz": {
+    "sha256": "c4dab55650b0546f8f1e452a0e2ee9e124ed717bd5ed2867c1d5160ea4cb99ca",
+    "bytes": 49507
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_010.npz": {
+    "sha256": "45f13c3913e5701e25cf4efea3bbb6811e4179ba8b9c99593ba6613b1ab341ca",
+    "bytes": 49428
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_011.npz": {
+    "sha256": "ea051e6f648280ea638788ff4abe01065c64735f1b10b5b47ccb4f9e74a8a06e",
+    "bytes": 49485
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_012.npz": {
+    "sha256": "aae89449349ebab52b18047a05d4476edda582671c5af4bc4cbcf6f77a0bbd91",
+    "bytes": 49448
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_013.npz": {
+    "sha256": "e2692cd6aa768e3a960c678acf17ede4240c2a0bdc4dd8fe16315f9293d9b668",
+    "bytes": 49500
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_014.npz": {
+    "sha256": "e4432da362e6d7211eae68c61ba9cb9e474c47f4a7e74c6b8107af4996e5f773",
+    "bytes": 49471
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_015.npz": {
+    "sha256": "5f33783f0df614032ecb80d316c73785536cab40c0c3bc21944d51cd43f3b040",
+    "bytes": 49497
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_016.npz": {
+    "sha256": "3434977aeb0c92ec2d294edfd53f07b9acc264b5c7a08eec45ded27bd03c8784",
+    "bytes": 49458
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_017.npz": {
+    "sha256": "1654d7e5067c117144f850ca6904c7830bbcc0d5b52c43b83d632c17338452dc",
+    "bytes": 49538
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_018.npz": {
+    "sha256": "7e0a8030a57a5017c2796619810377dec819bdabf3d7e3659cd72bb961827050",
+    "bytes": 49473
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_019.npz": {
+    "sha256": "4fa62a0fb7a5daee79340cebdb717d1d6ebc32f99524d7b363fcfde8a265bfff",
+    "bytes": 49506
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/sampling_indices/epoch_020.npz": {
+    "sha256": "c3696acfdddfc178d3ccd99683f2f1465538e6bd9856c9231a093b23611b482d",
+    "bytes": 49457
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/train_metrics.csv": {
+    "sha256": "4f917dfb8a536cd390ba73d0d63cb85c417248552c4a1bb98f5ed6309e0ca109",
+    "bytes": 84033
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/sanity/checkpoint_last.pt": {
+    "sha256": "1ad24215f03fd49767fac97fc4f6af18ed7957f8940642cf7a9139390416681c",
+    "bytes": 380991545
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/sanity/run_config.json": {
+    "sha256": "eab3a51456c48ea0c32740fbfe55800d042de925b782c481597e7117fe62514c",
+    "bytes": 975
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/sanity/train_metrics.csv": {
+    "sha256": "8f833cbdac73bae5a7f6168385b361440bbbe12dcc87f49a3f4e7131d7a6d5e9",
+    "bytes": 2053
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/split.json": {
+    "sha256": "6744ddf74fed9f2f6eb258ed6308b5e077a8eb00dcef2f4bcb6cd493ccdfc6c6",
+    "bytes": 548
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/models/Gaussian_JEPA_ExpMultiScale.py": {
+    "sha256": "7d5ad18656a6a53f404f2963ae86ebc04c1f25f060decbd73439566ad377e4a3",
+    "bytes": 24666
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/models/Gaussian_MAE.py": {
+    "sha256": "eda35a3356984cc2fb15d345e95e9ba97997dc979b91f985fa97efc715283d7f",
+    "bytes": 25773
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/models/__init__.py": {
+    "sha256": "ac2982d75e281b9aab9e2ab828813ac754a2ef72647e35163f2ef76a20871f55",
+    "bytes": 543
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/models/build.py": {
+    "sha256": "c6be5e6c015ca0fd5d2ba24d55590a9c9e0861ba415c72138d4b88291c35bed0",
+    "bytes": 322
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/models/neural_nn.py": {
+    "sha256": "f327106a676b3187a7c140cf0af320ae081f11a37c3d9f8417a67a16e97ac1c3",
+    "bytes": 7211
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/models/ops.py": {
+    "sha256": "53ec5342cf349efab802fe332957998f0161c7951640b4e8b186259957ce57f8",
+    "bytes": 714
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/models/transformer.py": {
+    "sha256": "ab01e9526ceac9aff8359fc56ef0c31300b13b555abd5b5c46e6e13677875eba",
+    "bytes": 15902
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/REPORT.md": {
+    "sha256": "e05695d4a960bc17124888139eb185effca3d8deae8a5b8e0474b6affd005e0c",
+    "bytes": 10149
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/evaluation_comparison.json": {
+    "sha256": "5b9e804701f9bcd6890656845e2603de1e09fa8a7961cc4cf423fb67b6110d54",
+    "bytes": 46778
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/fixed_test_sampling_indices.npz": {
+    "sha256": "ea57d0ffbfa6ad6eced0887c5b4ae38131128ed5a07f101ba6348fb47b3140c6",
+    "bytes": 39599
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/loss_curves.pdf": {
+    "sha256": "5e329059b6cc6039de0fe334873569f129c6fa3827d82ac6399104126d7c5a42",
+    "bytes": 17145
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/loss_curves.png": {
+    "sha256": "c2a5c2f6b4aa6827033e60b948b4fb3cb2819569b37dc55f2d14992c5f77b789",
+    "bytes": 101404
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/metrics_comparison.csv": {
+    "sha256": "09f1390ff70b46fb039d9bdbf87d220cc07c5a3962544ef1dd60c1198f109eca",
+    "bytes": 529
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/pilot_trained_embeddings.npz": {
+    "sha256": "44e32efa8b33eb58c75c21d5217f692b32134f723eea6d3154af7be15177cf80",
+    "bytes": 149841
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/pilot_trained_metrics.json": {
+    "sha256": "5ee99917bdf1558356201ea71da1c17abd7dfd4d2a943f1c45350f14b7b72ab8",
+    "bytes": 20734
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/random_init_embeddings.npz": {
+    "sha256": "75d5a2704d162687435bc5506c364d47cb4ec2f75c16ca47c3271408db42b84a",
+    "bytes": 150131
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_pilot/random_init_metrics.json": {
+    "sha256": "0f7248ecc8a52a43adfd013fdc7572e64faf6edb58608329735f8539324054fe",
+    "bytes": 20733
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/utils/AverageMeter.py": {
+    "sha256": "64ffee68e6cc0d78502a76c6e2c90c1c91b809f773703c092e00f1e761238ba6",
+    "bytes": 1523
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/utils/checkpoint.py": {
+    "sha256": "5001b9fd7ac18a6b9812487ae8d321764e692bd96c313278cad3874f9cb75abd",
+    "bytes": 3985
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/utils/config.py": {
+    "sha256": "30c6c1f522b2e0c62b05bf7a9ddb0fa7b2f22c7a36b46e47dc9b115eeb9ff9bf",
+    "bytes": 2367
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/utils/dist_utils.py": {
+    "sha256": "c108a3c68465b8cdecafc284ddddb9a5c5b26bab5cdb1f198bdaf791b2a59b01",
+    "bytes": 1493
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/utils/gaussian.py": {
+    "sha256": "b3f5f9ffab1b19c831a34a852022683186fc860f88be350c37308a36f18042d8",
+    "bytes": 8001
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/utils/logger.py": {
+    "sha256": "94b2211842f3902dd0ffcab111316a26813b31b3457698507f59b0637c708806",
+    "bytes": 4937
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/utils/misc.py": {
+    "sha256": "4483bd14c60def9a976a344a626ebe9cb246b11fc62fbaf30008171cc7844f1f",
+    "bytes": 9029
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/utils/parser.py": {
+    "sha256": "71c1234b6915dc5f8c766bf768f4a4897214a9ad682f5c77d50abd1c5b907ad6",
+    "bytes": 4232
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/utils/registry.py": {
+    "sha256": "4b0c4a52d9dfc0f12b93215a3e21b82390c79731e0e4010e36b05fc1c43e2b12",
+    "bytes": 10733
+  },
+  "/fj/AgriGaussian-JEPA/Gaussian-JEPA/utils/rotation_conversions.py": {
+    "sha256": "97f40e2b58633ee9ec4f7960e1f2fe8b9d828e53c82dddfdfd6358a530960497",
+    "bytes": 20177
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/CaoMei1/final/point_cloud.ply": {
+    "sha256": "35b23c429c7fca75637ee0311556cf9d95c6733acc4b10babca01b38f5ae47f4",
+    "bytes": 65501153
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/CaoMei2/final/point_cloud.ply": {
+    "sha256": "6760e749f0b0f218731f1003d0caaab8316f634ab21045fc1ca5742656d89822",
+    "bytes": 73088789
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/ChangShouHua1/final/point_cloud.ply": {
+    "sha256": "68fa1c8a30bdbd8c3344852fa66967b2b58118df8172ecda767e53574c70a9ed",
+    "bytes": 67110201
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/ChangShouHua2/final/point_cloud.ply": {
+    "sha256": "6965a27f46dda8486f4b6428a2f47dcacbef455004cfb6dd5a2ec618e076f129",
+    "bytes": 64567301
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/ChangShouHua3/final/point_cloud.ply": {
+    "sha256": "c6abf92844d0b488fd6ce6e76feb190dbba9f7cf1be34e3504558b1a3d79a4b8",
+    "bytes": 64776161
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/DouBanLv1/final/point_cloud.ply": {
+    "sha256": "9ce830d7b2523752d052a68cab79b2ca8d6263e7dc1336390c20b4dd1cbd6da3",
+    "bytes": 64518685
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/DouBanLv2/final/point_cloud.ply": {
+    "sha256": "bab7a85dcb9ea88d12bee256028e9723031be272853ba68a44d124b018b943c3",
+    "bytes": 65074937
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/DouBanLv3/final/point_cloud.ply": {
+    "sha256": "13b73d173b9bb30ebb42d3244ade6d2600a1ab052c7714039aceacae62f50f6a",
+    "bytes": 68891765
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/HongZhang/final/point_cloud.ply": {
+    "sha256": "f909b30d8b2fea396f25f21665860e86d98b4fcf68e7a641ca5b4b82030819d6",
+    "bytes": 66255881
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/KongQueZhuYu/final/point_cloud.ply": {
+    "sha256": "d234749767d1cdf22fbd923aa07d7bc81a5932e6ccdb26d8806e424cb11c2731",
+    "bytes": 69827269
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/WanNianQing1/final/point_cloud.ply": {
+    "sha256": "49c3a47c7af092baa763ebbe25a43090651dd710ae1160f56cc67e994e2f89aa",
+    "bytes": 67810177
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/WanNianQing2/final/point_cloud.ply": {
+    "sha256": "5d682c6d02992671229c6b3d0627c7ac329f8100052ce1eeb8d3372548b58181",
+    "bytes": 67872009
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/WangWenCao1/final/point_cloud.ply": {
+    "sha256": "e0e46db1ef34dbaa3b9f578c98569014777e3f24b4ccdd2ebe49b75d1a021cfe",
+    "bytes": 67405673
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/WangWenCao2/final/point_cloud.ply": {
+    "sha256": "31b6690cb7846edd592b4f72d9b2f009d01cf4b0ba70fea682f1f9ae439c6f63",
+    "bytes": 65306689
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XianKeLai2/final/point_cloud.ply": {
+    "sha256": "b7b0b63cc3e870f36fd455158b61deb088b5186c45b0e808f0edaa471da5ab99",
+    "bytes": 72068089
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XianKeLai3/final/point_cloud.ply": {
+    "sha256": "9b9311fb595bdf991e383fddf58cc53091b6f15dab9e676c716d9115b2287698",
+    "bytes": 67503141
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XiangPiShu1/final/point_cloud.ply": {
+    "sha256": "65c7d68e305d27606ac610908c3c64bc02cecdf3264fdd2df96d2ad9b59edfe2",
+    "bytes": 62603545
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/XiangPiShu2/final/point_cloud.ply": {
+    "sha256": "1ccc683390e6c02024307529a66de66de1aa7caee56edeb671999381d82ab2f8",
+    "bytes": 69034073
+  },
+  "/fj/AgriGaussian-JEPA/data/plant_gs/XianKeLai1_fg_20261014/final/point_cloud.ply": {
+    "sha256": "cfb17dc53260fa2597115a5afff3ceae8003930df459f02dab87181c39d116ae",
+    "bytes": 67752121
+  }
+}

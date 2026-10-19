@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "output": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_diagnostics/stage_3_5a",
+  "protected_files_unchanged": true,
+  "numerical_values_finite": true,
+  "all_inferences_repeated": true,
+  "stage3_embeds_reproduced": true,
+  "stage35b_started": false
+}

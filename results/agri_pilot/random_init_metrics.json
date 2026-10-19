@@ -1,0 +1,619 @@
+{
+  "checkpoint": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/initial_random.pt",
+  "metrics": {
+    "independent_test_plants": 4,
+    "complete_resampling_drift": {
+      "per_plant": [
+        {
+          "plant_id": "DouBanLv2",
+          "mean_cosine_to_reference": 0.9974415210961016,
+          "mean_l2_to_reference": 0.07045963406562805
+        },
+        {
+          "plant_id": "XianKeLai1",
+          "mean_cosine_to_reference": 0.9976402231511421,
+          "mean_l2_to_reference": 0.0673692375421524
+        },
+        {
+          "plant_id": "XianKeLai2",
+          "mean_cosine_to_reference": 0.9984142375185924,
+          "mean_l2_to_reference": 0.056269094347953796
+        },
+        {
+          "plant_id": "XiangPiShu2",
+          "mean_cosine_to_reference": 0.9959769847419657,
+          "mean_l2_to_reference": 0.08669890835881233
+        }
+      ],
+      "mean_cosine_to_reference": 0.9973682416269505,
+      "mean_l2_to_reference": 0.07019921857863665,
+      "sample_seeds": [
+        4101,
+        4102,
+        4103
+      ]
+    },
+    "same_vs_different_plant_cosine": {
+      "same_plant_mean": 0.9968001504010177,
+      "same_plant_std": 0.002558079460188142,
+      "same_plant_pair_measurements": 12,
+      "different_plant_mean": 0.989348298682155,
+      "different_plant_std": 0.00556589486701894,
+      "different_plant_pair_measurements": 54,
+      "different_independent_plant_pairs": 6,
+      "warning": "Resampled inputs are repeated measurements within one plant, not independent biological samples."
+    },
+    "spatial_contiguous_missing": {
+      "mask_type": "upper projection cap along a fixed XYZ axis; exact-ratio top-projection Gaussians removed before regrouping",
+      "directions": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ratios": {
+        "30": [
+          {
+            "plant_id": "DouBanLv2",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.9814938222010696,
+            "partial_to_same_complete_l2": 0.1923859715461731,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "DouBanLv2",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.906887615989354,
+            "partial_to_same_complete_l2": 0.4315377473831177,
+            "retrieved_plant_id": "XiangPiShu2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "DouBanLv2",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.9793884344166912,
+            "partial_to_same_complete_l2": 0.20303481817245483,
+            "retrieved_plant_id": "DouBanLv2",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XianKeLai1",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.9705581085916689,
+            "partial_to_same_complete_l2": 0.24265974760055542,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XianKeLai1",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.9245761256107043,
+            "partial_to_same_complete_l2": 0.3883912265300751,
+            "retrieved_plant_id": "XianKeLai1",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XianKeLai1",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.9440676012654119,
+            "partial_to_same_complete_l2": 0.3344620168209076,
+            "retrieved_plant_id": "DouBanLv2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XianKeLai2",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.9762223183985408,
+            "partial_to_same_complete_l2": 0.21807195246219635,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XianKeLai2",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.9407038402517268,
+            "partial_to_same_complete_l2": 0.34437236189842224,
+            "retrieved_plant_id": "XiangPiShu2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XianKeLai2",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.9654915406535926,
+            "partial_to_same_complete_l2": 0.2627108097076416,
+            "retrieved_plant_id": "DouBanLv2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XiangPiShu2",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.9866081670003194,
+            "partial_to_same_complete_l2": 0.16365712881088257,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XiangPiShu2",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.882330343524489,
+            "partial_to_same_complete_l2": 0.4851178228855133,
+            "retrieved_plant_id": "XiangPiShu2",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XiangPiShu2",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.3,
+            "removed_gaussian_ratio_actual": 0.2998046875,
+            "partial_to_same_complete_cosine": 0.8927519126796186,
+            "partial_to_same_complete_l2": 0.46313726902008057,
+            "retrieved_plant_id": "XiangPiShu2",
+            "retrieval_correct": true
+          }
+        ],
+        "55": [
+          {
+            "plant_id": "DouBanLv2",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.9484446091968627,
+            "partial_to_same_complete_l2": 0.3211085796356201,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "DouBanLv2",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.825949879385327,
+            "partial_to_same_complete_l2": 0.5900001525878906,
+            "retrieved_plant_id": "XiangPiShu2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "DouBanLv2",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.9286990617932457,
+            "partial_to_same_complete_l2": 0.3776266276836395,
+            "retrieved_plant_id": "DouBanLv2",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XianKeLai1",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.9150534536116355,
+            "partial_to_same_complete_l2": 0.41218090057373047,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XianKeLai1",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.8455616688205437,
+            "partial_to_same_complete_l2": 0.5557667016983032,
+            "retrieved_plant_id": "XianKeLai1",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XianKeLai1",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.8537301468059654,
+            "partial_to_same_complete_l2": 0.5408693552017212,
+            "retrieved_plant_id": "DouBanLv2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XianKeLai2",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.939433641552147,
+            "partial_to_same_complete_l2": 0.3480411767959595,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XianKeLai2",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.8573601399485391,
+            "partial_to_same_complete_l2": 0.5341156721115112,
+            "retrieved_plant_id": "XiangPiShu2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XianKeLai2",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.9132840896181199,
+            "partial_to_same_complete_l2": 0.41645148396492004,
+            "retrieved_plant_id": "DouBanLv2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XiangPiShu2",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.9593462694690411,
+            "partial_to_same_complete_l2": 0.2851446270942688,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XiangPiShu2",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.7007631586221058,
+            "partial_to_same_complete_l2": 0.7736110091209412,
+            "retrieved_plant_id": "XiangPiShu2",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XiangPiShu2",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.55,
+            "removed_gaussian_ratio_actual": 0.5498046875,
+            "partial_to_same_complete_cosine": 0.6133387509681749,
+            "partial_to_same_complete_l2": 0.8793875575065613,
+            "retrieved_plant_id": "DouBanLv2",
+            "retrieval_correct": false
+          }
+        ],
+        "70": [
+          {
+            "plant_id": "DouBanLv2",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.9161192678235441,
+            "partial_to_same_complete_l2": 0.4095870554447174,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "DouBanLv2",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.7622392543015459,
+            "partial_to_same_complete_l2": 0.6895809769630432,
+            "retrieved_plant_id": "XiangPiShu2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "DouBanLv2",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.8842137738934062,
+            "partial_to_same_complete_l2": 0.4812198579311371,
+            "retrieved_plant_id": "DouBanLv2",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XianKeLai1",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.860248333218454,
+            "partial_to_same_complete_l2": 0.5286807417869568,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XianKeLai1",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.7715312093871787,
+            "partial_to_same_complete_l2": 0.6759716272354126,
+            "retrieved_plant_id": "XianKeLai1",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XianKeLai1",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.8055361175912292,
+            "partial_to_same_complete_l2": 0.6236409544944763,
+            "retrieved_plant_id": "DouBanLv2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XianKeLai2",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.9034366730772738,
+            "partial_to_same_complete_l2": 0.43946170806884766,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XianKeLai2",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.7919489892876341,
+            "partial_to_same_complete_l2": 0.6450598239898682,
+            "retrieved_plant_id": "XiangPiShu2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XianKeLai2",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.8790765938132847,
+            "partial_to_same_complete_l2": 0.49177923798561096,
+            "retrieved_plant_id": "DouBanLv2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XiangPiShu2",
+            "direction": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.9433521184978972,
+            "partial_to_same_complete_l2": 0.3365944027900696,
+            "retrieved_plant_id": "XianKeLai2",
+            "retrieval_correct": false
+          },
+          {
+            "plant_id": "XiangPiShu2",
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.6070769420685148,
+            "partial_to_same_complete_l2": 0.8864796161651611,
+            "retrieved_plant_id": "XiangPiShu2",
+            "retrieval_correct": true
+          },
+          {
+            "plant_id": "XiangPiShu2",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "removed_ratio_requested": 0.7,
+            "removed_gaussian_ratio_actual": 0.7001953125,
+            "partial_to_same_complete_cosine": 0.5143472448489559,
+            "partial_to_same_complete_l2": 0.9855484366416931,
+            "retrieved_plant_id": "DouBanLv2",
+            "retrieval_correct": false
+          }
+        ]
+      },
+      "partial_to_complete_retrieval": {
+        "30": {
+          "r_at_1": 0.4166666666666667,
+          "correct_queries": 5,
+          "query_count": 12,
+          "independent_query_plants": 4,
+          "chance_r_at_1": 0.25
+        },
+        "55": {
+          "r_at_1": 0.3333333333333333,
+          "correct_queries": 4,
+          "query_count": 12,
+          "independent_query_plants": 4,
+          "chance_r_at_1": 0.25
+        },
+        "70": {
+          "r_at_1": 0.3333333333333333,
+          "correct_queries": 4,
+          "query_count": 12,
+          "independent_query_plants": 4,
+          "chance_r_at_1": 0.25
+        }
+      }
+    },
+    "embedding_statistics": {
+      "mean_dimension_variance_across_plant_means": 8.318816449843956e-06,
+      "participation_ratio_effective_rank": 1.8203537009367687,
+      "maximum_centered_rank_with_four_plants": 3,
+      "covariance_eigenvalues": [
+        0.0,
+        0.0005008218677739265,
+        0.0013887768929326536,
+        0.004499252272773569
+      ],
+      "collapse_heuristic": {
+        "variance_below_1e-8": false,
+        "effective_rank_below_1.1": false,
+        "different_plant_cosine_above_0.99": false,
+        "interpretation": "Descriptive warning flags only; four held-out plants are insufficient to establish population-level collapse/non-collapse."
+      }
+    }
+  }
+}

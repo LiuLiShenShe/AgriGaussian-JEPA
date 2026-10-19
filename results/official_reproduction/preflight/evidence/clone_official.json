@@ -1,0 +1,6 @@
+{
+  "task": "clone_official",
+  "exit": 0,
+  "stdout": "",
+  "stderr": "Cloning into '/tmp/gaussian-jepa-preflight-w8c5kl9h/official'...\n"
+}

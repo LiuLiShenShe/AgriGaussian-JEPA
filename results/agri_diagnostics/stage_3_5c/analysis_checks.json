@@ -1,0 +1,16 @@
+{
+  "saved_score_replay_max_abs_error": 0.0,
+  "score_atol": 1e-12,
+  "saved_rank_hit_and_prediction_replay_exact": true,
+  "all_query_correct_gallery_original_index_intersections_zero": true,
+  "all_query_and_gallery_budgets_1024": true,
+  "all_36_conditions_unique_and_present": true,
+  "all_36_saved_scope_rank_identities_hold": true,
+  "minimum_any_pair_score_gap": 1.7838076127318914e-08,
+  "score_ties": false,
+  "all_saved_and_computed_numeric_features_finite": true,
+  "protected_files_unchanged": true,
+  "protected_file_count": 162,
+  "new_model_forward_calls": 0,
+  "new_sampling_calls": 0
+}

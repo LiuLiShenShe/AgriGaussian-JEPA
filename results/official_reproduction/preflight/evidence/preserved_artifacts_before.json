@@ -1,0 +1,957 @@
+[
+  {
+    "path": "agri/plant_gs/sweep_thresholds.py",
+    "size": 3665,
+    "mtime_ns": 1791908483570090992
+  },
+  {
+    "path": "agri/plant_gs/prepare_frames.py",
+    "size": 3231,
+    "mtime_ns": 1791908483570729309
+  },
+  {
+    "path": "agri/plant_gs/colmap_io.py",
+    "size": 4484,
+    "mtime_ns": 1791908483570396382
+  },
+  {
+    "path": "agri/plant_gs/validate_ply.py",
+    "size": 7876,
+    "mtime_ns": 1791908483569883398
+  },
+  {
+    "path": "agri/plant_gs/verify_gsjepa_compatible.py",
+    "size": 4943,
+    "mtime_ns": 1791908483569979775
+  },
+  {
+    "path": "agri/plant_gs/build_dataset.py",
+    "size": 11397,
+    "mtime_ns": 1791908483570305635
+  },
+  {
+    "path": "agri/plant_gs/diagnose_background.py",
+    "size": 2892,
+    "mtime_ns": 1791908483570818798
+  },
+  {
+    "path": "agri/plant_gs/run_colmap.sh",
+    "size": 2785,
+    "mtime_ns": 1791908483572887130
+  },
+  {
+    "path": "agri/plant_gs/train_plant_gsplat.py",
+    "size": 25218,
+    "mtime_ns": 1791908483569602117
+  },
+  {
+    "path": "agri/plant_gs/README.md",
+    "size": 13133,
+    "mtime_ns": 1791908507885927599
+  },
+  {
+    "path": "agri/plant_gs/extract_plant.py",
+    "size": 10468,
+    "mtime_ns": 1791908483569772503
+  },
+  {
+    "path": "agri/plant_gs/__pycache__/colmap_io.cpython-313.pyc",
+    "size": 7633,
+    "mtime_ns": 1791946679467259321
+  },
+  {
+    "path": "agri/plant_gs/foreground/batch.py",
+    "size": 20869,
+    "mtime_ns": 1791966836841290506
+  },
+  {
+    "path": "agri/plant_gs/foreground/train.py",
+    "size": 13092,
+    "mtime_ns": 1791947677280581047
+  },
+  {
+    "path": "agri/plant_gs/foreground/build_dataset.py",
+    "size": 6404,
+    "mtime_ns": 1791946220273429979
+  },
+  {
+    "path": "agri/plant_gs/foreground/losses.py",
+    "size": 1365,
+    "mtime_ns": 1791946440191901152
+  },
+  {
+    "path": "agri/plant_gs/foreground/common.py",
+    "size": 3516,
+    "mtime_ns": 1791947677279086626
+  },
+  {
+    "path": "agri/plant_gs/foreground/export.py",
+    "size": 5952,
+    "mtime_ns": 1791946780002994419
+  },
+  {
+    "path": "agri/plant_gs/foreground/prepare.py",
+    "size": 6360,
+    "mtime_ns": 1791945989579109356
+  },
+  {
+    "path": "agri/plant_gs/foreground/README.md",
+    "size": 9888,
+    "mtime_ns": 1791966836841560604
+  },
+  {
+    "path": "agri/plant_gs/foreground/run_sfm.sh",
+    "size": 1696,
+    "mtime_ns": 1791945989579290315
+  },
+  {
+    "path": "agri/plant_gs/jepa/diagnostic_report.py",
+    "size": 29377,
+    "mtime_ns": 1792050729575863240
+  },
+  {
+    "path": "agri/plant_gs/jepa/pilot_train.py",
+    "size": 17059,
+    "mtime_ns": 1792044058159353332
+  },
+  {
+    "path": "agri/plant_gs/jepa/pilot_data.py",
+    "size": 7103,
+    "mtime_ns": 1792042974607819867
+  },
+  {
+    "path": "agri/plant_gs/jepa/pilot_report.py",
+    "size": 17175,
+    "mtime_ns": 1792044929022609349
+  },
+  {
+    "path": "agri/plant_gs/jepa/diagnostic_metrics.py",
+    "size": 9262,
+    "mtime_ns": 1792049887540616160
+  },
+  {
+    "path": "agri/plant_gs/jepa/verify_stage35b.py",
+    "size": 17424,
+    "mtime_ns": 1792054594510070762
+  },
+  {
+    "path": "agri/plant_gs/jepa/dataset.py",
+    "size": 6774,
+    "mtime_ns": 1791957088043858469
+  },
+  {
+    "path": "agri/plant_gs/jepa/smoke_real_plant.py",
+    "size": 12442,
+    "mtime_ns": 1791957492395801085
+  },
+  {
+    "path": "agri/plant_gs/jepa/pilot_eval.py",
+    "size": 15373,
+    "mtime_ns": 1792042940042826623
+  },
+  {
+    "path": "agri/plant_gs/jepa/verify_stage35a.py",
+    "size": 7601,
+    "mtime_ns": 1792050617695037451
+  },
+  {
+    "path": "agri/plant_gs/jepa/verify_stage35c.py",
+    "size": 15653,
+    "mtime_ns": 1792057432771344667
+  },
+  {
+    "path": "agri/plant_gs/jepa/analyze_stage35c.py",
+    "size": 45863,
+    "mtime_ns": 1792057630172225745
+  },
+  {
+    "path": "agri/plant_gs/jepa/diagnose_stage35a.py",
+    "size": 21741,
+    "mtime_ns": 1792050477353096947
+  },
+  {
+    "path": "agri/plant_gs/jepa/pilot_config.yaml",
+    "size": 762,
+    "mtime_ns": 1792042726191892265
+  },
+  {
+    "path": "agri/plant_gs/jepa/pooling_stage35b.py",
+    "size": 23347,
+    "mtime_ns": 1792054594509070388
+  },
+  {
+    "path": "agri/plant_gs/jepa/README.md",
+    "size": 6706,
+    "mtime_ns": 1791957763766023684
+  },
+  {
+    "path": "agri/plant_gs/jepa/validation.py",
+    "size": 1758,
+    "mtime_ns": 1791957277116739818
+  },
+  {
+    "path": "agri/plant_gs/jepa/pooling_stage35b_report.py",
+    "size": 22895,
+    "mtime_ns": 1792053622113132492
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/pooling_stage35b_report.cpython-39.pyc",
+    "size": 23170,
+    "mtime_ns": 1792053771806629878
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/diagnose_stage35a.cpython-39.pyc",
+    "size": 17804,
+    "mtime_ns": 1792050491625880447
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/diagnostic_report.cpython-39.pyc",
+    "size": 28897,
+    "mtime_ns": 1792050793809670017
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/verify_stage35a.cpython-39.pyc",
+    "size": 6090,
+    "mtime_ns": 1792050630921979067
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/diagnostic_metrics.cpython-39.pyc",
+    "size": 9477,
+    "mtime_ns": 1792050334121068068
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/pilot_data.cpython-39.pyc",
+    "size": 6752,
+    "mtime_ns": 1792043110173009540
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/pooling_stage35b.cpython-39.pyc",
+    "size": 20182,
+    "mtime_ns": 1792054594560454072
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/pilot_eval.cpython-39.pyc",
+    "size": 12298,
+    "mtime_ns": 1792049809048037685
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/dataset.cpython-313.pyc",
+    "size": 11305,
+    "mtime_ns": 1791957088264319716
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/dataset.cpython-39.pyc",
+    "size": 6913,
+    "mtime_ns": 1791957662426867330
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/pilot_report.cpython-313.pyc",
+    "size": 25820,
+    "mtime_ns": 1792044992420644883
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/pilot_eval.cpython-313.pyc",
+    "size": 22184,
+    "mtime_ns": 1792044992418160198
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/verify_stage35c.cpython-39.pyc",
+    "size": 15394,
+    "mtime_ns": 1792057630221730362
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/validation.cpython-39.pyc",
+    "size": 2110,
+    "mtime_ns": 1791957662427401175
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/pilot_train.cpython-39.pyc",
+    "size": 13448,
+    "mtime_ns": 1792044183920834022
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/verify_stage35b.cpython-39.pyc",
+    "size": 15582,
+    "mtime_ns": 1792054594564497257
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/pilot_data.cpython-313.pyc",
+    "size": 11071,
+    "mtime_ns": 1792044992411864347
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/pilot_train.cpython-313.pyc",
+    "size": 26359,
+    "mtime_ns": 1792044992415413249
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/analyze_stage35c.cpython-39.pyc",
+    "size": 43596,
+    "mtime_ns": 1792057630218908336
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/validation.cpython-313.pyc",
+    "size": 3487,
+    "mtime_ns": 1791957278512272437
+  },
+  {
+    "path": "agri/plant_gs/jepa/__pycache__/smoke_real_plant.cpython-39.pyc",
+    "size": 10127,
+    "mtime_ns": 1791957662429357341
+  },
+  {
+    "path": "agri/plant_gs/jepa/tests/test_dataset.py",
+    "size": 7914,
+    "mtime_ns": 1791957323126802103
+  },
+  {
+    "path": "agri/plant_gs/jepa/tests/test_pilot.py",
+    "size": 1569,
+    "mtime_ns": 1792042974607819867
+  },
+  {
+    "path": "agri/plant_gs/jepa/tests/test_validation.py",
+    "size": 1171,
+    "mtime_ns": 1791957384231885715
+  },
+  {
+    "path": "agri/plant_gs/jepa/tests/__pycache__/test_pilot.cpython-313-pytest-8.3.4.pyc",
+    "size": 10146,
+    "mtime_ns": 1792042975799259604
+  },
+  {
+    "path": "agri/plant_gs/jepa/tests/__pycache__/test_pilot.cpython-313.pyc",
+    "size": 3620,
+    "mtime_ns": 1792042974666458235
+  },
+  {
+    "path": "agri/plant_gs/jepa/tests/__pycache__/test_validation.cpython-313-pytest-8.3.4.pyc",
+    "size": 6271,
+    "mtime_ns": 1791957384377857729
+  },
+  {
+    "path": "agri/plant_gs/jepa/tests/__pycache__/test_dataset.cpython-313-pytest-8.3.4.pyc",
+    "size": 34007,
+    "mtime_ns": 1791957323289100076
+  },
+  {
+    "path": "agri/plant_gs/foreground/__pycache__/train.cpython-313.pyc",
+    "size": 26584,
+    "mtime_ns": 1791947678723287569
+  },
+  {
+    "path": "agri/plant_gs/foreground/__pycache__/prepare.cpython-313.pyc",
+    "size": 11184,
+    "mtime_ns": 1791946220324287370
+  },
+  {
+    "path": "agri/plant_gs/foreground/__pycache__/build_dataset.cpython-313.pyc",
+    "size": 12120,
+    "mtime_ns": 1791946220322726749
+  },
+  {
+    "path": "agri/plant_gs/foreground/__pycache__/common.cpython-313.pyc",
+    "size": 6149,
+    "mtime_ns": 1791947677516321766
+  },
+  {
+    "path": "agri/plant_gs/foreground/__pycache__/batch.cpython-313.pyc",
+    "size": 31259,
+    "mtime_ns": 1791966840532685392
+  },
+  {
+    "path": "agri/plant_gs/foreground/__pycache__/export.cpython-313.pyc",
+    "size": 11832,
+    "mtime_ns": 1791946780047058450
+  },
+  {
+    "path": "agri/plant_gs/foreground/__pycache__/losses.cpython-313.pyc",
+    "size": 2665,
+    "mtime_ns": 1791946441665843718
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/test_common.py",
+    "size": 1785,
+    "mtime_ns": 1791946117203692757
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/test_batch.py",
+    "size": 11146,
+    "mtime_ns": 1791966711561848089
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/test_schedule.py",
+    "size": 1071,
+    "mtime_ns": 1791947651444087054
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/test_losses.py",
+    "size": 647,
+    "mtime_ns": 1791946413526728837
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/test_export.py",
+    "size": 988,
+    "mtime_ns": 1791946623566051296
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/__pycache__/test_export.cpython-313-pytest-8.3.4.pyc",
+    "size": 4996,
+    "mtime_ns": 1791946623828686090
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/__pycache__/test_schedule.cpython-313-pytest-8.3.4.pyc",
+    "size": 7462,
+    "mtime_ns": 1791947651606514627
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/__pycache__/test_common.cpython-313.pyc",
+    "size": 3903,
+    "mtime_ns": 1791946220325010971
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/__pycache__/test_losses.cpython-313-pytest-8.3.4.pyc",
+    "size": 3073,
+    "mtime_ns": 1791946413670190132
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/__pycache__/test_losses.cpython-313.pyc",
+    "size": 1489,
+    "mtime_ns": 1791946579987897004
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/__pycache__/test_schedule.cpython-313.pyc",
+    "size": 1547,
+    "mtime_ns": 1791947679738584704
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/__pycache__/test_batch.cpython-313-pytest-8.3.4.pyc",
+    "size": 41691,
+    "mtime_ns": 1791966712656842888
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/__pycache__/test_export.cpython-313.pyc",
+    "size": 2317,
+    "mtime_ns": 1791946780047654658
+  },
+  {
+    "path": "agri/plant_gs/foreground/tests/__pycache__/test_common.cpython-313-pytest-8.3.4.pyc",
+    "size": 5152,
+    "mtime_ns": 1791946117345265838
+  },
+  {
+    "path": "experiments/agri_pilot/split.json",
+    "size": 548,
+    "mtime_ns": 1792043002960702466
+  },
+  {
+    "path": "experiments/agri_pilot/data_audit.json",
+    "size": 25217,
+    "mtime_ns": 1792043002960239246
+  },
+  {
+    "path": "experiments/agri_pilot/initial_random.pt",
+    "size": 185243293,
+    "mtime_ns": 1792043112247801207
+  },
+  {
+    "path": "experiments/agri_pilot/sanity/checkpoint_last.pt",
+    "size": 380991545,
+    "mtime_ns": 1792043970776829693
+  },
+  {
+    "path": "experiments/agri_pilot/sanity/train_metrics.csv",
+    "size": 2053,
+    "mtime_ns": 1792043970934232605
+  },
+  {
+    "path": "experiments/agri_pilot/sanity/run_config.json",
+    "size": 975,
+    "mtime_ns": 1792043968275656573
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/checkpoint_last.pt",
+    "size": 380992953,
+    "mtime_ns": 1792044122767354415
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/train_metrics.csv",
+    "size": 84033,
+    "mtime_ns": 1792044122931337374
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/run_config.json",
+    "size": 2241,
+    "mtime_ns": 1792044076222264465
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_014.npz",
+    "size": 49471,
+    "mtime_ns": 1792044110527635889
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_008.npz",
+    "size": 49479,
+    "mtime_ns": 1792044098753887655
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_003.npz",
+    "size": 49493,
+    "mtime_ns": 1792044087993048467
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_006.npz",
+    "size": 49463,
+    "mtime_ns": 1792044094786313775
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_009.npz",
+    "size": 49507,
+    "mtime_ns": 1792044100718677442
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_020.npz",
+    "size": 49457,
+    "mtime_ns": 1792044122355397225
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_005.npz",
+    "size": 49430,
+    "mtime_ns": 1792044092539556056
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_015.npz",
+    "size": 49497,
+    "mtime_ns": 1792044112478430302
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_004.npz",
+    "size": 49410,
+    "mtime_ns": 1792044090282800117
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_012.npz",
+    "size": 49448,
+    "mtime_ns": 1792044106600051362
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_019.npz",
+    "size": 49506,
+    "mtime_ns": 1792044120399600761
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_007.npz",
+    "size": 49430,
+    "mtime_ns": 1792044096800097219
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_011.npz",
+    "size": 49485,
+    "mtime_ns": 1792044104631260416
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_017.npz",
+    "size": 49538,
+    "mtime_ns": 1792044116495008622
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_018.npz",
+    "size": 49473,
+    "mtime_ns": 1792044118419807310
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_013.npz",
+    "size": 49500,
+    "mtime_ns": 1792044108545845268
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_010.npz",
+    "size": 49428,
+    "mtime_ns": 1792044102603476288
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_001.npz",
+    "size": 49452,
+    "mtime_ns": 1792044083643522307
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_016.npz",
+    "size": 49458,
+    "mtime_ns": 1792044114453222708
+  },
+  {
+    "path": "experiments/agri_pilot/pilot/sampling_indices/epoch_002.npz",
+    "size": 49447,
+    "mtime_ns": 1792044085703297586
+  },
+  {
+    "path": "results/agri_pilot/random_init_metrics.json",
+    "size": 20733,
+    "mtime_ns": 1792044189934947820
+  },
+  {
+    "path": "results/agri_pilot/REPORT.md",
+    "size": 10149,
+    "mtime_ns": 1792044955304097134
+  },
+  {
+    "path": "results/agri_pilot/loss_curves.pdf",
+    "size": 17145,
+    "mtime_ns": 1792044955301294576
+  },
+  {
+    "path": "results/agri_pilot/loss_curves.png",
+    "size": 101404,
+    "mtime_ns": 1792044955218298699
+  },
+  {
+    "path": "results/agri_pilot/fixed_test_sampling_indices.npz",
+    "size": 39599,
+    "mtime_ns": 1792044187340909951
+  },
+  {
+    "path": "results/agri_pilot/pilot_trained_metrics.json",
+    "size": 20734,
+    "mtime_ns": 1792044191119394078
+  },
+  {
+    "path": "results/agri_pilot/evaluation_comparison.json",
+    "size": 46778,
+    "mtime_ns": 1792044191129075648
+  },
+  {
+    "path": "results/agri_pilot/metrics_comparison.csv",
+    "size": 529,
+    "mtime_ns": 1792044191129282385
+  },
+  {
+    "path": "results/agri_pilot/pilot_trained_embeddings.npz",
+    "size": 149841,
+    "mtime_ns": 1792044191117548648
+  },
+  {
+    "path": "results/agri_pilot/random_init_embeddings.npz",
+    "size": 150131,
+    "mtime_ns": 1792044189933661726
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/occlusion_errors.csv",
+    "size": 656,
+    "mtime_ns": 1792057653321101900
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/protected_artifacts_after.json",
+    "size": 31916,
+    "mtime_ns": 1792057661951461195
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/hard_negative_ranking.csv",
+    "size": 101561,
+    "mtime_ns": 1792057653319835370
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/candidate_error_summary.csv",
+    "size": 3219,
+    "mtime_ns": 1792057653320455666
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/summary.json",
+    "size": 20814,
+    "mtime_ns": 1792057653323000323
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/error_cases.png",
+    "size": 1479165,
+    "mtime_ns": 1792057655740795275
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/axis_errors.csv",
+    "size": 629,
+    "mtime_ns": 1792057653321189399
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/per_plant_errors.csv",
+    "size": 1401,
+    "mtime_ns": 1792057653320212235
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/verification.json",
+    "size": 1347,
+    "mtime_ns": 1792057695860284896
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/run_completion.json",
+    "size": 417,
+    "mtime_ns": 1792057695860589042
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/focus_candidate_statistics.csv",
+    "size": 8314,
+    "mtime_ns": 1792057653320988516
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/error_case_manifest.json",
+    "size": 8675,
+    "mtime_ns": 1792057656274592506
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/query_error_details.csv",
+    "size": 10820,
+    "mtime_ns": 1792057653314212222
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/error_analysis.md",
+    "size": 13099,
+    "mtime_ns": 1792057656274924234
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/protected_artifacts_before.json",
+    "size": 31916,
+    "mtime_ns": 1792057653313632398
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/confusion_matrix.pdf",
+    "size": 23665,
+    "mtime_ns": 1792057654128191726
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/provenance.json",
+    "size": 478,
+    "mtime_ns": 1792057661969895449
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/confusion_matrix.png",
+    "size": 161645,
+    "mtime_ns": 1792057653952125830
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/saved_cosine_scores.npz",
+    "size": 5328,
+    "mtime_ns": 1792057653321834659
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/confusion_matrix.csv",
+    "size": 434,
+    "mtime_ns": 1792057653321527178
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/analysis_checks.json",
+    "size": 603,
+    "mtime_ns": 1792057661951673416
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5c/error_cases.pdf",
+    "size": 1128340,
+    "mtime_ns": 1792057656271745360
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/validation_amendment.json",
+    "size": 1388,
+    "mtime_ns": 1792054595784093847
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/pooling_comparison.csv",
+    "size": 7966,
+    "mtime_ns": 1792053843302562373
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/retrieval_per_query.csv",
+    "size": 48548,
+    "mtime_ns": 1792053843301967588
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/sampling_plan.json",
+    "size": 61349,
+    "mtime_ns": 1792053838004406543
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/protected_artifacts_after.json",
+    "size": 23695,
+    "mtime_ns": 1792053849212410095
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/retrieval_margin.pdf",
+    "size": 25842,
+    "mtime_ns": 1792053843894138303
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/per_plant_comparison.csv",
+    "size": 23140,
+    "mtime_ns": 1792053843304044804
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/summary.json",
+    "size": 19687,
+    "mtime_ns": 1792053843897102304
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/encoder_features.npz",
+    "size": 13596398,
+    "mtime_ns": 1792053843266544246
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/protocol.json",
+    "size": 19229,
+    "mtime_ns": 1792053794188756031
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/verification.json",
+    "size": 2597,
+    "mtime_ns": 1792054779332344478
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/run_completion.json",
+    "size": 232,
+    "mtime_ns": 1792054779332572004
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/protected_artifacts_before.json",
+    "size": 23695,
+    "mtime_ns": 1792053794189445860
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/diagnosis_report.md",
+    "size": 12254,
+    "mtime_ns": 1792054626605660152
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/sampling_indices.npz",
+    "size": 475543,
+    "mtime_ns": 1792053838082655441
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/retrieval_margin.png",
+    "size": 284382,
+    "mtime_ns": 1792053843767090754
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5b/sampling_drift.csv",
+    "size": 4626,
+    "mtime_ns": 1792053843304319174
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/pooling_comparison.csv",
+    "size": 9194,
+    "mtime_ns": 1792050064187328114
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/diagnostic_summary.json",
+    "size": 247160,
+    "mtime_ns": 1792050793945371961
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/retrieval_per_query.csv",
+    "size": 509294,
+    "mtime_ns": 1792050064220879589
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/sampling_plan.json",
+    "size": 102480,
+    "mtime_ns": 1792050052550405104
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/retrieval_per_plant.csv",
+    "size": 122460,
+    "mtime_ns": 1792050793934389329
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/protected_artifacts_after.json",
+    "size": 16514,
+    "mtime_ns": 1792050075282136020
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/embedding_pca.png",
+    "size": 157763,
+    "mtime_ns": 1792050069625790583
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/local_token_statistics.json",
+    "size": 94825,
+    "mtime_ns": 1792050064226649688
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/random_init_features.npz",
+    "size": 2278083,
+    "mtime_ns": 1792050058937503190
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/centered_cosine_similarity_matrix.pdf",
+    "size": 43464,
+    "mtime_ns": 1792050068937990594
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/retrieval_protocol_comparison.csv",
+    "size": 32794,
+    "mtime_ns": 1792050064222398379
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/pilot_trained_retrieval_features.npz",
+    "size": 1030940,
+    "mtime_ns": 1792050064167217874
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/spatial_token_pair_statistics.csv",
+    "size": 132950,
+    "mtime_ns": 1792050064194511323
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/random_init_retrieval_features.npz",
+    "size": 1035336,
+    "mtime_ns": 1792050058996993246
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/centered_cosine_similarity_matrix.png",
+    "size": 266360,
+    "mtime_ns": 1792050068438137174
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/verification.json",
+    "size": 1054,
+    "mtime_ns": 1792050641977446991
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/run_completion.json",
+    "size": 282,
+    "mtime_ns": 1792050075336789911
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/protected_artifacts_before.json",
+    "size": 16514,
+    "mtime_ns": 1792050042319078489
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/diagnosis_report.md",
+    "size": 29250,
+    "mtime_ns": 1792050793935748190
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/cosine_similarity_matrix.png",
+    "size": 255540,
+    "mtime_ns": 1792050066197801242
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/feature_statistics.csv",
+    "size": 15447,
+    "mtime_ns": 1792050064186762479
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/cosine_similarity_matrix.pdf",
+    "size": 42545,
+    "mtime_ns": 1792050066691653727
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/sampling_indices.npz",
+    "size": 434765,
+    "mtime_ns": 1792050052546785447
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/pilot_trained_features.npz",
+    "size": 2271929,
+    "mtime_ns": 1792050064105433965
+  },
+  {
+    "path": "results/agri_diagnostics/stage_3_5a/embedding_pca.pdf",
+    "size": 30371,
+    "mtime_ns": 1792050070024718149
+  }
+]

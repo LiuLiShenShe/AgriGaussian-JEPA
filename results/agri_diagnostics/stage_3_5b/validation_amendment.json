@@ -1,0 +1,28 @@
+{
+  "created_at_utc": "2026-10-15T08:56:35.783849+00:00",
+  "protocol_sha256": "080136e4fe121617de0b65c03f0dae745d32618fd07c37f7c4820b80dadf2cb0",
+  "reason": "Original float64 unit-norm assertion 1e-15 rejected 768-D rounding error 1.7763568394002505e-15; corrected validation tolerance to 32*float64 epsilon. No numerical experiment or scoring change.",
+  "runner_revision": "Accept and copy this explicitly fingerprinted validator-only amendment while preserving the original protocol bytes; allow only runner hash guard and validator revisions, not analysis/scoring module.",
+  "source_revisions": {
+    "pooling_stage35b.py": {
+      "original_sha256": "5ebada75aef65acaeb6b2073b645e3eadc9a5ccf8d6ebea7ab7163ca310b78a3",
+      "revised_sha256": "c06c6660ef135a883d83343802991b4579dbcaab7487eface25257e8b3ab476f"
+    },
+    "verify_stage35b.py": {
+      "original_sha256": "05600c5dc97b29eee2f2abf1ee2b32b953be86dddc8010b1613ffee49a539c0b",
+      "revised_sha256": "ecdb1d63ffb9de57cd5676f4aea0e81834347b9a3e53791bc6ce63e9dbcd0647"
+    }
+  },
+  "unchanged": [
+    "protocol.json",
+    "all seeds",
+    "sampling indices",
+    "encoder inputs and tokens",
+    "raw pooling components",
+    "float64 embeddings",
+    "retrieval scores",
+    "pooling_stage35b_report.py"
+  ],
+  "maximum_observed_unit_norm_error": 1.7763568394002505e-15,
+  "corrected_tolerance": 7.105427357601002e-15
+}
