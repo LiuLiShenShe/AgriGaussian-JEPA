@@ -1,0 +1,9 @@
+{
+  "method": "GET",
+  "url": "https://huggingface.co/datasets/ShapeNet/ShapeSplatsV1/resolve/1dabf50223bf360307afa4e78539fbd1aa73d65e/DATA.md",
+  "status": 403,
+  "error_code": "GatedRepo",
+  "error_message": "Access to dataset ShapeNet/ShapeSplatsV1 is restricted and you are not in the authorized list. Visit https://huggingface.co/datasets/ShapeNet/ShapeSplatsV1 to ask for access.",
+  "redirect_host": null,
+  "body": "Access to dataset ShapeNet/ShapeSplatsV1 is restricted and you are not in the authorized list. Visit https://huggingface.co/datasets/ShapeNet/ShapeSplatsV1 to ask for access."
+}

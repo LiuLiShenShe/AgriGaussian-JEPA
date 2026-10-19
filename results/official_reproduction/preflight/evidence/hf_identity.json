@@ -1,0 +1,10 @@
+{
+  "label": "hf_identity",
+  "url": "https://huggingface.co/api/whoami-v2",
+  "status": 200,
+  "body": {
+    "name": "Syx17751229472",
+    "type": "user",
+    "auth_type": "access_token"
+  }
+}

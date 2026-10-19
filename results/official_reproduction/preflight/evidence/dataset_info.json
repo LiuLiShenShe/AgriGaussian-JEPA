@@ -1,0 +1,237 @@
+{
+  "label": "dataset_info",
+  "url": "https://huggingface.co/api/datasets/ShapeNet/ShapeSplatsV1",
+  "status": 200,
+  "body": {
+    "_id": "66c6e49fd1af9f7943e0418d",
+    "id": "ShapeNet/ShapeSplatsV1",
+    "author": "ShapeNet",
+    "sha": "1dabf50223bf360307afa4e78539fbd1aa73d65e",
+    "lastModified": "2026-09-08T22:49:51.000Z",
+    "private": false,
+    "gated": "manual",
+    "disabled": false,
+    "tags": [
+      "language:en",
+      "license:other",
+      "size_categories:10K<n<100K",
+      "modality:3d",
+      "library:datasets",
+      "library:mlcroissant",
+      "arxiv:2408.10906",
+      "arxiv:1512.03012",
+      "region:us",
+      "3D shapes, Gaussian splats"
+    ],
+    "description": "This repository contains ShapeSplats, a large dataset of Gaussian splats spanning 65K objects in 87 unique categories (gathered from ShapeNetCore, ShapeNet-Part, and ModelNet).\nShapeSplatsV1 consists of the 52K objects across 55 categories of ShapeNetCore.\nThe data is distributed as ply files where information about each Gaussian is encoded in custom vertex attributes.\nPlease see DATA.md for details about the data.\nIf you use the ShapeSplatsV1 data, you agree to abide by the ShapeNet terms of… See the full description on the dataset page: https://huggingface.co/datasets/ShapeNet/ShapeSplatsV1.",
+    "downloads": 810,
+    "likes": 46,
+    "cardData": {
+      "language": [
+        "en"
+      ],
+      "pretty_name": "ShapeSplatsV1",
+      "tags": [
+        "3D shapes, Gaussian splats"
+      ],
+      "license": "other",
+      "extra_gated_heading": "Acknowledge license to accept the repository",
+      "extra_gated_prompt": "To request access to the ShapeSplats repo, you will need to provide your **full name** (please provide both your first and last name), the name of your **advisor or the principal investigator (PI)** of your lab (in the PI/Advisor) fields, and the **school or company** that you are affiliated with (the **Affiliation** field).   After requesting access to the ShapeSplats repo, you will be considered for access approval. \n\nAfter access approval, you (the \"Researcher\") receive permission to use the ShapeSplats dataset which is generated from the ShapeNet database (the \"Database\") at Princeton University and Stanford University. In exchange for being able to join the ShapeNet community and receive such permission, Researcher hereby agrees to the following terms and conditions: Researcher shall use the Database only for non-commercial research and educational purposes. Princeton University and Stanford University make no representations or warranties regarding the Database, including but not limited to warranties of non-infringement or fitness for a particular purpose. Researcher accepts full responsibility for his or her use of the Database and shall defend and indemnify Princeton University and Stanford University, including their employees, Trustees, officers and agents, against any and all claims arising from Researcher's use of the Database, including but not limited to Researcher's use of any copies of copyrighted 3D models that he or she may create from the Database. Researcher may provide research associates and colleagues with access to the Database provided that they first agree to be bound by these terms and conditions. Princeton University and Stanford University reserve the right to terminate Researcher's access to the Database at any time. If Researcher is employed by a for-profit, commercial entity, Researcher's employer shall also be bound by these terms and conditions, and Researcher hereby represents that he or she is fully authorized to enter into this agreement on behalf of such employer. The law of the State of New Jersey shall apply to all disputes under this agreement.\n\nFor access to the data, please fill in your **full name** (both first and last name), the name of your **advisor or principal investigator (PI)**, and the name of the **school or company** you are affliated with.   Please actually fill out the fields (DO NOT put the word \"Advisor\" for PI/Advisor and the word \"School\" for \"Affiliation\", please specify the name of your advisor and the name of your school).",
+      "extra_gated_fields": {
+        "Name": "text",
+        "PI/Advisor": "text",
+        "Affiliation": "text",
+        "Purpose": "text",
+        "Country": "text",
+        "I agree to use this dataset for non-commercial use ONLY": "checkbox"
+      }
+    },
+    "siblings": [
+      {
+        "rfilename": ".gitattributes"
+      },
+      {
+        "rfilename": "02691156.zip"
+      },
+      {
+        "rfilename": "02747177.zip"
+      },
+      {
+        "rfilename": "02773838.zip"
+      },
+      {
+        "rfilename": "02801938.zip"
+      },
+      {
+        "rfilename": "02808440.zip"
+      },
+      {
+        "rfilename": "02818832.zip"
+      },
+      {
+        "rfilename": "02828884.zip"
+      },
+      {
+        "rfilename": "02843684.zip"
+      },
+      {
+        "rfilename": "02871439.zip"
+      },
+      {
+        "rfilename": "02876657.zip"
+      },
+      {
+        "rfilename": "02880940.zip"
+      },
+      {
+        "rfilename": "02924116.zip"
+      },
+      {
+        "rfilename": "02933112.zip"
+      },
+      {
+        "rfilename": "02942699.zip"
+      },
+      {
+        "rfilename": "02946921.zip"
+      },
+      {
+        "rfilename": "02954340.zip"
+      },
+      {
+        "rfilename": "02958343.zip"
+      },
+      {
+        "rfilename": "02992529.zip"
+      },
+      {
+        "rfilename": "03001627_0.zip"
+      },
+      {
+        "rfilename": "03001627_1.zip"
+      },
+      {
+        "rfilename": "03046257.zip"
+      },
+      {
+        "rfilename": "03085013.zip"
+      },
+      {
+        "rfilename": "03207941.zip"
+      },
+      {
+        "rfilename": "03211117.zip"
+      },
+      {
+        "rfilename": "03261776.zip"
+      },
+      {
+        "rfilename": "03325088.zip"
+      },
+      {
+        "rfilename": "03337140.zip"
+      },
+      {
+        "rfilename": "03467517.zip"
+      },
+      {
+        "rfilename": "03513137.zip"
+      },
+      {
+        "rfilename": "03593526.zip"
+      },
+      {
+        "rfilename": "03624134.zip"
+      },
+      {
+        "rfilename": "03636649.zip"
+      },
+      {
+        "rfilename": "03642806.zip"
+      },
+      {
+        "rfilename": "03691459.zip"
+      },
+      {
+        "rfilename": "03710193.zip"
+      },
+      {
+        "rfilename": "03759954.zip"
+      },
+      {
+        "rfilename": "03761084.zip"
+      },
+      {
+        "rfilename": "03790512.zip"
+      },
+      {
+        "rfilename": "03797390.zip"
+      },
+      {
+        "rfilename": "03928116.zip"
+      },
+      {
+        "rfilename": "03938244.zip"
+      },
+      {
+        "rfilename": "03948459.zip"
+      },
+      {
+        "rfilename": "03991062.zip"
+      },
+      {
+        "rfilename": "04004475.zip"
+      },
+      {
+        "rfilename": "04074963.zip"
+      },
+      {
+        "rfilename": "04090263.zip"
+      },
+      {
+        "rfilename": "04099429.zip"
+      },
+      {
+        "rfilename": "04225987.zip"
+      },
+      {
+        "rfilename": "04256520.zip"
+      },
+      {
+        "rfilename": "04330267.zip"
+      },
+      {
+        "rfilename": "04379243_0.zip"
+      },
+      {
+        "rfilename": "04379243_1.zip"
+      },
+      {
+        "rfilename": "04401088.zip"
+      },
+      {
+        "rfilename": "04460130.zip"
+      },
+      {
+        "rfilename": "04468005.zip"
+      },
+      {
+        "rfilename": "04530566.zip"
+      },
+      {
+        "rfilename": "04554684.zip"
+      },
+      {
+        "rfilename": "DATA.md"
+      },
+      {
+        "rfilename": "README.md"
+      },
+      {
+        "rfilename": "ShapeSplatsV1_Qualitative_Results.json"
+      }
+    ],
+    "createdAt": "2024-08-22T07:11:27.000Z",
+    "usedStorage": 305708008512
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "task": "gpu",
+  "exit": 0,
+  "stdout": "index, name, uuid, driver_version, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%], compute_cap\n0, NVIDIA RTX A6000, GPU-db3ec610-630b-fa4f-66f2-b69f269ca856, 590.48.01, 49140 MiB, 553 MiB, 47982 MiB, 0 %, 8.6\n1, NVIDIA RTX A6000, GPU-6836f890-98b2-5891-07ef-675c25199c65, 590.48.01, 49140 MiB, 1586 MiB, 46957 MiB, 86 %, 8.6\n",
+  "stderr": ""
+}

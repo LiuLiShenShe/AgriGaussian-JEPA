@@ -1,0 +1,6 @@
+{
+  "task": "gpu_processes",
+  "exit": 0,
+  "stdout": "pid, process_name, used_gpu_memory [MiB]\n2657982, /data/fj/F2DMAS/2d-gaussian-splatting-main/venv/bin/python, 1568 MiB\n",
+  "stderr": ""
+}

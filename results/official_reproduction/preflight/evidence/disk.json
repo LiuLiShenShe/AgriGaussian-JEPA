@@ -1,0 +1,6 @@
+{
+  "task": "disk",
+  "exit": 0,
+  "stdout": "Filesystem     Type  Size  Used Avail Use% Mounted on\n/dev/nvme0n1p2 ext4  1.9T  1.3T  468G  74% /\n/dev/nvme0n1p2 ext4  1.9T  1.3T  468G  74% /\n/dev/nvme0n1p2 ext4  1.9T  1.3T  468G  74% /\n",
+  "stderr": ""
+}

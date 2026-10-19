@@ -1,0 +1,426 @@
+[
+  {
+    "file": ".gitignore",
+    "status": "identical"
+  },
+  {
+    "file": "CHECKPOINTS.md",
+    "status": "identical"
+  },
+  {
+    "file": "CONTRIBUTING.md",
+    "status": "identical"
+  },
+  {
+    "file": "LICENSE",
+    "status": "identical"
+  },
+  {
+    "file": "MODEL_CARD.md",
+    "status": "identical"
+  },
+  {
+    "file": "README.md",
+    "status": "identical"
+  },
+  {
+    "file": "THIRD_PARTY_NOTICES.md",
+    "status": "identical"
+  },
+  {
+    "file": "assets/framework.png",
+    "status": "identical"
+  },
+  {
+    "file": "assets/gaussian_jepa_framework.png",
+    "status": "identical"
+  },
+  {
+    "file": "assets/gaussian_jepa_teaser.png",
+    "status": "identical"
+  },
+  {
+    "file": "assets/teaser.png",
+    "status": "identical"
+  },
+  {
+    "file": "cfgs/dataset_configs/ModelNet10GS.yaml",
+    "status": "identical"
+  },
+  {
+    "file": "cfgs/dataset_configs/ModelNet40GS.yaml",
+    "status": "identical"
+  },
+  {
+    "file": "cfgs/dataset_configs/ShapeNet55GS.yaml",
+    "status": "identical"
+  },
+  {
+    "file": "cfgs/finetune/modelnet10_full.yaml",
+    "status": "identical"
+  },
+  {
+    "file": "cfgs/finetune/modelnet10_linear.yaml",
+    "status": "identical"
+  },
+  {
+    "file": "cfgs/finetune/modelnet10_mlp3.yaml",
+    "status": "identical"
+  },
+  {
+    "file": "cfgs/finetune/modelnet40_full.yaml",
+    "status": "identical"
+  },
+  {
+    "file": "cfgs/finetune/modelnet40_linear.yaml",
+    "status": "identical"
+  },
+  {
+    "file": "cfgs/finetune/modelnet40_mlp3.yaml",
+    "status": "identical"
+  },
+  {
+    "file": "cfgs/pretrain/gaussian_jepa.yaml",
+    "status": "identical"
+  },
+  {
+    "file": "completion_gs/README.md",
+    "status": "identical"
+  },
+  {
+    "file": "completion_gs/__init__.py",
+    "status": "identical"
+  },
+  {
+    "file": "completion_gs/data.py",
+    "status": "identical"
+  },
+  {
+    "file": "completion_gs/evaluate_render.py",
+    "status": "identical"
+  },
+  {
+    "file": "completion_gs/model.py",
+    "status": "identical"
+  },
+  {
+    "file": "completion_gs/select_visual_cases.py",
+    "status": "identical"
+  },
+  {
+    "file": "completion_gs/train.py",
+    "status": "identical"
+  },
+  {
+    "file": "completion_gs/visualize_compare.py",
+    "status": "identical"
+  },
+  {
+    "file": "completion_gs/visualize_completion_paper.py",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/ModelNetGaussian.py",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/ShapeNet55Gaussian.py",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/__init__.py",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/build.py",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/data_transforms.py",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/io.py",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/modelnet_split/modelnet10_shape_names.txt",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/modelnet_split/modelnet10_test.txt",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/modelnet_split/modelnet10_train.txt",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/modelnet_split/modelnet40_shape_names.txt",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/modelnet_split/modelnet40_test.txt",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/modelnet_split/modelnet40_train.txt",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/shapenet_split/test.txt",
+    "status": "identical"
+  },
+  {
+    "file": "datasets/shapenet_split/train.txt",
+    "status": "identical"
+  },
+  {
+    "file": "docs/getting_started.md",
+    "status": "identical"
+  },
+  {
+    "file": "docs/results/README.md",
+    "status": "identical"
+  },
+  {
+    "file": "docs/results/classification.md",
+    "status": "identical"
+  },
+  {
+    "file": "docs/results/completion.md",
+    "status": "identical"
+  },
+  {
+    "file": "docs/results/partial_observation.md",
+    "status": "identical"
+  },
+  {
+    "file": "docs/results/partseg.md",
+    "status": "identical"
+  },
+  {
+    "file": "docs/results/resampling_consistency.md",
+    "status": "identical"
+  },
+  {
+    "file": "docs/validation.md",
+    "status": "identical"
+  },
+  {
+    "file": "environment.yml",
+    "status": "identical"
+  },
+  {
+    "file": "local.env.example",
+    "status": "identical"
+  },
+  {
+    "file": "main.py",
+    "status": "identical"
+  },
+  {
+    "file": "models/Gaussian_JEPA_ExpMultiScale.py",
+    "status": "identical"
+  },
+  {
+    "file": "models/Gaussian_MAE.py",
+    "status": "identical"
+  },
+  {
+    "file": "models/__init__.py",
+    "status": "identical"
+  },
+  {
+    "file": "models/build.py",
+    "status": "identical"
+  },
+  {
+    "file": "models/neural_nn.py",
+    "status": "identical"
+  },
+  {
+    "file": "models/ops.py",
+    "status": "identical"
+  },
+  {
+    "file": "models/transformer.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/README.md",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/dataset.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/logger.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/main.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/misc.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/models/logger.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/models/neural_nn.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/models/ops.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/models/pointnet2_utils.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/models/pt.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/pointnet_util.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/prepare_seg_gs.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/provider.py",
+    "status": "identical"
+  },
+  {
+    "file": "segmentation_gs/split_to_org_gs_map.json",
+    "status": "identical"
+  },
+  {
+    "file": "tools/__init__.py",
+    "status": "identical"
+  },
+  {
+    "file": "tools/builder.py",
+    "status": "identical"
+  },
+  {
+    "file": "tools/compute_relative_drift.py",
+    "status": "identical"
+  },
+  {
+    "file": "tools/eval_frozen_embeddings.py",
+    "status": "identical"
+  },
+  {
+    "file": "tools/eval_partial_retrieval.py",
+    "status": "identical"
+  },
+  {
+    "file": "tools/extract_features.py",
+    "status": "identical"
+  },
+  {
+    "file": "tools/runner.py",
+    "status": "identical"
+  },
+  {
+    "file": "tools/runner_finetune.py",
+    "status": "identical"
+  },
+  {
+    "file": "tools/runner_pretrain.py",
+    "status": "identical"
+  },
+  {
+    "file": "tools/smoke_test_release.py",
+    "status": "identical"
+  },
+  {
+    "file": "utils/AverageMeter.py",
+    "status": "identical"
+  },
+  {
+    "file": "utils/checkpoint.py",
+    "status": "identical"
+  },
+  {
+    "file": "utils/config.py",
+    "status": "identical"
+  },
+  {
+    "file": "utils/dist_utils.py",
+    "status": "identical"
+  },
+  {
+    "file": "utils/gaussian.py",
+    "status": "identical"
+  },
+  {
+    "file": "utils/logger.py",
+    "status": "identical"
+  },
+  {
+    "file": "utils/misc.py",
+    "status": "identical"
+  },
+  {
+    "file": "utils/parser.py",
+    "status": "identical"
+  },
+  {
+    "file": "utils/registry.py",
+    "status": "identical"
+  },
+  {
+    "file": "utils/rotation_conversions.py",
+    "status": "identical"
+  },
+  {
+    "file": "viz/README.md",
+    "status": "identical"
+  },
+  {
+    "file": "viz/build_partseg_candidate_gallery.py",
+    "status": "identical"
+  },
+  {
+    "file": "viz/export_partseg_predictions.py",
+    "status": "identical"
+  },
+  {
+    "file": "viz/export_partseg_qualitative.py",
+    "status": "identical"
+  },
+  {
+    "file": "viz/partseg_qualitative_common.py",
+    "status": "identical"
+  },
+  {
+    "file": "viz/render_gs.py",
+    "status": "identical"
+  },
+  {
+    "file": "viz/render_gs_alpha.py",
+    "status": "identical"
+  },
+  {
+    "file": "viz/viz_partial_observation_paper.py",
+    "status": "identical"
+  },
+  {
+    "file": "viz/viz_resampling_consistency.py",
+    "status": "identical"
+  },
+  {
+    "file": "viz/viz_resampling_paper.py",
+    "status": "identical"
+  }
+]
