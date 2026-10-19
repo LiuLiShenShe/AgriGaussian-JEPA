@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "source_ply": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/final_7k/point_cloud.ply",
+  "source_sha256": "a2bdefc1a7d89d680ad5cdb7b043f53edb239e8f303e7750b1cebdf462102e5a",
+  "source_gaussians": 313936,
+  "sampled_gaussians": 1024,
+  "input_shape": [
+    2,
+    1024,
+    14
+  ],
+  "initialization": "random (no official pretrained checkpoint available)",
+  "steps": 5,
+  "learning_rate": 0.0001,
+  "weight_decay": 0.05,
+  "ema_momentum": 0.996,
+  "seed": 0,
+  "sampling_seed": 0,
+  "normalization": {
+    "mode": "pretrain",
+    "xyz_center": [
+      -0.011743755079805851,
+      -0.0411272831261158,
+      -0.003208501497283578
+    ],
+    "xyz_radius": 1.4979382753372192,
+    "scale_center": [
+      0.0034906212240457535,
+      0.0034745894372463226,
+      0.0035167771857231855
+    ],
+    "scale_factor": 0.12430354207754135,
+    "computed_from_full_asset": true
+  },
+  "all_losses_finite": true,
+  "parameters_moved": true,
+  "total_parameter_move_l2": 0.2099544348102788,
+  "encoder_parameter_move_l2": 0.188819733977044,
+  "teacher_parameter_move_l2": 0.0052994590640519776,
+  "final_grad_global_l2": 0.6645029783248901,
+  "ema_gap_start": 0.0,
+  "ema_gap_final": 1.319559097290039,
+  "ema_teacher_moved_every_step": true,
+  "ema_gap_grows_early_is_expected": true,
+  "ema_gap_note": "with teacher <- momentum*T + (1-momentum)*S and T0 == S0, the gap grows by about (1-momentum) x the student move per step; it narrows once the learning rate decays",
+  "history": [
+    {
+      "step": 0,
+      "total_loss": 1.1195435523986816,
+      "losses": {
+        "geo": 0.4645938575267792,
+        "app": 0.45845216512680054,
+        "ground": 0.1964976042509079
+      },
+      "grad_global_l2": 1.9864070415496826,
+      "parameter_move_l2": {
+        "all": 0.49095709986446084,
+        "JEPA_encoder": 0.4636783593953031,
+        "teacher_encoder": 0.0018546925657272012
+      },
+      "ema_student_teacher_gap_before": 0.0,
+      "ema_student_teacher_gap_after": 0.4618236720561981,
+      "ema_teacher_moved": true,
+      "lr": 0.0001
+    },
+    {
+      "step": 1,
+      "total_loss": 1.0527501106262207,
+      "losses": {
+        "geo": 0.4327924847602844,
+        "app": 0.42428773641586304,
+        "ground": 0.19566994905471802
+      },
+      "grad_global_l2": 0.8058428168296814,
+      "parameter_move_l2": {
+        "all": 0.33787602428841296,
+        "JEPA_encoder": 0.31729268100209457,
+        "teacher_encoder": 0.0029912459289553224
+      },
+      "ema_student_teacher_gap_before": 0.4618236720561981,
+      "ema_student_teacher_gap_after": 0.7448175549507141,
+      "ema_teacher_moved": true,
+      "lr": 0.0001
+    },
+    {
+      "step": 2,
+      "total_loss": 1.0154249668121338,
+      "losses": {
+        "geo": 0.4108695387840271,
+        "app": 0.4080132842063904,
+        "ground": 0.1965421587228775
+      },
+      "grad_global_l2": 0.7297150492668152,
+      "parameter_move_l2": {
+        "all": 0.2751640421816457,
+        "JEPA_encoder": 0.2548415846642643,
+        "teacher_encoder": 0.0038994267377578397
+      },
+      "ema_student_teacher_gap_before": 0.7448175549507141,
+      "ema_student_teacher_gap_after": 0.9709550738334656,
+      "ema_teacher_moved": true,
+      "lr": 0.0001
+    },
+    {
+      "step": 3,
+      "total_loss": 0.9908595085144043,
+      "losses": {
+        "geo": 0.3956053853034973,
+        "app": 0.39588773250579834,
+        "ground": 0.19936636090278625
+      },
+      "grad_global_l2": 0.6889991760253906,
+      "parameter_move_l2": {
+        "all": 0.23665604518905922,
+        "JEPA_encoder": 0.2160660060564465,
+        "teacher_encoder": 0.004656348327662854
+      },
+      "ema_student_teacher_gap_before": 0.9709550738334656,
+      "ema_student_teacher_gap_after": 1.1594257354736328,
+      "ema_teacher_moved": true,
+      "lr": 0.0001
+    },
+    {
+      "step": 4,
+      "total_loss": 0.9669471383094788,
+      "losses": {
+        "geo": 0.3839501738548279,
+        "app": 0.3848612308502197,
+        "ground": 0.19813571870326996
+      },
+      "grad_global_l2": 0.6645029783248901,
+      "parameter_move_l2": {
+        "all": 0.2099544348102788,
+        "JEPA_encoder": 0.188819733977044,
+        "teacher_encoder": 0.0052994590640519776
+      },
+      "ema_student_teacher_gap_before": 1.1594257354736328,
+      "ema_student_teacher_gap_after": 1.319559097290039,
+      "ema_teacher_moved": true,
+      "lr": 0.0001
+    }
+  ],
+  "device": "cuda:0",
+  "gpu_name": "NVIDIA RTX A6000",
+  "torch": "2.0.1",
+  "cuda_build": "11.8",
+  "python": "3.9.23",
+  "elapsed_seconds": 2.969560900999568,
+  "peak_allocated_memory_gib": 0.6444377899169922,
+  "scope": "engineering check of optimiser, gradient and EMA plumbing on one real plant asset; NOT pretraining, and NOT evidence of a useful agricultural representation",
+  "pretraining_claim": "NOT_MADE"
+}

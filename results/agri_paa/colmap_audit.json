@@ -1,0 +1,307 @@
+{
+  "sample_dir": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/external/PAA-Plant-Dataset/Broccoli/20260327-10",
+  "sparse": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/external/PAA-Plant-Dataset/Broccoli/20260327-10/Camera/sparse/0",
+  "files": {
+    "cameras.bin": {
+      "exists": true,
+      "bytes": 104
+    },
+    "images.bin": {
+      "exists": true,
+      "bytes": 5329676
+    },
+    "points3D.bin": {
+      "exists": true,
+      "bytes": 5303539
+    }
+  },
+  "counts": {
+    "cameras": 2,
+    "registered_images": 102,
+    "sparse_points": 69209
+  },
+  "cameras": {
+    "0": {
+      "model": "SIMPLE_PINHOLE",
+      "width": 2128,
+      "height": 3806,
+      "params": [
+        9917.213292454653,
+        1064.0,
+        1903.0
+      ],
+      "images": 99,
+      "distortion": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distortion_free": true,
+      "fx_fy_equal": true,
+      "principal_point_normalised": [
+        0.5,
+        0.5
+      ],
+      "horizontal_fov_deg": 12.24747334091144,
+      "vertical_fov_deg": 21.724736837434865
+    },
+    "1": {
+      "model": "SIMPLE_PINHOLE",
+      "width": 3070,
+      "height": 2020,
+      "params": [
+        3360.826223934333,
+        1535.0,
+        1010.0
+      ],
+      "images": 3,
+      "distortion": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distortion_free": true,
+      "fx_fy_equal": true,
+      "principal_point_normalised": [
+        0.5,
+        0.5
+      ],
+      "horizontal_fov_deg": 49.09548196866948,
+      "vertical_fov_deg": 33.45328899722979
+    }
+  },
+  "camera_model_distortion_free": true,
+  "camera_models_needing_undistortion": [],
+  "camera_models_unsupported": [],
+  "correspondence": {
+    "on_disk": 102,
+    "registered": 102,
+    "registered_missing_on_disk": [],
+    "on_disk_not_registered": [],
+    "exact": true
+  },
+  "image_decoding": {
+    "undecodable": [],
+    "size_mismatch_stored_vs_camera": [],
+    "all_sizes_match_stored_frame": true,
+    "images_carrying_exif_orientation": [
+      {
+        "image": "100.jpg",
+        "orientation": 6
+      },
+      {
+        "image": "101.jpg",
+        "orientation": 6
+      },
+      {
+        "image": "102.jpg",
+        "orientation": 6
+      }
+    ]
+  },
+  "poses": {
+    "non_finite": [],
+    "rotation_determinant_min": 0.9999999999999993,
+    "rotation_determinant_max": 1.0000000000000016,
+    "rotations_are_proper": true,
+    "camera_center_bbox_min": [
+      -4.7801576900893545,
+      -4.146148403916013,
+      -4.98892426061015
+    ],
+    "camera_center_bbox_max": [
+      4.427854496300803,
+      4.466925353906548,
+      -0.6485851416807699
+    ],
+    "camera_center_centroid": [
+      -0.23420080497223522,
+      0.3918675077406608,
+      -2.4968450509233873
+    ],
+    "camera_radius_median": 3.9039491447725476,
+    "camera_radius_min": 0.5433428374537053,
+    "camera_radius_max": 4.787905182095602
+  },
+  "points3D": {
+    "count": 69209,
+    "finite": true,
+    "bbox_min": [
+      -1.5913946628570557,
+      -1.4948912858963013,
+      -5.813535213470459
+    ],
+    "bbox_max": [
+      1.180991768836975,
+      1.365705966949463,
+      -3.228039264678955
+    ],
+    "stored_error_all_zero": true,
+    "stored_error_note": "PAA zeroed this field; the recomputed value below is the meaningful one",
+    "track_length_min": 1,
+    "track_length_median": 2.0,
+    "track_length_max": 35,
+    "observations_total": 221734
+  },
+  "reprojection_error_px": {
+    "observations": 221734,
+    "mean": 0.7743879389205613,
+    "median": 0.5784528960395623,
+    "p95": 2.055502224034995,
+    "max": 41.105484920672055,
+    "finite": true,
+    "per_image_median_worst5": [
+      {
+        "image": "11.jpg",
+        "median": 0.7510409392898105,
+        "n": 1850
+      },
+      {
+        "image": "65.jpg",
+        "median": 0.7346490151378504,
+        "n": 1870
+      },
+      {
+        "image": "45.jpg",
+        "median": 0.7056058577983826,
+        "n": 1605
+      },
+      {
+        "image": "42.jpg",
+        "median": 0.7006459746244461,
+        "n": 1966
+      },
+      {
+        "image": "35.jpg",
+        "median": 0.6955281145679955,
+        "n": 1833
+      }
+    ]
+  },
+  "orientation_probe": [
+    {
+      "image": "1.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3806,
+        2128
+      ],
+      "viewed_shape_hw": [
+        3806,
+        2128
+      ],
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 4.408883571624756,
+      "contrast_viewed": 4.473365783691406,
+      "projected_points_used": 69176
+    },
+    {
+      "image": "21.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3806,
+        2128
+      ],
+      "viewed_shape_hw": [
+        3806,
+        2128
+      ],
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 4.752625465393066,
+      "contrast_viewed": 4.619202136993408,
+      "projected_points_used": 69151
+    },
+    {
+      "image": "41.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3806,
+        2128
+      ],
+      "viewed_shape_hw": [
+        3806,
+        2128
+      ],
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 4.081427574157715,
+      "contrast_viewed": 3.9728448390960693,
+      "projected_points_used": 68802
+    },
+    {
+      "image": "61.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3806,
+        2128
+      ],
+      "viewed_shape_hw": [
+        3806,
+        2128
+      ],
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 3.6873135566711426,
+      "contrast_viewed": 3.626098871231079,
+      "projected_points_used": 68677
+    },
+    {
+      "image": "81.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3806,
+        2128
+      ],
+      "viewed_shape_hw": [
+        3806,
+        2128
+      ],
+      "camera_wxh": [
+        2128,
+        3806
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 3.895329713821411,
+      "contrast_viewed": 3.901132822036743,
+      "projected_points_used": 67421
+    },
+    {
+      "image": "102.jpg",
+      "camera_id": 1,
+      "stored_shape_hw": [
+        2020,
+        3070
+      ],
+      "viewed_shape_hw": [
+        3070,
+        2020
+      ],
+      "camera_wxh": [
+        3070,
+        2020
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 3.473757028579712,
+      "contrast_viewed": 1.838647484779358,
+      "projected_points_used": 69185
+    }
+  ],
+  "status": "PASS",
+  "trainer_ready_without_undistortion": true
+}

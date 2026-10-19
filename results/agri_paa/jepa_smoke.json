@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "source_ply": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/final/point_cloud.ply",
+  "source_sha256": "73498195ccee3c8bb6aafdd8782746c89ded78e9f20d459e82681b19ba43cffd",
+  "source_gaussians": 292517,
+  "sampled_gaussians": 1024,
+  "input_shape": [
+    1,
+    1024,
+    14
+  ],
+  "input_dtype": "torch.float32",
+  "input_contiguous": true,
+  "seed": 0,
+  "model_seed": 0,
+  "normalization": {
+    "mode": "pretrain",
+    "xyz_center": [
+      -0.005256885662674904,
+      -0.04787058010697365,
+      -0.0028758051339536905
+    ],
+    "xyz_radius": 1.4967892169952393,
+    "scale_center": [
+      0.0035328783560544252,
+      0.003520653350278735,
+      0.0035628960467875004
+    ],
+    "scale_factor": 0.19752880930900574,
+    "computed_from_full_asset": true
+  },
+  "sampling": {
+    "method": "uniform",
+    "replacement": false,
+    "unique_indices": 1024,
+    "indices_sha256": "364726bb6ee20aff4e84e8642840928a12544679257e2cafc0b24c32684c620c",
+    "sample_sha256": "fed1ce400bfa51528b5e7733d3a17a08f0b754122ba7a65ea1ab064736e1e97a"
+  },
+  "losses": {
+    "geo": 0.464180052280426,
+    "app": 0.46200230717658997,
+    "ground": 0.2014862298965454
+  },
+  "total_loss": 1.1276686191558838,
+  "gradients": {
+    "trainable_tensors": 215,
+    "tensors_with_finite_grad": 215,
+    "tensors_without_grad": [],
+    "tensors_with_nonfinite_grad": [],
+    "frozen_tensors": 150,
+    "frozen_tensors_with_grad": [],
+    "global_l2_norm": 2.212919235229492,
+    "branches": {
+      "JEPA_encoder": {
+        "trainable_tensors_with_grad": 150,
+        "global_l2_norm": 1.9066133499145508
+      },
+      "teacher_geo_proj": {
+        "trainable_tensors_with_grad": 4,
+        "global_l2_norm": 0.10741463303565979
+      },
+      "teacher_app_proj": {
+        "trainable_tensors_with_grad": 4,
+        "global_l2_norm": 0.09875262528657913
+      },
+      "pred_input_proj": {
+        "trainable_tensors_with_grad": 2,
+        "global_l2_norm": 0.6554269790649414
+      },
+      "predictor_pos_embed": {
+        "trainable_tensors_with_grad": 4,
+        "global_l2_norm": 0.20309680700302124
+      },
+      "predictor": {
+        "trainable_tensors_with_grad": 46,
+        "global_l2_norm": 0.5423463582992554
+      },
+      "pred_geo_out": {
+        "trainable_tensors_with_grad": 2,
+        "global_l2_norm": 0.4727261960506439
+      },
+      "pred_app_out": {
+        "trainable_tensors_with_grad": 2,
+        "global_l2_norm": 0.4716894030570984
+      }
+    },
+    "all_trainable_grads_finite": true,
+    "has_nonzero_gradient": true
+  },
+  "feature_probe": {
+    "scope": "repeatability_and_input_sensitivity_not_semantic_effectiveness",
+    "token_shape": [
+      1,
+      64,
+      384
+    ],
+    "embedding_shape": [
+      1,
+      768
+    ],
+    "embedding_l2_norm": 0.9999999403953552,
+    "repeat_max_abs_token_difference": 0.0,
+    "repeat_embedding_cosine": 1.000000238418579,
+    "zero_dc_embedding_l2_difference": 0.14252297580242157,
+    "zero_dc_embedding_cosine": 0.9898436665534973,
+    "zero_non_xyz_embedding_l2_difference": 0.7801910638809204,
+    "zero_non_xyz_embedding_cosine": 0.6956510543823242,
+    "ablations_are_model_space_diagnostics_not_valid_renderable_gaussians": true
+  },
+  "optimizer_step": false,
+  "ema_update": false,
+  "weights_unchanged": true,
+  "weights_sha256": "978fdc8d461b5413a8539b16fda95f1ef0b37469c6cec35f9ca1fa2d3f68258d",
+  "note": "train() may update BN running buffers in memory; no weights/checkpoints saved",
+  "checkpoint": {
+    "loaded": false,
+    "initialization": "random",
+    "path": null
+  },
+  "semantic_effectiveness": "NOT_EVALUATED",
+  "device": "cuda:0",
+  "gpu_name": "NVIDIA RTX A6000",
+  "cuda_visible_devices": "0",
+  "torch": "2.0.1",
+  "cuda_build": "11.8",
+  "python": "3.9.23",
+  "python_executable": "/home/test/biosoft/enter/envs/gaussian_jepa/bin/python",
+  "forward_backward_seconds": 0.3094248390007124,
+  "peak_allocated_memory_gib": 0.35698604583740234,
+  "config": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/cfgs/pretrain/gaussian_jepa.yaml",
+  "config_sha256": "f5d142513ebc57969946442ce41269054c5dd8eb3c7d9313aaa2fd63a4116400",
+  "feature_artifact": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_paa/jepa_smoke.npz"
+}
