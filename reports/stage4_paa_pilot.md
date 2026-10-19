@@ -38,7 +38,10 @@ rewrite、没有 reset/clean、没有删除任何历史文件。
   既有模块。
 
 `data/plant_gs/F2DMAS_fg_20261014/`（18 株 F2DMAS 植物）与
-`data/plant_gs/XianKeLai1_fg_20261014/` 是**旧成果**，本次全程只读，未删除、未覆盖。
+`data/plant_gs/XianKeLai1_fg_20261014/` 是**旧成果**，位于**仓库外**的
+`/fj/AgriGaussian-JEPA/data/plant_gs/`（20 GB / 1.2 GB），本次全程只读，未删除、
+未覆盖、未移动。本次新增的 PAA 产物在**仓库内** `Gaussian-JEPA/data/` 下
+（external 239 MB + plant_gs/PAA 1.3 GB），两个数据根刻意分开，批量阶段再统一。
 
 ---
 
