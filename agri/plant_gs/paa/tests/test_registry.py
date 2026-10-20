@@ -205,7 +205,8 @@ def test_registry_roundtrip_and_groups(tmp_path):
             crop="Broccoli", plant_id="10", acquisition_date=date,
             acquisition_id=sample, colmap_status="pass",
             gaussian_ply_path="/tmp/x.ply", gaussian_count=10,
-            jepa_compatibility={"status": "pass"}, acceptance_status="accepted")
+            jepa_compatibility={"status": "pass"}, acceptance_status="accepted",
+            provenance={"state": "verified", "checkpoint_sha256": "a" * 64})
         reg.append(record)
     groups = reg.groups()
     assert groups == {"Broccoli/10": ["20260327-10", "20260402-10"]}
@@ -231,12 +232,20 @@ def test_record_from_workspace_marks_unknown_not_accepted(tmp_path):
 # about which plant/date/source each row describes.
 # --------------------------------------------------------------------------- #
 def _accepted(sample, date, crop="Broccoli", plant="10", count=10, status="accepted",
-              revision=None):
+              revision=None, provenance="verified"):
+    """An accepted row must now carry a verified checkpoint -> PLY chain.
+
+    The default is exactly what a clean Stage 4B-Fix run leaves on disk.
+    Passing a weaker ``provenance`` lets a test assert that acceptance
+    refuses it.
+    """
     return registry.PlantRecord(
         crop=crop, plant_id=plant, acquisition_date=date, acquisition_id=sample,
         colmap_status="pass", gaussian_ply_path=f"/tmp/{sample}.ply",
         gaussian_count=count, jepa_compatibility={"status": "pass"},
-        acceptance_status=status, source_revision=revision)
+        acceptance_status=status, source_revision=revision,
+        provenance={"state": provenance, "checkpoint_sha256": "a" * 64,
+                    "checkpoint_step": 24000} if provenance == "verified" else {})
 
 
 def test_upsert_does_not_duplicate_an_acquisition(tmp_path):
@@ -296,3 +305,103 @@ def test_record_carries_source_provenance(tmp_path):
     assert payload["plant_id"] == "10"
     assert payload["acquisition_id"] == "20260327-10"
     assert payload["split_group"] == "Broccoli/10"
+
+
+# --------------------------------------------------------------------------- #
+# Stage 4B-Fix: acceptance requires a verified checkpoint -> PLY chain.
+#
+# The Cotton/1 number was unverifiable because splats_best.pt had been
+# overwritten after the export. A row that reports a metric must therefore be
+# able to name the bytes the metric came from.
+# --------------------------------------------------------------------------- #
+def _verified_workspace(tmp_path, *, status="pass", step=24000, sha="a" * 64,
+                        ply_sha="b" * 64, count=320644, jepa="pass"):
+    workspace = tmp_path / "workspace"
+    (workspace / "final").mkdir(parents=True)
+    (workspace / "colmap_audit.json").write_text(json.dumps({"status": "PASS"}))
+    (workspace / "final" / "report.json").write_text(json.dumps({
+        "point_cloud": str(workspace / "final" / "point_cloud.ply"),
+        "retained_gaussians": count, "step": step,
+        "raw_gaussians": 332859,
+        "clean_validation": {"foreground_psnr": 23.882, "silhouette_iou": 0.9703,
+                             "background_alpha": 0.00783},
+    }))
+    (workspace / "final" / "gsjepa_compatibility.json").write_text(json.dumps(
+        {"gsjepa_compatible": jepa == "pass", "required_fields": ["x", "y", "z"]}))
+    (workspace / "final" / "provenance_verification.json").write_text(json.dumps({
+        "status": status,
+        "problems": [] if status == "pass" else ["checkpoint changed"],
+        "details": {"checkpoint_sha256": sha, "ply_sha256": ply_sha,
+                    "checkpoint_step": step, "gaussians_after_filter": count,
+                    "gaussians_before_filter": 332859},
+    }))
+    return workspace
+
+
+def test_accepted_record_requires_a_verified_provenance_chain():
+    record = registry.PlantRecord(
+        crop="Cotton", plant_id="1", acquisition_id="1", colmap_status="pass",
+        gaussian_ply_path="/tmp/cotton.ply", gaussian_count=320644,
+        jepa_compatibility={"status": "pass"}, acceptance_status="accepted")
+    problems = record.validate()
+    assert any("provenance" in p for p in problems)
+
+
+def test_record_from_workspace_carries_the_chain_and_is_accepted(tmp_path):
+    workspace = _verified_workspace(tmp_path)
+    record = registry.record_from_workspace(workspace, "1", "Cotton")
+    assert record.acceptance_status == "accepted"
+    payload = record.to_dict()
+    assert payload["provenance"]["state"] == "verified"
+    assert payload["provenance"]["checkpoint_step"] == 24000
+    assert payload["provenance"]["gaussians_after_filter"] == 320644
+    assert len(payload["provenance"]["checkpoint_sha256"]) == 64
+
+
+def test_a_failed_verification_blocks_acceptance(tmp_path):
+    """This is the Cotton/1 case: a real PLY, an unverifiable source."""
+    workspace = _verified_workspace(tmp_path, status="fail")
+    record = registry.record_from_workspace(workspace, "1", "Cotton")
+    assert record.acceptance_status == "pending"
+    assert record.provenance["state"] == "failed"
+    assert "provenance=failed" in record.notes
+
+
+def test_a_missing_verification_blocks_acceptance_and_says_so(tmp_path):
+    workspace = _verified_workspace(tmp_path)
+    (workspace / "final" / "provenance_verification.json").unlink()
+    record = registry.record_from_workspace(workspace, "1", "Cotton")
+    assert record.acceptance_status == "pending"
+    assert record.provenance["state"] == "absent"
+    assert "provenance=absent" in record.notes
+
+
+def test_an_unreadable_verification_file_is_failed_not_ignored(tmp_path):
+    workspace = _verified_workspace(tmp_path)
+    (workspace / "final" / "provenance_verification.json").write_text("{not json")
+    record = registry.record_from_workspace(workspace, "1", "Cotton")
+    assert record.provenance["state"] == "failed"
+    assert record.provenance["detail"]
+
+
+def test_registry_refuses_to_write_an_unverifiable_accepted_row(tmp_path):
+    reg = registry.Registry(tmp_path / "registry.jsonl")
+    record = registry.PlantRecord(
+        crop="Cotton", plant_id="1", acquisition_id="1", colmap_status="pass",
+        gaussian_ply_path="/tmp/cotton.ply", gaussian_count=320644,
+        jepa_compatibility={"status": "pass"}, acceptance_status="accepted")
+    with pytest.raises(ValueError, match="provenance"):
+        reg.upsert(record)
+
+
+def test_provenance_survives_an_upsert(tmp_path):
+    reg = registry.Registry(tmp_path / "registry.jsonl")
+    workspace = _verified_workspace(tmp_path)
+    reg.upsert(registry.record_from_workspace(workspace, "1", "Cotton"))
+    newer = _verified_workspace(tmp_path / "v2", sha="c" * 64)
+    reg.upsert(registry.record_from_workspace(newer, "1", "Cotton"))
+    rows = reg.read()
+    assert len(rows) == 1
+    assert rows[0]["provenance"]["checkpoint_sha256"] == "c" * 64
+    # The superseded build's provenance is not lost.
+    assert rows[0]["history"][0]["gaussian_count"] == 320644

@@ -1,8 +1,29 @@
 #!/usr/bin/env python
-"""Object-only gsplat fit: RGB foreground + alpha silhouette, no background RGB."""
+"""Object-only gsplat fit: RGB foreground + alpha silhouette, no background RGB.
+
+Concurrency contract (Stage 4B-Fix)
+-----------------------------------
+A result directory is owned by exactly one live training process. ``main``
+takes :class:`runlock.RunLock` **before** it inspects ``history.jsonl``,
+``config.json`` or any checkpoint. Inspecting first and locking second is the
+race that produced the Stage 4B Cotton/1 accident: both processes saw an empty
+directory, both decided they were free to start, and both wrote.
+
+Writing contract
+----------------
+* A finished run (``splats.pt`` + ``status.json: complete``) is never silently
+  retrained in place.
+* A partial run is never silently restarted over. ``--resume`` continues it and
+  is accepted only when a checkpoint carries a full resume state (model,
+  optimiser, densification strategy, RNG). Model-only checkpoints from earlier
+  versions cannot be resumed and say so instead of pretending.
+* Every checkpoint is written to a temporary file and ``os.replace``d, so a
+  reader can never observe a half-written file.
+"""
 import argparse
 import json
 import math
+import os
 import time
 from pathlib import Path
 
@@ -16,8 +37,12 @@ from scipy.spatial import cKDTree
 
 from common import write_json, evaluation_due
 from losses import foreground_losses, masked_ssim
+import provenance
+import runlock
 
 C0 = .28209479177387814
+
+RESUME_CHECKPOINT = "splats_resume.pt"
 
 
 class Captures:
@@ -152,40 +177,162 @@ def evaluate(splats, data, degree, out=None, step=0):
     return metrics
 
 
-def checkpoint(splats, data, degree, step, config):
-    return {'splats':{k:v.detach().cpu() for k,v in splats.items()},'step':step,'sh_degree':degree,
-            'normalization':data.normalization,'data':str(data.root.resolve()),'config':config}
+# --------------------------------------------------------------------------- #
+# Checkpoints
+# --------------------------------------------------------------------------- #
+def _cpu_splats(splats):
+    return {k: v.detach().cpu() for k, v in splats.items()}
 
 
-def acquire_run_lock(result: Path):
-    """Take an exclusive lock on the result directory, or refuse to start.
+def _strategy_state_cpu(state):
+    return {k: (v.detach().cpu() if torch.is_tensor(v) else v)
+            for k, v in state.items()}
 
-    Two trainers pointed at one result directory share ``history.jsonl`` and
-    ``splats_best.pt``. That does not crash -- it silently interleaves two eval
-    streams, doubles the compute, and leaves an export reading whichever
-    checkpoint happened to be written last. Stage 4B hit exactly that on one
-    sample, so the collision is made loud here instead of being discovered from
-    the artefacts.
 
-    ``flock`` is released by the kernel when the process exits, so a crashed
-    run does not leave the directory permanently locked.
+def _strategy_state_to(state, device):
+    return {k: (v.to(device) if torch.is_tensor(v) else v)
+            for k, v in state.items()}
+
+
+def checkpoint(splats, data, degree, step, config, *, resume_state=None):
+    """Build a checkpoint payload.
+
+    ``resume_state`` is attached only by periodic and final writes. A
+    model-only checkpoint (``splats_best.pt``) is an *export* artefact, not a
+    resume point, and says so via ``resumable: False``.
     """
-    import fcntl
-    result.mkdir(parents=True, exist_ok=True)
-    handle = open(result / '.train.lock', 'w')
+    payload = {
+        'splats': _cpu_splats(splats),
+        'step': step,
+        'sh_degree': degree,
+        'normalization': data.normalization,
+        'data': str(data.root.resolve()),
+        'config': config,
+        'config_sha256': provenance.sha256_json(config),
+        'resumable': False,
+    }
+    if resume_state is not None:
+        payload.update(resume_state)
+        payload['resumable'] = True
+    return payload
+
+
+def atomic_torch_save(payload, path):
+    """Write a checkpoint without ever exposing a partial file.
+
+    ``torch.save`` straight to ``path`` leaves a truncated file if the process
+    dies mid-write, and a resume that reads it gets a confusing deserialisation
+    error. Writing to a sibling temp file and ``os.replace``-ing is atomic on
+    POSIX, so a reader sees either the old file or the new one.
+    """
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_name(path.name + '.tmp')
     try:
-        fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
-    except OSError:
-        handle.close()
+        torch.save(payload, tmp)
+        with open(tmp, 'rb') as handle:
+            os.fsync(handle.fileno())
+        os.replace(tmp, path)
+    except BaseException:
+        try:
+            tmp.unlink()
+        except OSError:
+            pass
+        raise
+
+
+def rng_snapshot(rng):
+    snapshot = {
+        'numpy_rng': rng.bit_generator.state,
+        'torch': torch.get_rng_state(),
+    }
+    if torch.cuda.is_available():
+        try:
+            snapshot['torch_cuda'] = torch.cuda.get_rng_state_all()
+        except Exception:
+            snapshot['torch_cuda'] = None
+    return snapshot
+
+
+def rng_restore(snapshot, rng):
+    state = snapshot.get('numpy_rng')
+    if state is not None:
+        rng.bit_generator.state = state
+    torch_state = snapshot.get('torch')
+    if torch_state is not None:
+        torch.set_rng_state(torch_state)
+    cuda_state = snapshot.get('torch_cuda')
+    if cuda_state:
+        try:
+            torch.cuda.set_rng_state_all(cuda_state)
+        except Exception:
+            pass
+
+
+# --------------------------------------------------------------------------- #
+# Config
+# --------------------------------------------------------------------------- #
+def normalized_config(args):
+    """Config with resolved paths, ready to hash and to write to disk."""
+    config = {}
+    for key, value in vars(args).items():
+        if key in ('resume', 'append_history'):
+            continue
+        if isinstance(value, Path):
+            value = str(runlock.resolve_result_path(value))
+        config[key] = value
+    return config
+
+
+def load_resume_state(result: Path, config_sha: str, data_path: Path) -> dict:
+    """Validate and load the checkpoint that ``--resume`` would continue from.
+
+    A resume claim is only honest if the checkpoint restores **all** the state
+    the training loop consumes: model parameters, the six Adam optimisers, the
+    densification strategy's running statistics, and the RNG. A model-only
+    checkpoint from an earlier version restores none of that, so resuming from
+    it would produce a different trajectory while calling itself the same run.
+    That is the ``--append-history`` mistake in a more respectable costume, and
+    it is refused here for the same reason.
+
+    Raises ``SystemExit`` with a diagnosis; tests call this directly.
+    """
+    resume_path = result / RESUME_CHECKPOINT
+    if not resume_path.is_file():
         raise SystemExit(
-            'another training run holds the lock on %s; refusing to start.\n'
-            'Use a different --result directory, or wait for that run to exit.'
-            % result)
-    handle.write(str(os.getpid()))
-    handle.flush()
-    return handle
+            'REFUSING TO RESUME: %s is absent. Model-only checkpoints '
+            '(splats_*.pt / splats_best.pt) from earlier versions do not carry '
+            'optimiser, densification-strategy or RNG state, so continuing from '
+            'them would not reproduce the original run. Use a new result '
+            'directory (recommended), or re-run the stage from scratch.'
+            % resume_path)
+    payload = torch.load(resume_path, map_location='cpu', weights_only=False)
+    if not payload.get('resumable'):
+        raise SystemExit(
+            'REFUSING TO RESUME: %s is not a resumable checkpoint '
+            '(no optimiser/strategy/RNG state).' % resume_path)
+    recorded = payload.get('config_sha256')
+    if recorded != config_sha:
+        raise SystemExit(
+            'REFUSING TO RESUME: the checkpoint was produced by a different '
+            'configuration.\n  checkpoint: %s\n  requested:  %s\n'
+            'Resuming would mix two experiments; use a new directory.'
+            % (recorded, config_sha))
+    if payload.get('data') != str(Path(data_path).resolve()):
+        raise SystemExit(
+            'REFUSING TO RESUME: checkpoint dataset %s != requested %s'
+            % (payload.get('data'), Path(data_path).resolve()))
+    for required in ('optimizers', 'strategy_state', 'rng'):
+        if required not in payload:
+            raise SystemExit(
+                'REFUSING TO RESUME: %s lacks %r; the checkpoint does not '
+                'carry enough state to continue this run.' % (resume_path, required))
+    return payload
 
 
+# --------------------------------------------------------------------------- #
+# Entry point
+# --------------------------------------------------------------------------- #
 def main():
     p=argparse.ArgumentParser()
     p.add_argument('--data',type=Path,required=True)
@@ -199,88 +346,241 @@ def main():
     p.add_argument('--background-alpha-weight',type=float,default=.75)
     p.add_argument('--max-gaussians',type=int,default=300000)
     p.add_argument('--seed',type=int,default=42)
+    p.add_argument('--resume',action='store_true',
+                   help='continue an INCOMPLETE run from %s; only accepted when '
+                        'that checkpoint carries model + optimiser + strategy + '
+                        'RNG state' % RESUME_CHECKPOINT)
     p.add_argument('--append-history',action='store_true',
-                   help='allow appending to an existing history.jsonl; off by '
-                        'default because a second run in the same directory '
-                        'makes the eval stream unreadable')
+                   help=argparse.SUPPRESS)
     args=p.parse_args()
-    if (args.result/'splats.pt').exists():
-        raise SystemExit('Result already completed; use a new result directory')
-    if (args.result/'history.jsonl').exists() and not args.append_history:
+
+    if args.append_history:
         raise SystemExit(
-            '%s/history.jsonl already exists from an unfinished run. Refusing '
-            'to append a second eval stream. Remove the directory, pick a new '
-            '--result, or pass --append-history if that is really intended.'
-            % args.result)
-    lock=acquire_run_lock(args.result)
-    args.result.mkdir(parents=True,exist_ok=True)
-    config={k:str(v) if isinstance(v,Path) else v for k,v in vars(args).items()}
-    write_json(args.result/'config.json',config)
-    torch.manual_seed(args.seed); np.random.seed(args.seed)
-    torch.set_num_threads(8)
-    torch.backends.cudnn.benchmark=True
-    data=Captures(args.data,downscale=args.downscale)
-    splats,opts=init_splats(data,args.sh_degree)
-    strategy=DefaultStrategy(prune_opa=.005,grow_grad2d=.0002,
-                             grow_scale3d=.01,prune_scale3d=.15,
-                             refine_start_iter=300,refine_stop_iter=min(15000,int(args.steps*.8)),
-                             reset_every=3000,refine_every=100,
-                             pause_refine_after_reset=len(data.train_idx),verbose=False)
-    strategy.check_sanity(splats,opts)
-    state=strategy.initialize_state(scene_scale=1.)
-    best_score=-float('inf'); best_step=None
-    start=time.time()
-    history=args.result/'history.jsonl'
-    rng=np.random.default_rng(args.seed)
-    for step in range(args.steps):
-        idx=int(rng.choice(data.train_idx))
-        rgb,mask,K,w2c=data.batch(idx)
-        degree=min(step//1000,args.sh_degree)
-        color,alpha,info=render(splats,K,w2c,data.width,data.height,degree,strategy.absgrad)
-        strategy.step_pre_backward(splats,opts,state,step,info)
-        components=foreground_losses(color,alpha,rgb,mask)
-        ssim=masked_ssim(color,rgb,mask)
-        loss=.8*components['foreground_rgb']+.2*(1-ssim)
-        loss+=args.foreground_alpha_weight*components['foreground_alpha']
-        loss+=args.background_alpha_weight*components['background_alpha']
-        if not torch.isfinite(loss):
-            raise RuntimeError(f'Nonfinite loss at {step}')
-        loss.backward()
-        opts['means'].param_groups[0]['lr']=1.6e-4*(.01**(step/max(1,args.steps-1)))
-        for opt in opts.values():
-            opt.step(); opt.zero_grad(set_to_none=True)
-        if len(splats['means'])>=args.max_gaussians:
-            strategy.grow_grad2d=1e6
+            '--append-history is not a resume mechanism: it appends a second '
+            'eval stream to an existing history.jsonl without restoring the '
+            'model, optimiser, densification strategy or RNG. Use --resume '
+            'instead, which requires a genuine %s checkpoint.' % RESUME_CHECKPOINT)
+
+    # --- Exclusive section starts here, BEFORE any inspection ----------- #
+    # This ordering is the fix: every decision below is made while no other
+    # process can be writing the same directory.
+    result = runlock.resolve_result_path(args.result)
+    try:
+        lock = runlock.RunLock(result).acquire()
+    except runlock.LockUnavailable as exc:
+        raise SystemExit('REFUSING TO START: %s' % exc)
+
+    try:
+        config = normalized_config(args)
+        config_sha = provenance.sha256_json(config)
+
+        try:
+            state_info = runlock.assert_writable(result, config, resume=args.resume)
+        except runlock.ResultStateError as exc:
+            raise SystemExit('REFUSING TO START: %s' % exc)
+
+        resume_payload = None
+        start_step = 0
+        run_id = None
+        best_score = -float('inf')
+        best_step = None
+
+        if state_info['state'] == 'partial':
+            resume_payload = load_resume_state(result, config_sha,
+                                               Path(args.data).resolve())
+            start_step = int(resume_payload['step'])
+            run_id = resume_payload.get('run_id')
+            best_score = float(resume_payload.get('best_score', -float('inf')))
+            best_step = resume_payload.get('best_step')
+            print('RESUME', result / RESUME_CHECKPOINT, 'from step', start_step,
+                  'run_id', run_id, flush=True)
         else:
-            strategy.grow_grad2d=.0002
-        strategy.step_post_backward(splats,opts,state,step,info,packed=False)
-        if step%100==0 or step==args.steps-1:
-            record={'step':step,'loss':float(loss.detach()),'ssim':float(ssim.detach()),
-                    'gaussians':len(splats['means']),'elapsed_seconds':round(time.time()-start,2),
-                    **{k:float(v.detach()) for k,v in components.items()}}
-            with history.open('a') as f: f.write(json.dumps(record)+'\n')
-            print(json.dumps(record),flush=True)
-            write_json(args.result/'status.json',{'status':'training',**record,'total_steps':args.steps})
-        if evaluation_due(step, args.eval_every, args.steps, strategy.reset_every,
-                          strategy.refine_stop_iter, len(data.train_idx)):
-            with torch.no_grad():
-                metrics=evaluate(splats,data,degree)
-            score=metrics['foreground_psnr']+5*metrics['silhouette_iou']-20*metrics['background_alpha']
-            compact={k:v for k,v in metrics.items() if k!='per_view'}
-            print('EVAL',step,json.dumps(compact),'score',score,flush=True)
-            with history.open('a') as f: f.write(json.dumps({'step':step,'eval':compact,'score':score})+'\n')
-            if score>best_score:
-                best_score=score;best_step=step
-                torch.save(checkpoint(splats,data,args.sh_degree,step,config),args.result/'splats_best.pt')
-                export_ply(splats,args.result/'point_cloud_best_raw.ply')
-                with torch.no_grad(): evaluate(splats,data,degree,out=args.result,step=step)
-        if step>0 and step%args.save_every==0:
-            torch.save(checkpoint(splats,data,args.sh_degree,step,config),args.result/f'splats_{step:06d}.pt')
-    torch.save(checkpoint(splats,data,args.sh_degree,args.steps,config),args.result/'splats.pt')
-    export_ply(splats,args.result/'point_cloud_final_raw.ply')
-    write_json(args.result/'status.json',{'status':'complete','steps':args.steps,'gaussians':len(splats['means']),
-                'elapsed_seconds':round(time.time()-start,2),'best_step':best_step,'best_score':best_score})
-    print('TRAIN_COMPLETE',flush=True)
+            run_id = '%s-%s' % (time.strftime('%Y%m%dT%H%M%SZ', time.gmtime()),
+                                os.getpid())
+
+        # The config on disk must describe the run that owns this directory.
+        existing_config = result / 'config.json'
+        if existing_config.is_file() and state_info['state'] == 'partial':
+            previous = json.loads(existing_config.read_text())
+            if previous.get('config_sha256') != config_sha:
+                raise SystemExit(
+                    'REFUSING TO START: %s/config.json records config %s but '
+                    'this invocation is %s. Refusing to overwrite the owning '
+                    'run\'s description.' % (result, previous.get('config_sha256'),
+                                             config_sha))
+        else:
+            write_json(existing_config, {**config, 'config_sha256': config_sha})
+
+        runlock.write_run_marker(result, {
+            'run_id': run_id,
+            'config_sha256': config_sha,
+            'pid': os.getpid(),
+            'started_utc': provenance.utc_now(),
+            'resumed_from_step': start_step or None,
+            'dataset': str(Path(args.data).resolve()),
+            'git_commit': provenance.git_commit(Path(__file__).resolve().parents[3]),
+        })
+
+        torch.manual_seed(args.seed)
+        np.random.seed(args.seed)
+        torch.set_num_threads(8)
+        torch.backends.cudnn.benchmark=True
+        data=Captures(args.data,downscale=args.downscale)
+
+        if resume_payload is not None:
+            splats = torch.nn.ParameterDict({
+                k: torch.nn.Parameter(v.to(data.device))
+                for k, v in resume_payload['splats'].items()})
+            rates = {'means':1.6e-4,'scales':5e-3,'quats':1e-3,
+                     'opacities':5e-2,'sh0':2.5e-3,'shN':2.5e-3/20}
+            opts = {k: torch.optim.Adam([v], lr=rates[k], eps=1e-15)
+                    for k, v in splats.items()}
+            for key, optimizer in opts.items():
+                saved = resume_payload.get('optimizers', {}).get(key)
+                if saved is not None:
+                    optimizer.load_state_dict(saved)
+        else:
+            splats,opts=init_splats(data,args.sh_degree)
+
+        strategy = DefaultStrategy(prune_opa=.005, grow_grad2d=.0002,
+                                   grow_scale3d=.01, prune_scale3d=.15,
+                                   refine_start_iter=300,
+                                   refine_stop_iter=min(15000,int(args.steps*.8)),
+                                   reset_every=3000, refine_every=100,
+                                   pause_refine_after_reset=len(data.train_idx),
+                                   verbose=False)
+        strategy.check_sanity(splats,opts)
+        state=strategy.initialize_state(scene_scale=1.)
+        if resume_payload is not None and resume_payload.get('strategy_state'):
+            state = _strategy_state_to(resume_payload['strategy_state'], data.device)
+
+        rng = np.random.default_rng(args.seed)
+        if resume_payload is not None and resume_payload.get('rng'):
+            rng_restore(resume_payload['rng'], rng)
+
+        history = result / 'history.jsonl'
+        if resume_payload is not None:
+            with history.open('a') as handle:
+                handle.write(json.dumps({
+                    'event': 'resume', 'from_step': start_step,
+                    'utc': provenance.utc_now(), 'run_id': run_id}) + '\n')
+
+        train_start = time.time()
+        elapsed_offset = float(resume_payload.get('elapsed_seconds', 0.0)) \
+            if resume_payload is not None else 0.0
+
+        for step in range(start_step, args.steps):
+            idx=int(rng.choice(data.train_idx))
+            rgb,mask,K,w2c=data.batch(idx)
+            degree=min(step//1000,args.sh_degree)
+            color,alpha,info=render(splats,K,w2c,data.width,data.height,degree,strategy.absgrad)
+            strategy.step_pre_backward(splats,opts,state,step,info)
+            components=foreground_losses(color,alpha,rgb,mask)
+            ssim=masked_ssim(color,rgb,mask)
+            loss=.8*components['foreground_rgb']+.2*(1-ssim)
+            loss+=args.foreground_alpha_weight*components['foreground_alpha']
+            loss+=args.background_alpha_weight*components['background_alpha']
+            if not torch.isfinite(loss):
+                raise RuntimeError(f'Nonfinite loss at {step}')
+            loss.backward()
+            opts['means'].param_groups[0]['lr']=1.6e-4*(.01**(step/max(1,args.steps-1)))
+            for opt in opts.values():
+                opt.step(); opt.zero_grad(set_to_none=True)
+            if len(splats['means'])>=args.max_gaussians:
+                strategy.grow_grad2d=1e6
+            else:
+                strategy.grow_grad2d=.0002
+            strategy.step_post_backward(splats,opts,state,step,info,packed=False)
+            if step%100==0 or step==args.steps-1:
+                record={'step':step,'loss':float(loss.detach()),'ssim':float(ssim.detach()),
+                        'gaussians':len(splats['means']),
+                        'elapsed_seconds':round(elapsed_offset+time.time()-train_start,2),
+                        **{k:float(v.detach()) for k,v in components.items()}}
+                with history.open('a') as f: f.write(json.dumps(record)+'\n')
+                print(json.dumps(record),flush=True)
+                write_json(result/'status.json',{'status':'training',**record,
+                                                 'total_steps':args.steps,
+                                                 'run_id':run_id})
+            if evaluation_due(step, args.eval_every, args.steps, strategy.reset_every,
+                              strategy.refine_stop_iter, len(data.train_idx)):
+                with torch.no_grad():
+                    metrics=evaluate(splats,data,degree)
+                score=metrics['foreground_psnr']+5*metrics['silhouette_iou']-20*metrics['background_alpha']
+                compact={k:v for k,v in metrics.items() if k!='per_view'}
+                print('EVAL',step,json.dumps(compact),'score',score,flush=True)
+                with history.open('a') as f: f.write(json.dumps({'step':step,'eval':compact,'score':score})+'\n')
+                if score>best_score:
+                    best_score=score;best_step=step
+                    atomic_torch_save(
+                        checkpoint(splats,data,args.sh_degree,step,config),
+                        result/'splats_best.pt')
+                    export_ply(splats,result/'point_cloud_best_raw.ply')
+                    with torch.no_grad(): evaluate(splats,data,degree,out=result,step=step)
+            if step>0 and step%args.save_every==0:
+                atomic_torch_save(
+                    checkpoint(splats,data,args.sh_degree,step,config,
+                               resume_state={
+                                   'optimizers': {k:o.state_dict() for k,o in opts.items()},
+                                   'strategy_state': _strategy_state_cpu(state),
+                                   'rng': rng_snapshot(rng),
+                                   'best_score': best_score,
+                                   'best_step': best_step,
+                                   'run_id': run_id,
+                                   'elapsed_seconds': round(elapsed_offset+time.time()-train_start,2),
+                               }),
+                    result/f'splats_{step:06d}.pt')
+                atomic_torch_save(
+                    checkpoint(splats,data,args.sh_degree,step,config,
+                               resume_state={
+                                   'optimizers': {k:o.state_dict() for k,o in opts.items()},
+                                   'strategy_state': _strategy_state_cpu(state),
+                                   'rng': rng_snapshot(rng),
+                                   'best_score': best_score,
+                                   'best_step': best_step,
+                                   'run_id': run_id,
+                                   'elapsed_seconds': round(elapsed_offset+time.time()-train_start,2),
+                               }),
+                    result/RESUME_CHECKPOINT)
+
+        elapsed = round(elapsed_offset+time.time()-train_start,2)
+        atomic_torch_save(
+            checkpoint(splats,data,args.sh_degree,args.steps,config,
+                       resume_state={
+                           'optimizers': {k:o.state_dict() for k,o in opts.items()},
+                           'strategy_state': _strategy_state_cpu(state),
+                           'rng': rng_snapshot(rng),
+                           'best_score': best_score,
+                           'best_step': best_step,
+                           'run_id': run_id,
+                           'elapsed_seconds': elapsed,
+                       }),
+            result/'splats.pt')
+        export_ply(splats,result/'point_cloud_final_raw.ply')
+        write_json(result/'status.json',{'status':'complete','steps':args.steps,
+                    'gaussians':len(splats['means']),
+                    'elapsed_seconds':elapsed,'best_step':best_step,
+                    'best_score':best_score,'run_id':run_id,
+                    'config_sha256':config_sha})
+
+        # Provenance for the checkpoints this run produced. The best
+        # checkpoint is the one an export is expected to read, so it gets a
+        # record of its own next to it.
+        for name, step in (('splats.pt', args.steps),
+                           ('splats_best.pt', best_step)):
+            target = result / name
+            if not target.is_file() or step is None:
+                continue
+            record = provenance.train_record(
+                result_dir=result, dataset=args.data, config=config,
+                seed=args.seed, checkpoint=target, step=int(step),
+                repo=Path(__file__).resolve().parents[3],
+                extra={'run_id': run_id, 'best_score': best_score,
+                       'best_step': best_step,
+                       'elapsed_seconds': elapsed})
+            provenance.write_record(result / f'{name}.provenance.json', record)
+        print('TRAIN_COMPLETE',flush=True)
+    finally:
+        lock.release()
 
 
 if __name__=='__main__':

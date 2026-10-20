@@ -39,6 +39,8 @@ REQUIRED_FIELDS = (
 ACCEPTANCE_STATES = ("accepted", "rejected", "pending")
 COLMAP_STATES = ("pass", "fail", "not_run")
 JEPA_STATES = ("pass", "fail", "not_run")
+#: What an acceptance decision saw of the checkpoint -> PLY chain.
+PROVENANCE_STATES = ("verified", "failed", "absent", "legacy")
 
 _DATED = re.compile(r"^(?P<date>\d{8})-(?P<plant>.+)$")
 
@@ -107,6 +109,10 @@ class PlantRecord:
     mask_hit_rate_median: float | None = None
     training_steps: int | None = None
     created_utc: str | None = None
+    # The checkpoint -> PLY chain: hashes, the step inside the checkpoint, and
+    # the outcome of the independent re-check. An `accepted` row requires this
+    # to have verified, so a number cannot be accepted on a report's word alone.
+    provenance: dict = field(default_factory=dict)
     notes: list = field(default_factory=list)
 
     @property
@@ -144,6 +150,15 @@ class PlantRecord:
                 problems.append("accepted record has no gaussian_count")
             if self.jepa_compatibility.get("status") != "pass":
                 problems.append("accepted record has jepa_compatibility.status != pass")
+            # Stage 4B-Fix: the metric must be attributable to a checkpoint.
+            if self.provenance.get("state") != "verified":
+                problems.append(
+                    "accepted record has no verified checkpoint->PLY provenance "
+                    "(state=%r); a metric whose source checkpoint cannot be "
+                    "identified is not acceptable" % self.provenance.get("state"))
+        elif self.provenance.get("state") not in PROVENANCE_STATES + (None,):
+            problems.append(f"provenance.state {self.provenance.get('state')!r} not in "
+                            f"{PROVENANCE_STATES}")
         return problems
 
 
@@ -223,6 +238,37 @@ def record_from_workspace(workspace: Path, sample: str, crop: str,
     # Acceptance is earned, not assumed. Record every missing piece of
     # evidence by name, so a `pending` row says WHY it is pending instead of
     # forcing whoever reads it next to re-derive the reason from blanks.
+    #
+    # The checkpoint -> PLY chain is read from the verification the exporter's
+    # independent checker wrote. It is not re-derived here: re-running the
+    # check during registration would make the row depend on whether the
+    # checkpoint is still present, rather than on what the run actually proved.
+    verification_path = workspace / "final" / "provenance_verification.json"
+    verification = None
+    if verification_path.is_file():
+        try:
+            verification = json.loads(verification_path.read_text())
+        except Exception as exc:
+            verification = {"unreadable": str(exc)}
+
+    if verification is None:
+        record.provenance = {"state": "absent", "record": None,
+                             "detail": "no final/provenance_verification.json"}
+    elif "unreadable" in verification:
+        record.provenance = {"state": "failed", "record": str(verification_path),
+                             "detail": verification["unreadable"]}
+    else:
+        record.provenance = {
+            "state": "verified" if verification.get("status") == "pass" else "failed",
+            "record": str(verification_path.resolve()),
+            "checkpoint_sha256": (verification.get("details") or {}).get("checkpoint_sha256"),
+            "ply_sha256": (verification.get("details") or {}).get("ply_sha256"),
+            "checkpoint_step": (verification.get("details") or {}).get("checkpoint_step"),
+            "gaussians_after_filter": (verification.get("details") or {}).get(
+                "gaussians_after_filter"),
+            "problems": verification.get("problems") or [],
+        }
+
     blocking = []
     if record.colmap_status != "pass":
         blocking.append(f"colmap_status={record.colmap_status}")
@@ -232,6 +278,8 @@ def record_from_workspace(workspace: Path, sample: str, crop: str,
         blocking.append("no gaussian_count")
     if record.jepa_compatibility.get("status") != "pass":
         blocking.append(f"jepa_compatibility={record.jepa_compatibility.get('status')}")
+    if record.provenance.get("state") != "verified":
+        blocking.append(f"provenance={record.provenance.get('state')}")
 
     if not blocking:
         record.acceptance_status = "accepted"
