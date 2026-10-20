@@ -224,3 +224,75 @@ def test_record_from_workspace_marks_unknown_not_accepted(tmp_path):
     parsed = registry.parse_sample_id("20260327-10")
     assert record.plant_id == parsed["plant_id"]
     assert record.acquisition_date == parsed["acquisition_date"]
+
+
+# --------------------------------------------------------------------------- #
+# Stage 4B: registration must be idempotent per acquisition, and lossless
+# about which plant/date/source each row describes.
+# --------------------------------------------------------------------------- #
+def _accepted(sample, date, crop="Broccoli", plant="10", count=10, status="accepted",
+              revision=None):
+    return registry.PlantRecord(
+        crop=crop, plant_id=plant, acquisition_date=date, acquisition_id=sample,
+        colmap_status="pass", gaussian_ply_path=f"/tmp/{sample}.ply",
+        gaussian_count=count, jepa_compatibility={"status": "pass"},
+        acceptance_status=status, source_revision=revision)
+
+
+def test_upsert_does_not_duplicate_an_acquisition(tmp_path):
+    """Re-running one sample must leave one row, not two."""
+    reg = registry.Registry(tmp_path / "registry.jsonl")
+    reg.upsert(_accepted("20260327-10", "2026-03-27", count=292517, revision="aaa"))
+    outcome = reg.upsert(_accepted("20260327-10", "2026-03-27", count=331903, revision="bbb"))
+
+    assert outcome["status"] == "updated"
+    assert outcome["replaced"] == 1
+    rows = reg.read()
+    assert len(rows) == 1
+    assert rows[0]["gaussian_count"] == 331903
+    assert rows[0]["source_revision"] == "bbb"
+    # The superseded build is not silently discarded.
+    assert rows[0]["history"][0]["gaussian_count"] == 292517
+    assert rows[0]["history"][0]["source_revision"] == "aaa"
+
+
+def test_upsert_keeps_different_acquisitions_of_one_plant(tmp_path):
+    """Dedup is per acquisition; the two dates of plant 10 both survive."""
+    reg = registry.Registry(tmp_path / "registry.jsonl")
+    reg.upsert(_accepted("20260327-10", "2026-03-27"))
+    reg.upsert(_accepted("20260402-10", "2026-04-02"))
+    assert len(reg.read()) == 2
+    assert reg.groups() == {"Broccoli/10": ["20260327-10", "20260402-10"]}
+
+    # Keyed by acquisition, not by plant: re-registering one date must not
+    # touch the other.
+    reg.upsert(_accepted("20260402-10", "2026-04-02", count=99))
+    rows = {r["acquisition_id"]: r for r in reg.read()}
+    assert len(rows) == 2
+    assert rows["20260327-10"]["gaussian_count"] == 10
+    assert rows["20260402-10"]["gaussian_count"] == 99
+
+
+def test_dedupe_collapses_a_legacy_append_only_registry(tmp_path):
+    """Rows written by the old append-only path collapse to the latest."""
+    path = tmp_path / "registry.jsonl"
+    reg = registry.Registry(path)
+    reg.append(_accepted("20260327-10", "2026-03-27", count=1))
+    reg.append(_accepted("20260327-10", "2026-03-27", count=2))
+    assert len(reg.read()) == 2
+    latest = reg.latest()
+    assert len(latest) == 1
+    assert latest["Broccoli/20260327-10"]["gaussian_count"] == 2
+
+
+def test_record_carries_source_provenance(tmp_path):
+    """The row must name its own source revision, not point at a file."""
+    record = registry.record_from_workspace(
+        tmp_path, "20260327-10", "Broccoli", revision="19e7f2f2",
+        source={"hub_sha": "19e7f2f2", "file_counts": {"camera": 102}})
+    payload = record.to_dict()
+    assert payload["source_revision"] == "19e7f2f2"
+    assert payload["source"]["file_counts"] == {"camera": 102}
+    assert payload["plant_id"] == "10"
+    assert payload["acquisition_id"] == "20260327-10"
+    assert payload["split_group"] == "Broccoli/10"

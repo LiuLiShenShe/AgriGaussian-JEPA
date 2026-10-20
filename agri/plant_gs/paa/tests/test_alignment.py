@@ -29,6 +29,8 @@ if str(REPO) not in sys.path:
 from agri.plant_gs.paa.alignment import (  # noqa: E402
     crop_mask_to_camera_frame, mask_vs_whitebg, match_template_offset,
     rotate_to_raw)
+from agri.plant_gs.paa.prepare_paa import (  # noqa: E402
+    SIM_MIN_INLIERS, SIM_RMS_MAX_PX, resolve_crops)
 
 
 def make_photo(height, width, seed=0, background=200):
@@ -164,3 +166,82 @@ def test_crop_mask_matches_crop_of_rotated_image():
     reference = np.asarray(Image.fromarray(display[:, :, 0]).rotate(90, expand=True))[30:30+180, 50:50+120]
     got = crop_mask_to_camera_frame(display[:, :, 0], 6, 50, 30, 120, 180)
     assert np.array_equal(got, reference)
+
+
+# --------------------------------------------------------------------------- #
+# Stage 4B: the mask crop offsets are measured per sample.
+#
+# The Stage 4A bug this closes: offsets measured on Broccoli/20260327-10 were
+# the default for every other sample, so a plant whose camera framing had
+# shifted would have been silently registered with the wrong mask.
+# --------------------------------------------------------------------------- #
+class _FakeAlignment:
+    """Just the shape resolve_crops reads out of a SampleAlignment."""
+
+    def __init__(self, crops):
+        self.crops = crops
+
+
+def _strong_crop(tx, ty, support=100, total=100, inliers=2500, rms=1.2):
+    """A fit in the shape :func:`resolve_transforms` actually reads.
+
+    The Stage 4B pipeline measures a per-camera *similarity* (ORB + RANSAC +
+    constrained similarity fit) between the white-background rendering and the
+    camera frame, not an integer crop. The schema below is the one
+    ``alignment.probe_sample`` writes: per-parameter medians plus the
+    cross-frame spread and the weakest frame's correspondence count.
+    """
+    return {"sx": 1.0, "sy": 1.0, "tx": tx, "ty": ty, "rms": rms,
+            "support_images": support, "total_images": total,
+            "inliers_min": inliers, "matches_min": inliers + 100,
+            "spread": {"sx": 0.001, "sy": 0.001, "tx": 0.2, "ty": 0.2},
+            "A_iou_median": 0.99, "A_iou_min": 0.97}
+
+
+def test_resolve_crops_uses_the_measurement_of_this_sample():
+    alignment = _FakeAlignment({0: _strong_crop(16, 24), 1: _strong_crop(440, 80)})
+    assert resolve_crops("20260402-10", alignment, trust_defaults=False) == \
+        {0: (16, 24), 1: (440, 80)}
+
+
+def test_resolve_crops_does_not_inherit_another_samples_offsets():
+    """A different measured offset is accepted as-is, not corrected to 16/24."""
+    alignment = _FakeAlignment({0: _strong_crop(3, 7)})
+    assert resolve_crops("20260402-10", alignment, trust_defaults=False) == {0: (3, 7)}
+
+
+def test_resolve_crops_refuses_a_weak_correspondence():
+    """Too few surviving correspondences means the mask was never matched."""
+    alignment = _FakeAlignment({0: _strong_crop(16, 24, inliers=SIM_MIN_INLIERS - 1)})
+    with pytest.raises(SystemExit, match="inliers"):
+        resolve_crops("20260402-10", alignment, trust_defaults=False)
+
+
+def test_resolve_crops_refuses_a_loose_fit():
+    """A high-residual similarity is not a registration."""
+    alignment = _FakeAlignment({0: _strong_crop(16, 24, rms=SIM_RMS_MAX_PX + 0.1)})
+    with pytest.raises(SystemExit, match="residual"):
+        resolve_crops("20260402-10", alignment, trust_defaults=False)
+
+
+def test_resolve_crops_refuses_a_split_vote():
+    """Half the frames agreeing is not a determined offset."""
+    alignment = _FakeAlignment({0: _strong_crop(16, 24, support=40, total=100)})
+    with pytest.raises(SystemExit, match="not determined"):
+        resolve_crops("20260402-10", alignment, trust_defaults=False)
+
+
+def test_resolve_crops_trust_defaults_only_for_the_reference_sample():
+    alignment = _FakeAlignment({0: _strong_crop(16, 24), 1: _strong_crop(440, 80)})
+    # The Stage 4A sample is the only one allowed to lean on the reference.
+    assert resolve_crops("20260327-10", alignment, trust_defaults=True) == \
+        {0: (16, 24), 1: (440, 80)}
+    with pytest.raises(SystemExit, match="only valid for"):
+        resolve_crops("20260402-10", alignment, trust_defaults=True)
+
+
+def test_resolve_crops_rejects_reference_values_the_data_disagrees_with():
+    """--trust-default-crops verifies; it does not override the measurement."""
+    alignment = _FakeAlignment({0: _strong_crop(3, 7), 1: _strong_crop(440, 80)})
+    with pytest.raises(SystemExit, match="disagrees"):
+        resolve_crops("20260327-10", alignment, trust_defaults=True)

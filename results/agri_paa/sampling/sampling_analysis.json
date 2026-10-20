@@ -1,0 +1,335 @@
+{
+  "status": "PASS",
+  "sample_size": 1024,
+  "seed": 42,
+  "seed_sweep_seeds": 8,
+  "full_specimen": {
+    "label": "full_specimen",
+    "ply": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/final/point_cloud.ply",
+    "gaussians": 292517,
+    "sample_size": 1024,
+    "seed": 42,
+    "uniform": {
+      "composition": {
+        "background": {
+          "count": 194,
+          "fraction": 0.189453125
+        },
+        "plant": {
+          "count": 288,
+          "fraction": 0.28125
+        },
+        "pot": {
+          "count": 314,
+          "fraction": 0.306640625
+        },
+        "soil": {
+          "count": 1,
+          "fraction": 0.0009765625
+        },
+        "support": {
+          "count": 227,
+          "fraction": 0.2216796875
+        }
+      },
+      "scale": {
+        "population": {
+          "median_max_scale": 0.008139771304927825,
+          "p05": 0.0023781861181465243,
+          "p95": 0.03232159762380661,
+          "max": 0.2984708989451162,
+          "fraction_below_1e-6": 0.0
+        },
+        "sample": {
+          "median_max_scale": 0.008471113312061454,
+          "p05": 0.0023838139693017476,
+          "p95": 0.03248720127294679,
+          "fraction_below_1e-6": 0.0
+        },
+        "small_gaussian_oversampling": null,
+        "note": "oversampling factor is (share of the sample below 1e-6) divided by (share of the population below 1e-6); 1.0 means the sample is unbiased with respect to Gaussian size"
+      },
+      "spatial": {
+        "population_bbox_min": [
+          -0.8388505578041077,
+          -1.0460563898086548,
+          -1.3619160652160645
+        ],
+        "population_bbox_max": [
+          0.807593822479248,
+          0.7225791215896606,
+          0.6201563477516174
+        ],
+        "sample_bbox_min": [
+          -0.8324311375617981,
+          -0.9841611981391907,
+          -1.1578879356384277
+        ],
+        "sample_bbox_max": [
+          0.7942519783973694,
+          0.7192116975784302,
+          0.6151171326637268
+        ],
+        "radius_population_median": 0.6177685465552339,
+        "radius_sample_median": 0.6184054248085948,
+        "radius_sample_p05": 0.30809121306538756,
+        "radius_sample_p95": 1.055170427352191,
+        "occupied_voxels_16cube_population": 1806,
+        "occupied_voxels_16cube_sample": 534,
+        "voxel_coverage_ratio": 0.2956810631229236
+      },
+      "nearest_neighbour": {
+        "nn_distance_median": 0.03840569831522851,
+        "nn_distance_p05": 0.009214390531238521,
+        "nn_distance_p95": 0.10238483772238839
+      },
+      "indices_sha256": "797bf3e71f515b1f6ca0c7b8c75e6261575eb2d793fe8eb2b259fa8ef717071c"
+    },
+    "balanced": {
+      "composition": {
+        "background": {
+          "count": 118,
+          "fraction": 0.115234375
+        },
+        "plant": {
+          "count": 142,
+          "fraction": 0.138671875
+        },
+        "pot": {
+          "count": 328,
+          "fraction": 0.3203125
+        },
+        "support": {
+          "count": 435,
+          "fraction": 0.4248046875
+        },
+        "undecided": {
+          "count": 1,
+          "fraction": 0.0009765625
+        }
+      },
+      "scale": {
+        "population": {
+          "median_max_scale": 0.008139771304927825,
+          "p05": 0.0023781861181465243,
+          "p95": 0.03232159762380661,
+          "max": 0.2984708989451162,
+          "fraction_below_1e-6": 0.0
+        },
+        "sample": {
+          "median_max_scale": 0.017637737016542667,
+          "p05": 0.003926026463738751,
+          "p95": 0.08711767287074529,
+          "fraction_below_1e-6": 0.0
+        },
+        "small_gaussian_oversampling": null,
+        "note": "oversampling factor is (share of the sample below 1e-6) divided by (share of the population below 1e-6); 1.0 means the sample is unbiased with respect to Gaussian size"
+      },
+      "spatial": {
+        "population_bbox_min": [
+          -0.8388505578041077,
+          -1.0460563898086548,
+          -1.3619160652160645
+        ],
+        "population_bbox_max": [
+          0.807593822479248,
+          0.7225791215896606,
+          0.6201563477516174
+        ],
+        "sample_bbox_min": [
+          -0.8200953006744385,
+          -1.0244630575180054,
+          -1.3130353689193726
+        ],
+        "sample_bbox_max": [
+          0.7942519783973694,
+          0.6944019794464111,
+          0.6090695261955261
+        ],
+        "radius_population_median": 0.6177685465552339,
+        "radius_sample_median": 0.7497274020985305,
+        "radius_sample_p05": 0.29208273069223223,
+        "radius_sample_p95": 1.2187809034596435,
+        "occupied_voxels_16cube_population": 1806,
+        "occupied_voxels_16cube_sample": 769,
+        "voxel_coverage_ratio": 0.4258028792912514
+      },
+      "nearest_neighbour": {
+        "nn_distance_median": 0.06529009461197752,
+        "nn_distance_p05": 0.023367204168698353,
+        "nn_distance_p95": 0.12130168172755164
+      },
+      "indices_sha256": "dc4871a4728ebfcd0633c523fd5238e72ea3b7114c3c2877fb53e65bf6ef085e"
+    },
+    "comparison": {
+      "uniform_voxel_coverage": 0.2956810631229236,
+      "balanced_voxel_coverage": 0.4258028792912514,
+      "uniform_small_oversampling": null,
+      "balanced_small_oversampling": null
+    },
+    "seed_sweep": {
+      "seeds": 8,
+      "uniform_mean_fraction": {
+        "plant": 0.2869873046875,
+        "pot": 0.31787109375,
+        "soil": 0.0001220703125,
+        "support": 0.2149658203125
+      },
+      "balanced_mean_fraction": {
+        "plant": 0.1329345703125,
+        "pot": 0.3197021484375,
+        "soil": 0.0,
+        "support": 0.42431640625
+      },
+      "uniform_std": {
+        "plant": 0.010142125798920577,
+        "pot": 0.012000200905707527,
+        "soil": 0.0003229676893389393,
+        "support": 0.007049494491201617
+      }
+    }
+  },
+  "plant_only": {
+    "label": "plant_only",
+    "ply": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/plant_only/plant_only.ply",
+    "gaussians": 83810,
+    "sample_size": 1024,
+    "seed": 42,
+    "uniform": {
+      "composition": {
+        "plant": {
+          "count": 1024,
+          "fraction": 1.0
+        }
+      },
+      "scale": {
+        "population": {
+          "median_max_scale": 0.0069074984604386765,
+          "p05": 0.002323909604692671,
+          "p95": 0.01779707281265874,
+          "max": 0.10337336028326972,
+          "fraction_below_1e-6": 0.0
+        },
+        "sample": {
+          "median_max_scale": 0.006731989037190144,
+          "p05": 0.002531867048416236,
+          "p95": 0.01705982946448945,
+          "fraction_below_1e-6": 0.0
+        },
+        "small_gaussian_oversampling": null,
+        "note": "oversampling factor is (share of the sample below 1e-6) divided by (share of the population below 1e-6); 1.0 means the sample is unbiased with respect to Gaussian size"
+      },
+      "spatial": {
+        "population_bbox_min": [
+          -0.48534032702445984,
+          -0.43675822019577026,
+          -0.044911906123161316
+        ],
+        "population_bbox_max": [
+          0.6379103660583496,
+          0.5431489944458008,
+          0.613219141960144
+        ],
+        "sample_bbox_min": [
+          -0.47422417998313904,
+          -0.39412468671798706,
+          -0.018656164407730103
+        ],
+        "sample_bbox_max": [
+          0.6354020237922668,
+          0.4582873582839966,
+          0.6076008677482605
+        ],
+        "radius_population_median": 0.3405992237402793,
+        "radius_sample_median": 0.33380342996596957,
+        "radius_sample_p05": 0.15136636987444407,
+        "radius_sample_p95": 0.5550785848496067,
+        "occupied_voxels_16cube_population": 1122,
+        "occupied_voxels_16cube_sample": 445,
+        "voxel_coverage_ratio": 0.3966131907308378
+      },
+      "nearest_neighbour": {
+        "nn_distance_median": 0.01759953630628639,
+        "nn_distance_p05": 0.00601706056470703,
+        "nn_distance_p95": 0.043889996816011835
+      },
+      "indices_sha256": "d8b543cc80b2556ea16c34613245e9a737a68c40691b058d073455e9c4faa631"
+    },
+    "balanced": {
+      "composition": {
+        "plant": {
+          "count": 1024,
+          "fraction": 1.0
+        }
+      },
+      "scale": {
+        "population": {
+          "median_max_scale": 0.0069074984604386765,
+          "p05": 0.002323909604692671,
+          "p95": 0.01779707281265874,
+          "max": 0.10337336028326972,
+          "fraction_below_1e-6": 0.0
+        },
+        "sample": {
+          "median_max_scale": 0.008822085624476044,
+          "p05": 0.0031183571941608523,
+          "p95": 0.023229892229829144,
+          "fraction_below_1e-6": 0.0
+        },
+        "small_gaussian_oversampling": null,
+        "note": "oversampling factor is (share of the sample below 1e-6) divided by (share of the population below 1e-6); 1.0 means the sample is unbiased with respect to Gaussian size"
+      },
+      "spatial": {
+        "population_bbox_min": [
+          -0.48534032702445984,
+          -0.43675822019577026,
+          -0.044911906123161316
+        ],
+        "population_bbox_max": [
+          0.6379103660583496,
+          0.5431489944458008,
+          0.613219141960144
+        ],
+        "sample_bbox_min": [
+          -0.4653692841529846,
+          -0.4260158836841583,
+          -0.03599747642874718
+        ],
+        "sample_bbox_max": [
+          0.6238254308700562,
+          0.49984419345855713,
+          0.6115456819534302
+        ],
+        "radius_population_median": 0.3405992237402793,
+        "radius_sample_median": 0.3060817801971163,
+        "radius_sample_p05": 0.13286126424190187,
+        "radius_sample_p95": 0.48531508758243885,
+        "occupied_voxels_16cube_population": 1122,
+        "occupied_voxels_16cube_sample": 659,
+        "voxel_coverage_ratio": 0.5873440285204992
+      },
+      "nearest_neighbour": {
+        "nn_distance_median": 0.027899686330764145,
+        "nn_distance_p05": 0.0120722478476827,
+        "nn_distance_p95": 0.047809368355241987
+      },
+      "indices_sha256": "a3284b10f15169a8fb51509d80c8aaedbcc3a0908c1a6bac6ba596fba49768b9"
+    },
+    "comparison": {
+      "uniform_voxel_coverage": 0.3966131907308378,
+      "balanced_voxel_coverage": 0.5873440285204992,
+      "uniform_small_oversampling": null,
+      "balanced_small_oversampling": null
+    }
+  },
+  "population_class_composition": {
+    "background": 0.1837397484590639,
+    "plant": 0.2909198439748801,
+    "pot": 0.31742770505645823,
+    "soil": 7.86279088053002e-05,
+    "support": 0.20776912111090978,
+    "undecided": 6.49534898826393e-05
+  },
+  "seconds": 1.1,
+  "scope": "class labels are the candidate semantic labels from plant_only.py, not ground truth; this module measures the sampling behaviour, not segmentation accuracy"
+}

@@ -1,0 +1,294 @@
+{
+  "sample_dir": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/external/PAA-Plant-Dataset/Cotton/1",
+  "sparse": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/external/PAA-Plant-Dataset/Cotton/1/Camera/sparse/0",
+  "files": {
+    "cameras.bin": {
+      "exists": true,
+      "bytes": 104
+    },
+    "images.bin": {
+      "exists": true,
+      "bytes": 1412636
+    },
+    "points3D.bin": {
+      "exists": true,
+      "bytes": 1660988
+    }
+  },
+  "counts": {
+    "cameras": 2,
+    "registered_images": 102,
+    "sparse_points": 23388
+  },
+  "cameras": {
+    "0": {
+      "model": "SIMPLE_PINHOLE",
+      "width": 2140,
+      "height": 3788,
+      "params": [
+        9856.395039402538,
+        1070.0,
+        1894.0
+      ],
+      "images": 66,
+      "distortion": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distortion_free": true,
+      "fx_fy_equal": true,
+      "principal_point_normalised": [
+        0.5,
+        0.5
+      ],
+      "horizontal_fov_deg": 12.391414768768295,
+      "vertical_fov_deg": 21.75467833575969
+    },
+    "1": {
+      "model": "SIMPLE_PINHOLE",
+      "width": 3858,
+      "height": 2136,
+      "params": [
+        3364.207485295982,
+        1929.0,
+        1068.0
+      ],
+      "images": 36,
+      "distortion": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distortion_free": true,
+      "fx_fy_equal": true,
+      "principal_point_normalised": [
+        0.5,
+        0.5
+      ],
+      "horizontal_fov_deg": 59.658981164820425,
+      "vertical_fov_deg": 35.22508215536411
+    }
+  },
+  "camera_model_distortion_free": true,
+  "camera_models_needing_undistortion": [],
+  "camera_models_unsupported": [],
+  "correspondence": {
+    "on_disk": 102,
+    "registered": 102,
+    "registered_missing_on_disk": [],
+    "on_disk_not_registered": [],
+    "exact": true
+  },
+  "image_decoding": {
+    "undecodable": [],
+    "size_mismatch_stored_vs_camera": [],
+    "all_sizes_match_stored_frame": true,
+    "images_carrying_exif_orientation": []
+  },
+  "poses": {
+    "non_finite": [],
+    "rotation_determinant_min": 0.9999999999999994,
+    "rotation_determinant_max": 1.000000000000001,
+    "rotations_are_proper": true,
+    "camera_center_bbox_min": [
+      -7.766601514593451,
+      -5.0049974010203115,
+      -11.070617235193613
+    ],
+    "camera_center_bbox_max": [
+      5.414422887401983,
+      2.726319926604508,
+      0.3223795535823276
+    ],
+    "camera_center_centroid": [
+      -1.1405306002977518,
+      -0.8289002776544315,
+      -4.730068431236396
+    ],
+    "camera_radius_median": 5.750751133358942,
+    "camera_radius_min": 1.5480219141076503,
+    "camera_radius_max": 6.942084853685341
+  },
+  "points3D": {
+    "count": 23388,
+    "finite": true,
+    "bbox_min": [
+      -1.8996555805206299,
+      -9.451706886291504,
+      -6.425922870635986
+    ],
+    "bbox_max": [
+      12.455013275146484,
+      -0.6968924403190613,
+      1.4358103275299072
+    ],
+    "stored_error_all_zero": true,
+    "stored_error_note": "PAA zeroed this field; the recomputed value below is the meaningful one",
+    "track_length_min": 0,
+    "track_length_median": 2.0,
+    "track_length_max": 25,
+    "observations_total": 58524
+  },
+  "reprojection_error_px": {
+    "observations": 58524,
+    "mean": 0.585952408546803,
+    "median": 0.32896962346479164,
+    "p95": 1.8513866953332299,
+    "max": 27.932972279758662,
+    "finite": true,
+    "per_image_median_worst5": [
+      {
+        "image": "3.jpg",
+        "median": 0.5423124268146648,
+        "n": 278
+      },
+      {
+        "image": "10.jpg",
+        "median": 0.530836568777814,
+        "n": 263
+      },
+      {
+        "image": "11.jpg",
+        "median": 0.5121244662011272,
+        "n": 268
+      },
+      {
+        "image": "51.jpg",
+        "median": 0.5032784164642791,
+        "n": 433
+      },
+      {
+        "image": "12.jpg",
+        "median": 0.5026676609290228,
+        "n": 293
+      }
+    ]
+  },
+  "orientation_probe": [
+    {
+      "image": "1.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3788,
+        2140
+      ],
+      "viewed_shape_hw": [
+        3788,
+        2140
+      ],
+      "camera_wxh": [
+        2140,
+        3788
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 4.866550922393799,
+      "contrast_viewed": 4.619246006011963,
+      "projected_points_used": 23191
+    },
+    {
+      "image": "21.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3788,
+        2140
+      ],
+      "viewed_shape_hw": [
+        3788,
+        2140
+      ],
+      "camera_wxh": [
+        2140,
+        3788
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 4.234711170196533,
+      "contrast_viewed": 4.176168918609619,
+      "projected_points_used": 23374
+    },
+    {
+      "image": "41.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3788,
+        2140
+      ],
+      "viewed_shape_hw": [
+        3788,
+        2140
+      ],
+      "camera_wxh": [
+        2140,
+        3788
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 4.956260681152344,
+      "contrast_viewed": 4.997312068939209,
+      "projected_points_used": 23167
+    },
+    {
+      "image": "61.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3788,
+        2140
+      ],
+      "viewed_shape_hw": [
+        3788,
+        2140
+      ],
+      "camera_wxh": [
+        2140,
+        3788
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 4.563310623168945,
+      "contrast_viewed": 4.738633155822754,
+      "projected_points_used": 22787
+    },
+    {
+      "image": "81.jpg",
+      "camera_id": 1,
+      "stored_shape_hw": [
+        2136,
+        3858
+      ],
+      "viewed_shape_hw": [
+        2136,
+        3858
+      ],
+      "camera_wxh": [
+        3858,
+        2136
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 8.72865104675293,
+      "contrast_viewed": 8.886630058288574,
+      "projected_points_used": 22961
+    },
+    {
+      "image": "102.jpg",
+      "camera_id": 1,
+      "stored_shape_hw": [
+        2136,
+        3858
+      ],
+      "viewed_shape_hw": [
+        2136,
+        3858
+      ],
+      "camera_wxh": [
+        3858,
+        2136
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 6.994931221008301,
+      "contrast_viewed": 7.035355091094971,
+      "projected_points_used": 22081
+    }
+  ],
+  "status": "PASS",
+  "trainer_ready_without_undistortion": true
+}
