@@ -104,7 +104,7 @@ print("torch", torch.__version__, "cuda", torch.version.cuda,
       "devices", torch.cuda.device_count())
 if torch.cuda.is_available():
     for i in range(torch.cuda.device_count()):
-        print("  gpu", i, torch.get_device_name(i))
+        print("  gpu", i, torch.cuda.get_device_name(i))
 for mod in ("gsplat", "pointnet2_ops", "knn_cuda"):
     try:
         m = __import__(mod)

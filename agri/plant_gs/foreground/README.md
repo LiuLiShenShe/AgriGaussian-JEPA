@@ -154,3 +154,48 @@ python agri/plant_gs/foreground/batch.py \
 源文件内容另由 `source_fingerprints.json` 校验。快照改变即拒绝旧审核，不能用旧审批接纳新异常。
 此例外只允许**排除**审核过的帧，不允许接纳歧义配对，仍要求每组至少 30 个一对一且全分辨率精确像素 >=99.9% 的配对。
 审核、证据和实际排除比例保存在该审核文件及 `pairing_audit.json`，不默认把 10% 提高到所有组。
+
+---
+
+## 并发与来源（Stage 4B-Fix）
+
+一个训练结果目录同一时刻只能归一个活跃训练进程所有。这条契约由三个文件实现：
+
+| 文件 | 作用 |
+|---|---|
+| `runlock.py` | 目录级 `flock` 独占锁；结果目录状态分类（empty / complete / partial） |
+| `provenance.py` | checkpoint 与 PLY 的 SHA256、内部 step、配置哈希、高斯数、属性一致性 |
+| `verify_provenance.py` | 独立复核：只读磁盘字节，重新推导上述结论 |
+
+### 为什么需要
+
+Stage 4B 的 `Cotton/1` 被两个训练进程同时写进 `results/train_30k/`：
+`history.jsonl` 出现两套交错的 eval/save 节奏，`splats_best.pt` 被后启动的进程覆盖，
+导出的 PLY 于是**无法指认来源**，报告里的 PSNR 成了不可追溯的数字。
+
+原先那次“加锁修复”本身也是失效的——`acquire_run_lock` 调用了 `os.getpid()`，
+而 `train.py` 没有 `import os`，每次调用都抛 `NameError`，从未真正加过锁。
+
+### 现在的行为
+
+- **先加锁，再检查。** `train.py` 在读取 `history.jsonl` / `config.json` / checkpoint
+  之前就取得独占锁，消除「检查与加锁之间」的竞态。第二个进程立即失败，不排队、不写入。
+- **完成的结果不重训。** `status.json: complete` + `splats.pt` 同时存在即拒绝启动。
+- **残缺的结果不静默覆盖。** 默认拒绝；`--resume` 只在该目录自己的
+  `splats_resume.pt` 同时携带模型、6 个 Adam 优化器、`DefaultStrategy` 动态高斯状态
+  与 NumPy/Torch RNG 时生效。模型专用 checkpoint 会明确报错，而不是冒充续跑。
+- **`--append-history` 已移除。** 它只是往已有 history 追加第二条 eval 流，
+  不恢复任何状态，不是续跑。
+- **原子写。** 所有 checkpoint/JSON/PLY 先写临时文件再 `os.replace`。
+- **导出拒绝进行中的训练。** 训练未完成、或有进程持锁时 `export.py` 直接失败；
+  导出前后各算一次 checkpoint SHA256，不一致即失败。
+- **锁的路径归一。** 符号链接、相对路径、`./` 拼写都经 `realpath` 归一到同一目录，
+  因此指向同一结果目录的不同写法争用同一把锁；不同目录互不影响。
+
+### 验证
+
+```bash
+PY_GS=python PYTHONPATH=agri/plant_gs/foreground \
+  python agri/plant_gs/foreground/verify_provenance.py <workspace>/final
+python -m pytest agri/plant_gs -q
+```

@@ -261,6 +261,14 @@ def record_from_workspace(workspace: Path, sample: str, crop: str,
         record.provenance = {
             "state": "verified" if verification.get("status") == "pass" else "failed",
             "record": str(verification_path.resolve()),
+            # Contemporaneous vs retrospective: a Stage 4B run was verified by
+            # the checker that ran inside that same pipeline, while a run from
+            # before the chain existed was verified later by
+            # `audit_historical_export.py`. Both re-derive the mapping from the
+            # bytes on disk; only one of them was present when the metric was
+            # first reported. The reader deserves to know which.
+            "verified_retrospectively": bool(verification.get("retrospective")),
+            "audited_utc": verification.get("checked_utc"),
             "checkpoint_sha256": (verification.get("details") or {}).get("checkpoint_sha256"),
             "ply_sha256": (verification.get("details") or {}).get("ply_sha256"),
             "checkpoint_step": (verification.get("details") or {}).get("checkpoint_step"),

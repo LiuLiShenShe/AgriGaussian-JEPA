@@ -1,0 +1,225 @@
+{
+  "artefacts": {
+    "config.json": {
+      "bytes": 319,
+      "mtime_utc": "2026-10-20T01:22:55Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/config.json",
+      "sha256": "09422479eaf900f4e1a48313654f5a6d52d903c5406a2105e2672e5852415d5e"
+    },
+    "history.jsonl": {
+      "bytes": 155928,
+      "mtime_utc": "2026-10-20T01:33:29Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/history.jsonl",
+      "sha256": "d5f52c67336cff946da10b8d5f07bfd9bfc914c2b30af060d55c8eb07a0a3788"
+    },
+    "point_cloud_best_raw.ply": {
+      "bytes": 78556201,
+      "mtime_utc": "2026-10-20T01:33:29Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/point_cloud_best_raw.ply",
+      "sha256": "cb0d07c48b6ca84ae9b758939133033ad7f3a381d8c300a36e4421bc8ce48c53"
+    },
+    "point_cloud_final_raw.ply": {
+      "bytes": 78556201,
+      "mtime_utc": "2026-10-20T01:33:32Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/point_cloud_final_raw.ply",
+      "sha256": "cb0d07c48b6ca84ae9b758939133033ad7f3a381d8c300a36e4421bc8ce48c53"
+    },
+    "splats.pt": {
+      "bytes": 78558025,
+      "mtime_utc": "2026-10-20T01:33:31Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats.pt",
+      "sha256": "5b253596fbe23f8318c204ab1376047adadc3a162bc53d5533effdfb09ee2488"
+    },
+    "splats_best.pt": {
+      "bytes": 78558149,
+      "mtime_utc": "2026-10-20T01:33:29Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_best.pt",
+      "sha256": "b06ae972092578373b51dfc95852da5da7b14043ecd2d6e11710243a13585b4e"
+    },
+    "status.json": {
+      "bytes": 155,
+      "mtime_utc": "2026-10-20T01:33:32Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/status.json",
+      "sha256": "f56256b3fa34b18a12729a31e776c39bffeed25c0664e1269f5001bb54609064"
+    },
+    "validation.json": {
+      "bytes": 3191,
+      "mtime_utc": "2026-10-20T01:33:31Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/validation.json",
+      "sha256": "5d66c45713a6636fb3df32ce7e2278befa915a34a1c5668e86648eaed14c4066"
+    }
+  },
+  "captured_utc": "2026-10-20T06:30:04Z",
+  "checkpoint_save_cadences": {
+    "deltas": [
+      2000,
+      1000,
+      1000,
+      2000,
+      2000,
+      2000,
+      2000,
+      1000,
+      1000,
+      2000,
+      2000,
+      2000,
+      2000,
+      1000,
+      1000,
+      2000
+    ],
+    "interleaved": true,
+    "periodic_steps": [
+      2000,
+      4000,
+      5000,
+      6000,
+      8000,
+      10000,
+      12000,
+      14000,
+      15000,
+      16000,
+      18000,
+      20000,
+      22000,
+      24000,
+      25000,
+      26000,
+      28000
+    ]
+  },
+  "exported_final": {
+    "gsjepa_compatibility.json": {
+      "bytes": 2195,
+      "mtime_utc": "2026-10-20T01:32:47Z",
+      "path": "data/plant_gs/PAA/Cotton_1/final/gsjepa_compatibility.json",
+      "sha256": "5406ac9bf1305025c127d2f0a1ea09957ed1bf0052581138db97fd7af0c3e164"
+    },
+    "point_cloud.ply": {
+      "bytes": 75673461,
+      "mtime_utc": "2026-10-20T01:32:04Z",
+      "path": "data/plant_gs/PAA/Cotton_1/final/point_cloud.ply",
+      "sha256": "a8881368837e507a56368adaf2731b3eb0a8c532e3b931079c262abba491957a"
+    },
+    "report.json": {
+      "bytes": 1892,
+      "mtime_utc": "2026-10-20T01:32:10Z",
+      "path": "data/plant_gs/PAA/Cotton_1/final/report.json",
+      "sha256": "296191e0a26d425e2520fc33c7c3a9af46912d425f4fc5e743c6ca5586655252"
+    },
+    "validation.json": {
+      "bytes": 3198,
+      "mtime_utc": "2026-10-20T01:32:10Z",
+      "path": "data/plant_gs/PAA/Cotton_1/final/validation.json",
+      "sha256": "b4770e407f8e3b6c3e40de472831c998604eb9418847b6ac55582ec701ee240c"
+    }
+  },
+  "note": "Cotton/1 results/train_30k was written by two concurrent training processes. This file preserves the artefact hashes as accident evidence; the directory is kept read-only and is not used as a source for any reported metric.",
+  "periodic_checkpoints": {
+    "splats_002000.pt": {
+      "bytes": 73403357,
+      "mtime_utc": "2026-10-20T01:18:11Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_002000.pt",
+      "sha256": "24ef31265603a62dc4917d7b8199d90bbb4ecb230e9e6e9351114b2cce5ac64c"
+    },
+    "splats_004000.pt": {
+      "bytes": 79918813,
+      "mtime_utc": "2026-10-20T01:18:56Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_004000.pt",
+      "sha256": "1108e796903e7c572b4ee51de6e8555b13c39c75b0ef562cc37aa9270d17a266"
+    },
+    "splats_005000.pt": {
+      "bytes": 79557789,
+      "mtime_utc": "2026-10-20T01:24:37Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_005000.pt",
+      "sha256": "63d76c3badb1ffc17cf762f9af676734b3bc3195c1c698a4d5073a9daea26f36"
+    },
+    "splats_006000.pt": {
+      "bytes": 78564957,
+      "mtime_utc": "2026-10-20T01:19:38Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_006000.pt",
+      "sha256": "30e566c785c49a9a704e952c048fef1b26e3953235f3a7d05200fb8c38f1bb54"
+    },
+    "splats_008000.pt": {
+      "bytes": 73781533,
+      "mtime_utc": "2026-10-20T01:20:26Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_008000.pt",
+      "sha256": "5decc238e9301d4e48512768ba20f40a178c290c9f8dc8a3d7f91e055616446c"
+    },
+    "splats_010000.pt": {
+      "bytes": 83532765,
+      "mtime_utc": "2026-10-20T01:26:23Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_010000.pt",
+      "sha256": "814ee8b14be94285d176a0a58867967bf818428502e25a7c9e50e08934b62c0d"
+    },
+    "splats_012000.pt": {
+      "bytes": 82629277,
+      "mtime_utc": "2026-10-20T01:21:55Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_012000.pt",
+      "sha256": "121766538608c01db9503783ee05607ba499e0a4d67f8192ba45e2eb67a5c096"
+    },
+    "splats_014000.pt": {
+      "bytes": 78595357,
+      "mtime_utc": "2026-10-20T01:22:41Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_014000.pt",
+      "sha256": "d47bfb3ed2944c4d5dd6ad46ce867cfdc209841217c747c2b887640e477427ed"
+    },
+    "splats_015000.pt": {
+      "bytes": 78558173,
+      "mtime_utc": "2026-10-20T01:28:27Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_015000.pt",
+      "sha256": "8a6686a786bbe13380fc9f945edb66c3c28590cbd106cb8de0fc254b9266a10f"
+    },
+    "splats_016000.pt": {
+      "bytes": 78411485,
+      "mtime_utc": "2026-10-20T01:23:25Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_016000.pt",
+      "sha256": "c7c8c3bafdb66e2a3adc8ff624c6a0f0ed1496d427f2574d5de1e752fa68498f"
+    },
+    "splats_018000.pt": {
+      "bytes": 78411485,
+      "mtime_utc": "2026-10-20T01:24:09Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_018000.pt",
+      "sha256": "2406a52e59ef1f87061ffb2c1b1164128826349873e0e5f82de5f458d7e02c9b"
+    },
+    "splats_020000.pt": {
+      "bytes": 78558173,
+      "mtime_utc": "2026-10-20T01:30:07Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_020000.pt",
+      "sha256": "649ca1e006ddb59b5b15e2c520c5d4edfb98e1ecb6a041e95085d0b4db2b7886"
+    },
+    "splats_022000.pt": {
+      "bytes": 78411485,
+      "mtime_utc": "2026-10-20T01:25:35Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_022000.pt",
+      "sha256": "b059f72f1c3cd3d8562529a89dc2cc7174bc9f44751734016fb0680421ac1446"
+    },
+    "splats_024000.pt": {
+      "bytes": 78411485,
+      "mtime_utc": "2026-10-20T01:26:19Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_024000.pt",
+      "sha256": "43b3c6dee8227f6eddd2d5afd09583ea74eb63c9d08eb748328cae30524643e1"
+    },
+    "splats_025000.pt": {
+      "bytes": 78558173,
+      "mtime_utc": "2026-10-20T01:31:49Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_025000.pt",
+      "sha256": "ac807436bdc5ca89533007f69df7ac44cc306cc9e1d3d41076c48385dcfad98d"
+    },
+    "splats_026000.pt": {
+      "bytes": 78411485,
+      "mtime_utc": "2026-10-20T01:27:03Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_026000.pt",
+      "sha256": "a607fd8c66fe58edb2d874ed89e263d7534e622ca83568ba029425b5c69785c4"
+    },
+    "splats_028000.pt": {
+      "bytes": 78411485,
+      "mtime_utc": "2026-10-20T01:27:43Z",
+      "path": "data/plant_gs/PAA/Cotton_1/results/train_30k/splats_028000.pt",
+      "sha256": "7307d61dd4dd4656408259af87a948b5099c952ea5ca805585c358f3327b37fd"
+    }
+  },
+  "workspace": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cotton_1"
+}
