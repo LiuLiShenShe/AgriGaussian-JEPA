@@ -1,0 +1,13 @@
+{
+  "status": "annotation_pending",
+  "truth_source": null,
+  "tasks_total": 48,
+  "tasks_human_confirmed": 0,
+  "tasks_unconfirmed_ignored": 0,
+  "annotators": [],
+  "per_task": {},
+  "per_crop": {},
+  "per_backend": {},
+  "evaluated_utc": "2026-10-20T12:08:41Z",
+  "caveat": "No human-confirmed labels exist, so NO segmentation accuracy is reported. Model predictions scored against themselves are not an accuracy measurement, and this report will not present them as one. Run `annotation.py import` for each reviewed task, then re-run `annotation.py evaluate`."
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Stage 4C annotation review</title>
+<style>
+ body{font:13px/1.4 system-ui,sans-serif;margin:0;display:flex;height:100vh}
+ #side{width:260px;overflow:auto;border-right:1px solid #ccc;padding:8px}
+ #main{flex:1;display:flex;flex-direction:column;padding:8px;gap:6px}
+ #stage{position:relative;flex:1;overflow:auto;background:#222}
+ canvas{position:absolute;left:0;top:0;image-rendering:pixelated}
+ .task{padding:3px 5px;cursor:pointer;border-radius:3px}
+ .task:hover{background:#eee}.task.done{color:#2a7;font-weight:600}
+ .classbtn{padding:4px 8px;margin:2px;border:1px solid #888;border-radius:3px;cursor:pointer}
+ .classbtn.active{outline:3px solid #000}
+ .hint{color:#666}
+</style>
+<div id="side">
+  <div><input id="annotator" placeholder="your name" style="width:100%"></div>
+  <div class="hint" id="progress"></div>
+  <div id="tasks"></div>
+</div>
+<div id="main">
+  <div id="classes"></div>
+  <div>
+    <button onclick="undo()">undo</button>
+    <button onclick="clearAll()">clear</button>
+    <button onclick="save()">save</button>
+    <label>brush <input id="brushsize" type="range" min="3" max="61" value="9"></label>
+    <span id="msg" class="hint"></span>
+  </div>
+  <div id="stage">
+    <canvas id="photo"></canvas>
+    <canvas id="paint"></canvas>
+  </div>
+</div>
+<script>
+const CLASSES = [[1,"Plant"],[2,"Pot/Soil"],[3,"Support"],[4,"Uncertain"],[0,"Background"]];
+const COLORS = {0:[0,0,0],1:[40,200,70],2:[60,90,230],3:[235,215,60],4:[255,0,255]};
+let manifest, current=null, cls=1, painting=false, undoStack=[], confirmed=new Set();
+const photo=document.getElementById('photo'), paint=document.getElementById('paint');
+const pctx=photo.getContext('2d'), gctx=paint.getContext('2d');
+
+const tpl = await (await fetch('manifest.json')).json();
+manifest = tpl;
+for(const t of manifest.tasks) if(t.status==='human_confirmed') confirmed.add(t.task_id);
+
+function classButtons(){
+  const box=document.getElementById('classes'); box.innerHTML='';
+  for(const [id,name] of CLASSES){
+    const b=document.createElement('button');
+    b.className='classbtn'+(id===cls?' active':'');
+    b.textContent=name;
+    b.style.background='rgb('+COLORS[id].join(',')+')';
+    b.style.color=(id===0||id===2)?'#fff':'#000';
+    b.onclick=()=>{cls=id;classButtons();};
+    box.appendChild(b);
+  }
+}
+function renderList(){
+  const box=document.getElementById('tasks'); box.innerHTML='';
+  let n=0;
+  for(const t of manifest.tasks){
+    const d=document.createElement('div');
+    d.className='task'+(confirmed.has(t.task_id)?' done':'');
+    d.textContent=t.task_id;
+    d.onclick=()=>loadTask(t); box.appendChild(d); if(confirmed.has(t.task_id))n++;
+  }
+  document.getElementById('progress').textContent = n+'/'+manifest.tasks.length+' confirmed';
+}
+function loadTask(t){
+  current=t; undoStack=[];
+  const img=new Image();
+  img.onload=()=>{
+    paint.width=photo.width=img.width; paint.height=photo.height=img.height;
+    pctx.drawImage(img,0,0);
+    gctx.clearRect(0,0,paint.width,paint.height);
+    const saved='labels/'+t.task_id+'.png';
+    const cur=new Image();
+    cur.onload=()=>gctx.drawImage(cur,0,0);
+    cur.onerror=()=>{};
+    cur.src=saved+'?t='+Date.now();
+  };
+  img.src=t.image;
+  document.getElementById('msg').textContent=t.task_id+' — '+(t.selected_because||[]).join(', ');
+}
+function pointAt(event){
+  const r=paint.getBoundingClientRect();
+  return [Math.round(event.clientX-r.left),Math.round(event.clientY-r.top)];
+}
+function stroke(event){
+  const [x,y]=pointAt(event);
+  const size=Number(document.getElementById('brushsize')?.value||9);
+  gctx.fillStyle='rgb('+COLORS[cls].join(',')+')';
+  gctx.beginPath(); gctx.arc(x,y,size/2,0,7); gctx.fill();
+}
+paint.addEventListener('mousedown',e=>{painting=true;undoStack.push(gctx.getImageData(0,0,paint.width,paint.height));stroke(e);});
+paint.addEventListener('mousemove',e=>{if(painting)stroke(e);});
+window.addEventListener('mouseup',()=>painting=false);
+function undo(){if(undoStack.length)gctx.putImageData(undoStack.pop(),0,0);}
+function clearAll(){gctx.clearRect(0,0,paint.width,paint.height);}
+function save(){
+  const who=document.getElementById('annotator').value.trim();
+  if(!who){alert('enter your name first');return;}
+  if(!current){alert('pick a task');return;}
+  // Flatten onto a zero-filled layer: alpha 0 means Background (class 0).
+  const flat=document.createElement('canvas');flat.width=paint.width;flat.height=paint.height;
+  const fctx=flat.getContext('2d');fctx.fillStyle='rgb(0,0,0)';fctx.fillRect(0,0,flat.width,flat.height);
+  fctx.drawImage(paint,0,0);
+  fetch('/api/save',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({task_id:current.task_id,annotator:who,png_base64:flat.toDataURL('image/png')})})
+   .then(r=>r.json()).then(j=>{document.getElementById('msg').textContent='saved '+j.saved;});
+}
+classButtons();renderList();
+</script>

@@ -39,6 +39,7 @@ Outputs
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 import time
@@ -133,6 +134,34 @@ def render_with_depth(splats, K, w2c, width, height, degree):
 
 def log(message: str) -> None:
     print(message, flush=True)
+
+
+def _sha256_file(path: Path, chunk: int = 1 << 20) -> str:
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as handle:
+        for block in iter(lambda: handle.read(chunk), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def _write_empty_ply(path: Path) -> None:
+    """A 0-row 3DGS PLY, so an empty asset is distinguishable from a missing one.
+
+    A downstream tool that opens the file sees a valid header and zero
+    vertices. Writing nothing at all would let a reader treat the failure as
+    "the step never ran".
+    """
+    header = ["ply", "format binary_little_endian 1.0",
+              "comment 3D Gaussians (empty carve: no Gaussian met the plant "
+              "criteria)", "element vertex 0",
+              "property float x", "property float y", "property float z",
+              "property float opacity"]
+    header += [f"property float scale_{i}" for i in range(3)]
+    header += [f"property float rot_{i}" for i in range(4)]
+    header += [f"property float f_dc_{i}" for i in range(3)]
+    header += [f"property float f_rest_{i}" for i in range(45)]
+    header += ["end_header"]
+    Path(path).write_text("\n".join(header) + "\n")
 
 
 def load_label_maps(directory: Path, frames, device) -> dict:
@@ -420,15 +449,41 @@ def main():
         eval_labels = load_label_maps(args.eval_labels, data.frames, device)
     log(f"evaluating full vs plant-only inside the plant region "
         f"(reference: {args.eval_labels or args.labels}) ...")
-    metrics["region_quality"] = evaluate_region_quality(
-        splats, data, keep, eval_labels, sh_degree, plant_id=PLANT)
+    # A carve that keeps nothing is a *result*, not a crash. Rendering an empty
+    # Gaussian tensor made gsplat divide by zero and the process died with
+    # SIGFPE, losing the report that would have explained why (Rice/1: both
+    # backends labelled the stalks "support"/"soil", so no Gaussian had a plant
+    # majority). Evaluate only when there is something to render, and record
+    # the empty carve explicitly so it survives as evidence.
     if int(keep.sum()) > 0:
-        metrics["render_comparison"] = render_comparison(
-            splats, data, keep, sh_degree, args.out / "renders")
+        metrics["region_quality"] = evaluate_region_quality(
+            splats, data, keep, eval_labels, sh_degree, plant_id=PLANT)
+        if not args.no_export:
+            metrics["render_comparison"] = render_comparison(
+                splats, data, keep, sh_degree, args.out / "renders")
+    else:
+        metrics["region_quality"] = {
+            "views": 0,
+            "reason": ("the carve retained no Gaussians, so there is nothing to "
+                       "render; this is a semantic-labelling failure, not a "
+                       "rendering failure"),
+        }
+        metrics["render_comparison"] = {"views_rendered": 0, "reason": "empty carve"}
     if not args.no_export:
         kept = {k: v.detach()[keep] for k, v in splats.items()}
-        export_ply(kept, args.out / "plant_only.ply")
-        log(f"wrote {args.out / 'plant_only.ply'}")
+        if int(kept["means"].shape[0]) == 0:
+            # gsplat's exporter cannot write a 0-row PLY ("cannot reshape
+            # tensor of 0 elements"), so an empty carve died here and took the
+            # whole report with it. The empty carve is a legitimate outcome of
+            # a labelling failure, so it is written as a header-only PLY and
+            # the report explains why there are no rows.
+            _write_empty_ply(args.out / "plant_only.ply")
+            log("carve retained 0 Gaussians; wrote a header-only plant_only.ply "
+                "so downstream tools can distinguish an empty asset from a "
+                "missing one")
+        else:
+            export_ply(kept, args.out / "plant_only.ply")
+            log(f"wrote {args.out / 'plant_only.ply'}")
 
     np.savez_compressed(
         args.out / "gaussian_classes.npz",
@@ -440,6 +495,12 @@ def main():
     report = {
         "status": "PASS",
         "source_checkpoint": str(args.checkpoint),
+        # The carve is a *subset of rows* of a source asset. Naming that asset
+        # and hashing its bytes is what lets stage4c/plant_only_provenance.py
+        # check the subset against it later; without it the plant-only PLY is
+        # an orphan that loads and renders perfectly.
+        "source_ply": str(args.from_ply.resolve()) if args.from_ply else None,
+        "source_ply_sha256": _sha256_file(args.from_ply) if args.from_ply else None,
         "labels": str(args.labels),
         "plant_source": args.plant_source,
         "source_gaussians": int(n),

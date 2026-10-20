@@ -1,0 +1,674 @@
+{
+  "status": "PASS",
+  "generated_utc": "2026-10-20T11:14:36Z",
+  "dataset_name": "PAA-Plant-Dataset",
+  "source_url": "https://huggingface.co/datasets/JackTrum938/PAA-Plant-Dataset",
+  "crops": [
+    "Broccoli",
+    "Cabbage",
+    "Cotton",
+    "Rice",
+    "Sunflower",
+    "Tobacco"
+  ],
+  "n_crops": 6,
+  "n_acquisitions": 41,
+  "n_distinct_plants": 23,
+  "plants": {
+    "Broccoli/10": {
+      "split_group": "Broccoli/10",
+      "crop": "Broccoli",
+      "plant_id": "10",
+      "acquisitions": [
+        "20260327-10",
+        "20260402-10",
+        "20260411-10",
+        "20260416-10"
+      ],
+      "dates": [
+        "2026-03-27",
+        "2026-04-02",
+        "2026-04-11",
+        "2026-04-16"
+      ],
+      "n_acquisitions": 4,
+      "time_span_days": 20
+    },
+    "Broccoli/5": {
+      "split_group": "Broccoli/5",
+      "crop": "Broccoli",
+      "plant_id": "5",
+      "acquisitions": [
+        "20260327-5",
+        "20260402-5",
+        "20260411-5",
+        "20260416-5"
+      ],
+      "dates": [
+        "2026-03-27",
+        "2026-04-02",
+        "2026-04-11",
+        "2026-04-16"
+      ],
+      "n_acquisitions": 4,
+      "time_span_days": 20
+    },
+    "Cabbage/21": {
+      "split_group": "Cabbage/21",
+      "crop": "Cabbage",
+      "plant_id": "21",
+      "acquisitions": [
+        "20260328-21",
+        "20260403-21",
+        "20260411-21",
+        "20260417-21"
+      ],
+      "dates": [
+        "2026-03-28",
+        "2026-04-03",
+        "2026-04-11",
+        "2026-04-17"
+      ],
+      "n_acquisitions": 4,
+      "time_span_days": 20
+    },
+    "Cabbage/9": {
+      "split_group": "Cabbage/9",
+      "crop": "Cabbage",
+      "plant_id": "9",
+      "acquisitions": [
+        "20260328-9",
+        "20260403-9",
+        "20260411-9",
+        "20260417-9"
+      ],
+      "dates": [
+        "2026-03-28",
+        "2026-04-03",
+        "2026-04-11",
+        "2026-04-17"
+      ],
+      "n_acquisitions": 4,
+      "time_span_days": 20
+    },
+    "Cotton/1": {
+      "split_group": "Cotton/1",
+      "crop": "Cotton",
+      "plant_id": "1",
+      "acquisitions": [
+        "1"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Cotton/2": {
+      "split_group": "Cotton/2",
+      "crop": "Cotton",
+      "plant_id": "2",
+      "acquisitions": [
+        "2"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Cotton/3": {
+      "split_group": "Cotton/3",
+      "crop": "Cotton",
+      "plant_id": "3",
+      "acquisitions": [
+        "3"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Cotton/4": {
+      "split_group": "Cotton/4",
+      "crop": "Cotton",
+      "plant_id": "4",
+      "acquisitions": [
+        "4"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Cotton/5": {
+      "split_group": "Cotton/5",
+      "crop": "Cotton",
+      "plant_id": "5",
+      "acquisitions": [
+        "5"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Rice/1": {
+      "split_group": "Rice/1",
+      "crop": "Rice",
+      "plant_id": "1",
+      "acquisitions": [
+        "1"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Rice/2": {
+      "split_group": "Rice/2",
+      "crop": "Rice",
+      "plant_id": "2",
+      "acquisitions": [
+        "2"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Rice/3": {
+      "split_group": "Rice/3",
+      "crop": "Rice",
+      "plant_id": "3",
+      "acquisitions": [
+        "3"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Rice/4": {
+      "split_group": "Rice/4",
+      "crop": "Rice",
+      "plant_id": "4",
+      "acquisitions": [
+        "4"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Rice/5": {
+      "split_group": "Rice/5",
+      "crop": "Rice",
+      "plant_id": "5",
+      "acquisitions": [
+        "5"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Sunflower/1": {
+      "split_group": "Sunflower/1",
+      "crop": "Sunflower",
+      "plant_id": "1",
+      "acquisitions": [
+        "1"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Sunflower/2": {
+      "split_group": "Sunflower/2",
+      "crop": "Sunflower",
+      "plant_id": "2",
+      "acquisitions": [
+        "2"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Sunflower/3": {
+      "split_group": "Sunflower/3",
+      "crop": "Sunflower",
+      "plant_id": "3",
+      "acquisitions": [
+        "3"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Sunflower/4": {
+      "split_group": "Sunflower/4",
+      "crop": "Sunflower",
+      "plant_id": "4",
+      "acquisitions": [
+        "4"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Sunflower/7": {
+      "split_group": "Sunflower/7",
+      "crop": "Sunflower",
+      "plant_id": "7",
+      "acquisitions": [
+        "7"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Sunflower/8": {
+      "split_group": "Sunflower/8",
+      "crop": "Sunflower",
+      "plant_id": "8",
+      "acquisitions": [
+        "8"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Sunflower/9": {
+      "split_group": "Sunflower/9",
+      "crop": "Sunflower",
+      "plant_id": "9",
+      "acquisitions": [
+        "9"
+      ],
+      "dates": [],
+      "n_acquisitions": 1,
+      "time_span_days": 0
+    },
+    "Tobacco/23": {
+      "split_group": "Tobacco/23",
+      "crop": "Tobacco",
+      "plant_id": "23",
+      "acquisitions": [
+        "20260401-23",
+        "20260407-23",
+        "20260415-23",
+        "20260421-23"
+      ],
+      "dates": [
+        "2026-04-01",
+        "2026-04-07",
+        "2026-04-15",
+        "2026-04-21"
+      ],
+      "n_acquisitions": 4,
+      "time_span_days": 20
+    },
+    "Tobacco/26": {
+      "split_group": "Tobacco/26",
+      "crop": "Tobacco",
+      "plant_id": "26",
+      "acquisitions": [
+        "20260401-26",
+        "20260407-26",
+        "20260415-26",
+        "20260421-26"
+      ],
+      "dates": [
+        "2026-04-01",
+        "2026-04-07",
+        "2026-04-15",
+        "2026-04-21"
+      ],
+      "n_acquisitions": 4,
+      "time_span_days": 20
+    }
+  },
+  "acquisitions": [
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260327-10",
+      "plant_id": "10",
+      "acquisition_date": "2026-03-27",
+      "dated": true,
+      "split_group": "Broccoli/10"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260327-5",
+      "plant_id": "5",
+      "acquisition_date": "2026-03-27",
+      "dated": true,
+      "split_group": "Broccoli/5"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260402-10",
+      "plant_id": "10",
+      "acquisition_date": "2026-04-02",
+      "dated": true,
+      "split_group": "Broccoli/10"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260402-5",
+      "plant_id": "5",
+      "acquisition_date": "2026-04-02",
+      "dated": true,
+      "split_group": "Broccoli/5"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260411-10",
+      "plant_id": "10",
+      "acquisition_date": "2026-04-11",
+      "dated": true,
+      "split_group": "Broccoli/10"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260411-5",
+      "plant_id": "5",
+      "acquisition_date": "2026-04-11",
+      "dated": true,
+      "split_group": "Broccoli/5"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260416-10",
+      "plant_id": "10",
+      "acquisition_date": "2026-04-16",
+      "dated": true,
+      "split_group": "Broccoli/10"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260416-5",
+      "plant_id": "5",
+      "acquisition_date": "2026-04-16",
+      "dated": true,
+      "split_group": "Broccoli/5"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260328-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-03-28",
+      "dated": true,
+      "split_group": "Cabbage/21"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260328-9",
+      "plant_id": "9",
+      "acquisition_date": "2026-03-28",
+      "dated": true,
+      "split_group": "Cabbage/9"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260403-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-04-03",
+      "dated": true,
+      "split_group": "Cabbage/21"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260403-9",
+      "plant_id": "9",
+      "acquisition_date": "2026-04-03",
+      "dated": true,
+      "split_group": "Cabbage/9"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260411-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-04-11",
+      "dated": true,
+      "split_group": "Cabbage/21"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260411-9",
+      "plant_id": "9",
+      "acquisition_date": "2026-04-11",
+      "dated": true,
+      "split_group": "Cabbage/9"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260417-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-04-17",
+      "dated": true,
+      "split_group": "Cabbage/21"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260417-9",
+      "plant_id": "9",
+      "acquisition_date": "2026-04-17",
+      "dated": true,
+      "split_group": "Cabbage/9"
+    },
+    {
+      "crop": "Cotton",
+      "acquisition_id": "1",
+      "plant_id": "1",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Cotton/1"
+    },
+    {
+      "crop": "Cotton",
+      "acquisition_id": "2",
+      "plant_id": "2",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Cotton/2"
+    },
+    {
+      "crop": "Cotton",
+      "acquisition_id": "3",
+      "plant_id": "3",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Cotton/3"
+    },
+    {
+      "crop": "Cotton",
+      "acquisition_id": "4",
+      "plant_id": "4",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Cotton/4"
+    },
+    {
+      "crop": "Cotton",
+      "acquisition_id": "5",
+      "plant_id": "5",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Cotton/5"
+    },
+    {
+      "crop": "Rice",
+      "acquisition_id": "1",
+      "plant_id": "1",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Rice/1"
+    },
+    {
+      "crop": "Rice",
+      "acquisition_id": "2",
+      "plant_id": "2",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Rice/2"
+    },
+    {
+      "crop": "Rice",
+      "acquisition_id": "3",
+      "plant_id": "3",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Rice/3"
+    },
+    {
+      "crop": "Rice",
+      "acquisition_id": "4",
+      "plant_id": "4",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Rice/4"
+    },
+    {
+      "crop": "Rice",
+      "acquisition_id": "5",
+      "plant_id": "5",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Rice/5"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "1",
+      "plant_id": "1",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/1"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "2",
+      "plant_id": "2",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/2"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "3",
+      "plant_id": "3",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/3"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "4",
+      "plant_id": "4",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/4"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "7",
+      "plant_id": "7",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/7"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "8",
+      "plant_id": "8",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/8"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "9",
+      "plant_id": "9",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/9"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260401-23",
+      "plant_id": "23",
+      "acquisition_date": "2026-04-01",
+      "dated": true,
+      "split_group": "Tobacco/23"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260401-26",
+      "plant_id": "26",
+      "acquisition_date": "2026-04-01",
+      "dated": true,
+      "split_group": "Tobacco/26"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260407-23",
+      "plant_id": "23",
+      "acquisition_date": "2026-04-07",
+      "dated": true,
+      "split_group": "Tobacco/23"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260407-26",
+      "plant_id": "26",
+      "acquisition_date": "2026-04-07",
+      "dated": true,
+      "split_group": "Tobacco/26"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260415-23",
+      "plant_id": "23",
+      "acquisition_date": "2026-04-15",
+      "dated": true,
+      "split_group": "Tobacco/23"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260415-26",
+      "plant_id": "26",
+      "acquisition_date": "2026-04-15",
+      "dated": true,
+      "split_group": "Tobacco/26"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260421-23",
+      "plant_id": "23",
+      "acquisition_date": "2026-04-21",
+      "dated": true,
+      "split_group": "Tobacco/23"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260421-26",
+      "plant_id": "26",
+      "acquisition_date": "2026-04-21",
+      "dated": true,
+      "split_group": "Tobacco/26"
+    }
+  ],
+  "acquisition_dates": [
+    "2026-03-27",
+    "2026-03-28",
+    "2026-04-01",
+    "2026-04-02",
+    "2026-04-03",
+    "2026-04-07",
+    "2026-04-11",
+    "2026-04-15",
+    "2026-04-16",
+    "2026-04-17",
+    "2026-04-21"
+  ],
+  "time_span": {
+    "first": "2026-03-27",
+    "last": "2026-04-21",
+    "n_distinct_dates": 11,
+    "days": 25
+  },
+  "split_group_rule": "split_group = <crop>/<plant_id>; one plant's acquisitions must never be split across train/val/test. Acquisitions of a plant are the leaves of that group.",
+  "local_reconstructions": {
+    "split_groups": {},
+    "registration": {}
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "probed_utc": "2026-10-20T11:09:06Z",
+  "purpose": "access/pose/intrinsics pre-flight only; no download, no reconstruction, no tomato 3DGS is produced here",
+  "attempts": [
+    {
+      "repo": "TomatoMAP/TomatoMAP",
+      "endpoint": "https://huggingface.co",
+      "http_status": null,
+      "control_repo": "JackTrum938/PAA-Plant-Dataset",
+      "control_status": null,
+      "endpoint_can_serve_public_datasets": false,
+      "reachable": false,
+      "detail": "URLError: <urlopen error [Errno 101] Network is unreachable>",
+      "conclusion": "unreachable from this host; NOT assessed"
+    },
+    {
+      "repo": "TomatoMAP/tomatomap",
+      "endpoint": "https://huggingface.co",
+      "http_status": null,
+      "control_repo": "JackTrum938/PAA-Plant-Dataset",
+      "control_status": null,
+      "endpoint_can_serve_public_datasets": false,
+      "reachable": false,
+      "detail": "URLError: <urlopen error [Errno 101] Network is unreachable>",
+      "conclusion": "unreachable from this host; NOT assessed"
+    },
+    {
+      "repo": "Liuxinyv/TomatoMAP",
+      "endpoint": "https://huggingface.co",
+      "http_status": null,
+      "control_repo": "JackTrum938/PAA-Plant-Dataset",
+      "control_status": null,
+      "endpoint_can_serve_public_datasets": false,
+      "reachable": false,
+      "detail": "URLError: <urlopen error [Errno 101] Network is unreachable>",
+      "conclusion": "unreachable from this host; NOT assessed"
+    },
+    {
+      "repo": "xiaoyang/TomatoMAP",
+      "endpoint": "https://huggingface.co",
+      "http_status": null,
+      "control_repo": "JackTrum938/PAA-Plant-Dataset",
+      "control_status": null,
+      "endpoint_can_serve_public_datasets": false,
+      "reachable": false,
+      "detail": "URLError: <urlopen error [Errno 101] Network is unreachable>",
+      "conclusion": "unreachable from this host; NOT assessed"
+    },
+    {
+      "repo": "TomatoMAP/TomatoMAP",
+      "endpoint": "https://hf-mirror.com",
+      "http_status": 401,
+      "control_repo": "JackTrum938/PAA-Plant-Dataset",
+      "control_status": 200,
+      "endpoint_can_serve_public_datasets": true,
+      "reachable": true,
+      "detail": {
+        "error": "Invalid username or password."
+      },
+      "conclusion": "the endpoint serves known-public datasets but not this id, so it is gated or private or the id is wrong; a credential or an approved request would settle which"
+    },
+    {
+      "repo": "TomatoMAP/tomatomap",
+      "endpoint": "https://hf-mirror.com",
+      "http_status": 401,
+      "control_repo": "JackTrum938/PAA-Plant-Dataset",
+      "control_status": 200,
+      "endpoint_can_serve_public_datasets": true,
+      "reachable": true,
+      "detail": {
+        "error": "Invalid username or password."
+      },
+      "conclusion": "the endpoint serves known-public datasets but not this id, so it is gated or private or the id is wrong; a credential or an approved request would settle which"
+    },
+    {
+      "repo": "Liuxinyv/TomatoMAP",
+      "endpoint": "https://hf-mirror.com",
+      "http_status": 401,
+      "control_repo": "JackTrum938/PAA-Plant-Dataset",
+      "control_status": 200,
+      "endpoint_can_serve_public_datasets": true,
+      "reachable": true,
+      "detail": {
+        "error": "Invalid username or password."
+      },
+      "conclusion": "the endpoint serves known-public datasets but not this id, so it is gated or private or the id is wrong; a credential or an approved request would settle which"
+    },
+    {
+      "repo": "xiaoyang/TomatoMAP",
+      "endpoint": "https://hf-mirror.com",
+      "http_status": 401,
+      "control_repo": "JackTrum938/PAA-Plant-Dataset",
+      "control_status": 200,
+      "endpoint_can_serve_public_datasets": true,
+      "reachable": true,
+      "detail": {
+        "error": "Invalid username or password."
+      },
+      "conclusion": "the endpoint serves known-public datasets but not this id, so it is gated or private or the id is wrong; a credential or an approved request would settle which"
+    }
+  ],
+  "conclusion": "TomatoMAP could not be read from this host. On an endpoint that DOES serve known-public datasets, every candidate id was refused, which means gated/private or a wrong id -- a credential or an approved request is needed to tell those apart. On the official endpoint the host has no network route at all. Either way this is an ACCESS result, not a data-quality result: poses and intrinsics are unassessed, and no download or reconstruction was started."
+}

@@ -1,0 +1,1507 @@
+{
+  "schema_version": "paa-stage4c-annotation-1",
+  "created_utc": "2026-10-20T12:08:40Z",
+  "views_per_crop": 8,
+  "n_tasks": 48,
+  "crops": [
+    "Broccoli",
+    "Cabbage",
+    "Cotton",
+    "Rice",
+    "Sunflower",
+    "Tobacco"
+  ],
+  "tasks": [
+    {
+      "task_id": "Broccoli_20260327-10_37",
+      "crop": "Broccoli",
+      "asset_id": "Broccoli/20260327-10",
+      "split_group": "Broccoli/10",
+      "frame": "37.jpg",
+      "image": "images/Broccoli_20260327-10_37.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/dataset/images/37.jpg",
+      "features": {
+        "azimuth_mod_360": 180.51860142459978,
+        "elevation": 0.2951064090045092,
+        "plant_fraction": 0.034627849002849,
+        "nonplant_fraction": 0.16256232193732192,
+        "disagreement_fraction": 0.039161918328584996,
+        "specimen_fraction": 0.19719017094017094
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Broccoli_20260327-10_31",
+      "crop": "Broccoli",
+      "asset_id": "Broccoli/20260327-10",
+      "split_group": "Broccoli/10",
+      "frame": "31.jpg",
+      "image": "images/Broccoli_20260327-10_31.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/dataset/images/31.jpg",
+      "features": {
+        "azimuth_mod_360": 17.235895066456465,
+        "elevation": -0.13600816453750011,
+        "plant_fraction": 0.03413283475783476,
+        "nonplant_fraction": 0.17499465811965811,
+        "disagreement_fraction": 0.004868233618233618,
+        "specimen_fraction": 0.20912749287749288
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Broccoli_20260327-10_100",
+      "crop": "Broccoli",
+      "asset_id": "Broccoli/20260327-10",
+      "split_group": "Broccoli/10",
+      "frame": "100.jpg",
+      "image": "images/Broccoli_20260327-10_100.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/dataset/images/100.jpg",
+      "features": {
+        "azimuth_mod_360": 281.8961456660674,
+        "elevation": 1.5233589511921377,
+        "plant_fraction": 0.1483695394112061,
+        "nonplant_fraction": 0.06022851377018044,
+        "disagreement_fraction": 0.051325379867046536,
+        "specimen_fraction": 0.20859805318138652
+      },
+      "selected_because": [
+        "leaf_density"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Broccoli_20260327-10_79",
+      "crop": "Broccoli",
+      "asset_id": "Broccoli/20260327-10",
+      "split_group": "Broccoli/10",
+      "frame": "79.jpg",
+      "image": "images/Broccoli_20260327-10_79.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/dataset/images/79.jpg",
+      "features": {
+        "azimuth_mod_360": 82.93679022433923,
+        "elevation": 0.01758124804544741,
+        "plant_fraction": 0.02832977207977208,
+        "nonplant_fraction": 0.13439636752136752,
+        "disagreement_fraction": 0.0690752611585945,
+        "specimen_fraction": 0.1627261396011396
+      },
+      "selected_because": [
+        "model_disagreement"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Broccoli_20260327-10_10",
+      "crop": "Broccoli",
+      "asset_id": "Broccoli/20260327-10",
+      "split_group": "Broccoli/10",
+      "frame": "10.jpg",
+      "image": "images/Broccoli_20260327-10_10.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/dataset/images/10.jpg",
+      "features": {
+        "azimuth_mod_360": 262.0977392232418,
+        "elevation": 0.36243713255835225,
+        "plant_fraction": 0.034786324786324783,
+        "nonplant_fraction": 0.1790349002849003,
+        "disagreement_fraction": 0.009936490978157644,
+        "specimen_fraction": 0.21382122507122509
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Broccoli_20260327-10_56",
+      "crop": "Broccoli",
+      "asset_id": "Broccoli/20260327-10",
+      "split_group": "Broccoli/10",
+      "frame": "56.jpg",
+      "image": "images/Broccoli_20260327-10_56.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/dataset/images/56.jpg",
+      "features": {
+        "azimuth_mod_360": 328.5471559695252,
+        "elevation": 0.4739755058979134,
+        "plant_fraction": 0.029938271604938272,
+        "nonplant_fraction": 0.1674596391263058,
+        "disagreement_fraction": 0.055579297245963916,
+        "specimen_fraction": 0.19739791073124408
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Broccoli_20260327-10_74",
+      "crop": "Broccoli",
+      "asset_id": "Broccoli/20260327-10",
+      "split_group": "Broccoli/10",
+      "frame": "74.jpg",
+      "image": "images/Broccoli_20260327-10_74.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/dataset/images/74.jpg",
+      "features": {
+        "azimuth_mod_360": 138.17738904551595,
+        "elevation": 0.12840974029390512,
+        "plant_fraction": 0.04677587844254511,
+        "nonplant_fraction": 0.052989078822412154,
+        "disagreement_fraction": 0.044223646723646724,
+        "specimen_fraction": 0.09976495726495727
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Broccoli_20260327-10_23",
+      "crop": "Broccoli",
+      "asset_id": "Broccoli/20260327-10",
+      "split_group": "Broccoli/10",
+      "frame": "23.jpg",
+      "image": "images/Broccoli_20260327-10_23.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Broccoli_20260327-10/dataset/images/23.jpg",
+      "features": {
+        "azimuth_mod_360": 115.21091311238729,
+        "elevation": -0.32854464905163433,
+        "plant_fraction": 0.03038758309591643,
+        "nonplant_fraction": 0.17937974833808168,
+        "disagreement_fraction": 0.014410612535612535,
+        "specimen_fraction": 0.20976733143399812
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cabbage_20260328-9_66",
+      "crop": "Cabbage",
+      "asset_id": "Cabbage/20260328-9",
+      "split_group": "Cabbage/9",
+      "frame": "66.jpg",
+      "image": "images/Cabbage_20260328-9_66.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cabbage_20260328-9/dataset/images/66.jpg",
+      "features": {
+        "azimuth_mod_360": 20.696102472345956,
+        "elevation": -0.48109146679607995,
+        "plant_fraction": 0.06546875,
+        "nonplant_fraction": 0.18169236111111112,
+        "disagreement_fraction": 0.1062625,
+        "specimen_fraction": 0.2471611111111111
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cabbage_20260328-9_69",
+      "crop": "Cabbage",
+      "asset_id": "Cabbage/20260328-9",
+      "split_group": "Cabbage/9",
+      "frame": "69.jpg",
+      "image": "images/Cabbage_20260328-9_69.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cabbage_20260328-9/dataset/images/69.jpg",
+      "features": {
+        "azimuth_mod_360": 199.68425355502364,
+        "elevation": 1.1980786267722177,
+        "plant_fraction": 0.10755208333333334,
+        "nonplant_fraction": 0.15820694444444444,
+        "disagreement_fraction": 0.16191597222222223,
+        "specimen_fraction": 0.26575902777777777
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cabbage_20260328-9_100",
+      "crop": "Cabbage",
+      "asset_id": "Cabbage/20260328-9",
+      "split_group": "Cabbage/9",
+      "frame": "100.jpg",
+      "image": "images/Cabbage_20260328-9_100.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cabbage_20260328-9/dataset/images/100.jpg",
+      "features": {
+        "azimuth_mod_360": 117.05322892289308,
+        "elevation": 0.09243360696389755,
+        "plant_fraction": 0.16320902777777777,
+        "nonplant_fraction": 0.036331944444444444,
+        "disagreement_fraction": 0.04472569444444444,
+        "specimen_fraction": 0.19954097222222222
+      },
+      "selected_because": [
+        "leaf_density"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cabbage_20260328-9_23",
+      "crop": "Cabbage",
+      "asset_id": "Cabbage/20260328-9",
+      "split_group": "Cabbage/9",
+      "frame": "23.jpg",
+      "image": "images/Cabbage_20260328-9_23.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cabbage_20260328-9/dataset/images/23.jpg",
+      "features": {
+        "azimuth_mod_360": 283.87263159632386,
+        "elevation": 1.2060134945960643,
+        "plant_fraction": 0.03151458333333333,
+        "nonplant_fraction": 0.2321527777777778,
+        "disagreement_fraction": 0.0321375,
+        "specimen_fraction": 0.2636673611111111
+      },
+      "selected_because": [
+        "plant_support_overlap"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cabbage_20260328-9_7",
+      "crop": "Cabbage",
+      "asset_id": "Cabbage/20260328-9",
+      "split_group": "Cabbage/9",
+      "frame": "7.jpg",
+      "image": "images/Cabbage_20260328-9_7.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cabbage_20260328-9/dataset/images/7.jpg",
+      "features": {
+        "azimuth_mod_360": 146.60647071994822,
+        "elevation": -1.1132694110935648,
+        "plant_fraction": 0.020680555555555556,
+        "nonplant_fraction": 0.22024791666666665,
+        "disagreement_fraction": 0.045851388888888886,
+        "specimen_fraction": 0.24092847222222222
+      },
+      "selected_because": [
+        "sparse_leaves"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cabbage_20260328-9_83",
+      "crop": "Cabbage",
+      "asset_id": "Cabbage/20260328-9",
+      "split_group": "Cabbage/9",
+      "frame": "83.jpg",
+      "image": "images/Cabbage_20260328-9_83.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cabbage_20260328-9/dataset/images/83.jpg",
+      "features": {
+        "azimuth_mod_360": 83.84795028193224,
+        "elevation": -0.6599377744084648,
+        "plant_fraction": 0.13822847222222223,
+        "nonplant_fraction": 0.21218472222222223,
+        "disagreement_fraction": 0.07829097222222223,
+        "specimen_fraction": 0.35041319444444446
+      },
+      "selected_because": [
+        "leaf_density",
+        "specimen_coverage"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cabbage_20260328-9_79",
+      "crop": "Cabbage",
+      "asset_id": "Cabbage/20260328-9",
+      "split_group": "Cabbage/9",
+      "frame": "79.jpg",
+      "image": "images/Cabbage_20260328-9_79.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cabbage_20260328-9/dataset/images/79.jpg",
+      "features": {
+        "azimuth_mod_360": 144.26065503639143,
+        "elevation": -0.38949140914795216,
+        "plant_fraction": 0.11372569444444444,
+        "nonplant_fraction": 0.1011548611111111,
+        "disagreement_fraction": 0.2572236111111111,
+        "specimen_fraction": 0.21488055555555555
+      },
+      "selected_because": [
+        "model_disagreement"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cabbage_20260328-9_97",
+      "crop": "Cabbage",
+      "asset_id": "Cabbage/20260328-9",
+      "split_group": "Cabbage/9",
+      "frame": "97.jpg",
+      "image": "images/Cabbage_20260328-9_97.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cabbage_20260328-9/dataset/images/97.jpg",
+      "features": {
+        "azimuth_mod_360": 330.4815395872663,
+        "elevation": 1.2877953045126882,
+        "plant_fraction": 0.07327569444444444,
+        "nonplant_fraction": 0.1725611111111111,
+        "disagreement_fraction": 0.17978055555555555,
+        "specimen_fraction": 0.24583680555555554
+      },
+      "selected_because": [
+        "model_disagreement"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cotton_1_4",
+      "crop": "Cotton",
+      "asset_id": "Cotton/1",
+      "split_group": "Cotton/1",
+      "frame": "4.jpg",
+      "image": "images/Cotton_1_4.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cotton_1_repro_v1/dataset/images/4.jpg",
+      "features": {
+        "azimuth_mod_360": 208.2827304525899,
+        "elevation": 0.6679988313427272,
+        "plant_fraction": 0.053189988938053094,
+        "nonplant_fraction": 0.10987624446902655,
+        "disagreement_fraction": 0.03449529867256637,
+        "specimen_fraction": 0.16306623340707965
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cotton_1_87",
+      "crop": "Cotton",
+      "asset_id": "Cotton/1",
+      "split_group": "Cotton/1",
+      "frame": "87.jpg",
+      "image": "images/Cotton_1_87.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cotton_1_repro_v1/dataset/images/87.jpg",
+      "features": {
+        "azimuth_mod_360": 34.02236538156416,
+        "elevation": -0.2881882219060728,
+        "plant_fraction": 0.013944275442477876,
+        "nonplant_fraction": 0.04052336836283186,
+        "disagreement_fraction": 0.07503318584070796,
+        "specimen_fraction": 0.05446764380530973
+      },
+      "selected_because": [
+        "model_disagreement",
+        "sparse_leaves"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cotton_1_26",
+      "crop": "Cotton",
+      "asset_id": "Cotton/1",
+      "split_group": "Cotton/1",
+      "frame": "26.jpg",
+      "image": "images/Cotton_1_26.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cotton_1_repro_v1/dataset/images/26.jpg",
+      "features": {
+        "azimuth_mod_360": 334.0930671321283,
+        "elevation": 0.3987092206103372,
+        "plant_fraction": 0.05692754424778761,
+        "nonplant_fraction": 0.14744054203539822,
+        "disagreement_fraction": 0.013600663716814159,
+        "specimen_fraction": 0.20436808628318584
+      },
+      "selected_because": [
+        "plant_support_overlap"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cotton_1_49",
+      "crop": "Cotton",
+      "asset_id": "Cotton/1",
+      "split_group": "Cotton/1",
+      "frame": "49.jpg",
+      "image": "images/Cotton_1_49.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cotton_1_repro_v1/dataset/images/49.jpg",
+      "features": {
+        "azimuth_mod_360": 103.08214622591129,
+        "elevation": -0.735625599241195,
+        "plant_fraction": 0.07061186393805309,
+        "nonplant_fraction": 0.1519787057522124,
+        "disagreement_fraction": 0.022065818584070796,
+        "specimen_fraction": 0.22259056969026547
+      },
+      "selected_because": [
+        "plant_support_overlap",
+        "specimen_coverage"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cotton_1_101",
+      "crop": "Cotton",
+      "asset_id": "Cotton/1",
+      "split_group": "Cotton/1",
+      "frame": "101.jpg",
+      "image": "images/Cotton_1_101.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cotton_1_repro_v1/dataset/images/101.jpg",
+      "features": {
+        "azimuth_mod_360": 139.4802195800345,
+        "elevation": 0.7531741744183402,
+        "plant_fraction": 0.10779175884955752,
+        "nonplant_fraction": 0.015294524336283186,
+        "disagreement_fraction": 0.058440265486725665,
+        "specimen_fraction": 0.12308628318584071
+      },
+      "selected_because": [
+        "model_disagreement",
+        "leaf_density"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cotton_1_67",
+      "crop": "Cotton",
+      "asset_id": "Cotton/1",
+      "split_group": "Cotton/1",
+      "frame": "67.jpg",
+      "image": "images/Cotton_1_67.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cotton_1_repro_v1/dataset/images/67.jpg",
+      "features": {
+        "azimuth_mod_360": 290.3401748600045,
+        "elevation": 1.517024867630209,
+        "plant_fraction": 0.02199391592920354,
+        "nonplant_fraction": 0.04797981194690266,
+        "disagreement_fraction": 0.04395049778761062,
+        "specimen_fraction": 0.0699737278761062
+      },
+      "selected_because": [
+        "sparse_leaves"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cotton_1_18",
+      "crop": "Cotton",
+      "asset_id": "Cotton/1",
+      "split_group": "Cotton/1",
+      "frame": "18.jpg",
+      "image": "images/Cotton_1_18.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cotton_1_repro_v1/dataset/images/18.jpg",
+      "features": {
+        "azimuth_mod_360": 35.59806405258655,
+        "elevation": -0.8699991978461428,
+        "plant_fraction": 0.05396294247787611,
+        "nonplant_fraction": 0.13984997234513274,
+        "disagreement_fraction": 0.010886338495575222,
+        "specimen_fraction": 0.19381291482300886
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Cotton_1_82",
+      "crop": "Cotton",
+      "asset_id": "Cotton/1",
+      "split_group": "Cotton/1",
+      "frame": "82.jpg",
+      "image": "images/Cotton_1_82.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cotton_1_repro_v1/dataset/images/82.jpg",
+      "features": {
+        "azimuth_mod_360": 103.78516001565896,
+        "elevation": -0.49877585010092673,
+        "plant_fraction": 0.031889518805309734,
+        "nonplant_fraction": 0.04813329646017699,
+        "disagreement_fraction": 0.038554341814159294,
+        "specimen_fraction": 0.08002281526548673
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Rice_1_74",
+      "crop": "Rice",
+      "asset_id": "Rice/1",
+      "split_group": "Rice/1",
+      "frame": "74.jpg",
+      "image": "images/Rice_1_74.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Rice_1/dataset/images/74.jpg",
+      "features": {
+        "azimuth_mod_360": 141.91942501097185,
+        "elevation": -0.23676385097796807,
+        "plant_fraction": 0.003988888888888889,
+        "nonplant_fraction": 0.17820972222222223,
+        "disagreement_fraction": 0.006304166666666666,
+        "specimen_fraction": 0.18219861111111113
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Rice_1_92",
+      "crop": "Rice",
+      "asset_id": "Rice/1",
+      "split_group": "Rice/1",
+      "frame": "92.jpg",
+      "image": "images/Rice_1_92.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Rice_1/dataset/images/92.jpg",
+      "features": {
+        "azimuth_mod_360": 310.52309397929025,
+        "elevation": 1.2994960852879869,
+        "plant_fraction": 0.0095375,
+        "nonplant_fraction": 0.17196458333333334,
+        "disagreement_fraction": 0.01096388888888889,
+        "specimen_fraction": 0.18150208333333334
+      },
+      "selected_because": [
+        "leaf_density"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Rice_1_30",
+      "crop": "Rice",
+      "asset_id": "Rice/1",
+      "split_group": "Rice/1",
+      "frame": "30.jpg",
+      "image": "images/Rice_1_30.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Rice_1/dataset/images/30.jpg",
+      "features": {
+        "azimuth_mod_360": 21.463184391761786,
+        "elevation": -0.6905814382699422,
+        "plant_fraction": 0.0,
+        "nonplant_fraction": 0.21650347222222222,
+        "disagreement_fraction": 0.00819375,
+        "specimen_fraction": 0.21650347222222222
+      },
+      "selected_because": [
+        "sparse_leaves"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Rice_1_13",
+      "crop": "Rice",
+      "asset_id": "Rice/1",
+      "split_group": "Rice/1",
+      "frame": "13.jpg",
+      "image": "images/Rice_1_13.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Rice_1/dataset/images/13.jpg",
+      "features": {
+        "azimuth_mod_360": 244.2095738052804,
+        "elevation": 0.7830574104338938,
+        "plant_fraction": 0.0,
+        "nonplant_fraction": 0.2313513888888889,
+        "disagreement_fraction": 0.007367361111111111,
+        "specimen_fraction": 0.2313513888888889
+      },
+      "selected_because": [
+        "plant_support_overlap",
+        "sparse_leaves"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Rice_1_40",
+      "crop": "Rice",
+      "asset_id": "Rice/1",
+      "split_group": "Rice/1",
+      "frame": "40.jpg",
+      "image": "images/Rice_1_40.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Rice_1/dataset/images/40.jpg",
+      "features": {
+        "azimuth_mod_360": 1.1587745263772717,
+        "elevation": 0.21378073239363438,
+        "plant_fraction": 0.0015993055555555556,
+        "nonplant_fraction": 0.10663402777777778,
+        "disagreement_fraction": 0.003882638888888889,
+        "specimen_fraction": 0.10823333333333333
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Rice_1_27",
+      "crop": "Rice",
+      "asset_id": "Rice/1",
+      "split_group": "Rice/1",
+      "frame": "27.jpg",
+      "image": "images/Rice_1_27.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Rice_1/dataset/images/27.jpg",
+      "features": {
+        "azimuth_mod_360": 80.06849304493073,
+        "elevation": -0.9576145964917865,
+        "plant_fraction": 0.007778472222222222,
+        "nonplant_fraction": 0.2158013888888889,
+        "disagreement_fraction": 0.0009618055555555556,
+        "specimen_fraction": 0.2235798611111111
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Rice_1_63",
+      "crop": "Rice",
+      "asset_id": "Rice/1",
+      "split_group": "Rice/1",
+      "frame": "63.jpg",
+      "image": "images/Rice_1_63.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Rice_1/dataset/images/63.jpg",
+      "features": {
+        "azimuth_mod_360": 95.49005379774297,
+        "elevation": -0.7191088780828243,
+        "plant_fraction": 0.0,
+        "nonplant_fraction": 0.10380763888888889,
+        "disagreement_fraction": 0.0041826388888888885,
+        "specimen_fraction": 0.10380763888888889
+      },
+      "selected_because": [
+        "sparse_leaves"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Rice_1_52",
+      "crop": "Rice",
+      "asset_id": "Rice/1",
+      "split_group": "Rice/1",
+      "frame": "52.jpg",
+      "image": "images/Rice_1_52.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Rice_1/dataset/images/52.jpg",
+      "features": {
+        "azimuth_mod_360": 203.80098901869644,
+        "elevation": 0.638004317507448,
+        "plant_fraction": 0.0047875,
+        "nonplant_fraction": 0.12908402777777778,
+        "disagreement_fraction": 0.0019875,
+        "specimen_fraction": 0.13387152777777778
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Sunflower_1_52",
+      "crop": "Sunflower",
+      "asset_id": "Sunflower/1",
+      "split_group": "Sunflower/1",
+      "frame": "52.jpg",
+      "image": "images/Sunflower_1_52.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Sunflower_1/dataset/images/52.jpg",
+      "features": {
+        "azimuth_mod_360": 151.24700170964303,
+        "elevation": -0.15967172004080715,
+        "plant_fraction": 0.14853014380530974,
+        "nonplant_fraction": 0.06064366703539823,
+        "disagreement_fraction": 0.06871819690265486,
+        "specimen_fraction": 0.20917381084070796
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Sunflower_1_83",
+      "crop": "Sunflower",
+      "asset_id": "Sunflower/1",
+      "split_group": "Sunflower/1",
+      "frame": "83.jpg",
+      "image": "images/Sunflower_1_83.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Sunflower_1/dataset/images/83.jpg",
+      "features": {
+        "azimuth_mod_360": 309.2370290762842,
+        "elevation": 1.331880606072454,
+        "plant_fraction": 0.06325082964601769,
+        "nonplant_fraction": 0.024280973451327435,
+        "disagreement_fraction": 0.07856263827433628,
+        "specimen_fraction": 0.08753180309734512
+      },
+      "selected_because": [
+        "sparse_leaves"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Sunflower_1_13",
+      "crop": "Sunflower",
+      "asset_id": "Sunflower/1",
+      "split_group": "Sunflower/1",
+      "frame": "13.jpg",
+      "image": "images/Sunflower_1_13.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Sunflower_1/dataset/images/13.jpg",
+      "features": {
+        "azimuth_mod_360": 30.49181015199116,
+        "elevation": -0.7773568924919283,
+        "plant_fraction": 0.10247441924778761,
+        "nonplant_fraction": 0.12234098451327434,
+        "disagreement_fraction": 0.0940756360619469,
+        "specimen_fraction": 0.22481540376106196
+      },
+      "selected_because": [
+        "plant_support_overlap"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Sunflower_1_43",
+      "crop": "Sunflower",
+      "asset_id": "Sunflower/1",
+      "split_group": "Sunflower/1",
+      "frame": "43.jpg",
+      "image": "images/Sunflower_1_43.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Sunflower_1/dataset/images/43.jpg",
+      "features": {
+        "azimuth_mod_360": 235.48662784218592,
+        "elevation": 1.2506910032555991,
+        "plant_fraction": 0.1765749446902655,
+        "nonplant_fraction": 0.08526272123893805,
+        "disagreement_fraction": 0.05044109513274336,
+        "specimen_fraction": 0.26183766592920354
+      },
+      "selected_because": [
+        "leaf_density",
+        "specimen_coverage"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Sunflower_1_39",
+      "crop": "Sunflower",
+      "asset_id": "Sunflower/1",
+      "split_group": "Sunflower/1",
+      "frame": "39.jpg",
+      "image": "images/Sunflower_1_39.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Sunflower_1/dataset/images/39.jpg",
+      "features": {
+        "azimuth_mod_360": 320.03659366712066,
+        "elevation": 1.0267146566848953,
+        "plant_fraction": 0.1925642975663717,
+        "nonplant_fraction": 0.09110826880530973,
+        "disagreement_fraction": 0.02037195796460177,
+        "specimen_fraction": 0.2836725663716814
+      },
+      "selected_because": [
+        "leaf_density",
+        "specimen_coverage"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Sunflower_1_100",
+      "crop": "Sunflower",
+      "asset_id": "Sunflower/1",
+      "split_group": "Sunflower/1",
+      "frame": "100.jpg",
+      "image": "images/Sunflower_1_100.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Sunflower_1/dataset/images/100.jpg",
+      "features": {
+        "azimuth_mod_360": 59.844847770627155,
+        "elevation": 0.9646575176690313,
+        "plant_fraction": 0.12434665376106195,
+        "nonplant_fraction": 0.012954231194690266,
+        "disagreement_fraction": 0.0790880807522124,
+        "specimen_fraction": 0.1373008849557522
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Sunflower_1_10",
+      "crop": "Sunflower",
+      "asset_id": "Sunflower/1",
+      "split_group": "Sunflower/1",
+      "frame": "10.jpg",
+      "image": "images/Sunflower_1_10.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Sunflower_1/dataset/images/10.jpg",
+      "features": {
+        "azimuth_mod_360": 103.32656049896786,
+        "elevation": -0.897871796439726,
+        "plant_fraction": 0.08503249446902655,
+        "nonplant_fraction": 0.12024336283185841,
+        "disagreement_fraction": 0.12406042588495575,
+        "specimen_fraction": 0.20527585730088496
+      },
+      "selected_because": [
+        "model_disagreement",
+        "plant_support_overlap",
+        "sparse_leaves"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Sunflower_1_77",
+      "crop": "Sunflower",
+      "asset_id": "Sunflower/1",
+      "split_group": "Sunflower/1",
+      "frame": "77.jpg",
+      "image": "images/Sunflower_1_77.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Sunflower_1/dataset/images/77.jpg",
+      "features": {
+        "azimuth_mod_360": 1.3407749439423924,
+        "elevation": 0.35329913800498547,
+        "plant_fraction": 0.11315472898230089,
+        "nonplant_fraction": 0.01701603982300885,
+        "disagreement_fraction": 0.031088219026548673,
+        "specimen_fraction": 0.13017076880530973
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Tobacco_20260401-23_57",
+      "crop": "Tobacco",
+      "asset_id": "Tobacco/20260401-23",
+      "split_group": "Tobacco/23",
+      "frame": "57.jpg",
+      "image": "images/Tobacco_20260401-23_57.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Tobacco_20260401-23/dataset/images/57.jpg",
+      "features": {
+        "azimuth_mod_360": 177.20505777453354,
+        "elevation": 0.3912321490366358,
+        "plant_fraction": 0.028910416666666668,
+        "nonplant_fraction": 0.20021597222222223,
+        "disagreement_fraction": 0.0849625,
+        "specimen_fraction": 0.2291263888888889
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Tobacco_20260401-23_94",
+      "crop": "Tobacco",
+      "asset_id": "Tobacco/20260401-23",
+      "split_group": "Tobacco/23",
+      "frame": "94.jpg",
+      "image": "images/Tobacco_20260401-23_94.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Tobacco_20260401-23/dataset/images/94.jpg",
+      "features": {
+        "azimuth_mod_360": 12.978535843912482,
+        "elevation": -0.06697685949348403,
+        "plant_fraction": 0.06658958333333333,
+        "nonplant_fraction": 0.045559722222222224,
+        "disagreement_fraction": 0.1192451388888889,
+        "specimen_fraction": 0.11214930555555555
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Tobacco_20260401-23_32",
+      "crop": "Tobacco",
+      "asset_id": "Tobacco/20260401-23",
+      "split_group": "Tobacco/23",
+      "frame": "32.jpg",
+      "image": "images/Tobacco_20260401-23_32.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Tobacco_20260401-23/dataset/images/32.jpg",
+      "features": {
+        "azimuth_mod_360": 292.1195633555565,
+        "elevation": 1.4648605676311668,
+        "plant_fraction": 0.022153472222222224,
+        "nonplant_fraction": 0.26756180555555553,
+        "disagreement_fraction": 0.012251388888888888,
+        "specimen_fraction": 0.2897152777777778
+      },
+      "selected_because": [
+        "plant_support_overlap",
+        "specimen_coverage"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Tobacco_20260401-23_51",
+      "crop": "Tobacco",
+      "asset_id": "Tobacco/20260401-23",
+      "split_group": "Tobacco/23",
+      "frame": "51.jpg",
+      "image": "images/Tobacco_20260401-23_51.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Tobacco_20260401-23/dataset/images/51.jpg",
+      "features": {
+        "azimuth_mod_360": 70.67164148250208,
+        "elevation": 1.2840077869418915,
+        "plant_fraction": 0.04315069444444444,
+        "nonplant_fraction": 0.21057777777777778,
+        "disagreement_fraction": 0.07129027777777777,
+        "specimen_fraction": 0.2537284722222222
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Tobacco_20260401-23_86",
+      "crop": "Tobacco",
+      "asset_id": "Tobacco/20260401-23",
+      "split_group": "Tobacco/23",
+      "frame": "86.jpg",
+      "image": "images/Tobacco_20260401-23_86.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Tobacco_20260401-23/dataset/images/86.jpg",
+      "features": {
+        "azimuth_mod_360": 110.81911122149245,
+        "elevation": -1.0486173052554213,
+        "plant_fraction": 0.0634138888888889,
+        "nonplant_fraction": 0.10843125,
+        "disagreement_fraction": 0.16734305555555556,
+        "specimen_fraction": 0.17184513888888892
+      },
+      "selected_because": [
+        "model_disagreement"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Tobacco_20260401-23_20",
+      "crop": "Tobacco",
+      "asset_id": "Tobacco/20260401-23",
+      "split_group": "Tobacco/23",
+      "frame": "20.jpg",
+      "image": "images/Tobacco_20260401-23_20.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Tobacco_20260401-23/dataset/images/20.jpg",
+      "features": {
+        "azimuth_mod_360": 342.36045943234956,
+        "elevation": -0.9323155617307144,
+        "plant_fraction": 0.007018055555555555,
+        "nonplant_fraction": 0.24255833333333332,
+        "disagreement_fraction": 0.043429861111111114,
+        "specimen_fraction": 0.2495763888888889
+      },
+      "selected_because": [
+        "sparse_leaves"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Tobacco_20260401-23_16",
+      "crop": "Tobacco",
+      "asset_id": "Tobacco/20260401-23",
+      "split_group": "Tobacco/23",
+      "frame": "16.jpg",
+      "image": "images/Tobacco_20260401-23_16.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Tobacco_20260401-23/dataset/images/16.jpg",
+      "features": {
+        "azimuth_mod_360": 229.38012080500042,
+        "elevation": -1.3951309540565608,
+        "plant_fraction": 0.018447222222222222,
+        "nonplant_fraction": 0.27253055555555555,
+        "disagreement_fraction": 0.021518055555555554,
+        "specimen_fraction": 0.2909777777777778
+      },
+      "selected_because": [
+        "plant_support_overlap",
+        "specimen_coverage"
+      ],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    },
+    {
+      "task_id": "Tobacco_20260401-23_2",
+      "crop": "Tobacco",
+      "asset_id": "Tobacco/20260401-23",
+      "split_group": "Tobacco/23",
+      "frame": "2.jpg",
+      "image": "images/Tobacco_20260401-23_2.jpg",
+      "source_image": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Tobacco_20260401-23/dataset/images/2.jpg",
+      "features": {
+        "azimuth_mod_360": 233.62199191127513,
+        "elevation": 1.3722017874810544,
+        "plant_fraction": 0.020445138888888888,
+        "nonplant_fraction": 0.2173798611111111,
+        "disagreement_fraction": 0.08167708333333333,
+        "specimen_fraction": 0.23782499999999998
+      },
+      "selected_because": [],
+      "classes": {
+        "0": "Background",
+        "1": "Plant",
+        "2": "Pot/Soil",
+        "3": "Support",
+        "4": "Uncertain"
+      },
+      "status": "annotation_pending",
+      "annotator": null,
+      "confirmation": null,
+      "preannotation_summary": {}
+    }
+  ],
+  "taxonomy": {
+    "0": "Background",
+    "1": "Plant",
+    "2": "Pot/Soil",
+    "3": "Support",
+    "4": "Uncertain"
+  },
+  "palette": {
+    "0": [
+      0,
+      0,
+      0
+    ],
+    "1": [
+      40,
+      200,
+      70
+    ],
+    "2": [
+      60,
+      90,
+      230
+    ],
+    "3": [
+      235,
+      215,
+      60
+    ],
+    "4": [
+      255,
+      0,
+      255
+    ]
+  },
+  "status": "annotation_pending",
+  "success_state": "evaluation tooling + pending task set are ready; segmentation accuracy is NOT verified because no human label exists yet"
+}

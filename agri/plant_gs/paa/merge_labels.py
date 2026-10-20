@@ -91,7 +91,11 @@ def main():
         "plant_agreement_fraction": (stats["plant_both"] /
                                       max(stats["plant_both"] + stats["plant_only_plant_dir"]
                                           + stats["plant_only_other_dir"], 1)),
-        "per_frame": per_frame,
+        # `per_frame` lives in merge()'s return value; referencing the local
+        # name here raised NameError after the label PNGs had already been
+        # written, which left a merged directory with no summary and looked
+        # like "the merge did not run" to every later reader.
+        "per_frame": merged["per_frame"],
     }
     (args.out.parent / "merge_summary.json").write_text(
         json.dumps(summary, indent=2) + "\n")

@@ -1,0 +1,584 @@
+{
+  "status": "PASS",
+  "n_samples": 9,
+  "crops": [
+    "Broccoli",
+    "Cabbage",
+    "Cotton",
+    "Rice",
+    "Sunflower",
+    "Tobacco"
+  ],
+  "camera_models_seen": [
+    "FULL_OPENCV",
+    "SIMPLE_PINHOLE"
+  ],
+  "n_distinct_camera_models": 2,
+  "models_needing_undistortion": [
+    "FULL_OPENCV"
+  ],
+  "roll_applied": {
+    "Broccoli/20260327-10": 3,
+    "Broccoli/20260327-5": 3,
+    "Cabbage/20260328-9": 3,
+    "Cotton/1@sealed": 36,
+    "Cotton/1": 36,
+    "Rice/1": 36,
+    "Sunflower/1": 36,
+    "Tobacco/20260401-23": 3
+  },
+  "roll_bounds_consistent": true,
+  "all_distortion_handled": true,
+  "samples": [
+    {
+      "asset_id": "Broccoli/20260327-10",
+      "crop": "Broccoli",
+      "colmap_status": "PASS",
+      "n_cameras": 2,
+      "camera_models": [
+        "SIMPLE_PINHOLE"
+      ],
+      "distortion_free": true,
+      "needing_undistortion": [],
+      "unsupported_models": [],
+      "trainer_ready_without_undistortion": true,
+      "per_camera": {
+        "0": {
+          "model": "SIMPLE_PINHOLE",
+          "images": 99,
+          "width": 2128,
+          "height": 3806,
+          "horizontal_fov_deg": 12.24747334091144,
+          "distortion_free": true
+        },
+        "1": {
+          "model": "SIMPLE_PINHOLE",
+          "images": 3,
+          "width": 3070,
+          "height": 2020,
+          "horizontal_fov_deg": 49.09548196866948,
+          "distortion_free": true
+        }
+      },
+      "frames_rolled_ccw90": 3,
+      "frames_used": 102,
+      "registered_images": 102,
+      "reprojection_error_mean_px": 0.7743879389205613,
+      "reprojection_error_p95_px": 2.055502224034995,
+      "orbit_radius": 3.9039491447725476,
+      "poses": {
+        "non_finite": [],
+        "rotation_determinant_min": 0.9999999999999993,
+        "rotation_determinant_max": 1.0000000000000016,
+        "rotations_are_proper": true,
+        "camera_center_bbox_min": [
+          -4.7801576900893545,
+          -4.146148403916013,
+          -4.98892426061015
+        ],
+        "camera_center_bbox_max": [
+          4.427854496300803,
+          4.466925353906548,
+          -0.6485851416807699
+        ],
+        "camera_center_centroid": [
+          -0.23420080497223522,
+          0.3918675077406608,
+          -2.4968450509233873
+        ],
+        "camera_radius_median": 3.9039491447725476,
+        "camera_radius_min": 0.5433428374537053,
+        "camera_radius_max": 4.787905182095602
+      }
+    },
+    {
+      "asset_id": "Broccoli/20260327-5",
+      "crop": "Broccoli",
+      "colmap_status": "PASS",
+      "n_cameras": 2,
+      "camera_models": [
+        "SIMPLE_PINHOLE"
+      ],
+      "distortion_free": true,
+      "needing_undistortion": [],
+      "unsupported_models": [],
+      "trainer_ready_without_undistortion": true,
+      "per_camera": {
+        "0": {
+          "model": "SIMPLE_PINHOLE",
+          "images": 99,
+          "width": 2138,
+          "height": 3812,
+          "horizontal_fov_deg": 12.36385414010818,
+          "distortion_free": true
+        },
+        "1": {
+          "model": "SIMPLE_PINHOLE",
+          "images": 3,
+          "width": 3476,
+          "height": 2020,
+          "horizontal_fov_deg": 54.34356184991205,
+          "distortion_free": true
+        }
+      },
+      "frames_rolled_ccw90": 3,
+      "frames_used": 102,
+      "registered_images": 102,
+      "reprojection_error_mean_px": 0.749582645234701,
+      "reprojection_error_p95_px": 2.0319308237934877,
+      "orbit_radius": 8.154463993931426,
+      "poses": {
+        "non_finite": [],
+        "rotation_determinant_min": 0.9999999999999994,
+        "rotation_determinant_max": 1.000000000000001,
+        "rotations_are_proper": true,
+        "camera_center_bbox_min": [
+          -8.386606901944775,
+          -3.457585829445925,
+          -12.449061936001309
+        ],
+        "camera_center_bbox_max": [
+          9.187123021856397,
+          3.7773335837831468,
+          4.5436452819809405
+        ],
+        "camera_center_centroid": [
+          0.625227884198118,
+          0.7111056648067202,
+          -3.4541396794026844
+        ],
+        "camera_radius_median": 8.154463993931424,
+        "camera_radius_min": 0.9003453153514221,
+        "camera_radius_max": 9.121986075658903
+      }
+    },
+    {
+      "asset_id": "Broccoli/20260402-10",
+      "crop": "Broccoli",
+      "colmap_status": "PASS",
+      "n_cameras": 1,
+      "camera_models": [
+        "FULL_OPENCV"
+      ],
+      "distortion_free": false,
+      "needing_undistortion": [
+        "FULL_OPENCV"
+      ],
+      "unsupported_models": [],
+      "trainer_ready_without_undistortion": false,
+      "per_camera": {
+        "0": {
+          "model": "FULL_OPENCV",
+          "images": 102,
+          "width": 2160,
+          "height": 3840,
+          "horizontal_fov_deg": 12.484448031115146,
+          "distortion_free": false
+        }
+      },
+      "frames_rolled_ccw90": 0,
+      "frames_used": 102,
+      "registered_images": 102,
+      "reprojection_error_mean_px": 0.7299829879018523,
+      "reprojection_error_p95_px": 1.9422135384766206,
+      "orbit_radius": 6.095726812678201,
+      "poses": {
+        "non_finite": [],
+        "rotation_determinant_min": 0.9999999999999996,
+        "rotation_determinant_max": 1.000000000000001,
+        "rotations_are_proper": true,
+        "camera_center_bbox_min": [
+          -7.356362729923154,
+          -0.20664896276762434,
+          -15.181648043416764
+        ],
+        "camera_center_bbox_max": [
+          7.225158774390947,
+          6.469182480292528,
+          -0.0029628064231917504
+        ],
+        "camera_center_centroid": [
+          0.12833412310001854,
+          1.7188547856655196,
+          -7.5941666854742
+        ],
+        "camera_radius_median": 6.095726812678199,
+        "camera_radius_min": 4.571598861822009,
+        "camera_radius_max": 7.813783560177283
+      }
+    },
+    {
+      "asset_id": "Cabbage/20260328-9",
+      "crop": "Cabbage",
+      "colmap_status": "PASS",
+      "n_cameras": 2,
+      "camera_models": [
+        "FULL_OPENCV"
+      ],
+      "distortion_free": false,
+      "needing_undistortion": [
+        "FULL_OPENCV"
+      ],
+      "unsupported_models": [],
+      "trainer_ready_without_undistortion": false,
+      "per_camera": {
+        "0": {
+          "model": "FULL_OPENCV",
+          "images": 99,
+          "width": 2160,
+          "height": 3840,
+          "horizontal_fov_deg": 12.458904945291033,
+          "distortion_free": false
+        },
+        "1": {
+          "model": "FULL_OPENCV",
+          "images": 3,
+          "width": 3840,
+          "height": 2160,
+          "horizontal_fov_deg": 58.66269049414701,
+          "distortion_free": false
+        }
+      },
+      "frames_rolled_ccw90": 3,
+      "frames_used": 102,
+      "registered_images": 102,
+      "reprojection_error_mean_px": 0.835396833565929,
+      "reprojection_error_p95_px": 2.3577886148133365,
+      "orbit_radius": 4.950287274393537,
+      "poses": {
+        "non_finite": [],
+        "rotation_determinant_min": 0.999999999999999,
+        "rotation_determinant_max": 1.000000000000001,
+        "rotations_are_proper": true,
+        "camera_center_bbox_min": [
+          -5.548348068958876,
+          -2.098106145638247,
+          -10.465288199496324
+        ],
+        "camera_center_bbox_max": [
+          6.426547283136204,
+          3.616869824864259,
+          0.7277469477635622
+        ],
+        "camera_center_centroid": [
+          0.46241694363748215,
+          1.3654929301236636,
+          -4.439398020810639
+        ],
+        "camera_radius_median": 4.950287274393537,
+        "camera_radius_min": 0.563393528079935,
+        "camera_radius_max": 6.2215985426060225
+      }
+    },
+    {
+      "asset_id": "Cotton/1@sealed",
+      "crop": "Cotton",
+      "colmap_status": "PASS",
+      "n_cameras": 2,
+      "camera_models": [
+        "SIMPLE_PINHOLE"
+      ],
+      "distortion_free": true,
+      "needing_undistortion": [],
+      "unsupported_models": [],
+      "trainer_ready_without_undistortion": true,
+      "per_camera": {
+        "0": {
+          "model": "SIMPLE_PINHOLE",
+          "images": 66,
+          "width": 2140,
+          "height": 3788,
+          "horizontal_fov_deg": 12.391414768768295,
+          "distortion_free": true
+        },
+        "1": {
+          "model": "SIMPLE_PINHOLE",
+          "images": 36,
+          "width": 3858,
+          "height": 2136,
+          "horizontal_fov_deg": 59.658981164820425,
+          "distortion_free": true
+        }
+      },
+      "frames_rolled_ccw90": 36,
+      "frames_used": 102,
+      "registered_images": 102,
+      "reprojection_error_mean_px": 0.585952408546803,
+      "reprojection_error_p95_px": 1.8513866953332299,
+      "orbit_radius": 5.750751133358943,
+      "poses": {
+        "non_finite": [],
+        "rotation_determinant_min": 0.9999999999999994,
+        "rotation_determinant_max": 1.000000000000001,
+        "rotations_are_proper": true,
+        "camera_center_bbox_min": [
+          -7.766601514593451,
+          -5.0049974010203115,
+          -11.070617235193613
+        ],
+        "camera_center_bbox_max": [
+          5.414422887401983,
+          2.726319926604508,
+          0.3223795535823276
+        ],
+        "camera_center_centroid": [
+          -1.1405306002977518,
+          -0.8289002776544315,
+          -4.730068431236396
+        ],
+        "camera_radius_median": 5.750751133358942,
+        "camera_radius_min": 1.5480219141076503,
+        "camera_radius_max": 6.942084853685341
+      }
+    },
+    {
+      "asset_id": "Cotton/1",
+      "crop": "Cotton",
+      "colmap_status": "PASS",
+      "n_cameras": 2,
+      "camera_models": [
+        "SIMPLE_PINHOLE"
+      ],
+      "distortion_free": true,
+      "needing_undistortion": [],
+      "unsupported_models": [],
+      "trainer_ready_without_undistortion": true,
+      "per_camera": {
+        "0": {
+          "model": "SIMPLE_PINHOLE",
+          "images": 66,
+          "width": 2140,
+          "height": 3788,
+          "horizontal_fov_deg": 12.391414768768295,
+          "distortion_free": true
+        },
+        "1": {
+          "model": "SIMPLE_PINHOLE",
+          "images": 36,
+          "width": 3858,
+          "height": 2136,
+          "horizontal_fov_deg": 59.658981164820425,
+          "distortion_free": true
+        }
+      },
+      "frames_rolled_ccw90": 36,
+      "frames_used": 102,
+      "registered_images": 102,
+      "reprojection_error_mean_px": 0.585952408546803,
+      "reprojection_error_p95_px": 1.8513866953332299,
+      "orbit_radius": 5.750751133358943,
+      "poses": {
+        "non_finite": [],
+        "rotation_determinant_min": 0.9999999999999994,
+        "rotation_determinant_max": 1.000000000000001,
+        "rotations_are_proper": true,
+        "camera_center_bbox_min": [
+          -7.766601514593451,
+          -5.0049974010203115,
+          -11.070617235193613
+        ],
+        "camera_center_bbox_max": [
+          5.414422887401983,
+          2.726319926604508,
+          0.3223795535823276
+        ],
+        "camera_center_centroid": [
+          -1.1405306002977518,
+          -0.8289002776544315,
+          -4.730068431236396
+        ],
+        "camera_radius_median": 5.750751133358942,
+        "camera_radius_min": 1.5480219141076503,
+        "camera_radius_max": 6.942084853685341
+      }
+    },
+    {
+      "asset_id": "Rice/1",
+      "crop": "Rice",
+      "colmap_status": "PASS",
+      "n_cameras": 2,
+      "camera_models": [
+        "FULL_OPENCV"
+      ],
+      "distortion_free": false,
+      "needing_undistortion": [
+        "FULL_OPENCV"
+      ],
+      "unsupported_models": [],
+      "trainer_ready_without_undistortion": false,
+      "per_camera": {
+        "0": {
+          "model": "FULL_OPENCV",
+          "images": 66,
+          "width": 2160,
+          "height": 3840,
+          "horizontal_fov_deg": 12.249348112042956,
+          "distortion_free": false
+        },
+        "1": {
+          "model": "FULL_OPENCV",
+          "images": 36,
+          "width": 3840,
+          "height": 2160,
+          "horizontal_fov_deg": 21.694486402435324,
+          "distortion_free": false
+        }
+      },
+      "frames_rolled_ccw90": 36,
+      "frames_used": 102,
+      "registered_images": 102,
+      "reprojection_error_mean_px": 0.6726542347113569,
+      "reprojection_error_p95_px": 1.9251929084889414,
+      "orbit_radius": 5.459041790574489,
+      "poses": {
+        "non_finite": [],
+        "rotation_determinant_min": 0.9999999999999993,
+        "rotation_determinant_max": 1.0000000000000009,
+        "rotations_are_proper": true,
+        "camera_center_bbox_min": [
+          -5.998049326824159,
+          -2.891680126093228,
+          -9.563227140729461
+        ],
+        "camera_center_bbox_max": [
+          6.281645618780686,
+          5.463491545248202,
+          0.725357506763255
+        ],
+        "camera_center_centroid": [
+          0.1707034301089205,
+          1.5262906550337716,
+          -4.456060743450382
+        ],
+        "camera_radius_median": 5.459041790574489,
+        "camera_radius_min": 3.8208972770797462,
+        "camera_radius_max": 6.229426224916154
+      }
+    },
+    {
+      "asset_id": "Sunflower/1",
+      "crop": "Sunflower",
+      "colmap_status": "PASS",
+      "n_cameras": 2,
+      "camera_models": [
+        "SIMPLE_PINHOLE"
+      ],
+      "distortion_free": true,
+      "needing_undistortion": [],
+      "unsupported_models": [],
+      "trainer_ready_without_undistortion": true,
+      "per_camera": {
+        "0": {
+          "model": "SIMPLE_PINHOLE",
+          "images": 66,
+          "width": 2138,
+          "height": 3808,
+          "horizontal_fov_deg": 12.59411337671258,
+          "distortion_free": true
+        },
+        "1": {
+          "model": "SIMPLE_PINHOLE",
+          "images": 36,
+          "width": 3732,
+          "height": 2108,
+          "horizontal_fov_deg": 58.30815487184266,
+          "distortion_free": true
+        }
+      },
+      "frames_rolled_ccw90": 36,
+      "frames_used": 102,
+      "registered_images": 102,
+      "reprojection_error_mean_px": 0.610216199160667,
+      "reprojection_error_p95_px": 1.7105042699273318,
+      "orbit_radius": 6.319634192503269,
+      "poses": {
+        "non_finite": [],
+        "rotation_determinant_min": 0.9999999999999996,
+        "rotation_determinant_max": 1.0000000000000018,
+        "rotations_are_proper": true,
+        "camera_center_bbox_min": [
+          -7.562389028293791,
+          -3.8810481428396,
+          -10.602753089252136
+        ],
+        "camera_center_bbox_max": [
+          5.828989623057185,
+          5.22412584170087,
+          1.3276522326759903
+        ],
+        "camera_center_centroid": [
+          -0.830820939007553,
+          0.9166906141660031,
+          -4.3365169915906
+        ],
+        "camera_radius_median": 6.319634192503269,
+        "camera_radius_min": 1.217336175405361,
+        "camera_radius_max": 6.907590506069275
+      }
+    },
+    {
+      "asset_id": "Tobacco/20260401-23",
+      "crop": "Tobacco",
+      "colmap_status": "PASS",
+      "n_cameras": 2,
+      "camera_models": [
+        "FULL_OPENCV"
+      ],
+      "distortion_free": false,
+      "needing_undistortion": [
+        "FULL_OPENCV"
+      ],
+      "unsupported_models": [],
+      "trainer_ready_without_undistortion": false,
+      "per_camera": {
+        "0": {
+          "model": "FULL_OPENCV",
+          "images": 99,
+          "width": 2160,
+          "height": 3840,
+          "horizontal_fov_deg": 12.450950680493815,
+          "distortion_free": false
+        },
+        "1": {
+          "model": "FULL_OPENCV",
+          "images": 3,
+          "width": 3840,
+          "height": 2160,
+          "horizontal_fov_deg": 62.734025156776056,
+          "distortion_free": false
+        }
+      },
+      "frames_rolled_ccw90": 3,
+      "frames_used": 102,
+      "registered_images": 102,
+      "reprojection_error_mean_px": 0.7473147228261408,
+      "reprojection_error_p95_px": 2.031018871871157,
+      "orbit_radius": 9.656958647798307,
+      "poses": {
+        "non_finite": [],
+        "rotation_determinant_min": 0.9999999999999994,
+        "rotation_determinant_max": 1.000000000000001,
+        "rotations_are_proper": true,
+        "camera_center_bbox_min": [
+          -11.359381876945731,
+          -0.046618381931121604,
+          -22.440892066063608
+        ],
+        "camera_center_bbox_max": [
+          11.091280020116573,
+          4.91015560818639,
+          0.0
+        ],
+        "camera_center_centroid": [
+          -0.07879453474980504,
+          2.8673105620679173,
+          -11.025297963119055
+        ],
+        "camera_radius_median": 9.656958647798307,
+        "camera_radius_min": 1.1726579525266618,
+        "camera_radius_max": 11.657166370378073
+      }
+    }
+  ],
+  "note": "a camera model appearing here is a COLMAP model name observed in a PAA sparse reconstruction, with the frame counts that use it. It is not a statement about the physical camera"
+}
