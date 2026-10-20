@@ -157,6 +157,35 @@ def checkpoint(splats, data, degree, step, config):
             'normalization':data.normalization,'data':str(data.root.resolve()),'config':config}
 
 
+def acquire_run_lock(result: Path):
+    """Take an exclusive lock on the result directory, or refuse to start.
+
+    Two trainers pointed at one result directory share ``history.jsonl`` and
+    ``splats_best.pt``. That does not crash -- it silently interleaves two eval
+    streams, doubles the compute, and leaves an export reading whichever
+    checkpoint happened to be written last. Stage 4B hit exactly that on one
+    sample, so the collision is made loud here instead of being discovered from
+    the artefacts.
+
+    ``flock`` is released by the kernel when the process exits, so a crashed
+    run does not leave the directory permanently locked.
+    """
+    import fcntl
+    result.mkdir(parents=True, exist_ok=True)
+    handle = open(result / '.train.lock', 'w')
+    try:
+        fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        handle.close()
+        raise SystemExit(
+            'another training run holds the lock on %s; refusing to start.\n'
+            'Use a different --result directory, or wait for that run to exit.'
+            % result)
+    handle.write(str(os.getpid()))
+    handle.flush()
+    return handle
+
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument('--data',type=Path,required=True)
@@ -170,9 +199,20 @@ def main():
     p.add_argument('--background-alpha-weight',type=float,default=.75)
     p.add_argument('--max-gaussians',type=int,default=300000)
     p.add_argument('--seed',type=int,default=42)
+    p.add_argument('--append-history',action='store_true',
+                   help='allow appending to an existing history.jsonl; off by '
+                        'default because a second run in the same directory '
+                        'makes the eval stream unreadable')
     args=p.parse_args()
     if (args.result/'splats.pt').exists():
         raise SystemExit('Result already completed; use a new result directory')
+    if (args.result/'history.jsonl').exists() and not args.append_history:
+        raise SystemExit(
+            '%s/history.jsonl already exists from an unfinished run. Refusing '
+            'to append a second eval stream. Remove the directory, pick a new '
+            '--result, or pass --append-history if that is really intended.'
+            % args.result)
+    lock=acquire_run_lock(args.result)
     args.result.mkdir(parents=True,exist_ok=True)
     config={k:str(v) if isinstance(v,Path) else v for k,v in vars(args).items()}
     write_json(args.result/'config.json',config)

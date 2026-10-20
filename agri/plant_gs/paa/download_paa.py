@@ -29,12 +29,19 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 import time
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from registry import parse_sample_id  # noqa: E402
 
 REPO_ID = "JackTrum938/PAA-Plant-Dataset"
 REPO_TYPE = "dataset"
 DEFAULT_ROOT = Path("data/external/PAA-Plant-Dataset")
+# Mirrors reject urllib's default User-Agent with a 403; identifying as the
+# hub client keeps both the official endpoint and hf-mirror.com happy.
+USER_AGENT = "huggingface_hub/1.8.0 (paa-download)"
 
 GROUPS = {
     "camera": ("Camera/**", True),
@@ -43,13 +50,27 @@ GROUPS = {
     "rgb": ("RGB/**", False),
 }
 
+# `Camera/` itself only holds `images/`, `sparse/` and a notes txt, so counting
+# its top level reports "3 cameras" for a sample with 102 frames. Count the
+# actual frames, and the COLMAP bins, separately.
+COUNT_DIRS = {
+    "camera_images": "Camera/images",
+    "camera_sparse": "Camera/sparse/0",
+    "masks": "RGB_seg/masks",
+    "whitebg": "RGB_seg/whitebg",
+    "rgb": "RGB",
+}
+
 
 def resolve_revision(repo_id: str) -> dict:
     """Ask the Hub for the commit SHA and licence of ``main``."""
+    import os
     import urllib.request
-    url = f"https://huggingface.co/api/datasets/{repo_id}"
+    endpoint = os.environ.get("HF_ENDPOINT", "https://huggingface.co").rstrip("/")
+    url = f"{endpoint}/api/datasets/{repo_id}"
     try:
-        with urllib.request.urlopen(url, timeout=60) as handle:
+        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(request, timeout=60) as handle:
             payload = json.load(handle)
     except Exception as exc:                              # noqa: BLE001
         return {"resolved": False, "error": f"{type(exc).__name__}: {exc}"}
@@ -69,15 +90,17 @@ def resolve_revision(repo_id: str) -> dict:
 def list_sample_files(crop: str, acquisition: str, revision: str | None,
                       timeout: int = 60) -> list:
     """Enumerate the sample's files through the paginated tree API."""
+    import os
     import urllib.request
+    endpoint = os.environ.get("HF_ENDPOINT", "https://huggingface.co").rstrip("/")
     prefix = f"{crop}/{acquisition}"
     rev = revision or "main"
-    api = (f"https://huggingface.co/api/datasets/{REPO_ID}/tree/{rev}/"
+    api = (f"{endpoint}/api/datasets/{REPO_ID}/tree/{rev}/"
            f"{prefix}?recursive=true")
     files, cursor = [], None
     while True:
         url = api + (f"&cursor={cursor}" if cursor else "")
-        request = urllib.request.Request(url)
+        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
         with urllib.request.urlopen(request, timeout=timeout) as handle:
             page = json.load(handle)
             link = handle.headers.get("Link", "")
@@ -126,22 +149,43 @@ def main():
 
     sample_dir = Path(path) / prefix
     listing = {}
-    for key, (pattern, _) in GROUPS.items():
-        pattern_dir = sample_dir / pattern.replace("/**", "")
-        listing[key] = sorted(p.name for p in pattern_dir.glob("*")) if pattern_dir.is_dir() else []
+    for key, sub in COUNT_DIRS.items():
+        d = sample_dir / sub
+        listing[key] = sorted(p.name for p in d.glob("*")) if d.is_dir() else []
     counts = {k: len(v) for k, v in listing.items()}
     print(f"files on disk: {counts}")
 
+    # A download that fetched nothing used to fall through to writing
+    # provenance.json into a directory that does not exist, which surfaced as a
+    # FileNotFoundError on an unrelated line. Fail with the real reason instead:
+    # when the Hub is unreachable, snapshot_download returns the local dir
+    # untouched and everything downstream is meaningless.
+    if counts.get("camera_images", 0) == 0 or counts.get("masks", 0) == 0:
+        import os
+        endpoint = os.environ.get("HF_ENDPOINT", "https://huggingface.co")
+        raise SystemExit(
+            f"download produced no data for {prefix}: camera_images={counts.get('camera_images', 0)}, "
+            f"masks={counts.get('masks', 0)}. The Hub endpoint {endpoint} is likely "
+            f"unreachable from this host; retry with HF_ENDPOINT=https://hf-mirror.com "
+            f"or once connectivity returns. Nothing was registered.")
+
+    import os
     provenance = {
         "dataset_name": "PAA-Plant-Dataset",
         "source_url": f"https://huggingface.co/datasets/{REPO_ID}",
         "repo_id": REPO_ID,
         "repo_type": REPO_TYPE,
+        "hf_endpoint_used": os.environ.get("HF_ENDPOINT", "https://huggingface.co"),
         "requested_revision": args.revision or "main",
         "crop": args.crop,
-        "plant_id": f"{args.crop}/{args.acquisition}",
+        # plant_id is the PLANT. Broccoli/20260327-10 and Broccoli/20260402-10
+        # are the same physical plant, so the split group must collapse them.
+        # registry.parse_sample_id is the single source of truth for this split
+        # and is imported rather than reimplemented here.
+        "plant_id": parse_sample_id(args.acquisition)["plant_id"],
         "acquisition_id": args.acquisition,
-        "acquisition_date": args.acquisition.split("-")[0],
+        "acquisition_date": parse_sample_id(args.acquisition)["acquisition_date"],
+        "split_group": f"{args.crop}/{parse_sample_id(args.acquisition)['plant_id']}",
         "downloaded_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "download_seconds": round(elapsed, 1),
         "include_rgb": args.include_rgb,
@@ -150,6 +194,7 @@ def main():
         "hub": resolve_revision(REPO_ID),
     }
     out = sample_dir / "provenance.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(provenance, indent=2) + "\n")
     print(f"wrote {out}")
     print(json.dumps({k: v for k, v in provenance.items()

@@ -25,7 +25,7 @@ import re
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
-SCHEMA_VERSION = "paa-stage4a-1"
+SCHEMA_VERSION = "paa-stage4b-1"
 
 # Fields the brief asks for, kept in one place so the writer, the validator and
 # the tests cannot drift apart.
@@ -99,6 +99,7 @@ class PlantRecord:
     # provenance / audit extras
     schema_version: str = SCHEMA_VERSION
     sample_dir: str | None = None
+    source: dict = field(default_factory=dict)
     registered_images: int | None = None
     frames_used: int | None = None
     sparse_points: int | None = None
@@ -147,12 +148,17 @@ class PlantRecord:
 
 
 def record_from_workspace(workspace: Path, sample: str, crop: str,
-                          revision: str | None = None) -> PlantRecord:
+                          revision: str | None = None,
+                          source: dict | None = None) -> PlantRecord:
     """Assemble a record from the artefacts a pilot run leaves on disk.
 
     Reads whatever is present and records what is missing rather than filling
     it in. A record built from a half-finished run is `pending`, never
     `accepted`.
+
+    ``source`` carries the upstream provenance (Hub revision, file counts,
+    licence) so the registry row is self-describing instead of pointing at a
+    JSON that may live outside the repository.
     """
     workspace = Path(workspace)
     parsed = parse_sample_id(sample)
@@ -161,6 +167,7 @@ def record_from_workspace(workspace: Path, sample: str, crop: str,
         acquisition_id=parsed["acquisition_id"],
         acquisition_date=parsed["acquisition_date"], sample_id=sample,
         source_revision=revision, sample_dir=str(workspace.resolve()),
+        source=dict(source or {}),
     )
 
     preparation = workspace / "preparation.json"
@@ -237,8 +244,25 @@ def record_from_workspace(workspace: Path, sample: str, crop: str,
     return record
 
 
+def record_key(crop: str, acquisition_id: str) -> str:
+    """Identity of one *acquisition* -- what a re-registration must collapse to.
+
+    Plant identity is a separate axis (``split_group``); one plant has many
+    acquisitions. A registry keyed only by plant would lose a date; keyed only
+    by sample directory it would duplicate. ``crop/acquisition`` is the
+    acquisition, which is what a rebuild of the same run must overwrite.
+    """
+    return f"{crop}/{acquisition_id}"
+
+
 class Registry:
-    """Append-only JSONL registry of plant records."""
+    """JSONL registry of plant records, one row per acquisition.
+
+    Re-registering an acquisition that is already present **replaces** its row
+    rather than appending a second one. The previous row is not discarded: its
+    revision and acceptance are kept under ``history`` so a later reader can
+    see that the run was rebuilt and from which source revision each build came.
+    """
 
     def __init__(self, path: Path):
         self.path = Path(path)
@@ -253,13 +277,68 @@ class Registry:
                 rows.append(json.loads(line))
         return rows
 
+    def latest(self) -> dict:
+        """Key -> most recent row, collapsing duplicate acquisitions."""
+        out = {}
+        for row in self.read():
+            key = record_key(row.get("crop", ""), row.get("acquisition_id", ""))
+            out[key] = row
+        return out
+
     def append(self, record: PlantRecord) -> None:
+        """Deprecated shim: writes a new row without deduplication."""
         problems = record.validate()
         if problems:
             raise ValueError(f"refusing to register an invalid record: {problems}")
         self.path.parent.mkdir(parents=True, exist_ok=True)
         with self.path.open("a") as stream:
             stream.write(json.dumps(record.to_dict(), ensure_ascii=False) + "\n")
+
+    def upsert(self, record: PlantRecord) -> dict:
+        """Register ``record``, replacing any earlier row for the same acquisition.
+
+        Rewrites the file in place. If the acquisition is already registered the
+        earlier row is archived into the new row's ``history`` (bounded to the
+        last few builds) and the new row takes its place, so the file stays one
+        line per acquisition. Returns a small summary of what happened.
+        """
+        problems = record.validate()
+        if problems:
+            raise ValueError(f"refusing to register an invalid record: {problems}")
+
+        payload = record.to_dict()
+        key = record_key(record.crop, record.acquisition_id)
+        rows = self.read()
+        replaced = 0
+        kept = []
+        for row in rows:
+            if record_key(row.get("crop", ""), row.get("acquisition_id", "")) == key:
+                replaced += 1
+                history = list(row.get("history", []))
+                history.append({
+                    "schema_version": row.get("schema_version"),
+                    "source_revision": row.get("source_revision"),
+                    "gaussian_count": row.get("gaussian_count"),
+                    "acceptance_status": row.get("acceptance_status"),
+                    "created_utc": row.get("created_utc"),
+                })
+                payload["history"] = history[-5:]
+                continue
+            kept.append(row)
+
+        kept.append(payload)
+        kept.sort(key=lambda r: (r.get("crop", ""), r.get("acquisition_id", "")))
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = self.path.with_suffix(self.path.suffix + ".tmp")
+        with tmp.open("w") as stream:
+            for row in kept:
+                stream.write(json.dumps(row, ensure_ascii=False) + "\n")
+        tmp.replace(self.path)
+
+        # A row for the same acquisition that predates deduplication support
+        # would have shown up as `replaced`; anything else is a first write.
+        return {"key": key, "replaced": replaced, "rows": len(kept),
+                "status": "updated" if replaced else "inserted"}
 
     def groups(self) -> dict:
         """plant identity -> acquisitions, the shape a splitter needs."""
@@ -280,9 +359,14 @@ def main():
     parser.add_argument("--sample", help="PAA sample id, e.g. 20260327-10")
     parser.add_argument("--crop", help="crop name, e.g. Broccoli")
     parser.add_argument("--revision", default=None)
+    parser.add_argument("--provenance", type=Path, default=None,
+                        help="the sample's provenance.json (Hub revision, file counts)")
     parser.add_argument("--registry", type=Path, default=None,
                         help="JSONL registry to append to")
     parser.add_argument("--parse", help="just parse a sample id and print the split")
+    parser.add_argument("--dedupe", action="store_true",
+                        help="collapse duplicate acquisitions in an existing registry "
+                             "(keeps the most recent row per crop/acquisition)")
     args = parser.parse_args()
 
     if args.parse:
@@ -291,14 +375,43 @@ def main():
         print(json.dumps({**parsed, "split_group": group_key(crop, parsed["plant_id"])},
                          indent=2))
         return
+    if args.dedupe:
+        if not args.registry:
+            parser.error("--dedupe needs --registry")
+        registry = Registry(args.registry)
+        rows = registry.read()
+        latest = registry.latest()
+        registry.path.write_text("".join(
+            json.dumps(row, ensure_ascii=False) + "\n"
+            for row in sorted(latest.values(),
+                              key=lambda r: (r.get("crop", ""), r.get("acquisition_id", "")))))
+        print(json.dumps({"rows_before": len(rows), "rows_after": len(latest)},
+                         indent=2))
+        return
     if not (args.workspace and args.sample and args.crop):
         parser.error("--workspace, --sample and --crop are required unless --parse is used")
 
-    record = record_from_workspace(args.workspace, args.sample, args.crop, args.revision)
+    source = {}
+    revision = args.revision
+    if args.provenance and Path(args.provenance).is_file():
+        payload = json.loads(Path(args.provenance).read_text())
+        source = {
+            "provenance_path": str(Path(args.provenance).resolve()),
+            "hf_endpoint": payload.get("hf_endpoint_used"),
+            "hub_sha": (payload.get("hub") or {}).get("sha"),
+            "hub_last_modified": (payload.get("hub") or {}).get("last_modified"),
+            "file_counts": payload.get("file_counts"),
+            "downloaded_at": payload.get("downloaded_at"),
+        }
+        revision = revision or (payload.get("hub") or {}).get("sha")
+
+    record = record_from_workspace(args.workspace, args.sample, args.crop,
+                                   revision, source=source)
     print(json.dumps(record.to_dict(), indent=2, ensure_ascii=False))
     if args.registry:
-        Registry(args.registry).append(record)
-        print(f"appended to {args.registry}")
+        outcome = Registry(args.registry).upsert(record)
+        print(f"registry {outcome['status']} {outcome['key']} "
+              f"({outcome['rows']} rows): {args.registry}")
 
 
 if __name__ == "__main__":

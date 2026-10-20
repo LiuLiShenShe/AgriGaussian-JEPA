@@ -1,0 +1,284 @@
+{
+  "sample_dir": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/external/PAA-Plant-Dataset/Broccoli/20260402-10",
+  "sparse": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/external/PAA-Plant-Dataset/Broccoli/20260402-10/Camera/sparse/0",
+  "files": {
+    "cameras.bin": {
+      "exists": true,
+      "bytes": 128
+    },
+    "images.bin": {
+      "exists": true,
+      "bytes": 5285996
+    },
+    "points3D.bin": {
+      "exists": true,
+      "bytes": 5291886
+    }
+  },
+  "counts": {
+    "cameras": 1,
+    "registered_images": 102,
+    "sparse_points": 69266
+  },
+  "cameras": {
+    "0": {
+      "model": "FULL_OPENCV",
+      "width": 2160,
+      "height": 3840,
+      "params": [
+        9873.791967084282,
+        9873.791967084282,
+        1066.3660618841386,
+        1909.5348211152823,
+        -0.06837469102266733,
+        13.969621387085535,
+        -0.003924453874374324,
+        -0.0005588535719478121,
+        -181.46447219846803,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "images": 102,
+      "distortion": [
+        -0.06837469102266733,
+        13.969621387085535,
+        -0.003924453874374324,
+        -0.0005588535719478121,
+        -181.46447219846803,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "distortion_free": false,
+      "fx_fy_equal": true,
+      "principal_point_normalised": [
+        0.4936879916130271,
+        0.4972746929987714
+      ],
+      "horizontal_fov_deg": 12.484448031115146,
+      "vertical_fov_deg": 22.008155323930254
+    }
+  },
+  "camera_model_distortion_free": false,
+  "camera_models_needing_undistortion": [
+    "FULL_OPENCV"
+  ],
+  "camera_models_unsupported": [],
+  "correspondence": {
+    "on_disk": 102,
+    "registered": 102,
+    "registered_missing_on_disk": [],
+    "on_disk_not_registered": [],
+    "exact": true
+  },
+  "image_decoding": {
+    "undecodable": [],
+    "size_mismatch_stored_vs_camera": [],
+    "all_sizes_match_stored_frame": true,
+    "images_carrying_exif_orientation": []
+  },
+  "poses": {
+    "non_finite": [],
+    "rotation_determinant_min": 0.9999999999999996,
+    "rotation_determinant_max": 1.000000000000001,
+    "rotations_are_proper": true,
+    "camera_center_bbox_min": [
+      -7.356362729923154,
+      -0.20664896276762434,
+      -15.181648043416764
+    ],
+    "camera_center_bbox_max": [
+      7.225158774390947,
+      6.469182480292528,
+      -0.0029628064231917504
+    ],
+    "camera_center_centroid": [
+      0.12833412310001854,
+      1.7188547856655196,
+      -7.5941666854742
+    ],
+    "camera_radius_median": 6.095726812678199,
+    "camera_radius_min": 4.571598861822009,
+    "camera_radius_max": 7.813783560177283
+  },
+  "points3D": {
+    "count": 69266,
+    "finite": true,
+    "bbox_min": [
+      -7.283484935760498,
+      -6.100831985473633,
+      -16.61115074157715
+    ],
+    "bbox_max": [
+      6.296375274658203,
+      1.6486612558364868,
+      -0.7091881036758423
+    ],
+    "stored_error_all_zero": true,
+    "stored_error_note": "PAA zeroed this field; the recomputed value below is the meaningful one",
+    "track_length_min": 2,
+    "track_length_median": 2.0,
+    "track_length_max": 30,
+    "observations_total": 219914
+  },
+  "reprojection_error_px": {
+    "observations": 219914,
+    "mean": 0.7299829879018523,
+    "median": 0.5493749060137784,
+    "p95": 1.9422135384766206,
+    "max": 32.13206577900159,
+    "finite": true,
+    "per_image_median_worst5": [
+      {
+        "image": "34.jpg",
+        "median": 0.8553292769310287,
+        "n": 1035
+      },
+      {
+        "image": "21.jpg",
+        "median": 0.7769637565993617,
+        "n": 1294
+      },
+      {
+        "image": "24.jpg",
+        "median": 0.7138948944472193,
+        "n": 1151
+      },
+      {
+        "image": "22.jpg",
+        "median": 0.7137923492420876,
+        "n": 1315
+      },
+      {
+        "image": "23.jpg",
+        "median": 0.6687031097715157,
+        "n": 1178
+      }
+    ]
+  },
+  "orientation_probe": [
+    {
+      "image": "1.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3840,
+        2160
+      ],
+      "viewed_shape_hw": [
+        3840,
+        2160
+      ],
+      "camera_wxh": [
+        2160,
+        3840
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 4.25900936126709,
+      "contrast_viewed": 4.182806015014648,
+      "projected_points_used": 69239
+    },
+    {
+      "image": "21.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3840,
+        2160
+      ],
+      "viewed_shape_hw": [
+        3840,
+        2160
+      ],
+      "camera_wxh": [
+        2160,
+        3840
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 4.758656024932861,
+      "contrast_viewed": 4.836073398590088,
+      "projected_points_used": 69211
+    },
+    {
+      "image": "41.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3840,
+        2160
+      ],
+      "viewed_shape_hw": [
+        3840,
+        2160
+      ],
+      "camera_wxh": [
+        2160,
+        3840
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 3.9988298416137695,
+      "contrast_viewed": 3.969731569290161,
+      "projected_points_used": 68821
+    },
+    {
+      "image": "61.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3840,
+        2160
+      ],
+      "viewed_shape_hw": [
+        3840,
+        2160
+      ],
+      "camera_wxh": [
+        2160,
+        3840
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 4.498467445373535,
+      "contrast_viewed": 4.44812536239624,
+      "projected_points_used": 67163
+    },
+    {
+      "image": "81.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3840,
+        2160
+      ],
+      "viewed_shape_hw": [
+        3840,
+        2160
+      ],
+      "camera_wxh": [
+        2160,
+        3840
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 3.346688747406006,
+      "contrast_viewed": 3.2291555404663086,
+      "projected_points_used": 67639
+    },
+    {
+      "image": "102.jpg",
+      "camera_id": 0,
+      "stored_shape_hw": [
+        3840,
+        2160
+      ],
+      "viewed_shape_hw": [
+        3840,
+        2160
+      ],
+      "camera_wxh": [
+        2160,
+        3840
+      ],
+      "intrinsics_match_stored": true,
+      "contrast_stored": 6.24052619934082,
+      "contrast_viewed": 6.371993541717529,
+      "projected_points_used": 69239
+    }
+  ],
+  "status": "PASS",
+  "trainer_ready_without_undistortion": false
+}

@@ -34,10 +34,26 @@ Image.MAX_IMAGE_PIXELS = None
 # Camera models gsplat can consume without an undistortion pass. Anything else
 # needs a real geometric conversion before it may be used for training.
 DISTORTION_FREE = {"PINHOLE", "SIMPLE_PINHOLE"}
+# Models whose coefficients this module can decode. Distinct from
+# DISTORTION_FREE: everything here can be *audited*, but only the first set can
+# be trained on without an undistortion pass.
+SUPPORTED_MODELS = DISTORTION_FREE | {
+    "SIMPLE_RADIAL", "RADIAL", "OPENCV", "FULL_OPENCV",
+}
 
 
 def intrinsics_matrix(camera):
-    """(K, distortion) for the models PAA is expected to use."""
+    """(K, distortion) for the camera models PAA actually ships.
+
+    PAA is not uniform across samples. Stage 4A's sample used SIMPLE_PINHOLE;
+    ``Broccoli/20260402-10`` ships a single FULL_OPENCV camera at 2160x3840 with
+    ``k1=-0.068, k2=13.97, k3=-181.5``. Those coefficients are large, but they
+    are pinned near the principal point: the distortion they imply is 0 px at
+    the centre and 24 px at a corner, and the mean displacement over the sparse
+    cloud is 0.8 px. They still cannot be ignored -- gsplat has no Brown-Conrady
+    model -- so the sample is undistorted rather than silently treated as
+    pinhole.
+    """
     p = [float(v) for v in camera.params]
     if camera.model == "PINHOLE":
         fx, fy, cx, cy = p
@@ -48,19 +64,70 @@ def intrinsics_matrix(camera):
     if camera.model == "SIMPLE_RADIAL":
         f, cx, cy, k1 = p
         return np.array([[f, 0, cx], [0, f, cy], [0, 0, 1.0]]), np.array([k1, 0, 0, 0])
+    if camera.model == "RADIAL":
+        f, cx, cy, k1, k2 = p
+        return np.array([[f, 0, cx], [0, f, cy], [0, 0, 1.0]]), np.array([k1, k2, 0, 0])
+    if camera.model == "OPENCV":
+        fx, fy, cx, cy, k1, k2, p1, p2 = p
+        return (np.array([[fx, 0, cx], [0, fy, cy], [0, 0, 1.0]]),
+                np.array([k1, k2, p1, p2]))
+    if camera.model == "FULL_OPENCV":
+        fx, fy, cx, cy, k1, k2, p1, p2, k3, k4, k5, k6 = p
+        return (np.array([[fx, 0, cx], [0, fy, cy], [0, 0, 1.0]]),
+                np.array([k1, k2, p1, p2, k3, k4, k5, k6]))
     raise ValueError(f"unsupported camera model {camera.model}")
 
 
 def project(points_xyz, camera, image):
-    """Project world points through one COLMAP image record."""
-    K, _ = intrinsics_matrix(camera)
+    """Project world points through one COLMAP image record.
+
+    Distortion is applied when the model has any. Omitting it would make a
+    FULL_OPENCV sample report an inflated reprojection error and look worse
+    than it is -- and, worse, would hide a genuinely bad model behind a
+    plausible-looking number.
+    """
+    K, dist = intrinsics_matrix(camera)
     R = qvec2rotmat(image.qvec)
     cam = np.asarray(points_xyz) @ R.T + image.tvec
     z = cam[:, 2]
     with np.errstate(divide="ignore", invalid="ignore"):
-        uv = np.stack([K[0, 0] * cam[:, 0] / z + K[0, 2],
-                       K[1, 1] * cam[:, 1] / z + K[1, 2]], axis=1)
+        xy = cam[:, :2] / z[:, None]
+    if np.any(dist):
+        xy = _distort_normalised(xy, camera, dist)
+    uv = np.stack([K[0, 0] * xy[:, 0] + K[0, 2],
+                   K[1, 1] * xy[:, 1] + K[1, 2]], axis=1)
     return uv, z, np.isfinite(uv).all(axis=1) & (z > 1e-6)
+
+
+def _distort_normalised(xy: np.ndarray, camera, dist: np.ndarray) -> np.ndarray:
+    """Apply a COLMAP distortion model to normalised camera coordinates."""
+    x, y = xy[:, 0], xy[:, 1]
+    if camera.model in ("SIMPLE_RADIAL", "RADIAL"):
+        k1 = dist[0]
+        k2 = dist[1] if camera.model == "RADIAL" else 0.0
+        r2 = x * x + y * y
+        radial = 1 + k1 * r2 + k2 * r2 * r2
+        return np.stack([x * radial, y * radial], axis=1)
+    if camera.model in ("OPENCV", "FULL_OPENCV"):
+        import cv2
+        if camera.model == "OPENCV":
+            k1, k2, p1, p2 = dist[:4]
+            k3 = k4 = k5 = k6 = 0.0
+        else:
+            k1, k2, p1, p2, k3, k4, k5, k6 = dist[:8]
+        D = np.array([k1, k2, p1, p2, k3, k4, k5, k6], dtype=np.float64)
+        K = np.asarray([[camera.params[0], 0, camera.params[2]],
+                        [0, camera.params[1], camera.params[3]],
+                        [0, 0, 1.0]], dtype=np.float64)
+        # cv2 works in pixels; convert in and back out.
+        pixels = np.stack([x * K[0, 0] + K[0, 2], y * K[1, 1] + K[1, 2]],
+                          axis=1).reshape(-1, 1, 2)
+        distorted = cv2.projectPoints(
+            np.concatenate([xy, np.ones((len(xy), 1))], axis=1),
+            np.zeros(3), np.zeros(3), K, D)[0].reshape(-1, 2)
+        return np.stack([(distorted[:, 0] - K[0, 2]) / K[0, 0],
+                         (distorted[:, 1] - K[1, 2]) / K[1, 1]], axis=1)
+    return xy
 
 
 def reprojection_error(cameras, images, points):
@@ -182,8 +249,7 @@ def audit(sample_dir: Path, sparse: Path | None = None, probe_limit: int = 0) ->
         }
         if cam.model not in DISTORTION_FREE:
             distorted.append(cam.model)
-        if cam.model not in DISTORTION_FREE and cam.model not in (
-                "SIMPLE_RADIAL", "RADIAL", "OPENCV", "FULL_OPENCV"):
+        if cam.model not in SUPPORTED_MODELS:
             unsupported.append(cam.model)
     report["camera_model_distortion_free"] = not distorted
     report["camera_models_needing_undistortion"] = sorted(set(distorted))
