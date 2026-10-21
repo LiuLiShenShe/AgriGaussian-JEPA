@@ -1,0 +1,423 @@
+{
+  "schema_version": "paa-stage4d-batch-plan-1",
+  "generated_utc": "2026-10-21T04:31:19Z",
+  "library": {
+    "acquisitions_total": 41,
+    "plants_total": 23,
+    "crops_total": 6,
+    "trusted_assets": 8,
+    "trusted_plants": 7,
+    "remaining_acquisitions": 33,
+    "remaining_new_plants": 22,
+    "remaining_extra_dates": 11
+  },
+  "measured_unit_cost": {
+    "workspaces_measured": 8,
+    "disk_bytes_per_unit_mean": 2682799333,
+    "disk_bytes_per_unit_max": 3462893739,
+    "train_7k_plus_30k_seconds_mean": 1694.7462500000001,
+    "prepare_seconds_mean": 86.25000000000001,
+    "not_measured_here": {
+      "download_seconds": 180,
+      "semantic_label_seconds": 1110,
+      "export_verify_seconds": 180,
+      "carve_eval_seconds": 120,
+      "source": "Stage 4C report section 2.5 measured on the same host; kept separate from the per-stage numbers above because they were timed as a block rather than by stage"
+    },
+    "note": "wall-clock is from a shared host (load 30-140); it is a plan input, not a benchmark"
+  },
+  "estimate": {
+    "remaining_units": 33,
+    "storage_bytes": 88532377989,
+    "storage_gib": 82.5,
+    "single_gpu_hours": 30.9,
+    "two_gpu_hours": 15.5,
+    "basis": "per-unit training (7k+30k) and preparation measured from the eight existing workspaces, plus the download/semantic/export timings measured in Stage 4C section 2.5",
+    "assumption": "two independent workers; wall-clock halves only if both GPUs are actually free"
+  },
+  "preconditions": {
+    "rice_root_cause": {
+      "met": false,
+      "why": "Rice/1 carved to 0 Gaussians because both backends miss the thin stalks; with 4 more Rice acquisitions in the remaining set, running them first repeats the failure four times",
+      "how_to_satisfy": "a candidate 2D labeller that keeps rice stalks stable across the orbit, checked on the Rice priority views"
+    },
+    "human_semantic_check": {
+      "met": false,
+      "why": "no human-confirmed label exists, so plant-only assets remain unverified and the white-tissue failure is not independently confirmed",
+      "how_to_satisfy": "the 12 priority tasks confirmed, then the semantic gate re-run"
+    },
+    "cabbage_consistency": {
+      "met": false,
+      "why": "Cabbage's A/B plant IoU is 0.38 and the diagnostic shows B labels 65% of white specimen pixels support; expanding Cabbage first would multiply a known failure",
+      "how_to_satisfy": "confirm the Cabbage priority views, then re-score"
+    }
+  },
+  "blocked_by": [
+    "rice_root_cause",
+    "human_semantic_check",
+    "cabbage_consistency"
+  ],
+  "decision": "conditional: do not start a bulk expansion until every precondition is met",
+  "recommended_first_batch": [
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260328-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-03-28",
+      "dated": true,
+      "split_group": "Cabbage/21",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260403-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-04-03",
+      "dated": true,
+      "split_group": "Cabbage/21",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260411-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-04-11",
+      "dated": true,
+      "split_group": "Cabbage/21",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260417-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-04-17",
+      "dated": true,
+      "split_group": "Cabbage/21",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cotton",
+      "acquisition_id": "2",
+      "plant_id": "2",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Cotton/2",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cotton",
+      "acquisition_id": "3",
+      "plant_id": "3",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Cotton/3",
+      "batch_reason": "new independent plant"
+    }
+  ],
+  "batch_order": [
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260328-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-03-28",
+      "dated": true,
+      "split_group": "Cabbage/21",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260403-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-04-03",
+      "dated": true,
+      "split_group": "Cabbage/21",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260411-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-04-11",
+      "dated": true,
+      "split_group": "Cabbage/21",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260417-21",
+      "plant_id": "21",
+      "acquisition_date": "2026-04-17",
+      "dated": true,
+      "split_group": "Cabbage/21",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cotton",
+      "acquisition_id": "2",
+      "plant_id": "2",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Cotton/2",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cotton",
+      "acquisition_id": "3",
+      "plant_id": "3",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Cotton/3",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cotton",
+      "acquisition_id": "4",
+      "plant_id": "4",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Cotton/4",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Cotton",
+      "acquisition_id": "5",
+      "plant_id": "5",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Cotton/5",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Rice",
+      "acquisition_id": "2",
+      "plant_id": "2",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Rice/2",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Rice",
+      "acquisition_id": "3",
+      "plant_id": "3",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Rice/3",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Rice",
+      "acquisition_id": "4",
+      "plant_id": "4",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Rice/4",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Rice",
+      "acquisition_id": "5",
+      "plant_id": "5",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Rice/5",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "2",
+      "plant_id": "2",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/2",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "3",
+      "plant_id": "3",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/3",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "4",
+      "plant_id": "4",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/4",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "7",
+      "plant_id": "7",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/7",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "8",
+      "plant_id": "8",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/8",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Sunflower",
+      "acquisition_id": "9",
+      "plant_id": "9",
+      "acquisition_date": null,
+      "dated": false,
+      "split_group": "Sunflower/9",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260401-26",
+      "plant_id": "26",
+      "acquisition_date": "2026-04-01",
+      "dated": true,
+      "split_group": "Tobacco/26",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260407-26",
+      "plant_id": "26",
+      "acquisition_date": "2026-04-07",
+      "dated": true,
+      "split_group": "Tobacco/26",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260415-26",
+      "plant_id": "26",
+      "acquisition_date": "2026-04-15",
+      "dated": true,
+      "split_group": "Tobacco/26",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260421-26",
+      "plant_id": "26",
+      "acquisition_date": "2026-04-21",
+      "dated": true,
+      "split_group": "Tobacco/26",
+      "batch_reason": "new independent plant"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260402-5",
+      "plant_id": "5",
+      "acquisition_date": "2026-04-02",
+      "dated": true,
+      "split_group": "Broccoli/5",
+      "batch_reason": "additional date of a known plant"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260411-10",
+      "plant_id": "10",
+      "acquisition_date": "2026-04-11",
+      "dated": true,
+      "split_group": "Broccoli/10",
+      "batch_reason": "additional date of a known plant"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260411-5",
+      "plant_id": "5",
+      "acquisition_date": "2026-04-11",
+      "dated": true,
+      "split_group": "Broccoli/5",
+      "batch_reason": "additional date of a known plant"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260416-10",
+      "plant_id": "10",
+      "acquisition_date": "2026-04-16",
+      "dated": true,
+      "split_group": "Broccoli/10",
+      "batch_reason": "additional date of a known plant"
+    },
+    {
+      "crop": "Broccoli",
+      "acquisition_id": "20260416-5",
+      "plant_id": "5",
+      "acquisition_date": "2026-04-16",
+      "dated": true,
+      "split_group": "Broccoli/5",
+      "batch_reason": "additional date of a known plant"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260403-9",
+      "plant_id": "9",
+      "acquisition_date": "2026-04-03",
+      "dated": true,
+      "split_group": "Cabbage/9",
+      "batch_reason": "additional date of a known plant"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260411-9",
+      "plant_id": "9",
+      "acquisition_date": "2026-04-11",
+      "dated": true,
+      "split_group": "Cabbage/9",
+      "batch_reason": "additional date of a known plant"
+    },
+    {
+      "crop": "Cabbage",
+      "acquisition_id": "20260417-9",
+      "plant_id": "9",
+      "acquisition_date": "2026-04-17",
+      "dated": true,
+      "split_group": "Cabbage/9",
+      "batch_reason": "additional date of a known plant"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260407-23",
+      "plant_id": "23",
+      "acquisition_date": "2026-04-07",
+      "dated": true,
+      "split_group": "Tobacco/23",
+      "batch_reason": "additional date of a known plant"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260415-23",
+      "plant_id": "23",
+      "acquisition_date": "2026-04-15",
+      "dated": true,
+      "split_group": "Tobacco/23",
+      "batch_reason": "additional date of a known plant"
+    },
+    {
+      "crop": "Tobacco",
+      "acquisition_id": "20260421-23",
+      "plant_id": "23",
+      "acquisition_date": "2026-04-21",
+      "dated": true,
+      "split_group": "Tobacco/23",
+      "batch_reason": "additional date of a known plant"
+    }
+  ],
+  "rules": [
+    "only reconstruction_verified, source-complete full-specimen assets enter the candidate pool",
+    "plant-only export must pass its own semantic gate; a loadable PLY is not evidence",
+    "new independent plants before additional dates",
+    "every asset keeps a checkpoint->PLY provenance record and a re-hashed PLY"
+  ],
+  "not_authorised": "this file is a plan, not a permission. The decision field is conditional and names what is missing."
+}

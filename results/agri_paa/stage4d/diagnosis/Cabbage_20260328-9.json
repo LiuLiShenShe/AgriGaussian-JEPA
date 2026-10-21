@@ -1,0 +1,3455 @@
+{
+  "workspace": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/plant_gs/PAA/Cabbage_20260328-9",
+  "diagnosed_utc": "2026-10-21T04:03:07Z",
+  "schema_version": "paa-stage4d-diagnosis-1",
+  "frames": [
+    {
+      "specimen_pixels": 442184,
+      "plant_pixels": {
+        "A_segformer": 103604,
+        "B_sam_clip": 64459,
+        "C_intersection": 64459
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.23430065312177736,
+        "B_sam_clip": 0.14577415736435512,
+        "C_intersection": 0.14577415736435512
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.012779429365661557,
+        "B_sam_clip": 0.014474317007710328,
+        "C_intersection": 0.014474317007710328
+      },
+      "white_specimen_pixels": 910,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8395604395604396,
+        "B_sam_clip": 0.9142857142857143,
+        "C_intersection": 0.9142857142857143
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.41318681318681316
+      },
+      "A_B_plant_iou": 0.6221670977954519,
+      "intersection_share_of_union": 0.6221670977954519,
+      "A_coverage_of_B": 1.60728525108984,
+      "B_coverage_of_A": 0.6221670977954519,
+      "stem": "1"
+    },
+    {
+      "specimen_pixels": 413649,
+      "plant_pixels": {
+        "A_segformer": 90081,
+        "B_sam_clip": 0,
+        "C_intersection": 0
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.21777158895585388,
+        "B_sam_clip": 0.0,
+        "C_intersection": 0.0
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.013188130682385852
+      },
+      "white_specimen_pixels": 771,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.7756160830090791,
+        "B_sam_clip": 1.0,
+        "C_intersection": 1.0
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.05317769130998703
+      },
+      "A_B_plant_iou": 0.0,
+      "intersection_share_of_union": 0.0,
+      "A_coverage_of_B": null,
+      "B_coverage_of_A": 0.0,
+      "stem": "10"
+    },
+    {
+      "specimen_pixels": 353147,
+      "plant_pixels": {
+        "A_segformer": 299422,
+        "B_sam_clip": 235025,
+        "C_intersection": 235021
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.8478678850450379,
+        "B_sam_clip": 0.6655160598844108,
+        "C_intersection": 0.6655047331564476
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.001195636927146302,
+        "B_sam_clip": 0.0018381023295394106,
+        "C_intersection": 0.001838133613591977
+      },
+      "white_specimen_pixels": 340,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9588235294117647,
+        "B_sam_clip": 1.0,
+        "C_intersection": 1.0
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.08823529411764706
+      },
+      "A_B_plant_iou": 0.7849051184599868,
+      "intersection_share_of_union": 0.7849051184599868,
+      "A_coverage_of_B": 1.2740006382299756,
+      "B_coverage_of_A": 0.7849289631356413,
+      "stem": "100"
+    },
+    {
+      "specimen_pixels": 363219,
+      "plant_pixels": {
+        "A_segformer": 290788,
+        "B_sam_clip": 231610,
+        "C_intersection": 230359
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.8005858724350874,
+        "B_sam_clip": 0.6376593735459875,
+        "C_intersection": 0.6342151704618977
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0013136718158933657,
+        "B_sam_clip": 0.0017443115582228747,
+        "C_intersection": 0.001736420109481288
+      },
+      "white_specimen_pixels": 1602,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9581772784019975,
+        "B_sam_clip": 0.9968789013732834,
+        "C_intersection": 0.9975031210986267
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.2940074906367041
+      },
+      "A_B_plant_iou": 0.7887953321302976,
+      "intersection_share_of_union": 0.7887953321302976,
+      "A_coverage_of_B": 1.255507102456716,
+      "B_coverage_of_A": 0.7964909143430953,
+      "stem": "101"
+    },
+    {
+      "specimen_pixels": 334821,
+      "plant_pixels": {
+        "A_segformer": 310159,
+        "B_sam_clip": 256758,
+        "C_intersection": 256729
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.9263427323853641,
+        "B_sam_clip": 0.7668515415699733,
+        "C_intersection": 0.7667649281257747
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0009672458319765024,
+        "B_sam_clip": 0.003213142336363424,
+        "C_intersection": 0.0032135052915720466
+      },
+      "white_specimen_pixels": 729,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8367626886145405,
+        "B_sam_clip": 0.9670781893004116,
+        "C_intersection": 0.9670781893004116
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.11934156378600823
+      },
+      "A_B_plant_iou": 0.8276561311204818,
+      "intersection_share_of_union": 0.8276561311204818,
+      "A_coverage_of_B": 1.207981835035325,
+      "B_coverage_of_A": 0.8278270177554093,
+      "stem": "102"
+    },
+    {
+      "specimen_pixels": 417714,
+      "plant_pixels": {
+        "A_segformer": 88513,
+        "B_sam_clip": 0,
+        "C_intersection": 0
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.2118985717500491,
+        "B_sam_clip": 0.0,
+        "C_intersection": 0.0
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.014641917006541412
+      },
+      "white_specimen_pixels": 727,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.7441540577716643,
+        "B_sam_clip": 1.0,
+        "C_intersection": 1.0
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.1279229711141678
+      },
+      "A_B_plant_iou": 0.0,
+      "intersection_share_of_union": 0.0,
+      "A_coverage_of_B": null,
+      "B_coverage_of_A": 0.0,
+      "stem": "11"
+    },
+    {
+      "specimen_pixels": 426671,
+      "plant_pixels": {
+        "A_segformer": 92661,
+        "B_sam_clip": 23916,
+        "C_intersection": 23281
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.21717201309674197,
+        "B_sam_clip": 0.05605255571623101,
+        "C_intersection": 0.05456428958143394
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.014094387066835022,
+        "B_sam_clip": 0.05268439538384345,
+        "C_intersection": 0.0542932004638976
+      },
+      "white_specimen_pixels": 905,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8331491712707182,
+        "B_sam_clip": 0.918232044198895,
+        "C_intersection": 0.9259668508287293
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.16353591160220995
+      },
+      "A_B_plant_iou": 0.24953910135482765,
+      "intersection_share_of_union": 0.24953910135482765,
+      "A_coverage_of_B": 3.874435524335173,
+      "B_coverage_of_A": 0.25810211415806,
+      "stem": "12"
+    },
+    {
+      "specimen_pixels": 445297,
+      "plant_pixels": {
+        "A_segformer": 106673,
+        "B_sam_clip": 21194,
+        "C_intersection": 21121
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.2395547241503985,
+        "B_sam_clip": 0.04759520050662816,
+        "C_intersection": 0.04743126497595986
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.01051812548629925,
+        "B_sam_clip": 0.0003774653203736907,
+        "C_intersection": 0.0012310023199659107
+      },
+      "white_specimen_pixels": 4436,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9675383228133454,
+        "B_sam_clip": 0.9990982867448152,
+        "C_intersection": 0.9990982867448152
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7493237150586114
+      },
+      "A_B_plant_iou": 0.1978622149776104,
+      "intersection_share_of_union": 0.1978622149776104,
+      "A_coverage_of_B": 5.033169765027838,
+      "B_coverage_of_A": 0.19868195325902524,
+      "stem": "13"
+    },
+    {
+      "specimen_pixels": 451881,
+      "plant_pixels": {
+        "A_segformer": 110799,
+        "B_sam_clip": 60316,
+        "C_intersection": 59618
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.24519508454659522,
+        "B_sam_clip": 0.13347761910768544,
+        "C_intersection": 0.13193296465219825
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.012084946615041652,
+        "B_sam_clip": 0.015501691093573845,
+        "C_intersection": 0.016169613204065885
+      },
+      "white_specimen_pixels": 13736,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.983401281304601,
+        "B_sam_clip": 0.9959231217239372,
+        "C_intersection": 0.9959231217239372
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9506406523005242
+      },
+      "A_B_plant_iou": 0.5347049696404388,
+      "intersection_share_of_union": 0.5347049696404388,
+      "A_coverage_of_B": 1.8369752636116454,
+      "B_coverage_of_A": 0.5443731441619509,
+      "stem": "14"
+    },
+    {
+      "specimen_pixels": 450454,
+      "plant_pixels": {
+        "A_segformer": 113195,
+        "B_sam_clip": 16854,
+        "C_intersection": 16363
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.25129091982755175,
+        "B_sam_clip": 0.0374155851651889,
+        "C_intersection": 0.03632557375447881
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.00706744997570564,
+        "B_sam_clip": 0.09422095644950754,
+        "C_intersection": 0.09637597017661798
+      },
+      "white_specimen_pixels": 14773,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9930278210248427,
+        "B_sam_clip": 0.997698504027618,
+        "C_intersection": 0.997698504027618
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9849725851215054
+      },
+      "A_B_plant_iou": 0.143931530707387,
+      "intersection_share_of_union": 0.143931530707387,
+      "A_coverage_of_B": 6.71620980182746,
+      "B_coverage_of_A": 0.14889350236317858,
+      "stem": "15"
+    },
+    {
+      "specimen_pixels": 450381,
+      "plant_pixels": {
+        "A_segformer": 116715,
+        "B_sam_clip": 41404,
+        "C_intersection": 40623
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.2591472553238258,
+        "B_sam_clip": 0.09193105392989491,
+        "C_intersection": 0.0901969665683055
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.005877565008782076,
+        "B_sam_clip": 0.02651917689112163,
+        "C_intersection": 0.029884548162371072
+      },
+      "white_specimen_pixels": 20308,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9578491234981288,
+        "B_sam_clip": 0.9967992909198345,
+        "C_intersection": 0.9968977742761473
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8539491825881426
+      },
+      "A_B_plant_iou": 0.3457394294273848,
+      "intersection_share_of_union": 0.3457394294273848,
+      "A_coverage_of_B": 2.8189305381122596,
+      "B_coverage_of_A": 0.3547444630081823,
+      "stem": "16"
+    },
+    {
+      "specimen_pixels": 462598,
+      "plant_pixels": {
+        "A_segformer": 122091,
+        "B_sam_clip": 12576,
+        "C_intersection": 12161
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.26392461705411613,
+        "B_sam_clip": 0.027185590945053805,
+        "C_intersection": 0.026288483737499944
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.014481001875650129,
+        "B_sam_clip": 0.15338740458015268,
+        "C_intersection": 0.16914727407285585
+      },
+      "white_specimen_pixels": 14717,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9162193381803356,
+        "B_sam_clip": 0.9972820547665965,
+        "C_intersection": 0.9972820547665965
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9579397975130801
+      },
+      "A_B_plant_iou": 0.0992686072518897,
+      "intersection_share_of_union": 0.0992686072518897,
+      "A_coverage_of_B": 9.708253816793894,
+      "B_coverage_of_A": 0.10300513551367423,
+      "stem": "17"
+    },
+    {
+      "specimen_pixels": 445919,
+      "plant_pixels": {
+        "A_segformer": 109186,
+        "B_sam_clip": 38042,
+        "C_intersection": 37792
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.24485612857940567,
+        "B_sam_clip": 0.08531145791051738,
+        "C_intersection": 0.08475081797366786
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.005641748942172073,
+        "B_sam_clip": 0.041743336312496715,
+        "C_intersection": 0.03926756985605419
+      },
+      "white_specimen_pixels": 20451,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8830375042785193,
+        "B_sam_clip": 0.9968705686763484,
+        "C_intersection": 0.9969194660407804
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.987188890518801
+      },
+      "A_B_plant_iou": 0.3453342592931028,
+      "intersection_share_of_union": 0.3453342592931028,
+      "A_coverage_of_B": 2.870143525576994,
+      "B_coverage_of_A": 0.34841463191251626,
+      "stem": "18"
+    },
+    {
+      "specimen_pixels": 444322,
+      "plant_pixels": {
+        "A_segformer": 95537,
+        "B_sam_clip": 57022,
+        "C_intersection": 56167
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.21501748731775605,
+        "B_sam_clip": 0.12833485625289767,
+        "C_intersection": 0.12641057611371934
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.009273893884044924,
+        "B_sam_clip": 0.006190593104415839,
+        "C_intersection": 0.006996991115779728
+      },
+      "white_specimen_pixels": 19062,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9959605497849124,
+        "B_sam_clip": 0.9983737278354842,
+        "C_intersection": 0.9985311090126954
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9874095058231036
+      },
+      "A_B_plant_iou": 0.5826935845298366,
+      "intersection_share_of_union": 0.5826935845298366,
+      "A_coverage_of_B": 1.675441057837326,
+      "B_coverage_of_A": 0.5968577619142322,
+      "stem": "19"
+    },
+    {
+      "specimen_pixels": 441447,
+      "plant_pixels": {
+        "A_segformer": 99303,
+        "B_sam_clip": 73135,
+        "C_intersection": 73135
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.22494886135821515,
+        "B_sam_clip": 0.16567107716215085,
+        "C_intersection": 0.16567107716215085
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.010936225491676988,
+        "B_sam_clip": 0.006946058658644972,
+        "C_intersection": 0.006946058658644972
+      },
+      "white_specimen_pixels": 772,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8691709844559585,
+        "B_sam_clip": 0.9520725388601037,
+        "C_intersection": 0.9520725388601037
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.1800518134715026
+      },
+      "A_B_plant_iou": 0.7364832885209913,
+      "intersection_share_of_union": 0.7364832885209913,
+      "A_coverage_of_B": 1.3578040609831135,
+      "B_coverage_of_A": 0.7364832885209913,
+      "stem": "2"
+    },
+    {
+      "specimen_pixels": 445042,
+      "plant_pixels": {
+        "A_segformer": 91172,
+        "B_sam_clip": 14474,
+        "C_intersection": 13223
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.20486156362770255,
+        "B_sam_clip": 0.032522773131524664,
+        "C_intersection": 0.029711802481563538
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.009816610362830694,
+        "B_sam_clip": 0.10791764543319055,
+        "C_intersection": 0.11903501474703168
+      },
+      "white_specimen_pixels": 9601,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9942714300593688,
+        "B_sam_clip": 0.9976044162066452,
+        "C_intersection": 0.9976044162066452
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7978335590042704
+      },
+      "A_B_plant_iou": 0.14307044783224954,
+      "intersection_share_of_union": 0.14307044783224954,
+      "A_coverage_of_B": 6.299018930496062,
+      "B_coverage_of_A": 0.15875488088448209,
+      "stem": "20"
+    },
+    {
+      "specimen_pixels": 457160,
+      "plant_pixels": {
+        "A_segformer": 101660,
+        "B_sam_clip": 63502,
+        "C_intersection": 63052
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.2223729110158369,
+        "B_sam_clip": 0.13890541604689824,
+        "C_intersection": 0.1379210779595765
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.006049577021444029,
+        "B_sam_clip": 0.01699159081603729,
+        "C_intersection": 0.015907504916576793
+      },
+      "white_specimen_pixels": 2310,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9640692640692641,
+        "B_sam_clip": 0.9848484848484849,
+        "C_intersection": 0.9848484848484849
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.07878787878787878
+      },
+      "A_B_plant_iou": 0.6174909411419058,
+      "intersection_share_of_union": 0.6174909411419058,
+      "A_coverage_of_B": 1.6008944600170074,
+      "B_coverage_of_A": 0.624650796773559,
+      "stem": "21"
+    },
+    {
+      "specimen_pixels": 459398,
+      "plant_pixels": {
+        "A_segformer": 110572,
+        "B_sam_clip": 37971,
+        "C_intersection": 37967
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.2406889015624796,
+        "B_sam_clip": 0.08265382086992107,
+        "C_intersection": 0.08264511382287254
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002206706942082987,
+        "B_sam_clip": 0.037554976166021437,
+        "C_intersection": 0.03755893275739458
+      },
+      "white_specimen_pixels": 1760,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9607954545454546,
+        "B_sam_clip": 0.9852272727272727,
+        "C_intersection": 0.9852272727272727
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.20738636363636365
+      },
+      "A_B_plant_iou": 0.3433566054116626,
+      "intersection_share_of_union": 0.3433566054116626,
+      "A_coverage_of_B": 2.912011798477786,
+      "B_coverage_of_A": 0.3434052020402995,
+      "stem": "22"
+    },
+    {
+      "specimen_pixels": 439867,
+      "plant_pixels": {
+        "A_segformer": 91237,
+        "B_sam_clip": 45803,
+        "C_intersection": 45381
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.20741951544444115,
+        "B_sam_clip": 0.10412920269081336,
+        "C_intersection": 0.10316982178704018
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.004186897859421068,
+        "B_sam_clip": 0.022989760496037376,
+        "C_intersection": 0.021859368458165312
+      },
+      "white_specimen_pixels": 1318,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9506828528072838,
+        "B_sam_clip": 0.9810318664643399,
+        "C_intersection": 0.9810318664643399
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.006828528072837633
+      },
+      "A_B_plant_iou": 0.49510686348312766,
+      "intersection_share_of_union": 0.49510686348312766,
+      "A_coverage_of_B": 1.9919437591424143,
+      "B_coverage_of_A": 0.5020222059033068,
+      "stem": "23"
+    },
+    {
+      "specimen_pixels": 445061,
+      "plant_pixels": {
+        "A_segformer": 89983,
+        "B_sam_clip": 14167,
+        "C_intersection": 13374
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.20218127402760522,
+        "B_sam_clip": 0.03183159162451889,
+        "C_intersection": 0.030049813396365893
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.01606970205483258,
+        "B_sam_clip": 0.14865532575704102,
+        "C_intersection": 0.15388066397487662
+      },
+      "white_specimen_pixels": 3626,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9721456150027579,
+        "B_sam_clip": 0.9884169884169884,
+        "C_intersection": 0.9884169884169884
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9023717595146167
+      },
+      "A_B_plant_iou": 0.1473296906671367,
+      "intersection_share_of_union": 0.1473296906671367,
+      "A_coverage_of_B": 6.351591727253476,
+      "B_coverage_of_A": 0.1574408499383217,
+      "stem": "24"
+    },
+    {
+      "specimen_pixels": 439291,
+      "plant_pixels": {
+        "A_segformer": 86416,
+        "B_sam_clip": 37969,
+        "C_intersection": 37794
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.19671698259240458,
+        "B_sam_clip": 0.08643245593467656,
+        "C_intersection": 0.0860340867443221
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.018110072208850213,
+        "B_sam_clip": 0.04098080012641892,
+        "C_intersection": 0.04214954754722972
+      },
+      "white_specimen_pixels": 1463,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9029391660970608,
+        "B_sam_clip": 0.9521531100478469,
+        "C_intersection": 0.9521531100478469
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.5721120984278879
+      },
+      "A_B_plant_iou": 0.4364656835005947,
+      "intersection_share_of_union": 0.4364656835005947,
+      "A_coverage_of_B": 2.27596196897469,
+      "B_coverage_of_A": 0.4393746528420663,
+      "stem": "25"
+    },
+    {
+      "specimen_pixels": 419131,
+      "plant_pixels": {
+        "A_segformer": 78824,
+        "B_sam_clip": 38627,
+        "C_intersection": 38015
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.18806530655093515,
+        "B_sam_clip": 0.09215973048999,
+        "C_intersection": 0.09069956648398711
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.026514767076017458,
+        "B_sam_clip": 0.06329769332332306,
+        "C_intersection": 0.06505326844666579
+      },
+      "white_specimen_pixels": 823,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8250303766707169,
+        "B_sam_clip": 0.9040097205346294,
+        "C_intersection": 0.905224787363305
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.31470230862697446
+      },
+      "A_B_plant_iou": 0.47856135757087465,
+      "intersection_share_of_union": 0.47856135757087465,
+      "A_coverage_of_B": 2.0406451445879825,
+      "B_coverage_of_A": 0.49004110423221353,
+      "stem": "26"
+    },
+    {
+      "specimen_pixels": 416698,
+      "plant_pixels": {
+        "A_segformer": 80288,
+        "B_sam_clip": 38028,
+        "C_intersection": 37092
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.1926767107113545,
+        "B_sam_clip": 0.09126033722264086,
+        "C_intersection": 0.08901410613921833
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.01960442407333599,
+        "B_sam_clip": 0.04110129378352793,
+        "C_intersection": 0.04345950609295805
+      },
+      "white_specimen_pixels": 678,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.799410029498525,
+        "B_sam_clip": 0.8761061946902655,
+        "C_intersection": 0.8761061946902655
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.2831858407079646
+      },
+      "A_B_plant_iou": 0.45666305525460454,
+      "intersection_share_of_union": 0.45666305525460454,
+      "A_coverage_of_B": 2.1112864205322395,
+      "B_coverage_of_A": 0.47364487843762454,
+      "stem": "27"
+    },
+    {
+      "specimen_pixels": 421609,
+      "plant_pixels": {
+        "A_segformer": 91025,
+        "B_sam_clip": 47534,
+        "C_intersection": 47464
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.215899091338183,
+        "B_sam_clip": 0.11274427253687659,
+        "C_intersection": 0.1125782419255756
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.016555891238670694,
+        "B_sam_clip": 0.022657466234695167,
+        "C_intersection": 0.02262767571211866
+      },
+      "white_specimen_pixels": 905,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8707182320441988,
+        "B_sam_clip": 0.918232044198895,
+        "C_intersection": 0.918232044198895
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.05303867403314917
+      },
+      "A_B_plant_iou": 0.5210384763159339,
+      "intersection_share_of_union": 0.5210384763159339,
+      "A_coverage_of_B": 1.9149450919341944,
+      "B_coverage_of_A": 0.52220818456468,
+      "stem": "28"
+    },
+    {
+      "specimen_pixels": 435758,
+      "plant_pixels": {
+        "A_segformer": 105714,
+        "B_sam_clip": 44925,
+        "C_intersection": 44672
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.24259795574607926,
+        "B_sam_clip": 0.10309621395361646,
+        "C_intersection": 0.10251561646602013
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.015948691753220955,
+        "B_sam_clip": 0.023260990539788536,
+        "C_intersection": 0.0238628223495702
+      },
+      "white_specimen_pixels": 1153,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8959236773633998,
+        "B_sam_clip": 0.9314830875975716,
+        "C_intersection": 0.9314830875975716
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.375542064180399
+      },
+      "A_B_plant_iou": 0.42156520426170413,
+      "intersection_share_of_union": 0.42156520426170413,
+      "A_coverage_of_B": 2.3531218697829717,
+      "B_coverage_of_A": 0.4249673647766616,
+      "stem": "29"
+    },
+    {
+      "specimen_pixels": 433769,
+      "plant_pixels": {
+        "A_segformer": 94901,
+        "B_sam_clip": 56159,
+        "C_intersection": 55817
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.2187823472862284,
+        "B_sam_clip": 0.12946752764720393,
+        "C_intersection": 0.1286790895614947
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.00878810549941518,
+        "B_sam_clip": 0.01880375362809167,
+        "C_intersection": 0.018757726140781483
+      },
+      "white_specimen_pixels": 615,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8,
+        "B_sam_clip": 0.9609756097560975,
+        "C_intersection": 0.9609756097560975
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.15772357723577235
+      },
+      "A_B_plant_iou": 0.5860483185115967,
+      "intersection_share_of_union": 0.5860483185115967,
+      "A_coverage_of_B": 1.689862711230613,
+      "B_coverage_of_A": 0.5917640488509078,
+      "stem": "3"
+    },
+    {
+      "specimen_pixels": 425195,
+      "plant_pixels": {
+        "A_segformer": 100432,
+        "B_sam_clip": 38262,
+        "C_intersection": 37953
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.2362022131022237,
+        "B_sam_clip": 0.08998694716541822,
+        "C_intersection": 0.08926022178059478
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.016209972916998567,
+        "B_sam_clip": 0.035465997595525586,
+        "C_intersection": 0.038178800094854165
+      },
+      "white_specimen_pixels": 990,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8606060606060606,
+        "B_sam_clip": 0.9525252525252526,
+        "C_intersection": 0.9525252525252526
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.44545454545454544
+      },
+      "A_B_plant_iou": 0.37673836868802174,
+      "intersection_share_of_union": 0.37673836868802174,
+      "A_coverage_of_B": 2.6248497203491716,
+      "B_coverage_of_A": 0.3809741914927513,
+      "stem": "30"
+    },
+    {
+      "specimen_pixels": 425957,
+      "plant_pixels": {
+        "A_segformer": 103615,
+        "B_sam_clip": 42997,
+        "C_intersection": 42416
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.24325225316170412,
+        "B_sam_clip": 0.10094211387534423,
+        "C_intersection": 0.09957812643060215
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.013048303817014911,
+        "B_sam_clip": 0.03725841337767751,
+        "C_intersection": 0.0410458317615994
+      },
+      "white_specimen_pixels": 428,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.719626168224299,
+        "B_sam_clip": 0.8504672897196262,
+        "C_intersection": 0.8504672897196262
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.31542056074766356
+      },
+      "A_B_plant_iou": 0.40707896656301584,
+      "intersection_share_of_union": 0.40707896656301584,
+      "A_coverage_of_B": 2.409819289717887,
+      "B_coverage_of_A": 0.4149688751628625,
+      "stem": "31"
+    },
+    {
+      "specimen_pixels": 425963,
+      "plant_pixels": {
+        "A_segformer": 106706,
+        "B_sam_clip": 61915,
+        "C_intersection": 61847
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.2505053255799213,
+        "B_sam_clip": 0.14535300014320493,
+        "C_intersection": 0.1451933618647629
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.015622364253181639,
+        "B_sam_clip": 0.022450133247193735,
+        "C_intersection": 0.023202418872378613
+      },
+      "white_specimen_pixels": 760,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.7907894736842105,
+        "B_sam_clip": 0.9276315789473685,
+        "C_intersection": 0.9276315789473685
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.5552631578947368
+      },
+      "A_B_plant_iou": 0.5792327720231517,
+      "intersection_share_of_union": 0.5792327720231517,
+      "A_coverage_of_B": 1.7234272793345715,
+      "B_coverage_of_A": 0.5802391618090829,
+      "stem": "32"
+    },
+    {
+      "specimen_pixels": 426890,
+      "plant_pixels": {
+        "A_segformer": 101755,
+        "B_sam_clip": 71695,
+        "C_intersection": 71695
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.23836351284874324,
+        "B_sam_clip": 0.16794724636323174,
+        "C_intersection": 0.16794724636323174
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.01479042798879662,
+        "B_sam_clip": 0.010753887997768325,
+        "C_intersection": 0.010753887997768325
+      },
+      "white_specimen_pixels": 875,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8514285714285714,
+        "B_sam_clip": 0.9325714285714286,
+        "C_intersection": 0.9325714285714286
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.2937142857142857
+      },
+      "A_B_plant_iou": 0.7045845413001818,
+      "intersection_share_of_union": 0.7045845413001818,
+      "A_coverage_of_B": 1.4192761001464538,
+      "B_coverage_of_A": 0.7045845413001818,
+      "stem": "33"
+    },
+    {
+      "specimen_pixels": 566130,
+      "plant_pixels": {
+        "A_segformer": 235794,
+        "B_sam_clip": 131644,
+        "C_intersection": 130970
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.41650151025382864,
+        "B_sam_clip": 0.23253316376097363,
+        "C_intersection": 0.2313426244855422
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0029432470715963933,
+        "B_sam_clip": 0.01118167178147124,
+        "C_intersection": 0.009498358402687639
+      },
+      "white_specimen_pixels": 2104,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8797528517110266,
+        "B_sam_clip": 0.9748098859315589,
+        "C_intersection": 0.9748098859315589
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7100760456273765
+      },
+      "A_B_plant_iou": 0.5538592959723937,
+      "intersection_share_of_union": 0.5538592959723937,
+      "A_coverage_of_B": 1.7911488560055908,
+      "B_coverage_of_A": 0.5583008897597055,
+      "stem": "34"
+    },
+    {
+      "specimen_pixels": 573018,
+      "plant_pixels": {
+        "A_segformer": 260755,
+        "B_sam_clip": 120686,
+        "C_intersection": 120683
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4550555130903392,
+        "B_sam_clip": 0.2106146752807067,
+        "C_intersection": 0.21060943984307648
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002523441544745067,
+        "B_sam_clip": 0.006264189715459954,
+        "C_intersection": 0.006264345433905355
+      },
+      "white_specimen_pixels": 6290,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.943402225755167,
+        "B_sam_clip": 0.9804451510333864,
+        "C_intersection": 0.9804451510333864
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.42639109697933225
+      },
+      "A_B_plant_iou": 0.46281609768444304,
+      "intersection_share_of_union": 0.46281609768444304,
+      "A_coverage_of_B": 2.1606068640935985,
+      "B_coverage_of_A": 0.46283292746064314,
+      "stem": "35"
+    },
+    {
+      "specimen_pixels": 576939,
+      "plant_pixels": {
+        "A_segformer": 259516,
+        "B_sam_clip": 131710,
+        "C_intersection": 131626
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4498153184305447,
+        "B_sam_clip": 0.22829103250083632,
+        "C_intersection": 0.2281454365192854
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0028476086252870727,
+        "B_sam_clip": 0.002725685217523347,
+        "C_intersection": 0.002704632823302387
+      },
+      "white_specimen_pixels": 12349,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9802413150862418,
+        "B_sam_clip": 0.9962750020244554,
+        "C_intersection": 0.9962750020244554
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7994169568386104
+      },
+      "A_B_plant_iou": 0.5070338983050847,
+      "intersection_share_of_union": 0.5070338983050847,
+      "A_coverage_of_B": 1.970359122314175,
+      "B_coverage_of_A": 0.5075216942307988,
+      "stem": "36"
+    },
+    {
+      "specimen_pixels": 567091,
+      "plant_pixels": {
+        "A_segformer": 262179,
+        "B_sam_clip": 125721,
+        "C_intersection": 125719
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.46232262546928093,
+        "B_sam_clip": 0.2216945781188557,
+        "C_intersection": 0.22169105134801997
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0015409319586999722,
+        "B_sam_clip": 0.005567884442535456,
+        "C_intersection": 0.005552064524853045
+      },
+      "white_specimen_pixels": 23020,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9923544743701129,
+        "B_sam_clip": 0.9993049522154648,
+        "C_intersection": 0.9993483927019983
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9554300608166811
+      },
+      "A_B_plant_iou": 0.47951224535721504,
+      "intersection_share_of_union": 0.47951224535721504,
+      "A_coverage_of_B": 2.0854033932278617,
+      "B_coverage_of_A": 0.4795235316329683,
+      "stem": "37"
+    },
+    {
+      "specimen_pixels": 573312,
+      "plant_pixels": {
+        "A_segformer": 273005,
+        "B_sam_clip": 109775,
+        "C_intersection": 109775
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.47618923029694127,
+        "B_sam_clip": 0.19147514791248046,
+        "C_intersection": 0.19147514791248046
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0017618724931777806,
+        "B_sam_clip": 0.013618765657025734,
+        "C_intersection": 0.013618765657025734
+      },
+      "white_specimen_pixels": 30871,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9913187133555764,
+        "B_sam_clip": 0.9995141070907972,
+        "C_intersection": 0.9995141070907972
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.954034530789414
+      },
+      "A_B_plant_iou": 0.40209886265819306,
+      "intersection_share_of_union": 0.40209886265819306,
+      "A_coverage_of_B": 2.486950580733318,
+      "B_coverage_of_A": 0.40209886265819306,
+      "stem": "38"
+    },
+    {
+      "specimen_pixels": 573684,
+      "plant_pixels": {
+        "A_segformer": 276684,
+        "B_sam_clip": 136761,
+        "C_intersection": 136419
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4822933879975736,
+        "B_sam_clip": 0.2383908214278244,
+        "C_intersection": 0.237794674420064
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0014565352532130518,
+        "B_sam_clip": 0.005864244923625888,
+        "C_intersection": 0.006751258988850527
+      },
+      "white_specimen_pixels": 29333,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9963863225718474,
+        "B_sam_clip": 0.9997272696280639,
+        "C_intersection": 0.9997272696280639
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9905908021682065
+      },
+      "A_B_plant_iou": 0.4924411427086266,
+      "intersection_share_of_union": 0.4924411427086266,
+      "A_coverage_of_B": 2.0231206264943955,
+      "B_coverage_of_A": 0.49428590016047186,
+      "stem": "39"
+    },
+    {
+      "specimen_pixels": 433568,
+      "plant_pixels": {
+        "A_segformer": 88861,
+        "B_sam_clip": 59388,
+        "C_intersection": 58902
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.2049528562993579,
+        "B_sam_clip": 0.1369750535094841,
+        "C_intersection": 0.13585412207542993
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0068871608467156575,
+        "B_sam_clip": 0.011618508789654475,
+        "C_intersection": 0.009660113408712777
+      },
+      "white_specimen_pixels": 634,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8186119873817035,
+        "B_sam_clip": 0.9511041009463722,
+        "C_intersection": 0.9526813880126183
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.43375394321766564
+      },
+      "A_B_plant_iou": 0.6592498908749035,
+      "intersection_share_of_union": 0.6592498908749035,
+      "A_coverage_of_B": 1.4962787095036034,
+      "B_coverage_of_A": 0.6683246868705056,
+      "stem": "4"
+    },
+    {
+      "specimen_pixels": 571059,
+      "plant_pixels": {
+        "A_segformer": 256311,
+        "B_sam_clip": 144641,
+        "C_intersection": 143166
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4488345337346929,
+        "B_sam_clip": 0.25328556243750644,
+        "C_intersection": 0.2507026419336706
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0028402994799286803,
+        "B_sam_clip": 0.002101755380562911,
+        "C_intersection": 0.0021792883785256277
+      },
+      "white_specimen_pixels": 29239,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9977085399637471,
+        "B_sam_clip": 0.9997605937275557,
+        "C_intersection": 0.9997605937275557
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.980710694620199
+      },
+      "A_B_plant_iou": 0.5553676305152335,
+      "intersection_share_of_union": 0.5553676305152335,
+      "A_coverage_of_B": 1.7720494189061193,
+      "B_coverage_of_A": 0.5643183476323685,
+      "stem": "40"
+    },
+    {
+      "specimen_pixels": 563138,
+      "plant_pixels": {
+        "A_segformer": 251204,
+        "B_sam_clip": 82004,
+        "C_intersection": 81737
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.44607893624653283,
+        "B_sam_clip": 0.14561972376220395,
+        "C_intersection": 0.14514559486307085
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002587538414993392,
+        "B_sam_clip": 0.012694502707185015,
+        "C_intersection": 0.01507273327868652
+      },
+      "white_specimen_pixels": 32652,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9898934215362,
+        "B_sam_clip": 0.9995712360651721,
+        "C_intersection": 0.9995712360651721
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9920678672056842
+      },
+      "A_B_plant_iou": 0.325035491169956,
+      "intersection_share_of_union": 0.325035491169956,
+      "A_coverage_of_B": 3.063313984683674,
+      "B_coverage_of_A": 0.3264438464355663,
+      "stem": "41"
+    },
+    {
+      "specimen_pixels": 555658,
+      "plant_pixels": {
+        "A_segformer": 233490,
+        "B_sam_clip": 96941,
+        "C_intersection": 96742
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4202045142875654,
+        "B_sam_clip": 0.17446162927556158,
+        "C_intersection": 0.17410349531546382
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002042914043427984,
+        "B_sam_clip": 0.0114296324568552,
+        "C_intersection": 0.012197390998738913
+      },
+      "white_specimen_pixels": 31122,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9924490713964398,
+        "B_sam_clip": 0.9981684981684982,
+        "C_intersection": 0.9981684981684982
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9825525351841141
+      },
+      "A_B_plant_iou": 0.4139775513609969,
+      "intersection_share_of_union": 0.4139775513609969,
+      "A_coverage_of_B": 2.408578413674297,
+      "B_coverage_of_A": 0.4151826630690822,
+      "stem": "42"
+    },
+    {
+      "specimen_pixels": 546385,
+      "plant_pixels": {
+        "A_segformer": 231411,
+        "B_sam_clip": 85751,
+        "C_intersection": 85741
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4235310266570276,
+        "B_sam_clip": 0.1569424490057377,
+        "C_intersection": 0.15692414689275877
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0020483036675006806,
+        "B_sam_clip": 0.01324765891942951,
+        "C_intersection": 0.013249203998087263
+      },
+      "white_specimen_pixels": 23232,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9859676308539945,
+        "B_sam_clip": 0.9955234159779615,
+        "C_intersection": 0.9955234159779615
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9663395316804407
+      },
+      "A_B_plant_iou": 0.3704979236975037,
+      "intersection_share_of_union": 0.3704979236975037,
+      "A_coverage_of_B": 2.698639082926147,
+      "B_coverage_of_A": 0.3705571472401917,
+      "stem": "43"
+    },
+    {
+      "specimen_pixels": 526026,
+      "plant_pixels": {
+        "A_segformer": 214928,
+        "B_sam_clip": 62517,
+        "C_intersection": 62073
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4085881686456563,
+        "B_sam_clip": 0.1188477375643029,
+        "C_intersection": 0.11800367282225593
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0015260924588699472,
+        "B_sam_clip": 0.019002831229905464,
+        "C_intersection": 0.0193642968762586
+      },
+      "white_specimen_pixels": 15516,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.982985305491106,
+        "B_sam_clip": 0.9969064191802011,
+        "C_intersection": 0.9969064191802011
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9519205980922918
+      },
+      "A_B_plant_iou": 0.28821295247293055,
+      "intersection_share_of_union": 0.28821295247293055,
+      "A_coverage_of_B": 3.437912887694547,
+      "B_coverage_of_A": 0.29087415320479415,
+      "stem": "44"
+    },
+    {
+      "specimen_pixels": 509472,
+      "plant_pixels": {
+        "A_segformer": 228237,
+        "B_sam_clip": 58143,
+        "C_intersection": 57330
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4479873280572828,
+        "B_sam_clip": 0.11412403429432824,
+        "C_intersection": 0.11252826455624647
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002620083509685108,
+        "B_sam_clip": 0.024766523915174657,
+        "C_intersection": 0.025902668759811617
+      },
+      "white_specimen_pixels": 13359,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.977543229283629,
+        "B_sam_clip": 0.9970806198068718,
+        "C_intersection": 0.9970806198068718
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.2601242607979639
+      },
+      "A_B_plant_iou": 0.2502946954813359,
+      "intersection_share_of_union": 0.2502946954813359,
+      "A_coverage_of_B": 3.9254424436303594,
+      "B_coverage_of_A": 0.25474835368498533,
+      "stem": "45"
+    },
+    {
+      "specimen_pixels": 492737,
+      "plant_pixels": {
+        "A_segformer": 257976,
+        "B_sam_clip": 78657,
+        "C_intersection": 77271
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5235571917676164,
+        "B_sam_clip": 0.15963282643682128,
+        "C_intersection": 0.15681996683829305
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0023257977486277792,
+        "B_sam_clip": 0.020659318306063032,
+        "C_intersection": 0.023527584734247
+      },
+      "white_specimen_pixels": 9711,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9698280300689939,
+        "B_sam_clip": 0.9935125115848007,
+        "C_intersection": 0.9936154875913912
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.920399546905571
+      },
+      "A_B_plant_iou": 0.2979272214125431,
+      "intersection_share_of_union": 0.2979272214125431,
+      "A_coverage_of_B": 3.279758953430718,
+      "B_coverage_of_A": 0.3049004558563587,
+      "stem": "46"
+    },
+    {
+      "specimen_pixels": 499762,
+      "plant_pixels": {
+        "A_segformer": 250957,
+        "B_sam_clip": 59419,
+        "C_intersection": 58711
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5021530248398237,
+        "B_sam_clip": 0.1188945938266615,
+        "C_intersection": 0.11747791948967709
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.003956853166080245,
+        "B_sam_clip": 0.03364243760413336,
+        "C_intersection": 0.03047129158079406
+      },
+      "white_specimen_pixels": 6291,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9663010650135113,
+        "B_sam_clip": 0.992687966936894,
+        "C_intersection": 0.992687966936894
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9109839453187093
+      },
+      "A_B_plant_iou": 0.23329028669064034,
+      "intersection_share_of_union": 0.23329028669064034,
+      "A_coverage_of_B": 4.223514364092294,
+      "B_coverage_of_A": 0.23676964579589332,
+      "stem": "47"
+    },
+    {
+      "specimen_pixels": 507798,
+      "plant_pixels": {
+        "A_segformer": 238138,
+        "B_sam_clip": 57047,
+        "C_intersection": 56223
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.468962067593807,
+        "B_sam_clip": 0.11234191548607911,
+        "C_intersection": 0.1107192229981213
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.004501591514164056,
+        "B_sam_clip": 0.02580328501060529,
+        "C_intersection": 0.02699962648738061
+      },
+      "white_specimen_pixels": 5600,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9519642857142857,
+        "B_sam_clip": 0.9914285714285714,
+        "C_intersection": 0.9914285714285714
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8103571428571429
+      },
+      "A_B_plant_iou": 0.23528008637356568,
+      "intersection_share_of_union": 0.23528008637356568,
+      "A_coverage_of_B": 4.1744175854996755,
+      "B_coverage_of_A": 0.2395543760340643,
+      "stem": "48"
+    },
+    {
+      "specimen_pixels": 517966,
+      "plant_pixels": {
+        "A_segformer": 220837,
+        "B_sam_clip": 31947,
+        "C_intersection": 30048
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4263542394674554,
+        "B_sam_clip": 0.061677793523127,
+        "C_intersection": 0.05801152971430557
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0023093956175821986,
+        "B_sam_clip": 0.05490343381225154,
+        "C_intersection": 0.059438232161874334
+      },
+      "white_specimen_pixels": 12236,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9699248120300752,
+        "B_sam_clip": 0.9938705459300425,
+        "C_intersection": 0.9938705459300425
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8498692383131743
+      },
+      "A_B_plant_iou": 0.13490410171683068,
+      "intersection_share_of_union": 0.13490410171683068,
+      "A_coverage_of_B": 6.912605252449369,
+      "B_coverage_of_A": 0.1446632584213696,
+      "stem": "49"
+    },
+    {
+      "specimen_pixels": 430680,
+      "plant_pixels": {
+        "A_segformer": 98694,
+        "B_sam_clip": 60913,
+        "C_intersection": 60779
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.22915853998328226,
+        "B_sam_clip": 0.14143447571282622,
+        "C_intersection": 0.14112333983468003
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.006879850852128802,
+        "B_sam_clip": 0.015546763416676244,
+        "C_intersection": 0.014215436252653054
+      },
+      "white_specimen_pixels": 857,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8413068844807468,
+        "B_sam_clip": 0.9521586931155193,
+        "C_intersection": 0.9521586931155193
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.3115519253208868
+      },
+      "A_B_plant_iou": 0.6149977739102279,
+      "intersection_share_of_union": 0.6149977739102279,
+      "A_coverage_of_B": 1.620245267841019,
+      "B_coverage_of_A": 0.6171905080349362,
+      "stem": "5"
+    },
+    {
+      "specimen_pixels": 505126,
+      "plant_pixels": {
+        "A_segformer": 190835,
+        "B_sam_clip": 24050,
+        "C_intersection": 24050
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.37779682693031047,
+        "B_sam_clip": 0.04761188297573279,
+        "C_intersection": 0.04761188297573279
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.008751015274975765,
+        "B_sam_clip": 0.002079002079002079,
+        "C_intersection": 0.002079002079002079
+      },
+      "white_specimen_pixels": 10727,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.953947981728349,
+        "B_sam_clip": 0.9995338864547404,
+        "C_intersection": 0.9995338864547404
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.6399738976414655
+      },
+      "A_B_plant_iou": 0.12602510021746535,
+      "intersection_share_of_union": 0.12602510021746535,
+      "A_coverage_of_B": 7.934927234927235,
+      "B_coverage_of_A": 0.12602510021746535,
+      "stem": "50"
+    },
+    {
+      "specimen_pixels": 496386,
+      "plant_pixels": {
+        "A_segformer": 217870,
+        "B_sam_clip": 20633,
+        "C_intersection": 20589
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.43891245925549877,
+        "B_sam_clip": 0.04156644224454356,
+        "C_intersection": 0.04147780154960051
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.003020149630513609,
+        "B_sam_clip": 0.12213444482140261,
+        "C_intersection": 0.12035552965175579
+      },
+      "white_specimen_pixels": 9189,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9425399934704538,
+        "B_sam_clip": 0.9890085972358255,
+        "C_intersection": 0.9890085972358255
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.5100663837196648
+      },
+      "A_B_plant_iou": 0.09448222693356094,
+      "intersection_share_of_union": 0.09448222693356094,
+      "A_coverage_of_B": 10.559298211602773,
+      "B_coverage_of_A": 0.09470326341396246,
+      "stem": "51"
+    },
+    {
+      "specimen_pixels": 490550,
+      "plant_pixels": {
+        "A_segformer": 217549,
+        "B_sam_clip": 48674,
+        "C_intersection": 48360
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4434797676077872,
+        "B_sam_clip": 0.09922332076240954,
+        "C_intersection": 0.09858322291305677
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.005741235307907644,
+        "B_sam_clip": 0.031022722603443315,
+        "C_intersection": 0.034181141439205955
+      },
+      "white_specimen_pixels": 10518,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.944095835710211,
+        "B_sam_clip": 0.9930595170184445,
+        "C_intersection": 0.9930595170184445
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.26640045636052484
+      },
+      "A_B_plant_iou": 0.2219743600335991,
+      "intersection_share_of_union": 0.2219743600335991,
+      "A_coverage_of_B": 4.469511443481119,
+      "B_coverage_of_A": 0.2237381003819829,
+      "stem": "52"
+    },
+    {
+      "specimen_pixels": 492110,
+      "plant_pixels": {
+        "A_segformer": 239238,
+        "B_sam_clip": 62862,
+        "C_intersection": 62445
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4861474060677491,
+        "B_sam_clip": 0.1277397329865274,
+        "C_intersection": 0.12689236146390034
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.004572852138874259,
+        "B_sam_clip": 0.020155260729852693,
+        "C_intersection": 0.021635038834174072
+      },
+      "white_specimen_pixels": 9506,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.939406690511256,
+        "B_sam_clip": 0.9935830002103935,
+        "C_intersection": 0.9935830002103935
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.873553545129392
+      },
+      "A_B_plant_iou": 0.26056205795831505,
+      "intersection_share_of_union": 0.26056205795831505,
+      "A_coverage_of_B": 3.805765009067481,
+      "B_coverage_of_A": 0.26275926065257194,
+      "stem": "53"
+    },
+    {
+      "specimen_pixels": 486853,
+      "plant_pixels": {
+        "A_segformer": 271647,
+        "B_sam_clip": 57280,
+        "C_intersection": 56824
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5579651352667027,
+        "B_sam_clip": 0.11765358331981111,
+        "C_intersection": 0.11671695563137127
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.005231053536390978,
+        "B_sam_clip": 0.022695530726256984,
+        "C_intersection": 0.02520061945656765
+      },
+      "white_specimen_pixels": 9076,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9449096518289996,
+        "B_sam_clip": 0.9912957249889819,
+        "C_intersection": 0.9912957249889819
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8963199647421771
+      },
+      "A_B_plant_iou": 0.20883268468190355,
+      "intersection_share_of_union": 0.20883268468190355,
+      "A_coverage_of_B": 4.7424406424581,
+      "B_coverage_of_A": 0.21086189061539423,
+      "stem": "54"
+    },
+    {
+      "specimen_pixels": 484948,
+      "plant_pixels": {
+        "A_segformer": 258952,
+        "B_sam_clip": 76363,
+        "C_intersection": 76362
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5339789008306045,
+        "B_sam_clip": 0.15746636752806487,
+        "C_intersection": 0.15746430545130613
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.006367975532144954,
+        "B_sam_clip": 0.008394117570027369,
+        "C_intersection": 0.00843351405149158
+      },
+      "white_specimen_pixels": 9953,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9506681402592183,
+        "B_sam_clip": 0.9936702501758263,
+        "C_intersection": 0.9936702501758263
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9093740580729428
+      },
+      "A_B_plant_iou": 0.29488748923549835,
+      "intersection_share_of_union": 0.29488748923549835,
+      "A_coverage_of_B": 3.3910663541243795,
+      "B_coverage_of_A": 0.294892489727826,
+      "stem": "55"
+    },
+    {
+      "specimen_pixels": 490829,
+      "plant_pixels": {
+        "A_segformer": 197688,
+        "B_sam_clip": 53158,
+        "C_intersection": 53158
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4027634878949695,
+        "B_sam_clip": 0.1083024841645461,
+        "C_intersection": 0.1083024841645461
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0032424831046902187,
+        "B_sam_clip": 0.017231649046239514,
+        "C_intersection": 0.017231649046239514
+      },
+      "white_specimen_pixels": 14224,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9652699662542182,
+        "B_sam_clip": 0.9977502812148481,
+        "C_intersection": 0.9977502812148481
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7141451068616423
+      },
+      "A_B_plant_iou": 0.2688984662700821,
+      "intersection_share_of_union": 0.2688984662700821,
+      "A_coverage_of_B": 3.7188758042063284,
+      "B_coverage_of_A": 0.2688984662700821,
+      "stem": "56"
+    },
+    {
+      "specimen_pixels": 498957,
+      "plant_pixels": {
+        "A_segformer": 198663,
+        "B_sam_clip": 46863,
+        "C_intersection": 46863
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.39815655457283894,
+        "B_sam_clip": 0.0939219211274719,
+        "C_intersection": 0.0939219211274719
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0020184936299159884,
+        "B_sam_clip": 0.029959669675436913,
+        "C_intersection": 0.029959669675436913
+      },
+      "white_specimen_pixels": 13323,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9581175410943481,
+        "B_sam_clip": 0.9941454627336186,
+        "C_intersection": 0.9941454627336186
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7105006379944457
+      },
+      "A_B_plant_iou": 0.23589193760287522,
+      "intersection_share_of_union": 0.23589193760287522,
+      "A_coverage_of_B": 4.239229242686128,
+      "B_coverage_of_A": 0.23589193760287522,
+      "stem": "57"
+    },
+    {
+      "specimen_pixels": 503592,
+      "plant_pixels": {
+        "A_segformer": 240847,
+        "B_sam_clip": 50599,
+        "C_intersection": 50586
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4782581931404788,
+        "B_sam_clip": 0.10047617912913628,
+        "C_intersection": 0.10045036458085116
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002964537652534597,
+        "B_sam_clip": 0.02628510444870452,
+        "C_intersection": 0.026291859407741272
+      },
+      "white_specimen_pixels": 14125,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9557522123893806,
+        "B_sam_clip": 0.9960353982300885,
+        "C_intersection": 0.9960353982300885
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.6798584070796461
+      },
+      "A_B_plant_iou": 0.2100224196628747,
+      "intersection_share_of_union": 0.2100224196628747,
+      "A_coverage_of_B": 4.759916203877547,
+      "B_coverage_of_A": 0.21008773204565553,
+      "stem": "58"
+    },
+    {
+      "specimen_pixels": 497710,
+      "plant_pixels": {
+        "A_segformer": 256438,
+        "B_sam_clip": 51691,
+        "C_intersection": 51645
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5152357798718129,
+        "B_sam_clip": 0.10385766811998955,
+        "C_intersection": 0.10376524482128147
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0035837122423353794,
+        "B_sam_clip": 0.031862413186047864,
+        "C_intersection": 0.03320747410204279
+      },
+      "white_specimen_pixels": 12132,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9443620178041543,
+        "B_sam_clip": 0.9957962413452027,
+        "C_intersection": 0.9957962413452027
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.2624464226838114
+      },
+      "A_B_plant_iou": 0.20135758955724334,
+      "intersection_share_of_union": 0.20135758955724334,
+      "A_coverage_of_B": 4.960979667640402,
+      "B_coverage_of_A": 0.20157308979168453,
+      "stem": "59"
+    },
+    {
+      "specimen_pixels": 437615,
+      "plant_pixels": {
+        "A_segformer": 102507,
+        "B_sam_clip": 61481,
+        "C_intersection": 61461
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.23424014259109036,
+        "B_sam_clip": 0.1404910709185014,
+        "C_intersection": 0.14044536864595591
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.003443667261747978,
+        "B_sam_clip": 0.01198744327515818,
+        "C_intersection": 0.01166593449504564
+      },
+      "white_specimen_pixels": 1090,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8990825688073395,
+        "B_sam_clip": 0.9431192660550459,
+        "C_intersection": 0.9495412844036697
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.27522935779816515
+      },
+      "A_B_plant_iou": 0.599461605235694,
+      "intersection_share_of_union": 0.599461605235694,
+      "A_coverage_of_B": 1.667295587254599,
+      "B_coverage_of_A": 0.5997736739929956,
+      "stem": "6"
+    },
+    {
+      "specimen_pixels": 491207,
+      "plant_pixels": {
+        "A_segformer": 302482,
+        "B_sam_clip": 62460,
+        "C_intersection": 62460
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.615793341707264,
+        "B_sam_clip": 0.12715616837707933,
+        "C_intersection": 0.12715616837707933
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002671233329586554,
+        "B_sam_clip": 0.027569644572526416,
+        "C_intersection": 0.027569644572526416
+      },
+      "white_specimen_pixels": 12609,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9441668649377429,
+        "B_sam_clip": 0.9921484653818701,
+        "C_intersection": 0.9921484653818701
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8462209532873345
+      },
+      "A_B_plant_iou": 0.20649162594799028,
+      "intersection_share_of_union": 0.20649162594799028,
+      "A_coverage_of_B": 4.842811399295549,
+      "B_coverage_of_A": 0.20649162594799028,
+      "stem": "60"
+    },
+    {
+      "specimen_pixels": 488880,
+      "plant_pixels": {
+        "A_segformer": 310084,
+        "B_sam_clip": 76417,
+        "C_intersection": 76417
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.6342742595319915,
+        "B_sam_clip": 0.1563103420062183,
+        "C_intersection": 0.1563103420062183
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.00364739876936572,
+        "B_sam_clip": 0.023267074080374785,
+        "C_intersection": 0.023267074080374785
+      },
+      "white_specimen_pixels": 10692,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.913112607557052,
+        "B_sam_clip": 0.987467265245043,
+        "C_intersection": 0.987467265245043
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8937523381967827
+      },
+      "A_B_plant_iou": 0.2464396744108048,
+      "intersection_share_of_union": 0.2464396744108048,
+      "A_coverage_of_B": 4.05778818849209,
+      "B_coverage_of_A": 0.2464396744108048,
+      "stem": "61"
+    },
+    {
+      "specimen_pixels": 492508,
+      "plant_pixels": {
+        "A_segformer": 231780,
+        "B_sam_clip": 100887,
+        "C_intersection": 100492
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4706116448869866,
+        "B_sam_clip": 0.2048433731025689,
+        "C_intersection": 0.2040413556734104
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0044222970057813445,
+        "B_sam_clip": 0.007424147808934749,
+        "C_intersection": 0.007453329618278072
+      },
+      "white_specimen_pixels": 15444,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9467754467754468,
+        "B_sam_clip": 0.967042217042217,
+        "C_intersection": 0.967042217042217
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8975653975653975
+      },
+      "A_B_plant_iou": 0.4328286852589641,
+      "intersection_share_of_union": 0.4328286852589641,
+      "A_coverage_of_B": 2.2974218680305687,
+      "B_coverage_of_A": 0.4352705151436707,
+      "stem": "62"
+    },
+    {
+      "specimen_pixels": 508760,
+      "plant_pixels": {
+        "A_segformer": 252764,
+        "B_sam_clip": 59330,
+        "C_intersection": 57245
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.496823649657992,
+        "B_sam_clip": 0.11661687239562858,
+        "C_intersection": 0.11251867285163927
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0029038945419442644,
+        "B_sam_clip": 0.0319399966290241,
+        "C_intersection": 0.035933269281159926
+      },
+      "white_specimen_pixels": 17030,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.971873165002936,
+        "B_sam_clip": 0.9908984145625367,
+        "C_intersection": 0.991015854374633
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9072812683499707
+      },
+      "A_B_plant_iou": 0.22462320825273005,
+      "intersection_share_of_union": 0.22462320825273005,
+      "A_coverage_of_B": 4.260306758806674,
+      "B_coverage_of_A": 0.23472488170783815,
+      "stem": "63"
+    },
+    {
+      "specimen_pixels": 507498,
+      "plant_pixels": {
+        "A_segformer": 227009,
+        "B_sam_clip": 53615,
+        "C_intersection": 53425
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.44731013718280666,
+        "B_sam_clip": 0.1056457365349223,
+        "C_intersection": 0.10527135082305743
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0034315820077618067,
+        "B_sam_clip": 0.037582766016972864,
+        "C_intersection": 0.034160037435657466
+      },
+      "white_specimen_pixels": 15416,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9715879605604567,
+        "B_sam_clip": 0.991437467566165,
+        "C_intersection": 0.991437467566165
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9324727555786196
+      },
+      "A_B_plant_iou": 0.2351462814537036,
+      "intersection_share_of_union": 0.2351462814537036,
+      "A_coverage_of_B": 4.234057633125058,
+      "B_coverage_of_A": 0.23618006334550612,
+      "stem": "64"
+    },
+    {
+      "specimen_pixels": 523520,
+      "plant_pixels": {
+        "A_segformer": 235487,
+        "B_sam_clip": 116656,
+        "C_intersection": 116646
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4498147157701711,
+        "B_sam_clip": 0.22283007334963326,
+        "C_intersection": 0.2228109718826406
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0028239350792188104,
+        "B_sam_clip": 0.005906254286106158,
+        "C_intersection": 0.005906760626168064
+      },
+      "white_specimen_pixels": 18269,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9689638184903389,
+        "B_sam_clip": 0.9876840549564837,
+        "C_intersection": 0.9876840549564837
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7559800755377962
+      },
+      "A_B_plant_iou": 0.4953184116995121,
+      "intersection_share_of_union": 0.4953184116995121,
+      "A_coverage_of_B": 2.0186445617885065,
+      "B_coverage_of_A": 0.4953819106787211,
+      "stem": "65"
+    },
+    {
+      "specimen_pixels": 521547,
+      "plant_pixels": {
+        "A_segformer": 247067,
+        "B_sam_clip": 94501,
+        "C_intersection": 94275
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.47371953055045857,
+        "B_sam_clip": 0.1811936412250478,
+        "C_intersection": 0.1807603149859936
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0025175357291746772,
+        "B_sam_clip": 0.00863482926106602,
+        "C_intersection": 0.00869795810129939
+      },
+      "white_specimen_pixels": 8206,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9701437972215452,
+        "B_sam_clip": 0.9939068973921521,
+        "C_intersection": 0.9939068973921521
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7637094808676578
+      },
+      "A_B_plant_iou": 0.3812279360920042,
+      "intersection_share_of_union": 0.3812279360920042,
+      "A_coverage_of_B": 2.6144379424556354,
+      "B_coverage_of_A": 0.3824913889754601,
+      "stem": "66"
+    },
+    {
+      "specimen_pixels": 655278,
+      "plant_pixels": {
+        "A_segformer": 384458,
+        "B_sam_clip": 157558,
+        "C_intersection": 157017
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5867097628792665,
+        "B_sam_clip": 0.2404445136262777,
+        "C_intersection": 0.23961890983674106
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.00338138366219457,
+        "B_sam_clip": 0.007939933230937179,
+        "C_intersection": 0.00824114586318679
+      },
+      "white_specimen_pixels": 18941,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9838445699804657,
+        "B_sam_clip": 0.9948788342748535,
+        "C_intersection": 0.9948788342748535
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7982683068475793
+      },
+      "A_B_plant_iou": 0.40783742295434533,
+      "intersection_share_of_union": 0.40783742295434533,
+      "A_coverage_of_B": 2.4401045964025947,
+      "B_coverage_of_A": 0.4098184977292708,
+      "stem": "67"
+    },
+    {
+      "specimen_pixels": 653890,
+      "plant_pixels": {
+        "A_segformer": 378142,
+        "B_sam_clip": 159260,
+        "C_intersection": 157871
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5782960436770711,
+        "B_sam_clip": 0.24355778494853875,
+        "C_intersection": 0.24143357445441893
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002686821352825129,
+        "B_sam_clip": 0.008219264096446063,
+        "C_intersection": 0.010293214079850004
+      },
+      "white_specimen_pixels": 16357,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9706547655438039,
+        "B_sam_clip": 0.9966375252185609,
+        "C_intersection": 0.9966375252185609
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8906278657455524
+      },
+      "A_B_plant_iou": 0.41596338639004454,
+      "intersection_share_of_union": 0.41596338639004454,
+      "A_coverage_of_B": 2.3743689564234587,
+      "B_coverage_of_A": 0.4211645360737501,
+      "stem": "68"
+    },
+    {
+      "specimen_pixels": 673609,
+      "plant_pixels": {
+        "A_segformer": 388034,
+        "B_sam_clip": 154875,
+        "C_intersection": 154875
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5760522795865257,
+        "B_sam_clip": 0.2299182463417205,
+        "C_intersection": 0.2299182463417205
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0010978419416855223,
+        "B_sam_clip": 0.006534301856335754,
+        "C_intersection": 0.006534301856335754
+      },
+      "white_specimen_pixels": 17742,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9705782888062225,
+        "B_sam_clip": 0.995998196370195,
+        "C_intersection": 0.995998196370195
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8752113628677713
+      },
+      "A_B_plant_iou": 0.3991273960529232,
+      "intersection_share_of_union": 0.3991273960529232,
+      "A_coverage_of_B": 2.5054656981436643,
+      "B_coverage_of_A": 0.3991273960529232,
+      "stem": "69"
+    },
+    {
+      "specimen_pixels": 421600,
+      "plant_pixels": {
+        "A_segformer": 95528,
+        "B_sam_clip": 30058,
+        "C_intersection": 29780
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.226584440227704,
+        "B_sam_clip": 0.07129506641366223,
+        "C_intersection": 0.07063567362428842
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0014236663596013735,
+        "B_sam_clip": 0.06108190831059951,
+        "C_intersection": 0.05621222296843519
+      },
+      "white_specimen_pixels": 663,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8235294117647058,
+        "B_sam_clip": 0.9140271493212669,
+        "C_intersection": 0.918552036199095
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.30618401206636503
+      },
+      "A_B_plant_iou": 0.3108364820574912,
+      "intersection_share_of_union": 0.3108364820574912,
+      "A_coverage_of_B": 3.178122296892674,
+      "B_coverage_of_A": 0.31465120174189765,
+      "stem": "7"
+    },
+    {
+      "specimen_pixels": 677582,
+      "plant_pixels": {
+        "A_segformer": 372638,
+        "B_sam_clip": 119547,
+        "C_intersection": 119442
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5499526256600678,
+        "B_sam_clip": 0.17643178242633364,
+        "C_intersection": 0.1762768196321626
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.001212973448762606,
+        "B_sam_clip": 0.015859871013074355,
+        "C_intersection": 0.015924046817702316
+      },
+      "white_specimen_pixels": 16795,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.973920809764811,
+        "B_sam_clip": 0.9961298005358737,
+        "C_intersection": 0.9961298005358737
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.755879726108961
+      },
+      "A_B_plant_iou": 0.32044062531020034,
+      "intersection_share_of_union": 0.32044062531020034,
+      "A_coverage_of_B": 3.11708365747363,
+      "B_coverage_of_A": 0.32081269221067094,
+      "stem": "70"
+    },
+    {
+      "specimen_pixels": 692227,
+      "plant_pixels": {
+        "A_segformer": 384676,
+        "B_sam_clip": 159044,
+        "C_intersection": 158838
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5557078819520186,
+        "B_sam_clip": 0.22975700167719548,
+        "C_intersection": 0.22945941143584403
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.003907184227765704,
+        "B_sam_clip": 0.00803551218530721,
+        "C_intersection": 0.008467747012679586
+      },
+      "white_specimen_pixels": 14711,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9651961117531099,
+        "B_sam_clip": 0.9954455849364421,
+        "C_intersection": 0.9954455849364421
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.4506151859153015
+      },
+      "A_B_plant_iou": 0.4126927214055217,
+      "intersection_share_of_union": 0.4126927214055217,
+      "A_coverage_of_B": 2.41867659264103,
+      "B_coverage_of_A": 0.413449240399713,
+      "stem": "71"
+    },
+    {
+      "specimen_pixels": 605296,
+      "plant_pixels": {
+        "A_segformer": 362211,
+        "B_sam_clip": 98053,
+        "C_intersection": 97539
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5984030953450874,
+        "B_sam_clip": 0.16199181887869737,
+        "C_intersection": 0.16114264756416696
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.004889415285565596,
+        "B_sam_clip": 0.02421139587773959,
+        "C_intersection": 0.023928889982468553
+      },
+      "white_specimen_pixels": 8970,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8782608695652174,
+        "B_sam_clip": 0.9869565217391304,
+        "C_intersection": 0.9869565217391304
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.888628762541806
+      },
+      "A_B_plant_iou": 0.26890619615411127,
+      "intersection_share_of_union": 0.26890619615411127,
+      "A_coverage_of_B": 3.694032818985651,
+      "B_coverage_of_A": 0.2707068531877828,
+      "stem": "72"
+    },
+    {
+      "specimen_pixels": 656210,
+      "plant_pixels": {
+        "A_segformer": 410382,
+        "B_sam_clip": 74668,
+        "C_intersection": 74643
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.6253821185291294,
+        "B_sam_clip": 0.113786745096844,
+        "C_intersection": 0.11374864753661175
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.004142481882733648,
+        "B_sam_clip": 0.030548561632827986,
+        "C_intersection": 0.030558793188912556
+      },
+      "white_specimen_pixels": 16421,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8269898300956093,
+        "B_sam_clip": 0.9701601607697461,
+        "C_intersection": 0.9701601607697461
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8140795323061933
+      },
+      "A_B_plant_iou": 0.18187555280489856,
+      "intersection_share_of_union": 0.18187555280489856,
+      "A_coverage_of_B": 5.496089355547222,
+      "B_coverage_of_A": 0.1819475513058565,
+      "stem": "73"
+    },
+    {
+      "specimen_pixels": 651651,
+      "plant_pixels": {
+        "A_segformer": 284874,
+        "B_sam_clip": 74183,
+        "C_intersection": 73987
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.4371573127333496,
+        "B_sam_clip": 0.11383854240997097,
+        "C_intersection": 0.1135377679156481
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.008143951360952561,
+        "B_sam_clip": 0.03504846123774989,
+        "C_intersection": 0.032492194574722584
+      },
+      "white_specimen_pixels": 21252,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8847167325428195,
+        "B_sam_clip": 0.9826369282891022,
+        "C_intersection": 0.9826839826839827
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7198381328816111
+      },
+      "A_B_plant_iou": 0.2595397621636791,
+      "intersection_share_of_union": 0.2595397621636791,
+      "A_coverage_of_B": 3.8401520564010623,
+      "B_coverage_of_A": 0.2604063550903206,
+      "stem": "74"
+    },
+    {
+      "specimen_pixels": 666475,
+      "plant_pixels": {
+        "A_segformer": 349356,
+        "B_sam_clip": 99960,
+        "C_intersection": 99952
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5241847031021418,
+        "B_sam_clip": 0.14998312014704226,
+        "C_intersection": 0.14997111669605012
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002224092329886992,
+        "B_sam_clip": 0.014135654261704681,
+        "C_intersection": 0.014056747238674564
+      },
+      "white_specimen_pixels": 18115,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9385592050786641,
+        "B_sam_clip": 0.9938724813690312,
+        "C_intersection": 0.9938724813690312
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7934860612751863
+      },
+      "A_B_plant_iou": 0.28609702201715115,
+      "intersection_share_of_union": 0.28609702201715115,
+      "A_coverage_of_B": 3.4949579831932773,
+      "B_coverage_of_A": 0.28612647270978603,
+      "stem": "75"
+    },
+    {
+      "specimen_pixels": 668263,
+      "plant_pixels": {
+        "A_segformer": 356727,
+        "B_sam_clip": 99162,
+        "C_intersection": 99126
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5338122864800235,
+        "B_sam_clip": 0.1483876856866234,
+        "C_intersection": 0.14833381468074694
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0025846095193243013,
+        "B_sam_clip": 0.01950343881728888,
+        "C_intersection": 0.019520610132558562
+      },
+      "white_specimen_pixels": 20164,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9747073993255306,
+        "B_sam_clip": 0.9971731799246182,
+        "C_intersection": 0.9971731799246182
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8992263439793692
+      },
+      "A_B_plant_iou": 0.27784831947259103,
+      "intersection_share_of_union": 0.27784831947259103,
+      "A_coverage_of_B": 3.597416349004659,
+      "B_coverage_of_A": 0.2779772767410373,
+      "stem": "76"
+    },
+    {
+      "specimen_pixels": 673366,
+      "plant_pixels": {
+        "A_segformer": 369025,
+        "B_sam_clip": 71321,
+        "C_intersection": 71321
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5480303430823653,
+        "B_sam_clip": 0.1059171386734703,
+        "C_intersection": 0.1059171386734703
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.005259806246189282,
+        "B_sam_clip": 0.023457326734061496,
+        "C_intersection": 0.023457326734061496
+      },
+      "white_specimen_pixels": 19535,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9624776042999744,
+        "B_sam_clip": 0.9989761965702585,
+        "C_intersection": 0.9989761965702585
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7677501919631431
+      },
+      "A_B_plant_iou": 0.19326874872976085,
+      "intersection_share_of_union": 0.19326874872976085,
+      "A_coverage_of_B": 5.174142258240911,
+      "B_coverage_of_A": 0.19326874872976085,
+      "stem": "77"
+    },
+    {
+      "specimen_pixels": 675450,
+      "plant_pixels": {
+        "A_segformer": 418434,
+        "B_sam_clip": 108130,
+        "C_intersection": 108033
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.6194892294026205,
+        "B_sam_clip": 0.16008586868013916,
+        "C_intersection": 0.15994226071507883
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.004581367670887165,
+        "B_sam_clip": 0.009581059835383335,
+        "C_intersection": 0.010043227532328084
+      },
+      "white_specimen_pixels": 15926,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9395328393821424,
+        "B_sam_clip": 0.9976139645862112,
+        "C_intersection": 0.9976139645862112
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.5698229310561346
+      },
+      "A_B_plant_iou": 0.2581242488608968,
+      "intersection_share_of_union": 0.2581242488608968,
+      "A_coverage_of_B": 3.869730879496902,
+      "B_coverage_of_A": 0.2584159031053882,
+      "stem": "78"
+    },
+    {
+      "specimen_pixels": 689671,
+      "plant_pixels": {
+        "A_segformer": 534163,
+        "B_sam_clip": 163769,
+        "C_intersection": 163765
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.7745185747987083,
+        "B_sam_clip": 0.23745960030217306,
+        "C_intersection": 0.23745380043528
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0017204486271044607,
+        "B_sam_clip": 0.004549090487210645,
+        "C_intersection": 0.004549201599853448
+      },
+      "white_specimen_pixels": 15310,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9075767472240366,
+        "B_sam_clip": 0.9974526453298498,
+        "C_intersection": 0.9974526453298498
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.5842586544741999
+      },
+      "A_B_plant_iou": 0.3065801519000612,
+      "intersection_share_of_union": 0.3065801519000612,
+      "A_coverage_of_B": 3.261685667006576,
+      "B_coverage_of_A": 0.3065899360307621,
+      "stem": "79"
+    },
+    {
+      "specimen_pixels": 418976,
+      "plant_pixels": {
+        "A_segformer": 94355,
+        "B_sam_clip": 38009,
+        "C_intersection": 37845
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.2252038302909952,
+        "B_sam_clip": 0.09071880012220271,
+        "C_intersection": 0.09032736958680211
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.011923056541783689,
+        "B_sam_clip": 0.033044805177721064,
+        "C_intersection": 0.03284449729158409
+      },
+      "white_specimen_pixels": 656,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.788109756097561,
+        "B_sam_clip": 0.9222560975609756,
+        "C_intersection": 0.9222560975609756
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.44664634146341464
+      },
+      "A_B_plant_iou": 0.4003956876395222,
+      "intersection_share_of_union": 0.4003956876395222,
+      "A_coverage_of_B": 2.48243836985977,
+      "B_coverage_of_A": 0.4028297387525833,
+      "stem": "8"
+    },
+    {
+      "specimen_pixels": 667093,
+      "plant_pixels": {
+        "A_segformer": 460589,
+        "B_sam_clip": 131888,
+        "C_intersection": 131888
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.6904419623650675,
+        "B_sam_clip": 0.19770556728971822,
+        "C_intersection": 0.19770556728971822
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0038211941665997236,
+        "B_sam_clip": 0.0162941283513284,
+        "C_intersection": 0.0162941283513284
+      },
+      "white_specimen_pixels": 13444,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8994346920559357,
+        "B_sam_clip": 0.9917435287116929,
+        "C_intersection": 0.9917435287116929
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.843127045522166
+      },
+      "A_B_plant_iou": 0.28634639559346836,
+      "intersection_share_of_union": 0.28634639559346836,
+      "A_coverage_of_B": 3.492273747422055,
+      "B_coverage_of_A": 0.28634639559346836,
+      "stem": "80"
+    },
+    {
+      "specimen_pixels": 652100,
+      "plant_pixels": {
+        "A_segformer": 459062,
+        "B_sam_clip": 155022,
+        "C_intersection": 154750
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.7039748504830547,
+        "B_sam_clip": 0.2377273424321423,
+        "C_intersection": 0.2373102284925625
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0027686891966662453,
+        "B_sam_clip": 0.008031118163873514,
+        "C_intersection": 0.008084006462035541
+      },
+      "white_specimen_pixels": 19312,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9089685169842585,
+        "B_sam_clip": 0.9432477216238608,
+        "C_intersection": 0.9432477216238608
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.847245236122618
+      },
+      "A_B_plant_iou": 0.33690081727022164,
+      "intersection_share_of_union": 0.33690081727022164,
+      "A_coverage_of_B": 2.9612700132884364,
+      "B_coverage_of_A": 0.33769294779354425,
+      "stem": "81"
+    },
+    {
+      "specimen_pixels": 614607,
+      "plant_pixels": {
+        "A_segformer": 382537,
+        "B_sam_clip": 164377,
+        "C_intersection": 164361
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.6224091167201155,
+        "B_sam_clip": 0.26745058224198553,
+        "C_intersection": 0.26742454934616755
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0024781916520493445,
+        "B_sam_clip": 0.004514013517706248,
+        "C_intersection": 0.004514452941999623
+      },
+      "white_specimen_pixels": 17536,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9757641423357665,
+        "B_sam_clip": 0.9965214416058394,
+        "C_intersection": 0.9965214416058394
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9168567518248175
+      },
+      "A_B_plant_iou": 0.4296424286308041,
+      "intersection_share_of_union": 0.4296424286308041,
+      "A_coverage_of_B": 2.32719297711967,
+      "B_coverage_of_A": 0.4297022248828218,
+      "stem": "82"
+    },
+    {
+      "specimen_pixels": 625708,
+      "plant_pixels": {
+        "A_segformer": 309433,
+        "B_sam_clip": 201404,
+        "C_intersection": 199049
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.494532593478108,
+        "B_sam_clip": 0.3218817723283065,
+        "C_intersection": 0.318118035888945
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.004091354186528263,
+        "B_sam_clip": 0.0035103572918114834,
+        "C_intersection": 0.0036724625594702813
+      },
+      "white_specimen_pixels": 18793,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9821210025009312,
+        "B_sam_clip": 0.9966476879689246,
+        "C_intersection": 0.9967008992710051
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9105518012025754
+      },
+      "A_B_plant_iou": 0.6384113564345004,
+      "intersection_share_of_union": 0.6384113564345004,
+      "A_coverage_of_B": 1.5363796151019842,
+      "B_coverage_of_A": 0.6508808045683556,
+      "stem": "83"
+    },
+    {
+      "specimen_pixels": 643296,
+      "plant_pixels": {
+        "A_segformer": 443188,
+        "B_sam_clip": 201442,
+        "C_intersection": 201442
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.6889332437944585,
+        "B_sam_clip": 0.3131404516738795,
+        "C_intersection": 0.3131404516738795
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0017374116627706527,
+        "B_sam_clip": 0.0047656397374926775,
+        "C_intersection": 0.0047656397374926775
+      },
+      "white_specimen_pixels": 19428,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9691682108297303,
+        "B_sam_clip": 0.9981984764257772,
+        "C_intersection": 0.9981984764257772
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9500720609429689
+      },
+      "A_B_plant_iou": 0.45452945476863094,
+      "intersection_share_of_union": 0.45452945476863094,
+      "A_coverage_of_B": 2.200077441645734,
+      "B_coverage_of_A": 0.45452945476863094,
+      "stem": "84"
+    },
+    {
+      "specimen_pixels": 596545,
+      "plant_pixels": {
+        "A_segformer": 400349,
+        "B_sam_clip": 217439,
+        "C_intersection": 216275
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.671112824682128,
+        "B_sam_clip": 0.36449722988207095,
+        "C_intersection": 0.3625459940155395
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0019358110048982263,
+        "B_sam_clip": 0.004874930440261407,
+        "C_intersection": 0.005160097098601318
+      },
+      "white_specimen_pixels": 19255,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9827577252661647,
+        "B_sam_clip": 0.9965723188782134,
+        "C_intersection": 0.9965723188782134
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.7922098156323033
+      },
+      "A_B_plant_iou": 0.5386500561625651,
+      "intersection_share_of_union": 0.5386500561625651,
+      "A_coverage_of_B": 1.8412014404039754,
+      "B_coverage_of_A": 0.5431236246375037,
+      "stem": "85"
+    },
+    {
+      "specimen_pixels": 609268,
+      "plant_pixels": {
+        "A_segformer": 385627,
+        "B_sam_clip": 189718,
+        "C_intersection": 189323
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.6329349317541706,
+        "B_sam_clip": 0.31138677888876487,
+        "C_intersection": 0.3107384599223987
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0038768032321388284,
+        "B_sam_clip": 0.010821324281301722,
+        "C_intersection": 0.010960105217010083
+      },
+      "white_specimen_pixels": 20838,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9814761493425472,
+        "B_sam_clip": 0.9972646127267492,
+        "C_intersection": 0.9972646127267492
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.74896823111623
+      },
+      "A_B_plant_iou": 0.490446140375419,
+      "intersection_share_of_union": 0.490446140375419,
+      "A_coverage_of_B": 2.032632644240399,
+      "B_coverage_of_A": 0.49197281310696606,
+      "stem": "86"
+    },
+    {
+      "specimen_pixels": 659576,
+      "plant_pixels": {
+        "A_segformer": 367633,
+        "B_sam_clip": 196694,
+        "C_intersection": 196679
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5573777699613085,
+        "B_sam_clip": 0.29821279124771066,
+        "C_intersection": 0.2981900493650466
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002301207998193851,
+        "B_sam_clip": 0.0009354632068085452,
+        "C_intersection": 0.001088067358487688
+      },
+      "white_specimen_pixels": 26986,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9903653746387016,
+        "B_sam_clip": 0.9999629437486104,
+        "C_intersection": 0.9999629437486104
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9653894612021048
+      },
+      "A_B_plant_iou": 0.5349655104882931,
+      "intersection_share_of_union": 0.5349655104882931,
+      "A_coverage_of_B": 1.869060571242641,
+      "B_coverage_of_A": 0.5350281394760535,
+      "stem": "87"
+    },
+    {
+      "specimen_pixels": 649212,
+      "plant_pixels": {
+        "A_segformer": 354055,
+        "B_sam_clip": 209661,
+        "C_intersection": 203386
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5453611455117897,
+        "B_sam_clip": 0.32294689562115303,
+        "C_intersection": 0.3132813318299723
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002477016282780924,
+        "B_sam_clip": 0.0008680679763999981,
+        "C_intersection": 0.0016913651873776956
+      },
+      "white_specimen_pixels": 36298,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9922860763678439,
+        "B_sam_clip": 0.9998622513637115,
+        "C_intersection": 0.9998622513637115
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9597773982037577
+      },
+      "A_B_plant_iou": 0.5644437043820942,
+      "intersection_share_of_union": 0.5644437043820942,
+      "A_coverage_of_B": 1.688702238375282,
+      "B_coverage_of_A": 0.5921707079408567,
+      "stem": "88"
+    },
+    {
+      "specimen_pixels": 649100,
+      "plant_pixels": {
+        "A_segformer": 410860,
+        "B_sam_clip": 227430,
+        "C_intersection": 227355
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.6329687259282083,
+        "B_sam_clip": 0.3503774456940379,
+        "C_intersection": 0.3502619010938222
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0008640412792678771,
+        "B_sam_clip": 0.0008266279734423778,
+        "C_intersection": 0.0013239207406918695
+      },
+      "white_specimen_pixels": 33423,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9948538431618945,
+        "B_sam_clip": 0.9998504024174969,
+        "C_intersection": 0.9998504024174969
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.8593184334141161
+      },
+      "A_B_plant_iou": 0.5532626814459708,
+      "intersection_share_of_union": 0.5532626814459708,
+      "A_coverage_of_B": 1.8065338785560392,
+      "B_coverage_of_A": 0.5535462201236431,
+      "stem": "89"
+    },
+    {
+      "specimen_pixels": 426713,
+      "plant_pixels": {
+        "A_segformer": 95026,
+        "B_sam_clip": 46018,
+        "C_intersection": 45985
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.22269300443155002,
+        "B_sam_clip": 0.10784297642677866,
+        "C_intersection": 0.10776564107491451
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.016469176856860227,
+        "B_sam_clip": 0.03296536138032943,
+        "C_intersection": 0.03255409372621507
+      },
+      "white_specimen_pixels": 941,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.8342189160467588,
+        "B_sam_clip": 0.9341126461211477,
+        "C_intersection": 0.9362380446333688
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.21360255047821466
+      },
+      "A_B_plant_iou": 0.48375219600458663,
+      "intersection_share_of_union": 0.48375219600458663,
+      "A_coverage_of_B": 2.0649745751662394,
+      "B_coverage_of_A": 0.48426746364152967,
+      "stem": "9"
+    },
+    {
+      "specimen_pixels": 638266,
+      "plant_pixels": {
+        "A_segformer": 415233,
+        "B_sam_clip": 181560,
+        "C_intersection": 181560
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.6505641848382963,
+        "B_sam_clip": 0.28445820394631705,
+        "C_intersection": 0.28445820394631705
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0018640136983332249,
+        "B_sam_clip": 0.00033046926635822867,
+        "C_intersection": 0.00033046926635822867
+      },
+      "white_specimen_pixels": 31161,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9916241455665736,
+        "B_sam_clip": 0.9999358172074067,
+        "C_intersection": 0.9999358172074067
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9865857963479991
+      },
+      "A_B_plant_iou": 0.4372484845857627,
+      "intersection_share_of_union": 0.4372484845857627,
+      "A_coverage_of_B": 2.2870290812954397,
+      "B_coverage_of_A": 0.4372484845857627,
+      "stem": "90"
+    },
+    {
+      "specimen_pixels": 638433,
+      "plant_pixels": {
+        "A_segformer": 413925,
+        "B_sam_clip": 187503,
+        "C_intersection": 187503
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.6483452453115676,
+        "B_sam_clip": 0.2936925252923956,
+        "C_intersection": 0.2936925252923956
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002582593464999698,
+        "B_sam_clip": 0.0008639861762211804,
+        "C_intersection": 0.0008639861762211804
+      },
+      "white_specimen_pixels": 30231,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9762826237967649,
+        "B_sam_clip": 0.9999007641163045,
+        "C_intersection": 0.9999007641163045
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9870331778637822
+      },
+      "A_B_plant_iou": 0.45298786011958686,
+      "intersection_share_of_union": 0.45298786011958686,
+      "A_coverage_of_B": 2.2075646789651366,
+      "B_coverage_of_A": 0.45298786011958686,
+      "stem": "91"
+    },
+    {
+      "specimen_pixels": 630031,
+      "plant_pixels": {
+        "A_segformer": 367995,
+        "B_sam_clip": 158144,
+        "C_intersection": 158065
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5840903066674497,
+        "B_sam_clip": 0.25100987094285837,
+        "C_intersection": 0.2508844802874779
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0025353605347898747,
+        "B_sam_clip": 0.0031427053824362606,
+        "C_intersection": 0.002644481700566223
+      },
+      "white_specimen_pixels": 29235,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9987343937061741,
+        "B_sam_clip": 0.9999657944244912,
+        "C_intersection": 0.9999657944244912
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.03047716777834787
+      },
+      "A_B_plant_iou": 0.4294381021207692,
+      "intersection_share_of_union": 0.4294381021207692,
+      "A_coverage_of_B": 2.326961503439903,
+      "B_coverage_of_A": 0.42974496936099676,
+      "stem": "92"
+    },
+    {
+      "specimen_pixels": 639500,
+      "plant_pixels": {
+        "A_segformer": 362347,
+        "B_sam_clip": 181304,
+        "C_intersection": 181304
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5666098514464425,
+        "B_sam_clip": 0.2835089913995309,
+        "C_intersection": 0.2835089913995309
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0015730777403980163,
+        "B_sam_clip": 0.005190177822883113,
+        "C_intersection": 0.005190177822883113
+      },
+      "white_specimen_pixels": 32181,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.997141170255741,
+        "B_sam_clip": 0.9995338864547404,
+        "C_intersection": 0.9995338864547404
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.5605170752928746
+      },
+      "A_B_plant_iou": 0.5003601520089859,
+      "intersection_share_of_union": 0.5003601520089859,
+      "A_coverage_of_B": 1.998560428892909,
+      "B_coverage_of_A": 0.5003601520089859,
+      "stem": "93"
+    },
+    {
+      "specimen_pixels": 652394,
+      "plant_pixels": {
+        "A_segformer": 380679,
+        "B_sam_clip": 134454,
+        "C_intersection": 134454
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.583510884526835,
+        "B_sam_clip": 0.20609325039776577,
+        "C_intersection": 0.20609325039776577
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0018388195829031808,
+        "B_sam_clip": 0.013186666071667633,
+        "C_intersection": 0.013186666071667633
+      },
+      "white_specimen_pixels": 30769,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9845623842178817,
+        "B_sam_clip": 0.9982774870811532,
+        "C_intersection": 0.9982774870811532
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.9713347850108875
+      },
+      "A_B_plant_iou": 0.35319521171380613,
+      "intersection_share_of_union": 0.35319521171380613,
+      "A_coverage_of_B": 2.8312954616448747,
+      "B_coverage_of_A": 0.35319521171380613,
+      "stem": "94"
+    },
+    {
+      "specimen_pixels": 642215,
+      "plant_pixels": {
+        "A_segformer": 345207,
+        "B_sam_clip": 108501,
+        "C_intersection": 108398
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5375255950110166,
+        "B_sam_clip": 0.16894809370693614,
+        "C_intersection": 0.16878771128049017
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0032299460903168244,
+        "B_sam_clip": 0.018045916627496522,
+        "C_intersection": 0.017325042897470434
+      },
+      "white_specimen_pixels": 25933,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9745883623182817,
+        "B_sam_clip": 0.9959896656769367,
+        "C_intersection": 0.9959896656769367
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.1352716615894806
+      },
+      "A_B_plant_iou": 0.31391503286901623,
+      "intersection_share_of_union": 0.31391503286901623,
+      "A_coverage_of_B": 3.181602012884674,
+      "B_coverage_of_A": 0.31430706793315316,
+      "stem": "95"
+    },
+    {
+      "specimen_pixels": 635756,
+      "plant_pixels": {
+        "A_segformer": 334550,
+        "B_sam_clip": 113587,
+        "C_intersection": 109655
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5262238972184297,
+        "B_sam_clip": 0.17866445617501053,
+        "C_intersection": 0.17247969346730507
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.002714093558511433,
+        "B_sam_clip": 0.01375157368360816,
+        "C_intersection": 0.015339017828644384
+      },
+      "white_specimen_pixels": 20783,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9546744935764808,
+        "B_sam_clip": 0.992349516431699,
+        "C_intersection": 0.992349516431699
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.20478275513640956
+      },
+      "A_B_plant_iou": 0.32396109689732394,
+      "intersection_share_of_union": 0.32396109689732394,
+      "A_coverage_of_B": 2.9453194467676758,
+      "B_coverage_of_A": 0.33952174562845616,
+      "stem": "96"
+    },
+    {
+      "specimen_pixels": 628212,
+      "plant_pixels": {
+        "A_segformer": 357359,
+        "B_sam_clip": 112559,
+        "C_intersection": 105517
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.5688509611405067,
+        "B_sam_clip": 0.17917359108071798,
+        "C_intersection": 0.1679639994142105
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0037637221953273877,
+        "B_sam_clip": 0.017670732682415445,
+        "C_intersection": 0.023389595989271872
+      },
+      "white_specimen_pixels": 22318,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.92732323684918,
+        "B_sam_clip": 0.9905009409445291,
+        "C_intersection": 0.9905009409445291
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.6973295098127072
+      },
+      "A_B_plant_iou": 0.28956287167159256,
+      "intersection_share_of_union": 0.28956287167159256,
+      "A_coverage_of_B": 3.174859407066516,
+      "B_coverage_of_A": 0.3149745773857661,
+      "stem": "97"
+    },
+    {
+      "specimen_pixels": 585633,
+      "plant_pixels": {
+        "A_segformer": 375660,
+        "B_sam_clip": 88143,
+        "C_intersection": 88143
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.6414597538048573,
+        "B_sam_clip": 0.15050893648411207,
+        "C_intersection": 0.15050893648411207
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0028243624554118085,
+        "B_sam_clip": 0.0065575258386939405,
+        "C_intersection": 0.0065575258386939405
+      },
+      "white_specimen_pixels": 13100,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9335114503816794,
+        "B_sam_clip": 0.9983206106870229,
+        "C_intersection": 0.9983206106870229
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.6457251908396947
+      },
+      "A_B_plant_iou": 0.2346350423255071,
+      "intersection_share_of_union": 0.2346350423255071,
+      "A_coverage_of_B": 4.261937987134543,
+      "B_coverage_of_A": 0.2346350423255071,
+      "stem": "98"
+    },
+    {
+      "specimen_pixels": 624687,
+      "plant_pixels": {
+        "A_segformer": 354810,
+        "B_sam_clip": 153537,
+        "C_intersection": 151323
+      },
+      "plant_fraction_of_specimen": {
+        "A_segformer": 0.567980444606659,
+        "B_sam_clip": 0.24578228776971509,
+        "C_intersection": 0.24223811284691374
+      },
+      "thin_fraction_of_own_plant": {
+        "A_segformer": 0.0030410642315605537,
+        "B_sam_clip": 0.005874805421494493,
+        "C_intersection": 0.006905757882146138
+      },
+      "white_specimen_pixels": 8194,
+      "white_not_plant_fraction": {
+        "A_segformer": 0.9624115206248475,
+        "B_sam_clip": 0.9956065413717354,
+        "C_intersection": 0.9956065413717354
+      },
+      "white_called_support_fraction": {
+        "A_segformer": 0.0,
+        "B_sam_clip": 0.86258237734928
+      },
+      "A_B_plant_iou": 0.42384545576767946,
+      "intersection_share_of_union": 0.42384545576767946,
+      "A_coverage_of_B": 2.3109087711756775,
+      "B_coverage_of_A": 0.4327301936247569,
+      "stem": "99"
+    }
+  ],
+  "summary": {
+    "plant_fraction_of_specimen_A_segformer": {
+      "n": 102,
+      "mean": 0.44260458850400825,
+      "min": 0.18806530655093515,
+      "max": 0.9263427323853641,
+      "std": 0.17480554552539898,
+      "cv": 0.3949474317838346
+    },
+    "near_empty_frames_A_segformer": 0,
+    "thin_fraction_A_segformer": 0.005789269731488075,
+    "white_not_plant_A_segformer": 0.9312208269019476,
+    "white_called_support_A_segformer": 0.0,
+    "plant_fraction_of_specimen_B_sam_clip": {
+      "n": 102,
+      "mean": 0.1723229079334687,
+      "min": 0.0,
+      "max": 0.7668515415699733,
+      "std": 0.12018571477951523,
+      "cv": 0.6974447925746305
+    },
+    "near_empty_frames_B_sam_clip": 2,
+    "thin_fraction_B_sam_clip": 0.023005240196994382,
+    "white_not_plant_B_sam_clip": 0.9808616623465841,
+    "white_called_support_B_sam_clip": 0.645695607887892,
+    "plant_fraction_of_specimen_C_intersection": {
+      "n": 102,
+      "mean": 0.17135899012314895,
+      "min": 0.0,
+      "max": 0.7667649281257747,
+      "std": 0.12006091210541714,
+      "cv": 0.7006397039287761
+    },
+    "near_empty_frames_C_intersection": 2,
+    "thin_fraction_C_intersection": 0.023677696003511276,
+    "white_not_plant_C_intersection": 0.9811057071298087,
+    "white_called_support_C_intersection": null,
+    "A_B_plant_iou": {
+      "n": 102,
+      "mean": 0.38200700629561435,
+      "min": 0.0,
+      "max": 0.8276561311204818,
+      "std": 0.17032219832309323,
+      "cv": 0.44586145153392864
+    },
+    "intersection_share_of_union": {
+      "n": 102,
+      "mean": 0.38200700629561435,
+      "min": 0.0,
+      "max": 0.8276561311204818,
+      "std": 0.17032219832309323,
+      "cv": 0.44586145153392864
+    },
+    "frames_measured": 102
+  },
+  "orbit_stability_cv": {
+    "A_segformer": 0.3949474317838346,
+    "B_sam_clip": 0.6974447925746305,
+    "C_intersection": 0.7006397039287761
+  },
+  "arms": {
+    "A_segformer": {
+      "status": "measured",
+      "what": "nvidia/segformer-b5-finetuned-ade-640-640"
+    },
+    "B_sam_clip": {
+      "status": "measured",
+      "what": "SAM vit_h proposals + CLIP ViT-B/32 zero-shot text scoring"
+    },
+    "C_intersection": {
+      "status": "measured",
+      "what": "plant where both A and B agree"
+    },
+    "D_sam2_grounded": {
+      "status": "not_run",
+      "reason": "no SAM 2 / Grounded SAM 2 weights or code are installed on this host (import sam2 fails; the SAM vit_h checkpoint the Stage 4C backend referenced is also no longer present under /data/models). No accuracy is implied in either direction."
+    },
+    "E_human_prompts": {
+      "status": "not_run",
+      "reason": "requires a human to place prompts; no human is available, and simulating prompts with a model would repeat the substitution this project forbids. The orbit-stability figure is the closest available proxy and is labelled a proxy, not arm E."
+    }
+  },
+  "claims": {
+    "candidate_disagreement_only": true,
+    "no_accuracy_claim": "no human-confirmed label was used; every number compares model outputs with each other or measures stability"
+  }
+}

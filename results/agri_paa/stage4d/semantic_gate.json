@@ -1,0 +1,184 @@
+{
+  "schema_version": "paa-stage4d-semantic-gate-1",
+  "generated_utc": "2026-10-21T04:29:34Z",
+  "annotation_dir": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_paa/stage4c/annotation",
+  "policy": {
+    "unit_of_verification": "asset (one acquisition of one plant)",
+    "crop_summary_certifies_nothing": true,
+    "verification_backend": "labels_merged",
+    "model_predictions_are_not_truth": true
+  },
+  "tasks_total": 48,
+  "tasks_human_confirmed": 0,
+  "tasks_unconfirmed_ignored": 0,
+  "annotators": [],
+  "per_task": {},
+  "per_asset": {
+    "Broccoli/20260327-10": {
+      "status": "annotation_pending",
+      "verified": false,
+      "n_confirmed_views": 0,
+      "n_tasks": 8,
+      "n_required_views": 6,
+      "reasons": [
+        "no human-confirmed view for this asset"
+      ],
+      "metrics": {},
+      "asset_id": "Broccoli/20260327-10",
+      "crop": "Broccoli",
+      "per_backend": {}
+    },
+    "Cabbage/20260328-9": {
+      "status": "annotation_pending",
+      "verified": false,
+      "n_confirmed_views": 0,
+      "n_tasks": 8,
+      "n_required_views": 6,
+      "reasons": [
+        "no human-confirmed view for this asset"
+      ],
+      "metrics": {},
+      "asset_id": "Cabbage/20260328-9",
+      "crop": "Cabbage",
+      "per_backend": {}
+    },
+    "Cotton/1": {
+      "status": "annotation_pending",
+      "verified": false,
+      "n_confirmed_views": 0,
+      "n_tasks": 8,
+      "n_required_views": 6,
+      "reasons": [
+        "no human-confirmed view for this asset"
+      ],
+      "metrics": {},
+      "asset_id": "Cotton/1",
+      "crop": "Cotton",
+      "per_backend": {}
+    },
+    "Rice/1": {
+      "status": "annotation_pending",
+      "verified": false,
+      "n_confirmed_views": 0,
+      "n_tasks": 8,
+      "n_required_views": 6,
+      "reasons": [
+        "no human-confirmed view for this asset"
+      ],
+      "metrics": {},
+      "asset_id": "Rice/1",
+      "crop": "Rice",
+      "per_backend": {}
+    },
+    "Sunflower/1": {
+      "status": "annotation_pending",
+      "verified": false,
+      "n_confirmed_views": 0,
+      "n_tasks": 8,
+      "n_required_views": 6,
+      "reasons": [
+        "no human-confirmed view for this asset"
+      ],
+      "metrics": {},
+      "asset_id": "Sunflower/1",
+      "crop": "Sunflower",
+      "per_backend": {}
+    },
+    "Tobacco/20260401-23": {
+      "status": "annotation_pending",
+      "verified": false,
+      "n_confirmed_views": 0,
+      "n_tasks": 8,
+      "n_required_views": 6,
+      "reasons": [
+        "no human-confirmed view for this asset"
+      ],
+      "metrics": {},
+      "asset_id": "Tobacco/20260401-23",
+      "crop": "Tobacco",
+      "per_backend": {}
+    }
+  },
+  "per_crop": {
+    "Broccoli": {
+      "assets": [
+        "Broccoli/20260327-10"
+      ],
+      "assets_annotated": 0,
+      "assets_verified": 0,
+      "n_confirmed_views": 0,
+      "n_required_views": 6,
+      "status": "annotation_pending",
+      "metrics": {},
+      "certifies_assets": false,
+      "note": "crop averages are reported for diagnosis only; each asset needs its own confirmed views"
+    },
+    "Cabbage": {
+      "assets": [
+        "Cabbage/20260328-9"
+      ],
+      "assets_annotated": 0,
+      "assets_verified": 0,
+      "n_confirmed_views": 0,
+      "n_required_views": 6,
+      "status": "annotation_pending",
+      "metrics": {},
+      "certifies_assets": false,
+      "note": "crop averages are reported for diagnosis only; each asset needs its own confirmed views"
+    },
+    "Cotton": {
+      "assets": [
+        "Cotton/1"
+      ],
+      "assets_annotated": 0,
+      "assets_verified": 0,
+      "n_confirmed_views": 0,
+      "n_required_views": 6,
+      "status": "annotation_pending",
+      "metrics": {},
+      "certifies_assets": false,
+      "note": "crop averages are reported for diagnosis only; each asset needs its own confirmed views"
+    },
+    "Rice": {
+      "assets": [
+        "Rice/1"
+      ],
+      "assets_annotated": 0,
+      "assets_verified": 0,
+      "n_confirmed_views": 0,
+      "n_required_views": 6,
+      "status": "annotation_pending",
+      "metrics": {},
+      "certifies_assets": false,
+      "note": "crop averages are reported for diagnosis only; each asset needs its own confirmed views"
+    },
+    "Sunflower": {
+      "assets": [
+        "Sunflower/1"
+      ],
+      "assets_annotated": 0,
+      "assets_verified": 0,
+      "n_confirmed_views": 0,
+      "n_required_views": 6,
+      "status": "annotation_pending",
+      "metrics": {},
+      "certifies_assets": false,
+      "note": "crop averages are reported for diagnosis only; each asset needs its own confirmed views"
+    },
+    "Tobacco": {
+      "assets": [
+        "Tobacco/20260401-23"
+      ],
+      "assets_annotated": 0,
+      "assets_verified": 0,
+      "n_confirmed_views": 0,
+      "n_required_views": 6,
+      "status": "annotation_pending",
+      "metrics": {},
+      "certifies_assets": false,
+      "note": "crop averages are reported for diagnosis only; each asset needs its own confirmed views"
+    }
+  },
+  "assets_semantic_verified": [],
+  "caveat": "A verdict exists only for an asset that has enough human-confirmed views and passes the per-view and aggregate gate. With no confirmed labels every asset stays pending; that is the honest state, not a missing measurement."
+}

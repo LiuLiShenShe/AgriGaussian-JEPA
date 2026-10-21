@@ -1,0 +1,229 @@
+{
+  "schema_version": "paa-stage4d-tomatomap-preflight-1",
+  "probed_utc": "2026-10-21T05:14:54Z",
+  "purpose": "access, metadata, calibration and pose-model pre-flight. No bulk download; no reconstruction.",
+  "probes": [
+    {
+      "url": "https://doi.org/10.5447/ipk/2025/14",
+      "what": "e!DAL DOI landing page",
+      "http_status": 429,
+      "classification": "rate_limited"
+    },
+    {
+      "url": "https://edal.ipk-gatersleben.de/",
+      "what": "e!DAL repository root",
+      "http_status": 200,
+      "classification": "present"
+    },
+    {
+      "url": "https://github.com/0YJ/TomatoMAP",
+      "what": "code repository",
+      "http_status": 200,
+      "classification": "present"
+    },
+    {
+      "url": "https://doi.org/10.1038/s41597-026-06926-9",
+      "what": "paper DOI",
+      "http_status": 200,
+      "classification": "present"
+    },
+    {
+      "kind": "hf_dataset_api",
+      "url": "https://huggingface.co/api/datasets/Voxel51/tomato-map",
+      "repo": "Voxel51/tomato-map",
+      "endpoint": "https://huggingface.co",
+      "http_status": null,
+      "classification": "unreachable",
+      "control": {
+        "repo": "JackTrum938/PAA-Plant-Dataset",
+        "http_status": null,
+        "classification": "unreachable"
+      },
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "kind": "hf_dataset_api",
+      "url": "https://hf-mirror.com/api/datasets/Voxel51/tomato-map",
+      "repo": "Voxel51/tomato-map",
+      "endpoint": "https://hf-mirror.com",
+      "http_status": 200,
+      "classification": "present",
+      "control": {
+        "repo": "JackTrum938/PAA-Plant-Dataset",
+        "http_status": 200,
+        "classification": "present"
+      },
+      "sha": "c978c56cfc6d1bd35d0b34709f9b14cfc85b165f",
+      "last_modified": "2026-07-10T16:31:09.000Z",
+      "private": false,
+      "gated": false,
+      "disabled": false,
+      "license": "cc-by-4.0",
+      "tags": [
+        "task_categories:object-detection",
+        "task_categories:image-classification",
+        "task_categories:image-segmentation",
+        "annotations_creators:expert-generated",
+        "language:en",
+        "license:cc-by-4.0",
+        "size_categories:10K<n<100K",
+        "modality:image",
+        "library:fiftyone",
+        "region:us",
+        "fiftyone",
+        "group",
+        "agriculture",
+        "plant-phenotyping",
+        "tomato",
+        "multi-view"
+      ],
+      "downloads": 7150,
+      "n_files_listed": 68075,
+      "conclusion": "public and reachable; no credential needed"
+    }
+  ],
+  "hf_dataset": {
+    "repo": "Voxel51/tomato-map",
+    "endpoint": "https://hf-mirror.com",
+    "revision": "c978c56cfc6d1bd35d0b34709f9b14cfc85b165f",
+    "access": {
+      "sha": "c978c56cfc6d1bd35d0b34709f9b14cfc85b165f",
+      "last_modified": "2026-07-10T16:31:09.000Z",
+      "private": false,
+      "gated": false,
+      "disabled": false,
+      "license": "cc-by-4.0",
+      "downloads": 7150,
+      "n_files_listed": 68075,
+      "conclusion": "public and reachable; no credential needed"
+    },
+    "top_level": [
+      {
+        "path": "data",
+        "type": "directory",
+        "size": 0
+      },
+      {
+        "path": ".gitattributes",
+        "type": "file",
+        "size": 226063
+      },
+      {
+        "path": "README.md",
+        "type": "file",
+        "size": 17091
+      },
+      {
+        "path": "fiftyone.yml",
+        "type": "file",
+        "size": 606
+      },
+      {
+        "path": "metadata.json",
+        "type": "file",
+        "size": 26548
+      },
+      {
+        "path": "samples.json",
+        "type": "file",
+        "size": 218203497
+      },
+      {
+        "path": "tomato_map.gif",
+        "type": "file",
+        "size": 17412850
+      }
+    ],
+    "metadata_files": {
+      "metadata.json": {
+        "url": "https://hf-mirror.com/datasets/Voxel51/tomato-map/resolve/c978c56cfc6d1bd35d0b34709f9b14cfc85b165f/metadata.json",
+        "http_status": 200,
+        "classification": "present",
+        "bytes": null
+      },
+      "fiftyone.yml": {
+        "url": "https://hf-mirror.com/datasets/Voxel51/tomato-map/resolve/c978c56cfc6d1bd35d0b34709f9b14cfc85b165f/fiftyone.yml",
+        "http_status": 200,
+        "classification": "present",
+        "bytes": null
+      },
+      "README.md": {
+        "url": "https://hf-mirror.com/datasets/Voxel51/tomato-map/resolve/c978c56cfc6d1bd35d0b34709f9b14cfc85b165f/README.md",
+        "http_status": 200,
+        "classification": "present",
+        "bytes": null
+      }
+    },
+    "calibration_probe": {
+      "data/calibration/pi1.npz": {
+        "url": "https://hf-mirror.com/datasets/Voxel51/tomato-map/resolve/c978c56cfc6d1bd35d0b34709f9b14cfc85b165f/data/calibration/pi1.npz",
+        "http_status": 404,
+        "classification": "repository_absent",
+        "bytes": 15
+      },
+      "data/calibration/pi2.npz": {
+        "url": "https://hf-mirror.com/datasets/Voxel51/tomato-map/resolve/c978c56cfc6d1bd35d0b34709f9b14cfc85b165f/data/calibration/pi2.npz",
+        "http_status": 404,
+        "classification": "repository_absent",
+        "bytes": 15
+      },
+      "data/calibration/pi3.npz": {
+        "url": "https://hf-mirror.com/datasets/Voxel51/tomato-map/resolve/c978c56cfc6d1bd35d0b34709f9b14cfc85b165f/data/calibration/pi3.npz",
+        "http_status": 404,
+        "classification": "repository_absent",
+        "bytes": 15
+      },
+      "data/calibration/pi4.npz": {
+        "url": "https://hf-mirror.com/datasets/Voxel51/tomato-map/resolve/c978c56cfc6d1bd35d0b34709f9b14cfc85b165f/data/calibration/pi4.npz",
+        "http_status": 404,
+        "classification": "repository_absent",
+        "bytes": 15
+      }
+    },
+    "fiftyone_vs_colmap": {
+      "what_fiftyone_gives": "16,116 groups, each one turntable pose; each group has 4 slices (pos_1..pos_4) -- the 4 simultaneous camera exposures of that pose. plant_id, pose_id, pose_degrees, image_set_id and capture_datetime are per-sample fields, and 1,343 (plant, date) units contain the full 48 images.",
+      "what_it_does_not_give": "no extrinsic camera poses and no COLMAP-style camera matrix per view. metadata.json carries no camera_intrinsics and no static_transforms (both empty), and the dataset card states the calibration npz files are not attached to samples. The only pose information is the nominal turntable angle (12 x 30 deg) and the 4 nominal camera elevations (45/90/135/180 deg).",
+      "consequence_for_reconstruction": "a capture unit is reconstructable in principle -- 48 views of one plant on a known turntable, with known intrinsics -- but the camera motion must be either recovered by SfM on the images or derived from the nominal angles, and the white backdrop/pot must be masked out or SfM will lock onto it. Neither is established by the metadata alone.",
+      "joinability": "the macro-photograph segmentation subset is a different imaging task (different camera, different window, no plant_id/pose/session ids) and must not be joined to the rig images by plant id."
+    }
+  },
+  "github_calibration": {
+    "pi1.npz": {
+      "url": "https://raw.githubusercontent.com/0YJ/TomatoMAP/main/src/models/pi1.npz",
+      "http_status": 200,
+      "classification": "present",
+      "bytes": 656
+    },
+    "pi2.npz": {
+      "url": "https://raw.githubusercontent.com/0YJ/TomatoMAP/main/src/models/pi2.npz",
+      "http_status": 200,
+      "classification": "present",
+      "bytes": 656
+    },
+    "pi3.npz": {
+      "url": "https://raw.githubusercontent.com/0YJ/TomatoMAP/main/src/models/pi3.npz",
+      "http_status": 200,
+      "classification": "present",
+      "bytes": 656
+    },
+    "pi4.npz": {
+      "url": "https://raw.githubusercontent.com/0YJ/TomatoMAP/main/src/models/pi4.npz",
+      "http_status": 200,
+      "classification": "present",
+      "bytes": 656
+    }
+  },
+  "calibration_location": {
+    "in_hf_dataset_repo": false,
+    "in_code_repo": true,
+    "finding": "the calibration npz files are NOT in the Hugging Face dataset repository (404 there) but ARE published in the code repository under src/models/pi{1-4}.npz"
+  },
+  "summary": {
+    "hf_dataset_present": true,
+    "hf_dataset_gated": false,
+    "edal_landing_reachable": true,
+    "endpoints_reachable": [
+      "https://hf-mirror.com"
+    ]
+  }
+}

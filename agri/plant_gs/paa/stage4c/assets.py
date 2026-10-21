@@ -37,12 +37,17 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from agri.plant_gs.paa.stage4c import guard  # noqa: E402
+from agri.plant_gs.paa.stage4c import semantic_gate  # noqa: E402
 
-SCHEMA_VERSION = "paa-stage4c-1"
+SCHEMA_VERSION = "paa-stage4d-1"
 
 #: Directories under a workspace that a Stage 4C run may have written.
 SEMANTIC_LABEL_DIRS = ("labels_merged", "labels_segformer", "labels_sam_clip")
 PLANT_ONLY_DIRS = ("plant_only", "plant_only_segformer")
+
+#: Where the per-asset semantic verdict is read from. Absent by default in a
+#: fresh checkout, which yields ``annotation_pending`` for every asset.
+DEFAULT_SEMANTIC_GATE = Path("results/agri_paa/stage4d/semantic_gate.json")
 
 
 def log(message: str) -> None:
@@ -257,11 +262,20 @@ def read_smoke(workspace: Path) -> dict:
     }
 
 
-def read_semantics(workspace: Path) -> dict:
-    """Candidate per-view labels and the agreement between the two backends."""
+def read_semantics(workspace: Path, asset_id: str | None = None,
+                   gate_report: dict | None = None) -> dict:
+    """Candidate per-view labels, backend agreement, and the human verdict.
+
+    ``benchmark`` is no longer hard-coded to ``annotation_pending``: it is the
+    per-asset slice of ``semantic_gate.json``, which is produced only by
+    scoring labels a human imported. When that file is absent the answer is
+    still pending, but now for the measured reason "no confirmed view for this
+    asset" rather than because the field was a constant.
+    """
     semantic = workspace / "semantic"
+    benchmark = semantic_gate.asset_benchmark(gate_report, asset_id)
     if not semantic.is_dir():
-        return {"available": False}
+        return {"available": False, "benchmark": benchmark}
     summary = read_json(semantic / "summary.json") or {}
     agreement = read_json(semantic / "agreement.json") or {}
     merge = read_json(semantic / "merge_summary.json") or {}
@@ -282,11 +296,87 @@ def read_semantics(workspace: Path) -> dict:
             "totals": merge.get("totals"),
         },
         "panel": (workspace / "semantic" / "plant_reference_panel" / "panel_summary.json").is_file(),
-        # The brief is explicit: model output is not human truth. This is the
-        # field the guard reads, and it is hard-coded here as a fact about the
-        # *tooling*, not a claim about the labels.
+        # The brief is explicit: model output is not human truth. This field
+        # describes the *candidate labels*, and is unrelated to the verdict.
         "truth_source": "model_candidate",
-        "benchmark": {"status": "annotation_pending", "truth_source": "model_candidate"},
+        "benchmark": benchmark,
+    }
+
+
+#: States a plant-only candidate can be in. Kept as data so the guard and the
+#: report spell them the same way.
+PLANT_ONLY_STATES = (
+    "absent",                       # no candidate asset on disk
+    "failed_empty",                 # carve failed, or retained 0 Gaussians
+    "candidate_source_unverified",  # carve exists, provenance did not verify
+    "source_verified_semantics_unverified",  # carve is traceable; labels unproven
+    "verified",                     # traceable AND the labels met a human
+)
+
+
+def summarise_plant_only(candidates: dict, semantic_verified: bool,
+                         preferred: str = "plant_only") -> dict:
+    """Collapse per-version candidates into one contract the guard can read.
+
+    Stage 4C wrote ``entry["plant_only"] = {"plant_only": {...}}`` -- keyed by
+    version -- while ``guard.plant_only_checks`` read
+    ``entry["plant_only"]["available"]``. The keys never met, so every asset
+    with a real, provenance-verified carve was reported as
+    ``plant_only_missing``. This function is the single place the shape is
+    defined; both consumers now read ``state`` and nothing else.
+    """
+    candidates = {name: value for name, value in (candidates or {}).items()
+                  if isinstance(value, dict) and value.get("available")}
+    if not candidates:
+        return {
+            "state": "absent",
+            "available": False,
+            "selected": None,
+            "versions": [],
+            "candidates": {},
+            "detail": "no plant-only candidate directory exists",
+        }
+
+    selected_name = preferred if preferred in candidates else sorted(candidates)[0]
+    selected = candidates[selected_name]
+    plant_gaussians = selected.get("plant_gaussians")
+    empty = (plant_gaussians in (0, None)
+             or (selected.get("ply") is None)
+             or selected.get("provenance_state") == "failed")
+    if empty:
+        state = "failed_empty"
+    elif selected.get("provenance_state") != "verified":
+        state = "candidate_source_unverified"
+    elif not semantic_verified:
+        state = "source_verified_semantics_unverified"
+    else:
+        state = "verified"
+
+    detail = {
+        "absent": "",
+        "failed_empty": (f"the carve retained {plant_gaussians} plant Gaussians"
+                         if plant_gaussians is not None
+                         else "the carve produced no PLY"),
+        "candidate_source_unverified":
+            "the carve exists but plant_only_provenance_verification did not pass",
+        "source_verified_semantics_unverified":
+            "the carve is traceable to its source rows, but its labels have no "
+            "human-confirmed evidence",
+        "verified": "the carve is traceable and its labels met a human gate",
+    }[state]
+    return {
+        "state": state,
+        "available": True,
+        "selected": selected_name,
+        "versions": sorted(candidates),
+        "candidates": candidates,
+        "detail": detail,
+        # Convenience mirrors of the selected candidate, for report readers.
+        "provenance_state": selected.get("provenance_state"),
+        "plant_gaussians": plant_gaussians,
+        "plant_fraction_of_gaussians": selected.get("plant_fraction_of_gaussians"),
+        "ply": selected.get("ply"),
+        "dir": selected.get("dir"),
     }
 
 
@@ -390,7 +480,8 @@ def read_resources(workspace: Path) -> dict:
 # --------------------------------------------------------------------------- #
 def build_entry(workspace: Path, sample_dir: Path | None = None,
                 registry_row: dict | None = None,
-                plant_only_dirs: tuple = PLANT_ONLY_DIRS) -> dict:
+                plant_only_dirs: tuple = PLANT_ONLY_DIRS,
+                gate_report: dict | None = None) -> dict:
     preparation = read_json(workspace / "preparation.json") or {}
     crop = preparation.get("crop") or (registry_row or {}).get("crop") or ""
     sample = preparation.get("sample") or (registry_row or {}).get("sample_id")
@@ -406,16 +497,23 @@ def build_entry(workspace: Path, sample_dir: Path | None = None,
             str(crop) / str(sample)
         sample_dir = candidate if candidate.is_dir() else None
 
-    plant_only = {}
+    plant_only_candidates = {}
     for name in plant_only_dirs:
         candidate = read_plant_only(workspace, name)
         if candidate.get("available"):
-            plant_only[name] = candidate
+            plant_only_candidates[name] = candidate
+
+    asset_id = f"{crop}/{acquisition}"
+    semantics = read_semantics(workspace, asset_id, gate_report)
+    semantic_verified = bool((semantics.get("benchmark") or {}).get("verified"))
+    # One normalised contract, computed here and read by the guard. The raw
+    # per-version candidates stay under ``candidates`` so nothing is lost.
+    plant_only = summarise_plant_only(plant_only_candidates, semantic_verified)
 
     reconstruction = read_reconstruction(workspace)
     entry = {
         "schema_version": SCHEMA_VERSION,
-        "asset_id": f"{crop}/{acquisition}",
+        "asset_id": asset_id,
         "crop": crop,
         "plant_id": plant_id,
         "acquisition_id": acquisition,
@@ -439,7 +537,7 @@ def build_entry(workspace: Path, sample_dir: Path | None = None,
         "jepa_compatibility": read_jepa_compat(workspace),
         "provenance": read_provenance(workspace),
         "jepa": read_smoke(workspace),
-        "semantics": read_semantics(workspace),
+        "semantics": semantics,
         "plant_only": plant_only,
         "resources": read_resources(workspace),
         "registered": bool(registry_row),
@@ -464,7 +562,8 @@ def load_registry(path: Path) -> dict:
     return out
 
 
-def build_library(workspaces_root: Path, registry_path: Path) -> list:
+def build_library(workspaces_root: Path, registry_path: Path,
+                  gate_report: dict | None = None) -> list:
     registry = load_registry(registry_path)
     entries = []
     for workspace in discover_workspaces(workspaces_root):
@@ -473,7 +572,7 @@ def build_library(workspaces_root: Path, registry_path: Path) -> list:
             if candidate.get("sample_dir") and Path(candidate["sample_dir"]).resolve() == workspace.resolve():
                 row = candidate
                 break
-        entry = build_entry(workspace, registry_row=row)
+        entry = build_entry(workspace, registry_row=row, gate_report=gate_report)
         if not entry["crop"] or not entry["acquisition_id"]:
             log(f"skipping {workspace.name}: crop/sample id unresolved")
             continue
@@ -563,10 +662,17 @@ def main():
                     help="do not re-hash the PLYs (the provenance record already "
                          "carries their hashes; re-hashing is an independent check)")
     ap.add_argument("--split-seed", type=int, default=20261020)
+    ap.add_argument("--semantic-gate", type=Path, default=DEFAULT_SEMANTIC_GATE,
+                    help="per-asset semantic verdicts from human-confirmed labels; "
+                         "when absent every asset stays annotation_pending")
     args = ap.parse_args()
 
     args.out.mkdir(parents=True, exist_ok=True)
-    entries = build_library(args.workspaces, args.registry)
+    gate_report = read_json(args.semantic_gate)
+    if gate_report is None:
+        log(f"no semantic gate report at {args.semantic_gate}; "
+            "semantic_verified will be 0 for every asset")
+    entries = build_library(args.workspaces, args.registry, gate_report)
 
     hash_audit = {}
     if not args.skip_hashes:
@@ -608,11 +714,35 @@ def main():
                                        "passed, PLY is JEPA-compatible, metrics "
                                        "cleared the gate",
             "semantic_verified": "plant/pot labels were scored against labels a "
-                                 "human confirmed",
-            "plant_only_verified": "a plant-only asset exists and is both "
-                                   "reconstruction- and semantic-verified",
+                                 "human confirmed, and the per-asset gate passed",
+            "plant_only_verified": "a plant-only asset exists, its carve is "
+                                   "traceable to its source rows, and its labels "
+                                   "are both reconstruction- and semantic-verified",
             "train_eligible": "the asset meets the project's data-use conditions "
                               "for a named role",
+        },
+        "plant_only_states": {
+            "legend": list(PLANT_ONLY_STATES),
+            "counts": {
+                state: sum(1 for e in entries
+                           if (e.get("plant_only") or {}).get("state") == state)
+                for state in PLANT_ONLY_STATES
+            },
+            "note": ("'absent' means no candidate directory; 'failed_empty' means "
+                     "the carve failed or kept 0 Gaussians; "
+                     "'candidate_source_unverified' means the carve exists but its "
+                     "provenance did not verify; "
+                     "'source_verified_semantics_unverified' means the carve is "
+                     "traceable but its labels have no human evidence; 'verified' "
+                     "requires a human-confirmed gate pass"),
+        },
+        "semantic_gate": {
+            "report": str(args.semantic_gate) if gate_report else None,
+            "loaded": gate_report is not None,
+            "tasks_human_confirmed": (gate_report or {}).get("tasks_human_confirmed"),
+            "assets_semantic_verified": (gate_report or {}).get(
+                "assets_semantic_verified", []),
+            "policy": (gate_report or {}).get("policy"),
         },
         "counts": {
             "assets": len(entries),
@@ -641,6 +771,10 @@ def main():
         "split": split,
         "ply_hash_recheck": hash_audit,
         "not_claimed": [
+            (f"no segmentation accuracy: {len(eligible_po)} plant-only assets "
+             "passed the semantic gate; every plant-only carve without one is "
+             "still a candidate")
+            if eligible_po else
             "no segmentation accuracy: no human-confirmed annotation exists",
             "no representation quality: every JEPA number is from a randomly "
             "initialised model",

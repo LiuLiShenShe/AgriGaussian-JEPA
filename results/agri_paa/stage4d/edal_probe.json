@@ -1,0 +1,8 @@
+{
+  "url": "https://doi.org/10.5447/ipk/2025/14",
+  "final_url": "https://doi.ipk-gatersleben.de:443/DOI/89386758-8bfd-41ca-aa9c-ee363e9d94c9/073051f0-b05e-4b43-a9cd-0435fe7cd913/2",
+  "http_status": 429,
+  "title": "Wartungsarbeiten - IPK Gatersleben",
+  "body_bytes": 14108,
+  "conclusion": "the DOI resolver reached the IPK host, which answered with a maintenance/rate-limit page; the dataset itself was not served and this is an ACCESS result, not a data-quality result"
+}

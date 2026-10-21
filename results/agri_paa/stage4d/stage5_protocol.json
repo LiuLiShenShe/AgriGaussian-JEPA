@@ -1,0 +1,703 @@
+{
+  "schema_version": "paa-stage4d-stage5-protocol-1",
+  "generated_utc": "2026-10-21T05:57:13Z",
+  "library": "results/agri_paa/stage4d/assets.json",
+  "n_eligible_assets": 8,
+  "n_plants": 7,
+  "n_crops": 6,
+  "split": {
+    "groups": {
+      "train": [
+        "Broccoli/10",
+        "Broccoli/5",
+        "Rice/1",
+        "Sunflower/1"
+      ],
+      "val": [
+        "Cabbage/9"
+      ],
+      "test": [
+        "Cotton/1",
+        "Tobacco/23"
+      ]
+    },
+    "assets": {
+      "train": [
+        "Broccoli/20260327-10",
+        "Broccoli/20260327-5",
+        "Broccoli/20260402-10",
+        "Rice/1",
+        "Sunflower/1"
+      ],
+      "val": [
+        "Cabbage/20260328-9"
+      ],
+      "test": [
+        "Cotton/1",
+        "Tobacco/20260401-23"
+      ]
+    },
+    "seed": 20261020,
+    "ratios": {
+      "train": 0.6,
+      "val": 0.2,
+      "test": 0.2
+    }
+  },
+  "leakage": {
+    "split_group_in_two_splits": {},
+    "leakage": false,
+    "plants_with_multiple_acquisitions": {
+      "Broccoli/10": [
+        "2026-03-27",
+        "2026-04-02"
+      ]
+    },
+    "same_plant_multi_date_note": "every acquisition of a plant must stay in one split; the list above shows which plants actually have more than one date, i.e. where a date-level split would have leaked",
+    "crops_present_in_multiple_splits": {},
+    "crop_overlap_is_not_plant_leakage": "a crop appearing in train and test is allowed and is what makes leave-one-crop-out a different question"
+  },
+  "leave_one_crop_out": {
+    "folds": {
+      "Broccoli": {
+        "train_assets": [
+          "Cabbage/20260328-9",
+          "Cotton/1",
+          "Rice/1",
+          "Sunflower/1",
+          "Tobacco/20260401-23"
+        ],
+        "test_assets": [
+          "Broccoli/20260327-10",
+          "Broccoli/20260327-5",
+          "Broccoli/20260402-10"
+        ],
+        "n_train_plants": 5,
+        "n_test_plants": 2
+      },
+      "Cabbage": {
+        "train_assets": [
+          "Broccoli/20260327-10",
+          "Broccoli/20260327-5",
+          "Broccoli/20260402-10",
+          "Cotton/1",
+          "Rice/1",
+          "Sunflower/1",
+          "Tobacco/20260401-23"
+        ],
+        "test_assets": [
+          "Cabbage/20260328-9"
+        ],
+        "n_train_plants": 6,
+        "n_test_plants": 1
+      },
+      "Cotton": {
+        "train_assets": [
+          "Broccoli/20260327-10",
+          "Broccoli/20260327-5",
+          "Broccoli/20260402-10",
+          "Cabbage/20260328-9",
+          "Rice/1",
+          "Sunflower/1",
+          "Tobacco/20260401-23"
+        ],
+        "test_assets": [
+          "Cotton/1"
+        ],
+        "n_train_plants": 6,
+        "n_test_plants": 1
+      },
+      "Rice": {
+        "train_assets": [
+          "Broccoli/20260327-10",
+          "Broccoli/20260327-5",
+          "Broccoli/20260402-10",
+          "Cabbage/20260328-9",
+          "Cotton/1",
+          "Sunflower/1",
+          "Tobacco/20260401-23"
+        ],
+        "test_assets": [
+          "Rice/1"
+        ],
+        "n_train_plants": 6,
+        "n_test_plants": 1
+      },
+      "Sunflower": {
+        "train_assets": [
+          "Broccoli/20260327-10",
+          "Broccoli/20260327-5",
+          "Broccoli/20260402-10",
+          "Cabbage/20260328-9",
+          "Cotton/1",
+          "Rice/1",
+          "Tobacco/20260401-23"
+        ],
+        "test_assets": [
+          "Sunflower/1"
+        ],
+        "n_train_plants": 6,
+        "n_test_plants": 1
+      },
+      "Tobacco": {
+        "train_assets": [
+          "Broccoli/20260327-10",
+          "Broccoli/20260327-5",
+          "Broccoli/20260402-10",
+          "Cabbage/20260328-9",
+          "Cotton/1",
+          "Rice/1",
+          "Sunflower/1"
+        ],
+        "test_assets": [
+          "Tobacco/20260401-23"
+        ],
+        "n_train_plants": 6,
+        "n_test_plants": 1
+      }
+    },
+    "n_folds": 6,
+    "caveat": "with 2-3 plants in several crops a fold has a training set of 5-7 plants; report per-fold spread, never a single mean"
+  },
+  "repeated_sampling": {
+    "Broccoli/20260327-10": {
+      "status": "measured",
+      "budget": 1024,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "grid": 16,
+      "reference_voxels": 1806,
+      "voxel_coverage_mean": 0.29360465116279066,
+      "voxel_coverage_std": 0.0084054086286048,
+      "voxel_coverage_min": 0.2840531561461794,
+      "voxel_coverage_max": 0.3067552602436323,
+      "centroid_std": [
+        0.010819838382303715,
+        0.011079938150942326,
+        0.011349029839038849
+      ],
+      "interpretation": "a JEPA difference smaller than this seed-to-seed spread is not a difference"
+    },
+    "Broccoli/20260327-5": {
+      "status": "measured",
+      "budget": 1024,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "grid": 16,
+      "reference_voxels": 1572,
+      "voxel_coverage_mean": 0.326176844783715,
+      "voxel_coverage_std": 0.006715264736233277,
+      "voxel_coverage_min": 0.31806615776081426,
+      "voxel_coverage_max": 0.33651399491094147,
+      "centroid_std": [
+        0.01006938423961401,
+        0.010801807045936584,
+        0.015012594871222973
+      ],
+      "interpretation": "a JEPA difference smaller than this seed-to-seed spread is not a difference"
+    },
+    "Broccoli/20260402-10": {
+      "status": "measured",
+      "budget": 1024,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "grid": 16,
+      "reference_voxels": 1556,
+      "voxel_coverage_mean": 0.3329048843187661,
+      "voxel_coverage_std": 0.005556432026282319,
+      "voxel_coverage_min": 0.3258354755784062,
+      "voxel_coverage_max": 0.3412596401028278,
+      "centroid_std": [
+        0.012826851569116116,
+        0.009290729649364948,
+        0.018277831375598907
+      ],
+      "interpretation": "a JEPA difference smaller than this seed-to-seed spread is not a difference"
+    },
+    "Cabbage/20260328-9": {
+      "status": "measured",
+      "budget": 1024,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "grid": 16,
+      "reference_voxels": 1221,
+      "voxel_coverage_mean": 0.373976248976249,
+      "voxel_coverage_std": 0.0069727891907689805,
+      "voxel_coverage_min": 0.3595413595413595,
+      "voxel_coverage_max": 0.38493038493038495,
+      "centroid_std": [
+        0.013489695265889168,
+        0.016756346449255943,
+        0.011098122224211693
+      ],
+      "interpretation": "a JEPA difference smaller than this seed-to-seed spread is not a difference"
+    },
+    "Cotton/1": {
+      "status": "measured",
+      "budget": 1024,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "grid": 16,
+      "reference_voxels": 791,
+      "voxel_coverage_mean": 0.4856194690265487,
+      "voxel_coverage_std": 0.011645910036594624,
+      "voxel_coverage_min": 0.46270543615676357,
+      "voxel_coverage_max": 0.5056890012642224,
+      "centroid_std": [
+        0.008164004422724247,
+        0.008972578682005405,
+        0.00704844668507576
+      ],
+      "interpretation": "a JEPA difference smaller than this seed-to-seed spread is not a difference"
+    },
+    "Rice/1": {
+      "status": "measured",
+      "budget": 1024,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "grid": 16,
+      "reference_voxels": 1075,
+      "voxel_coverage_mean": 0.34906976744186047,
+      "voxel_coverage_std": 0.006304856610105103,
+      "voxel_coverage_min": 0.3413953488372093,
+      "voxel_coverage_max": 0.3590697674418605,
+      "centroid_std": [
+        0.006089461036026478,
+        0.009103620424866676,
+        0.010569482110440731
+      ],
+      "interpretation": "a JEPA difference smaller than this seed-to-seed spread is not a difference"
+    },
+    "Sunflower/1": {
+      "status": "measured",
+      "budget": 1024,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "grid": 16,
+      "reference_voxels": 962,
+      "voxel_coverage_mean": 0.4589397089397089,
+      "voxel_coverage_std": 0.009929819737288355,
+      "voxel_coverage_min": 0.4397089397089397,
+      "voxel_coverage_max": 0.47297297297297297,
+      "centroid_std": [
+        0.006727939005941153,
+        0.01686912775039673,
+        0.01212402805685997
+      ],
+      "interpretation": "a JEPA difference smaller than this seed-to-seed spread is not a difference"
+    },
+    "Tobacco/20260401-23": {
+      "status": "measured",
+      "budget": 1024,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "grid": 16,
+      "reference_voxels": 1569,
+      "voxel_coverage_mean": 0.34456660293180374,
+      "voxel_coverage_std": 0.0051575791299042365,
+      "voxel_coverage_min": 0.3365200764818356,
+      "voxel_coverage_max": 0.35309114085404714,
+      "centroid_std": [
+        0.00829656608402729,
+        0.008536945097148418,
+        0.009150272235274315
+      ],
+      "interpretation": "a JEPA difference smaller than this seed-to-seed spread is not a difference"
+    }
+  },
+  "occlusion_strata": {
+    "Broccoli/20260327-10": {
+      "status": "measured",
+      "n_gaussians": 292517,
+      "seen_range": [
+        0.0,
+        102.0
+      ],
+      "strata_by_visibility_quartile": [
+        {
+          "seen_min": 0.0,
+          "seen_max": 88.0,
+          "n_gaussians": 73150,
+          "plant_fraction": 0.0008475734791524265,
+          "undecided_fraction": 0.00025974025974025974
+        },
+        {
+          "seen_min": 88.0,
+          "seen_max": 99.0,
+          "n_gaussians": 94519,
+          "plant_fraction": 0.024428950792962263,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 99.0,
+          "seen_max": 102.0,
+          "n_gaussians": 146970,
+          "plant_fraction": 0.5711573790569504,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 102.0,
+          "seen_max": 102.0,
+          "n_gaussians": 93820,
+          "plant_fraction": 0.7918674056704328,
+          "undecided_fraction": 0.0
+        }
+      ],
+      "protocol": "report representation stability separately for the lowest and highest visibility strata; a model that only works on Gaussians seen by most views has not learned partial occlusion"
+    },
+    "Broccoli/20260327-5": {
+      "status": "measured",
+      "n_gaussians": 302152,
+      "seen_range": [
+        1.0,
+        102.0
+      ],
+      "strata_by_visibility_quartile": [
+        {
+          "seen_min": 1.0,
+          "seen_max": 92.0,
+          "n_gaussians": 79897,
+          "plant_fraction": 0.004906316882986846,
+          "undecided_fraction": 3.7548343492246264e-05
+        },
+        {
+          "seen_min": 92.0,
+          "seen_max": 97.0,
+          "n_gaussians": 79311,
+          "plant_fraction": 0.03068931169699033,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 97.0,
+          "seen_max": 102.0,
+          "n_gaussians": 168122,
+          "plant_fraction": 0.6922948810982501,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 102.0,
+          "seen_max": 102.0,
+          "n_gaussians": 76295,
+          "plant_fraction": 0.9515695655023265,
+          "undecided_fraction": 0.0
+        }
+      ],
+      "protocol": "report representation stability separately for the lowest and highest visibility strata; a model that only works on Gaussians seen by most views has not learned partial occlusion"
+    },
+    "Broccoli/20260402-10": {
+      "status": "measured",
+      "n_gaussians": 307159,
+      "seen_range": [
+        2.0,
+        102.0
+      ],
+      "strata_by_visibility_quartile": [
+        {
+          "seen_min": 2.0,
+          "seen_max": 91.0,
+          "n_gaussians": 77580,
+          "plant_fraction": 0.0017530291312193864,
+          "undecided_fraction": 3.8669760247486464e-05
+        },
+        {
+          "seen_min": 91.0,
+          "seen_max": 98.0,
+          "n_gaussians": 83196,
+          "plant_fraction": 0.019195634405500265,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 98.0,
+          "seen_max": 102.0,
+          "n_gaussians": 162317,
+          "plant_fraction": 0.601156995262357,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 102.0,
+          "seen_max": 102.0,
+          "n_gaussians": 94328,
+          "plant_fraction": 0.7529683657026546,
+          "undecided_fraction": 0.0
+        }
+      ],
+      "protocol": "report representation stability separately for the lowest and highest visibility strata; a model that only works on Gaussians seen by most views has not learned partial occlusion"
+    },
+    "Cabbage/20260328-9": {
+      "status": "measured",
+      "n_gaussians": 299839,
+      "seen_range": [
+        2.0,
+        102.0
+      ],
+      "strata_by_visibility_quartile": [
+        {
+          "seen_min": 2.0,
+          "seen_max": 89.0,
+          "n_gaussians": 76149,
+          "plant_fraction": 0.0008010610776241317,
+          "undecided_fraction": 2.626429762702071e-05
+        },
+        {
+          "seen_min": 89.0,
+          "seen_max": 95.0,
+          "n_gaussians": 79406,
+          "plant_fraction": 0.009419943077349318,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 95.0,
+          "seen_max": 100.0,
+          "n_gaussians": 112155,
+          "plant_fraction": 0.12127858766885115,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 100.0,
+          "seen_max": 102.0,
+          "n_gaussians": 75433,
+          "plant_fraction": 0.4188087441835801,
+          "undecided_fraction": 0.0
+        }
+      ],
+      "protocol": "report representation stability separately for the lowest and highest visibility strata; a model that only works on Gaussians seen by most views has not learned partial occlusion"
+    },
+    "Cotton/1": {
+      "status": "measured",
+      "n_gaussians": 319969,
+      "seen_range": [
+        2.0,
+        102.0
+      ],
+      "strata_by_visibility_quartile": [
+        {
+          "seen_min": 2.0,
+          "seen_max": 92.0,
+          "n_gaussians": 86735,
+          "plant_fraction": 0.4607367268115524,
+          "undecided_fraction": 1.1529371072807978e-05
+        },
+        {
+          "seen_min": 92.0,
+          "seen_max": 97.0,
+          "n_gaussians": 91031,
+          "plant_fraction": 0.7211499379332316,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 97.0,
+          "seen_max": 100.0,
+          "n_gaussians": 111854,
+          "plant_fraction": 0.26901138984747974,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 100.0,
+          "seen_max": 102.0,
+          "n_gaussians": 97471,
+          "plant_fraction": 0.2226816181223133,
+          "undecided_fraction": 0.0
+        }
+      ],
+      "protocol": "report representation stability separately for the lowest and highest visibility strata; a model that only works on Gaussians seen by most views has not learned partial occlusion"
+    },
+    "Rice/1": {
+      "status": "measured",
+      "n_gaussians": 292746,
+      "seen_range": [
+        1.0,
+        102.0
+      ],
+      "strata_by_visibility_quartile": [
+        {
+          "seen_min": 1.0,
+          "seen_max": 92.0,
+          "n_gaussians": 73576,
+          "plant_fraction": 1.3591388496248778e-05,
+          "undecided_fraction": 6.795694248124388e-05
+        },
+        {
+          "seen_min": 92.0,
+          "seen_max": 102.0,
+          "n_gaussians": 223310,
+          "plant_fraction": 0.0,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 102.0,
+          "seen_max": 102.0,
+          "n_gaussians": 152911,
+          "plant_fraction": 0.0,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 102.0,
+          "seen_max": 102.0,
+          "n_gaussians": 152911,
+          "plant_fraction": 0.0,
+          "undecided_fraction": 0.0
+        }
+      ],
+      "protocol": "report representation stability separately for the lowest and highest visibility strata; a model that only works on Gaussians seen by most views has not learned partial occlusion"
+    },
+    "Sunflower/1": {
+      "status": "measured",
+      "n_gaussians": 304134,
+      "seen_range": [
+        5.0,
+        102.0
+      ],
+      "strata_by_visibility_quartile": [
+        {
+          "seen_min": 5.0,
+          "seen_max": 80.0,
+          "n_gaussians": 80581,
+          "plant_fraction": 0.3707325548206153,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 80.0,
+          "seen_max": 85.0,
+          "n_gaussians": 95232,
+          "plant_fraction": 0.7124810987903226,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 85.0,
+          "seen_max": 92.0,
+          "n_gaussians": 88346,
+          "plant_fraction": 0.7821746315622665,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 92.0,
+          "seen_max": 102.0,
+          "n_gaussians": 77184,
+          "plant_fraction": 0.6312059494195689,
+          "undecided_fraction": 0.0
+        }
+      ],
+      "protocol": "report representation stability separately for the lowest and highest visibility strata; a model that only works on Gaussians seen by most views has not learned partial occlusion"
+    },
+    "Tobacco/20260401-23": {
+      "status": "measured",
+      "n_gaussians": 305998,
+      "seen_range": [
+        2.0,
+        102.0
+      ],
+      "strata_by_visibility_quartile": [
+        {
+          "seen_min": 2.0,
+          "seen_max": 84.0,
+          "n_gaussians": 78462,
+          "plant_fraction": 0.00012745023068491755,
+          "undecided_fraction": 1.2745023068491754e-05
+        },
+        {
+          "seen_min": 84.0,
+          "seen_max": 95.0,
+          "n_gaussians": 80865,
+          "plant_fraction": 0.0013973907129165894,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 95.0,
+          "seen_max": 102.0,
+          "n_gaussians": 156060,
+          "plant_fraction": 0.3991541714725106,
+          "undecided_fraction": 0.0
+        },
+        {
+          "seen_min": 102.0,
+          "seen_max": 102.0,
+          "n_gaussians": 79288,
+          "plant_fraction": 0.7028049641812127,
+          "undecided_fraction": 0.0
+        }
+      ],
+      "protocol": "report representation stability separately for the lowest and highest visibility strata; a model that only works on Gaussians seen by most views has not learned partial occlusion"
+    }
+  },
+  "config_templates": {
+    "random_encoder.yaml": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_paa/stage4d/stage5_configs/random_encoder.yaml",
+    "gaussian_jepa.yaml": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_paa/stage4d/stage5_configs/gaussian_jepa.yaml",
+    "gaussian_mae.yaml": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/results/agri_paa/stage4d/stage5_configs/gaussian_mae.yaml"
+  },
+  "claims": {
+    "allowed": [
+      "within-library ranking of objectives",
+      "stability under resampling and visibility strata"
+    ],
+    "forbidden": [
+      "generalisation to unseen plants from this split",
+      "segmentation accuracy (no human-confirmed label exists)",
+      "semantic validity inferred from a lower training loss"
+    ],
+    "reason": "8 assets from 7 plants is enough to validate the evaluation machinery, not to establish a representation claim"
+  }
+}

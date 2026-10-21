@@ -1,0 +1,292 @@
+{
+  "schema_version": "paa-stage4d-1",
+  "generated_utc": "2026-10-21T04:29:37Z",
+  "states_legend": {
+    "reconstruction_verified": "checkpoint->PLY chain verified, COLMAP passed, PLY is JEPA-compatible, metrics cleared the gate",
+    "semantic_verified": "plant/pot labels were scored against labels a human confirmed, and the per-asset gate passed",
+    "plant_only_verified": "a plant-only asset exists, its carve is traceable to its source rows, and its labels are both reconstruction- and semantic-verified",
+    "train_eligible": "the asset meets the project's data-use conditions for a named role"
+  },
+  "plant_only_states": {
+    "legend": [
+      "absent",
+      "failed_empty",
+      "candidate_source_unverified",
+      "source_verified_semantics_unverified",
+      "verified"
+    ],
+    "counts": {
+      "absent": 1,
+      "failed_empty": 1,
+      "candidate_source_unverified": 0,
+      "source_verified_semantics_unverified": 7,
+      "verified": 0
+    },
+    "note": "'absent' means no candidate directory; 'failed_empty' means the carve failed or kept 0 Gaussians; 'candidate_source_unverified' means the carve exists but its provenance did not verify; 'source_verified_semantics_unverified' means the carve is traceable but its labels have no human evidence; 'verified' requires a human-confirmed gate pass"
+  },
+  "semantic_gate": {
+    "report": "results/agri_paa/stage4d/semantic_gate.json",
+    "loaded": true,
+    "tasks_human_confirmed": 0,
+    "assets_semantic_verified": [],
+    "policy": {
+      "unit_of_verification": "asset (one acquisition of one plant)",
+      "crop_summary_certifies_nothing": true,
+      "verification_backend": "labels_merged",
+      "model_predictions_are_not_truth": true
+    }
+  },
+  "counts": {
+    "assets": 9,
+    "reconstruction_verified": 8,
+    "semantic_verified": 0,
+    "plant_only_verified": 0,
+    "train_eligible_full_specimen": 8,
+    "train_eligible_plant_only": 0,
+    "sealed": 1,
+    "crops": 6,
+    "distinct_plants": 7
+  },
+  "eligibility": {
+    "full_specimen_pretrain": {
+      "eligible": [
+        "Broccoli/20260327-10",
+        "Broccoli/20260327-5",
+        "Broccoli/20260402-10",
+        "Cabbage/20260328-9",
+        "Cotton/1",
+        "Rice/1",
+        "Sunflower/1",
+        "Tobacco/20260401-23"
+      ],
+      "refused": [
+        {
+          "asset_id": "Cotton/1@sealed",
+          "blocking": [
+            "asset_sealed",
+            "provenance_absent"
+          ],
+          "reasons": [
+            "workspace is sealed as incident evidence and is excluded by policy",
+            "no checkpoint->PLY provenance record (missing or unreadable)"
+          ]
+        }
+      ]
+    },
+    "plant_only_pretrain": {
+      "eligible": [],
+      "refused": [
+        {
+          "asset_id": "Broccoli/20260327-10",
+          "blocking": [
+            "semantics_unverified"
+          ],
+          "reasons": [
+            "semantic separation has no human-confirmed evidence"
+          ]
+        },
+        {
+          "asset_id": "Broccoli/20260327-5",
+          "blocking": [
+            "semantics_unverified"
+          ],
+          "reasons": [
+            "semantic separation has no human-confirmed evidence"
+          ]
+        },
+        {
+          "asset_id": "Broccoli/20260402-10",
+          "blocking": [
+            "semantics_unverified"
+          ],
+          "reasons": [
+            "semantic separation has no human-confirmed evidence"
+          ]
+        },
+        {
+          "asset_id": "Cabbage/20260328-9",
+          "blocking": [
+            "semantics_unverified"
+          ],
+          "reasons": [
+            "semantic separation has no human-confirmed evidence"
+          ]
+        },
+        {
+          "asset_id": "Cotton/1@sealed",
+          "blocking": [
+            "plant_only_missing"
+          ],
+          "reasons": [
+            "no plant-only asset"
+          ]
+        },
+        {
+          "asset_id": "Cotton/1",
+          "blocking": [
+            "semantics_unverified"
+          ],
+          "reasons": [
+            "semantic separation has no human-confirmed evidence"
+          ]
+        },
+        {
+          "asset_id": "Rice/1",
+          "blocking": [
+            "plant_only_failed_empty"
+          ],
+          "reasons": [
+            "the plant-only carve failed or retained no Gaussians"
+          ]
+        },
+        {
+          "asset_id": "Sunflower/1",
+          "blocking": [
+            "semantics_unverified"
+          ],
+          "reasons": [
+            "semantic separation has no human-confirmed evidence"
+          ]
+        },
+        {
+          "asset_id": "Tobacco/20260401-23",
+          "blocking": [
+            "semantics_unverified"
+          ],
+          "reasons": [
+            "semantic separation has no human-confirmed evidence"
+          ]
+        }
+      ]
+    }
+  },
+  "audit": {
+    "assets_checked": 9,
+    "problems": [],
+    "error_count": 0,
+    "warning_count": 0,
+    "split_leakage": [],
+    "split_clean": true,
+    "clean": true,
+    "note": "this audit proves internal consistency of the library (identities, hashes, provenance, split grouping); it does not prove that a plant id names the physical plant the data came from"
+  },
+  "split": {
+    "groups": {
+      "train": [
+        "Broccoli/10",
+        "Broccoli/5",
+        "Rice/1",
+        "Sunflower/1"
+      ],
+      "val": [
+        "Cabbage/9"
+      ],
+      "test": [
+        "Cotton/1",
+        "Tobacco/23"
+      ]
+    },
+    "coverage": {
+      "train": [
+        "Broccoli/20260327-10",
+        "Broccoli/20260327-5",
+        "Broccoli/20260402-10",
+        "Rice/1",
+        "Sunflower/1"
+      ],
+      "val": [
+        "Cabbage/20260328-9"
+      ],
+      "test": [
+        "Cotton/1",
+        "Tobacco/20260401-23"
+      ]
+    },
+    "unassigned_assets": [],
+    "unknown_groups": [],
+    "duplicate_placement": {},
+    "leakage": false,
+    "rule": "a split assigns whole split groups (<crop>/<plant_id>); an acquisition is never assigned on its own",
+    "seed": 20261020,
+    "ratios": {
+      "train": 0.6,
+      "val": 0.2,
+      "test": 0.2
+    },
+    "counts": {
+      "groups_total": 7,
+      "groups": {
+        "train": 4,
+        "val": 1,
+        "test": 2
+      },
+      "assets": {
+        "train": 5,
+        "val": 1,
+        "test": 2
+      },
+      "crops": {
+        "train": [
+          "Broccoli",
+          "Rice",
+          "Sunflower"
+        ],
+        "val": [
+          "Cabbage"
+        ],
+        "test": [
+          "Cotton",
+          "Tobacco"
+        ]
+      }
+    },
+    "caveat": "7 distinct plants is too few for a three-way split to support a generalisation claim; it fixes identity leakage, which is necessary but not sufficient. For any statement about unseen plants, prefer leave-one-crop-out and report the per-crop spread, not a single val number."
+  },
+  "ply_hash_recheck": {
+    "Broccoli/20260327-10": {
+      "recorded": "73498195ccee3c8bb6aafdd8782746c89ded78e9f20d459e82681b19ba43cffd",
+      "recomputed": "73498195ccee3c8bb6aafdd8782746c89ded78e9f20d459e82681b19ba43cffd",
+      "matches": true
+    },
+    "Broccoli/20260327-5": {
+      "recorded": "8dde56909afd51f25adb3e6a8ab15b9d920baae723d8897bbcd4b6672f768906",
+      "recomputed": "8dde56909afd51f25adb3e6a8ab15b9d920baae723d8897bbcd4b6672f768906",
+      "matches": true
+    },
+    "Broccoli/20260402-10": {
+      "recorded": "3dda95b43862948e3bdfe35e1721793403463d3eacf69ca7677580a75b548d53",
+      "recomputed": "3dda95b43862948e3bdfe35e1721793403463d3eacf69ca7677580a75b548d53",
+      "matches": true
+    },
+    "Cabbage/20260328-9": {
+      "recorded": "a230ed87b718ee2ada9a3e9d1196ecaea1205134c4747418c68cdc87f3147954",
+      "recomputed": "a230ed87b718ee2ada9a3e9d1196ecaea1205134c4747418c68cdc87f3147954",
+      "matches": true
+    },
+    "Cotton/1": {
+      "recorded": "1e9ff42dadc1f0565e16853b994648e0ad9b5de6b6fec7769ed15882f45a3495",
+      "recomputed": "1e9ff42dadc1f0565e16853b994648e0ad9b5de6b6fec7769ed15882f45a3495",
+      "matches": true
+    },
+    "Rice/1": {
+      "recorded": "09664567255011d752f82378e630c39498f717aaa1c7a577accf9081773f338a",
+      "recomputed": "09664567255011d752f82378e630c39498f717aaa1c7a577accf9081773f338a",
+      "matches": true
+    },
+    "Sunflower/1": {
+      "recorded": "aa94eaf07fdc35f923d33c94d53abef6c000e59f31e8373bea13a218ab971496",
+      "recomputed": "aa94eaf07fdc35f923d33c94d53abef6c000e59f31e8373bea13a218ab971496",
+      "matches": true
+    },
+    "Tobacco/20260401-23": {
+      "recorded": "5fe36f9114cef58cbaab9e9b9ad8239e6bd1268dd3f28bf01f79cf0e1279f8b6",
+      "recomputed": "5fe36f9114cef58cbaab9e9b9ad8239e6bd1268dd3f28bf01f79cf0e1279f8b6",
+      "matches": true
+    }
+  },
+  "not_claimed": [
+    "no segmentation accuracy: no human-confirmed annotation exists",
+    "no representation quality: every JEPA number is from a randomly initialised model",
+    "no plant generalisation: all reconstruction metrics are single-scene held-out views"
+  ]
+}

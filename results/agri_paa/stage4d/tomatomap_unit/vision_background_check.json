@@ -1,0 +1,8 @@
+{
+  "purpose": "background-mask feasibility check for one rig image",
+  "model": "agnes-3.0-flash",
+  "image": "data/external/TomatoMAP/plant1_20230816/images/pi1_00001_1_1_20230816154734.jpg",
+  "summary": "upright tomato plant, portrait 1080x1440; white/light support stake with dark clips beside the stem; pot rim barely visible at bottom; background is greenhouse glazing with structural beams -- NOT a blank backdrop, and NOT other plants",
+  "implication": "a static-background subtraction mask is not trivially available; plant/support separation would need per-image masks, which the rig subset does not ship",
+  "used_as": "diagnostic only; no label or pose derived from it"
+}

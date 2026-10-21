@@ -1,0 +1,33 @@
+seed: 20261021
+num_gaussians: 1024
+batch_size: 8
+epochs: 100
+learning_rate: 0.0003
+weight_decay: 0.05
+normalization: pretrain
+optimizer: AdamW
+scheduler: cosine
+data:
+  train_split: results/agri_paa/stage4d/stage5_protocol.json#/split/assets/train
+  val_split: results/agri_paa/stage4d/stage5_protocol.json#/split/assets/val
+  test_split: results/agri_paa/stage4d/stage5_protocol.json#/split/assets/test
+  split_unit: <crop>/<plant_id>
+evaluation:
+  leave_one_crop_out: true
+  repeated_sampling: {seeds: 8, budget: 1024}
+  occlusion_strata: true
+  report_per_fold: true
+  claims_allowed: [within-library ranking, stability under resampling]
+  claims_forbidden: [generalisation to unseen plants, segmentation accuracy,
+                     semantic validity from loss alone]
+
+# Comparison arm 1: the Gaussian-JEPA architecture with a randomly initialised
+# encoder that is never updated. It is the floor a learned encoder must beat.
+model:
+  NAME: RandomEncoder
+  freeze_encoder: true
+  encoder_arch: gaussian_jepa_encoder
+  trans_dim: 384
+  depth: 12
+  num_heads: 6
+  objective: none_linear_probe_only

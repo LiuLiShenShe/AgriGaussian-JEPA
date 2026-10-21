@@ -65,6 +65,10 @@ REASONS = {
     "quality_below_gate": "held-out reconstruction metrics are below the gate",
     "semantics_unverified": "semantic separation has no human-confirmed evidence",
     "plant_only_missing": "no plant-only asset",
+    "plant_only_failed_empty":
+        "the plant-only carve failed or retained no Gaussians",
+    "plant_only_source_unverified":
+        "a plant-only asset exists but its carve provenance did not verify",
     "plant_only_not_reconstruction_verified":
         "plant-only asset's own reconstruction/provenance did not verify",
     "annotation_not_human": "labels are not human-confirmed",
@@ -118,6 +122,11 @@ def semantic_checks(entry: dict) -> list:
     The only accepted source of truth is a benchmark evaluation whose labels
     were imported from a human confirmation. ``source="model_pseudo_label"``
     or ``"candidate"`` counts as *evidence of work done*, never as verified.
+
+    A benchmark that was evaluated but whose per-asset gate failed is also not
+    verified: ``status`` is ``"failed"`` there, and ``verified`` is ``False``.
+    Reading both fields means a report written by an older tool (which had no
+    ``verified`` key) still decides on ``status`` alone.
     """
     semantics = entry.get("semantics") or {}
     benchmark = semantics.get("benchmark") or {}
@@ -125,22 +134,69 @@ def semantic_checks(entry: dict) -> list:
         return ["semantics_unverified"]
     if benchmark.get("status") != "evaluated":
         return ["semantics_unverified"]
+    if benchmark.get("verified") is False:
+        return ["semantics_unverified"]
     return []
 
 
 def plant_only_checks(entry: dict, gate: dict | None = None) -> list:
-    """Every reason the entry has not earned ``plant_only_verified``."""
+    """Every reason the entry has not earned ``plant_only_verified``.
+
+    ``assets.py`` collapses the per-version plant-only candidates into a single
+    ``state`` (see ``assets.summarise_plant_only``). The five states are
+    distinct on purpose, because "there is no carve", "the carve exists but its
+    source is unverified", "the carve is sound but its labels never met a
+    human" and "the carve is empty" call for different next actions. Collapsing
+    them into one ``plant_only_missing`` -- the Stage 4C bug -- told a reader
+    that eight existing assets had no carve at all.
+    """
     plant = entry.get("plant_only") or {}
-    problems = []
-    if not plant.get("available"):
+    state = plant.get("state")
+
+    # Resolve the candidate the verdict is about. Three shapes exist:
+    #   stage4d: {"state": ..., "selected": "plant_only", "candidates": {...}}
+    #   stage4c: {"plant_only": {...}, "plant_only_segformer": {...}}
+    #   older:   {"available": True, "provenance_state": "verified"}
+    nested = plant.get("candidates") if isinstance(plant.get("candidates"), dict) else {}
+    if nested:
+        candidates = {k: v for k, v in nested.items()
+                      if isinstance(v, dict) and v.get("available")}
+        selected_name = plant.get("selected")
+    elif plant.get("available") is True:
+        candidates = {"_flat": plant}
+        selected_name = "_flat"
+    else:
+        candidates = {k: v for k, v in plant.items() if isinstance(v, dict)
+                      and v.get("available")}
+        selected_name = sorted(candidates)[0] if candidates else None
+    if state is None:
+        state = "absent" if not candidates else "_legacy"
+
+    if state == "absent":
         return ["plant_only_missing"]
+
+    problems = []
+    if state == "failed_empty":
+        return ["plant_only_failed_empty"]
+    if state == "candidate_source_unverified":
+        return ["plant_only_source_unverified"]
+
     # The carved asset's own provenance: it was rendered from the same
     # checkpoint, but it is a *different* PLY and its rows must be traceable.
-    if plant.get("provenance_state") != "verified":
+    # Only the *selected* candidate decides the verdict; an unused variant with
+    # an unverified carve is a note for a reader, not a blocker.
+    selected = candidates.get(selected_name) if selected_name else None
+    if selected is None and len(candidates) == 1:
+        selected = next(iter(candidates.values()))
+    if selected is not None and selected.get("provenance_state") not in (
+            None, "verified"):
         problems.append("plant_only_not_reconstruction_verified")
+
     problems.extend(reconstruction_checks(entry, gate))
     problems.extend(semantic_checks(entry))
     return problems
+
+
 
 
 def evaluate(entry: dict, gate: dict | None = None) -> dict:

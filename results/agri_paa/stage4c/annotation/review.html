@@ -1,21 +1,26 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Stage 4C annotation review</title>
+<title>Stage 4C/4D annotation review</title>
 <style>
  body{font:13px/1.4 system-ui,sans-serif;margin:0;display:flex;height:100vh}
- #side{width:260px;overflow:auto;border-right:1px solid #ccc;padding:8px}
- #main{flex:1;display:flex;flex-direction:column;padding:8px;gap:6px}
- #stage{position:relative;flex:1;overflow:auto;background:#222}
+ #side{width:300px;overflow:auto;border-right:1px solid #ccc;padding:8px}
+ #main{flex:1;display:flex;flex-direction:column;padding:8px;gap:6px;min-width:0}
+ #stage{position:relative;flex:1;overflow:auto;background:#222;min-height:200px}
  canvas{position:absolute;left:0;top:0;image-rendering:pixelated}
- .task{padding:3px 5px;cursor:pointer;border-radius:3px}
+ #overlay{opacity:.45}
+ .crop{margin:6px 0 2px;font-weight:700;border-bottom:1px solid #ddd}
+ .task{padding:2px 5px;cursor:pointer;border-radius:3px}
  .task:hover{background:#eee}.task.done{color:#2a7;font-weight:600}
+ .task.prio{background:#fff6d8}.task.active{outline:2px solid #06c}
  .classbtn{padding:4px 8px;margin:2px;border:1px solid #888;border-radius:3px;cursor:pointer}
  .classbtn.active{outline:3px solid #000}
- .hint{color:#666}
+ .hint{color:#666}.warn{color:#b00;font-weight:600}
+ .prog{font-size:11px;color:#555}
 </style>
 <div id="side">
   <div><input id="annotator" placeholder="your name" style="width:100%"></div>
-  <div class="hint" id="progress"></div>
+  <div class="hint">Priority tasks are marked <b>P</b> and listed first.</div>
+  <div class="prog" id="progress"></div>
   <div id="tasks"></div>
 </div>
 <div id="main">
@@ -23,68 +28,115 @@
   <div>
     <button onclick="undo()">undo</button>
     <button onclick="clearAll()">clear</button>
-    <button onclick="save()">save</button>
+    <button onclick="save()">save (not a confirmation)</button>
     <label>brush <input id="brushsize" type="range" min="3" max="61" value="9"></label>
+    <label><input id="showcand" type="checkbox"> candidate overlay</label>
+    <label>opacity <input id="candop" type="range" min="0" max="100" value="45"></label>
     <span id="msg" class="hint"></span>
   </div>
   <div id="stage">
     <canvas id="photo"></canvas>
+    <canvas id="overlay"></canvas>
     <canvas id="paint"></canvas>
   </div>
+  <div class="hint" id="reason"></div>
 </div>
 <script>
+// taxonomy ids from the Python module; do not re-derive them
 const CLASSES = [[1,"Plant"],[2,"Pot/Soil"],[3,"Support"],[4,"Uncertain"],[0,"Background"]];
 const COLORS = {0:[0,0,0],1:[40,200,70],2:[60,90,230],3:[235,215,60],4:[255,0,255]};
-let manifest, current=null, cls=1, painting=false, undoStack=[], confirmed=new Set();
+const KEYS = {"1":1,"2":2,"3":3,"4":4,"0":0};
+let manifest, current=null, cls=1, painting=false, undoStack=[], confirmed=new Set(), saved=new Set();
 const photo=document.getElementById('photo'), paint=document.getElementById('paint');
-const pctx=photo.getContext('2d'), gctx=paint.getContext('2d');
+const overlay=document.getElementById('overlay');
+const pctx=photo.getContext('2d'), gctx=paint.getContext('2d'), octx=overlay.getContext('2d');
 
-const tpl = await (await fetch('manifest.json')).json();
-manifest = tpl;
-for(const t of manifest.tasks) if(t.status==='human_confirmed') confirmed.add(t.task_id);
+fetch('manifest.json').then(r=>r.json()).then(m=>{
+  manifest=m;
+  for(const t of manifest.tasks){ if(t.status==='human_confirmed') confirmed.add(t.task_id); }
+  classButtons(); renderList();
+});
 
 function classButtons(){
   const box=document.getElementById('classes'); box.innerHTML='';
   for(const [id,name] of CLASSES){
     const b=document.createElement('button');
     b.className='classbtn'+(id===cls?' active':'');
-    b.textContent=name;
+    b.textContent=name+' ['+id+']';
     b.style.background='rgb('+COLORS[id].join(',')+')';
     b.style.color=(id===0||id===2)?'#fff':'#000';
     b.onclick=()=>{cls=id;classButtons();};
     box.appendChild(b);
   }
 }
+window.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT')return;
+  if(e.key in KEYS){cls=KEYS[e.key];classButtons();e.preventDefault();}
+  if(e.key==='z'&&(e.ctrlKey||e.metaKey)){undo();e.preventDefault();}
+});
 function renderList(){
   const box=document.getElementById('tasks'); box.innerHTML='';
-  let n=0;
-  for(const t of manifest.tasks){
-    const d=document.createElement('div');
-    d.className='task'+(confirmed.has(t.task_id)?' done':'');
-    d.textContent=t.task_id;
-    d.onclick=()=>loadTask(t); box.appendChild(d); if(confirmed.has(t.task_id))n++;
+  const crops=[...new Set(manifest.tasks.map(t=>t.crop))].sort();
+  let totalDone=0;
+  for(const crop of crops){
+    const items=manifest.tasks.filter(t=>t.crop===crop)
+      .sort((a,b)=>(b.priority?1:0)-(a.priority?1:0)
+        || (a.priority_rank||999)-(b.priority_rank||999)
+        || a.task_id.localeCompare(b.task_id));
+    const done=items.filter(t=>confirmed.has(t.task_id)).length;
+    totalDone+=done;
+    const h=document.createElement('div'); h.className='crop';
+    h.textContent=crop+'  '+done+'/'+items.length;
+    box.appendChild(h);
+    for(const t of items){
+      const d=document.createElement('div');
+      d.className='task'+(confirmed.has(t.task_id)?' done':'')
+        +(t.priority?' prio':'')+(current&&current.task_id===t.task_id?' active':'');
+      d.textContent=(t.priority?'P ':'  ')+t.task_id;
+      d.onclick=()=>loadTask(t); box.appendChild(d);
+    }
   }
-  document.getElementById('progress').textContent = n+'/'+manifest.tasks.length+' confirmed';
+  document.getElementById('progress').textContent=
+    totalDone+'/'+manifest.tasks.length+' confirmed';
 }
 function loadTask(t){
-  current=t; undoStack=[];
+  current=t; undoStack=[]; renderList();
   const img=new Image();
   img.onload=()=>{
-    paint.width=photo.width=img.width; paint.height=photo.height=img.height;
+    for(const c of [photo,paint,overlay]){c.width=img.width;c.height=img.height;}
     pctx.drawImage(img,0,0);
     gctx.clearRect(0,0,paint.width,paint.height);
-    const saved='labels/'+t.task_id+'.png';
+    octx.clearRect(0,0,overlay.width,overlay.height);
+    const savedImg='labels/'+t.task_id+'.png';
     const cur=new Image();
     cur.onload=()=>gctx.drawImage(cur,0,0);
     cur.onerror=()=>{};
-    cur.src=saved+'?t='+Date.now();
+    cur.src=savedImg+'?t='+Date.now();
+    const cand=new Image();
+    cand.onload=()=>octx.drawImage(cand,0,0);
+    cand.onerror=()=>{};
+    cand.src='preannotations/'+t.task_id+'/labels_merged.png?t='+Date.now();
   };
   img.src=t.image;
-  document.getElementById('msg').textContent=t.task_id+' — '+(t.selected_because||[]).join(', ');
+  const feats=t.features?Object.entries(t.features)
+      .filter(([k,v])=>v!==null).map(([k,v])=>k+'='+Number(v).toFixed(3)).join(' '):'';
+  document.getElementById('msg').textContent=t.task_id;
+  document.getElementById('reason').textContent=
+    (t.hardness&&t.hardness.reason?('why this view: '+t.hardness.reason+'. '):'')
+    +(t.selected_because&&t.selected_because.length?('selected as: '+t.selected_because.join(', ')+'. '):'')
+    +feats;
 }
+document.getElementById('showcand').onchange=e=>{
+  overlay.style.display=e.target.checked?'block':'none';
+};
+document.getElementById('candop').oninput=e=>{
+  overlay.style.opacity=(e.target.value/100);
+};
+overlay.style.display='none';
 function pointAt(event){
   const r=paint.getBoundingClientRect();
-  return [Math.round(event.clientX-r.left),Math.round(event.clientY-r.top)];
+  return [Math.round((event.clientX-r.left)*paint.width/r.width),
+          Math.round((event.clientY-r.top)*paint.height/r.height)];
 }
 function stroke(event){
   const [x,y]=pointAt(event);
@@ -107,7 +159,9 @@ function save(){
   fctx.drawImage(paint,0,0);
   fetch('/api/save',{method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify({task_id:current.task_id,annotator:who,png_base64:flat.toDataURL('image/png')})})
-   .then(r=>r.json()).then(j=>{document.getElementById('msg').textContent='saved '+j.saved;});
+   .then(r=>r.json()).then(j=>{
+     document.getElementById('msg').textContent=
+       'saved '+j.saved+' sha '+j.sha256.slice(0,12)+'… — run import to confirm';
+   }).catch(e=>{document.getElementById('msg').textContent='save failed: '+e;});
 }
-classButtons();renderList();
 </script>

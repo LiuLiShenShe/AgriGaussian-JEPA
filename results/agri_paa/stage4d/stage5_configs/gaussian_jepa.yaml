@@ -1,0 +1,54 @@
+seed: 20261021
+num_gaussians: 1024
+batch_size: 8
+epochs: 100
+learning_rate: 0.0003
+weight_decay: 0.05
+normalization: pretrain
+optimizer: AdamW
+scheduler: cosine
+data:
+  train_split: results/agri_paa/stage4d/stage5_protocol.json#/split/assets/train
+  val_split: results/agri_paa/stage4d/stage5_protocol.json#/split/assets/val
+  test_split: results/agri_paa/stage4d/stage5_protocol.json#/split/assets/test
+  split_unit: <crop>/<plant_id>
+evaluation:
+  leave_one_crop_out: true
+  repeated_sampling: {seeds: 8, budget: 1024}
+  occlusion_strata: true
+  report_per_fold: true
+  claims_allowed: [within-library ranking, stability under resampling]
+  claims_forbidden: [generalisation to unseen plants, segmentation accuracy,
+                     semantic validity from loss alone]
+
+# The official model and objective, unchanged. Stage 4D does not modify either.
+model:
+  NAME: GaussianJEPA
+  num_targets: 4
+  target_sizes: [11, 9, 7, 5]
+  group_size: 32
+  num_group: 64
+  attribute: [xyz, opacity, scale, rotation, sh]
+  group_attribute: [xyz]
+  soft_knn: false
+  lambda_ground: 0.1
+  num_swd_projections: 256
+  transformer_config:
+    mask_ratio: 0.55
+    mask_type: block
+    trans_dim: 384
+    encoder_dims: 384
+    depth: 12
+    drop_path_rate: 0.1
+    num_heads: 6
+    decoder_depth: 4
+    decoder_num_heads: 6
+    pred_dim: 192
+
+ema_momentum_start: 0.996
+ema_momentum_end: 0.9999
+npoints: 1024
+npoints_fps: false
+total_bs: 256
+step_per_update: 1
+max_epoch: 100

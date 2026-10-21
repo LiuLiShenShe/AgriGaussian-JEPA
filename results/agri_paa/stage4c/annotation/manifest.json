@@ -39,7 +39,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.287723,
+        "components": {
+          "plant_fraction": 0.034627849002849,
+          "nonplant_fraction": 0.16256232193732192,
+          "thin_fraction": 0.008981676693920228,
+          "white_support_fraction": 0.5758241758241758,
+          "disagreement_fraction": 0.039161918328584996,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Broccoli_20260327-10_31",
@@ -68,7 +82,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.7594,
+        "components": {
+          "plant_fraction": 0.03413283475783476,
+          "nonplant_fraction": 0.17499465811965811,
+          "thin_fraction": 0.005008085972142522,
+          "white_support_fraction": 0.8460785912277842,
+          "disagreement_fraction": 0.004868233618233618,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; specimen is mostly non-plant or support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Broccoli_20260327-10_100",
@@ -99,7 +127,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.923972,
+        "components": {
+          "plant_fraction": 0.1483695394112061,
+          "nonplant_fraction": 0.06022851377018044,
+          "thin_fraction": 0.0006960751761190208,
+          "white_support_fraction": 0.901278215936905,
+          "disagreement_fraction": 0.051325379867046536,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority_crop_rank": 1,
+      "priority": true,
+      "priority_rank": 11
     },
     {
       "task_id": "Broccoli_20260327-10_79",
@@ -130,7 +173,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.915449,
+        "components": {
+          "plant_fraction": 0.02832977207977208,
+          "nonplant_fraction": 0.13439636752136752,
+          "thin_fraction": 0.03540750052377959,
+          "white_support_fraction": 0.8507862759113652,
+          "disagreement_fraction": 0.0690752611585945,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority_crop_rank": 2,
+      "priority": true,
+      "priority_rank": 12
     },
     {
       "task_id": "Broccoli_20260327-10_10",
@@ -159,7 +217,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.285922,
+        "components": {
+          "plant_fraction": 0.034786324786324783,
+          "nonplant_fraction": 0.1790349002849003,
+          "thin_fraction": 0.007814632814632815,
+          "white_support_fraction": 0.6022620169651273,
+          "disagreement_fraction": 0.009936490978157644,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; specimen is mostly non-plant or support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Broccoli_20260327-10_56",
@@ -188,7 +260,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.904682,
+        "components": {
+          "plant_fraction": 0.029938271604938272,
+          "nonplant_fraction": 0.1674596391263058,
+          "thin_fraction": 0.021431403647898493,
+          "white_support_fraction": 0.8609271523178808,
+          "disagreement_fraction": 0.055579297245963916,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Broccoli_20260327-10_74",
@@ -217,7 +303,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.759224,
+        "components": {
+          "plant_fraction": 0.04677587844254511,
+          "nonplant_fraction": 0.052989078822412154,
+          "thin_fraction": 0.011686630798903665,
+          "white_support_fraction": 0.8215966951676433,
+          "disagreement_fraction": 0.044223646723646724,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Broccoli_20260327-10_23",
@@ -246,7 +346,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.634759,
+        "components": {
+          "plant_fraction": 0.03038758309591643,
+          "nonplant_fraction": 0.17937974833808168,
+          "thin_fraction": 0.0020509014200050784,
+          "white_support_fraction": 0.7750362844702468,
+          "disagreement_fraction": 0.014410612535612535,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; specimen is mostly non-plant or support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cabbage_20260328-9_66",
@@ -275,7 +389,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.946506,
+        "components": {
+          "plant_fraction": 0.06546875,
+          "nonplant_fraction": 0.18169236111111112,
+          "thin_fraction": 0.00869795810129939,
+          "white_support_fraction": 0.8353876739562625,
+          "disagreement_fraction": 0.1062625,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cabbage_20260328-9_69",
@@ -304,7 +432,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 2.366858,
+        "components": {
+          "plant_fraction": 0.10755208333333334,
+          "nonplant_fraction": 0.15820694444444444,
+          "thin_fraction": 0.006534301856335754,
+          "white_support_fraction": 0.9945149563109892,
+          "disagreement_fraction": 0.16191597222222223,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority_crop_rank": 2,
+      "priority": true,
+      "priority_rank": 7
     },
     {
       "task_id": "Cabbage_20260328-9_100",
@@ -335,7 +478,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.628505,
+        "components": {
+          "plant_fraction": 0.16320902777777777,
+          "nonplant_fraction": 0.036331944444444444,
+          "thin_fraction": 0.001838133613591977,
+          "white_support_fraction": 0.7631578947368421,
+          "disagreement_fraction": 0.04472569444444444,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cabbage_20260328-9_23",
@@ -366,7 +523,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 0.15578,
+        "components": {
+          "plant_fraction": 0.03151458333333333,
+          "nonplant_fraction": 0.2321527777777778,
+          "thin_fraction": 0.021859368458165312,
+          "white_support_fraction": 0.0,
+          "disagreement_fraction": 0.0321375,
+          "plant_absence": 0.0
+        },
+        "reason": "specimen is mostly non-plant or support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cabbage_20260328-9_7",
@@ -397,7 +568,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.771302,
+        "components": {
+          "plant_fraction": 0.020680555555555556,
+          "nonplant_fraction": 0.22024791666666665,
+          "thin_fraction": 0.05621222296843519,
+          "white_support_fraction": 0.7786561264822134,
+          "disagreement_fraction": 0.045851388888888886,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cabbage_20260328-9_83",
@@ -429,7 +614,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 2.197499,
+        "components": {
+          "plant_fraction": 0.13822847222222223,
+          "nonplant_fraction": 0.21218472222222223,
+          "thin_fraction": 0.0036724625594702813,
+          "white_support_fraction": 0.9867945111098352,
+          "disagreement_fraction": 0.07829097222222223,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cabbage_20260328-9_79",
@@ -460,7 +659,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.868974,
+        "components": {
+          "plant_fraction": 0.11372569444444444,
+          "nonplant_fraction": 0.1011548611111111,
+          "thin_fraction": 0.004549201599853448,
+          "white_support_fraction": 0.6598157874705032,
+          "disagreement_fraction": 0.2572236111111111,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cabbage_20260328-9_97",
@@ -491,7 +704,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 2.386813,
+        "components": {
+          "plant_fraction": 0.07327569444444444,
+          "nonplant_fraction": 0.1725611111111111,
+          "thin_fraction": 0.023389595989271872,
+          "white_support_fraction": 0.9760467380720546,
+          "disagreement_fraction": 0.17978055555555555,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority_crop_rank": 1,
+      "priority": true,
+      "priority_rank": 6
     },
     {
       "task_id": "Cotton_1_4",
@@ -520,7 +748,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.644652,
+        "components": {
+          "plant_fraction": 0.053189988938053094,
+          "nonplant_fraction": 0.10987624446902655,
+          "thin_fraction": 0.031169573920503287,
+          "white_support_fraction": 0.7557644060371949,
+          "disagreement_fraction": 0.03449529867256637,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cotton_1_87",
@@ -552,7 +794,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 5.130694,
+        "components": {
+          "plant_fraction": 0.013944275442477876,
+          "nonplant_fraction": 0.04052336836283186,
+          "thin_fraction": 0.011701125489612772,
+          "white_support_fraction": 0.9783845278725825,
+          "disagreement_fraction": 0.07503318584070796,
+          "plant_absence": 1.0
+        },
+        "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support"
+      },
+      "priority_crop_rank": 1,
+      "priority": true,
+      "priority_rank": 3
     },
     {
       "task_id": "Cotton_1_26",
@@ -583,7 +840,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.793188,
+        "components": {
+          "plant_fraction": 0.05692754424778761,
+          "nonplant_fraction": 0.14744054203539822,
+          "thin_fraction": 0.029123147923245083,
+          "white_support_fraction": 0.8463158485903628,
+          "disagreement_fraction": 0.013600663716814159,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; specimen is mostly non-plant or support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cotton_1_49",
@@ -615,7 +886,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.394527,
+        "components": {
+          "plant_fraction": 0.07061186393805309,
+          "nonplant_fraction": 0.1519787057522124,
+          "thin_fraction": 0.04399165793622042,
+          "white_support_fraction": 0.630404993909866,
+          "disagreement_fraction": 0.022065818584070796,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; specimen is mostly non-plant or support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cotton_1_101",
@@ -647,7 +932,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 0.129178,
+        "components": {
+          "plant_fraction": 0.10779175884955752,
+          "nonplant_fraction": 0.015294524336283186,
+          "thin_fraction": 0.007709576037457508,
+          "white_support_fraction": 0.0,
+          "disagreement_fraction": 0.058440265486725665,
+          "plant_absence": 0.0
+        },
+        "reason": "the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cotton_1_67",
@@ -678,7 +977,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 0.662469,
+        "components": {
+          "plant_fraction": 0.02199391592920354,
+          "nonplant_fraction": 0.04797981194690266,
+          "thin_fraction": 0.08100716710675217,
+          "white_support_fraction": 0.23958333333333334,
+          "disagreement_fraction": 0.04395049778761062,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cotton_1_18",
@@ -707,7 +1020,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.843581,
+        "components": {
+          "plant_fraction": 0.05396294247787611,
+          "nonplant_fraction": 0.13984997234513274,
+          "thin_fraction": 0.04261261722953928,
+          "white_support_fraction": 0.8686204670953553,
+          "disagreement_fraction": 0.010886338495575222,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; most of the plant label is thin structure"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Cotton_1_82",
@@ -736,7 +1063,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.963085,
+        "components": {
+          "plant_fraction": 0.031889518805309734,
+          "nonplant_fraction": 0.04813329646017699,
+          "thin_fraction": 0.09051490514905149,
+          "white_support_fraction": 0.8905109489051095,
+          "disagreement_fraction": 0.038554341814159294,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; most of the plant label is thin structure"
+      },
+      "priority_crop_rank": 2,
+      "priority": true,
+      "priority_rank": 10
     },
     {
       "task_id": "Rice_1_74",
@@ -765,7 +1107,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 5.211312,
+        "components": {
+          "plant_fraction": 0.003988888888888889,
+          "nonplant_fraction": 0.17820972222222223,
+          "thin_fraction": 0.15041782729805014,
+          "white_support_fraction": 0.9974113240801938,
+          "disagreement_fraction": 0.006304166666666666,
+          "plant_absence": 1.0
+        },
+        "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Rice_1_92",
@@ -796,7 +1152,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 5.12925,
+        "components": {
+          "plant_fraction": 0.0095375,
+          "nonplant_fraction": 0.17196458333333334,
+          "thin_fraction": 0.07404980340760157,
+          "white_support_fraction": 0.9908416921064108,
+          "disagreement_fraction": 0.01096388888888889,
+          "plant_absence": 1.0
+        },
+        "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Rice_1_30",
@@ -827,7 +1197,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 4.281339,
+        "components": {
+          "plant_fraction": 0.0,
+          "nonplant_fraction": 0.21650347222222222,
+          "thin_fraction": 0.0,
+          "white_support_fraction": 0.6,
+          "disagreement_fraction": 0.00819375,
+          "plant_absence": 1.0
+        },
+        "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Rice_1_13",
@@ -859,7 +1243,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 4.28414,
+        "components": {
+          "plant_fraction": 0.0,
+          "nonplant_fraction": 0.2313513888888889,
+          "thin_fraction": 0.0,
+          "white_support_fraction": 0.6,
+          "disagreement_fraction": 0.007367361111111111,
+          "plant_absence": 1.0
+        },
+        "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Rice_1_40",
@@ -888,7 +1286,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 5.359815,
+        "components": {
+          "plant_fraction": 0.0015993055555555556,
+          "nonplant_fraction": 0.10663402777777778,
+          "thin_fraction": 0.6426400347372991,
+          "white_support_fraction": 0.8387096774193549,
+          "disagreement_fraction": 0.003882638888888889,
+          "plant_absence": 1.0
+        },
+        "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support"
+      },
+      "priority_crop_rank": 1,
+      "priority": true,
+      "priority_rank": 1
     },
     {
       "task_id": "Rice_1_27",
@@ -917,7 +1330,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 3.541463,
+        "components": {
+          "plant_fraction": 0.007778472222222222,
+          "nonplant_fraction": 0.2158013888888889,
+          "thin_fraction": 0.030354432639942863,
+          "white_support_fraction": 0.2222222222222222,
+          "disagreement_fraction": 0.0009618055555555556,
+          "plant_absence": 1.0
+        },
+        "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Rice_1_63",
@@ -948,7 +1375,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 5.017268,
+        "components": {
+          "plant_fraction": 0.0,
+          "nonplant_fraction": 0.10380763888888889,
+          "thin_fraction": 0.0,
+          "white_support_fraction": 0.988880063542494,
+          "disagreement_fraction": 0.0041826388888888885,
+          "plant_absence": 1.0
+        },
+        "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Rice_1_52",
@@ -977,7 +1418,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 5.237489,
+        "components": {
+          "plant_fraction": 0.0047875,
+          "nonplant_fraction": 0.12908402777777778,
+          "thin_fraction": 0.2396286626051639,
+          "white_support_fraction": 0.9775800711743772,
+          "disagreement_fraction": 0.0019875,
+          "plant_absence": 1.0
+        },
+        "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support"
+      },
+      "priority_crop_rank": 2,
+      "priority": true,
+      "priority_rank": 2
     },
     {
       "task_id": "Sunflower_1_52",
@@ -1006,7 +1462,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 0.278369,
+        "components": {
+          "plant_fraction": 0.14853014380530974,
+          "nonplant_fraction": 0.06064366703539823,
+          "thin_fraction": 0.011064356666077064,
+          "white_support_fraction": 0.05583756345177665,
+          "disagreement_fraction": 0.06871819690265486,
+          "plant_absence": 0.0
+        },
+        "reason": "the two backends disagree most here; bright/desaturated plant tissue labelled support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Sunflower_1_83",
@@ -1037,7 +1507,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.939006,
+        "components": {
+          "plant_fraction": 0.06325082964601769,
+          "nonplant_fraction": 0.024280973451327435,
+          "thin_fraction": 0.023183875128434953,
+          "white_support_fraction": 0.8757062146892656,
+          "disagreement_fraction": 0.07856263827433628,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Sunflower_1_13",
@@ -1068,7 +1552,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 2.152349,
+        "components": {
+          "plant_fraction": 0.10247441924778761,
+          "nonplant_fraction": 0.12234098451327434,
+          "thin_fraction": 0.006868215276044232,
+          "white_support_fraction": 0.9603135717785399,
+          "disagreement_fraction": 0.0940756360619469,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority_crop_rank": 2,
+      "priority": true,
+      "priority_rank": 9
     },
     {
       "task_id": "Sunflower_1_43",
@@ -1100,7 +1599,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.755925,
+        "components": {
+          "plant_fraction": 0.1765749446902655,
+          "nonplant_fraction": 0.08526272123893805,
+          "thin_fraction": 0.014960962889294356,
+          "white_support_fraction": 0.8072516088526134,
+          "disagreement_fraction": 0.05044109513274336,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Sunflower_1_39",
@@ -1132,7 +1645,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.837166,
+        "components": {
+          "plant_fraction": 0.1925642975663717,
+          "nonplant_fraction": 0.09110826880530973,
+          "thin_fraction": 0.006132304101965713,
+          "white_support_fraction": 0.881478422465414,
+          "disagreement_fraction": 0.02037195796460177,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Sunflower_1_100",
@@ -1161,7 +1688,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 0.840733,
+        "components": {
+          "plant_fraction": 0.12434665376106195,
+          "nonplant_fraction": 0.012954231194690266,
+          "thin_fraction": 0.01951016096299797,
+          "white_support_fraction": 0.3295803480040942,
+          "disagreement_fraction": 0.0790880807522124,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Sunflower_1_10",
@@ -1194,7 +1735,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 2.232755,
+        "components": {
+          "plant_fraction": 0.08503249446902655,
+          "nonplant_fraction": 0.12024336283185841,
+          "thin_fraction": 0.003748241741265621,
+          "white_support_fraction": 0.972406669617825,
+          "disagreement_fraction": 0.12406042588495575,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority_crop_rank": 1,
+      "priority": true,
+      "priority_rank": 8
     },
     {
       "task_id": "Sunflower_1_77",
@@ -1223,7 +1779,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 0.318651,
+        "components": {
+          "plant_fraction": 0.11315472898230089,
+          "nonplant_fraction": 0.01701603982300885,
+          "thin_fraction": 0.015006079417353529,
+          "white_support_fraction": 0.11818181818181818,
+          "disagreement_fraction": 0.031088219026548673,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Tobacco_20260401-23_57",
@@ -1252,7 +1822,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 0.691473,
+        "components": {
+          "plant_fraction": 0.028910416666666668,
+          "nonplant_fraction": 0.20021597222222223,
+          "thin_fraction": 0.00641348994739497,
+          "white_support_fraction": 0.22753468516542155,
+          "disagreement_fraction": 0.0849625,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Tobacco_20260401-23_94",
@@ -1281,7 +1865,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.190636,
+        "components": {
+          "plant_fraction": 0.06658958333333333,
+          "nonplant_fraction": 0.045559722222222224,
+          "thin_fraction": 0.002127459875481025,
+          "white_support_fraction": 0.4681753889674682,
+          "disagreement_fraction": 0.1192451388888889,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Tobacco_20260401-23_32",
@@ -1313,7 +1911,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 0.154679,
+        "components": {
+          "plant_fraction": 0.022153472222222224,
+          "nonplant_fraction": 0.26756180555555553,
+          "thin_fraction": 0.00410645434312404,
+          "white_support_fraction": 0.022900763358778626,
+          "disagreement_fraction": 0.012251388888888888,
+          "plant_absence": 0.0
+        },
+        "reason": "specimen is mostly non-plant or support; bright/desaturated plant tissue labelled support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Tobacco_20260401-23_51",
@@ -1342,7 +1954,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 0.786936,
+        "components": {
+          "plant_fraction": 0.04315069444444444,
+          "nonplant_fraction": 0.21057777777777778,
+          "thin_fraction": 0.0019473099763425978,
+          "white_support_fraction": 0.2896174863387978,
+          "disagreement_fraction": 0.07129027777777777,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Tobacco_20260401-23_86",
@@ -1373,7 +1999,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 1.39004,
+        "components": {
+          "plant_fraction": 0.0634138888888889,
+          "nonplant_fraction": 0.10843125,
+          "thin_fraction": 0.0010950983398309167,
+          "white_support_fraction": 0.5108647450110865,
+          "disagreement_fraction": 0.16734305555555556,
+          "plant_absence": 0.0
+        },
+        "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     },
     {
       "task_id": "Tobacco_20260401-23_20",
@@ -1404,7 +2044,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 3.212863,
+        "components": {
+          "plant_fraction": 0.007018055555555555,
+          "nonplant_fraction": 0.24255833333333332,
+          "thin_fraction": 0.05323570156342767,
+          "white_support_fraction": 0.0,
+          "disagreement_fraction": 0.043429861111111114,
+          "plant_absence": 1.0
+        },
+        "reason": "candidate labels find almost no plant (total-miss risk); the two backends disagree most here"
+      },
+      "priority_crop_rank": 2,
+      "priority": true,
+      "priority_rank": 5
     },
     {
       "task_id": "Tobacco_20260401-23_16",
@@ -1436,7 +2091,22 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 3.451157,
+        "components": {
+          "plant_fraction": 0.018447222222222222,
+          "nonplant_fraction": 0.27253055555555555,
+          "thin_fraction": 0.006361993675651257,
+          "white_support_fraction": 0.16,
+          "disagreement_fraction": 0.021518055555555554,
+          "plant_absence": 1.0
+        },
+        "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support"
+      },
+      "priority_crop_rank": 1,
+      "priority": true,
+      "priority_rank": 4
     },
     {
       "task_id": "Tobacco_20260401-23_2",
@@ -1465,7 +2135,21 @@
       "status": "annotation_pending",
       "annotator": null,
       "confirmation": null,
-      "preannotation_summary": {}
+      "preannotation_summary": {},
+      "hardness": {
+        "score": 0.231353,
+        "components": {
+          "plant_fraction": 0.020445138888888888,
+          "nonplant_fraction": 0.2173798611111111,
+          "thin_fraction": 0.0027852314799089706,
+          "white_support_fraction": 0.0,
+          "disagreement_fraction": 0.08167708333333333,
+          "plant_absence": 0.0
+        },
+        "reason": "the two backends disagree most here; specimen is mostly non-plant or support"
+      },
+      "priority": false,
+      "priority_crop_rank": null
     }
   ],
   "taxonomy": {
@@ -1503,5 +2187,211 @@
     ]
   },
   "status": "annotation_pending",
-  "success_state": "evaluation tooling + pending task set are ready; segmentation accuracy is NOT verified because no human label exists yet"
+  "success_state": "evaluation tooling + pending task set are ready; segmentation accuracy is NOT verified because no human label exists yet",
+  "priority_policy": {
+    "n": 12,
+    "per_crop": 2,
+    "weights": {
+      "plant_absence": 3.0,
+      "white_support_fraction": 2.0,
+      "disagreement_fraction": 2.0,
+      "thin_fraction": 1.0,
+      "nonplant_fraction": 0.3
+    },
+    "rule": "priority marks a review order, not a class balance; the full 48-task set remains available"
+  },
+  "priority_tasks": [
+    {
+      "task_id": "Rice_1_40",
+      "crop": "Rice",
+      "priority_rank": 1,
+      "priority_crop_rank": 1,
+      "score": 5.359815,
+      "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support",
+      "components": {
+        "plant_fraction": 0.0015993055555555556,
+        "nonplant_fraction": 0.10663402777777778,
+        "thin_fraction": 0.6426400347372991,
+        "white_support_fraction": 0.8387096774193549,
+        "disagreement_fraction": 0.003882638888888889,
+        "plant_absence": 1.0
+      }
+    },
+    {
+      "task_id": "Rice_1_52",
+      "crop": "Rice",
+      "priority_rank": 2,
+      "priority_crop_rank": 2,
+      "score": 5.237489,
+      "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support",
+      "components": {
+        "plant_fraction": 0.0047875,
+        "nonplant_fraction": 0.12908402777777778,
+        "thin_fraction": 0.2396286626051639,
+        "white_support_fraction": 0.9775800711743772,
+        "disagreement_fraction": 0.0019875,
+        "plant_absence": 1.0
+      }
+    },
+    {
+      "task_id": "Cotton_1_87",
+      "crop": "Cotton",
+      "priority_rank": 3,
+      "priority_crop_rank": 1,
+      "score": 5.130694,
+      "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support",
+      "components": {
+        "plant_fraction": 0.013944275442477876,
+        "nonplant_fraction": 0.04052336836283186,
+        "thin_fraction": 0.011701125489612772,
+        "white_support_fraction": 0.9783845278725825,
+        "disagreement_fraction": 0.07503318584070796,
+        "plant_absence": 1.0
+      }
+    },
+    {
+      "task_id": "Tobacco_20260401-23_16",
+      "crop": "Tobacco",
+      "priority_rank": 4,
+      "priority_crop_rank": 1,
+      "score": 3.451157,
+      "reason": "candidate labels find almost no plant (total-miss risk); bright/desaturated plant tissue labelled support",
+      "components": {
+        "plant_fraction": 0.018447222222222222,
+        "nonplant_fraction": 0.27253055555555555,
+        "thin_fraction": 0.006361993675651257,
+        "white_support_fraction": 0.16,
+        "disagreement_fraction": 0.021518055555555554,
+        "plant_absence": 1.0
+      }
+    },
+    {
+      "task_id": "Tobacco_20260401-23_20",
+      "crop": "Tobacco",
+      "priority_rank": 5,
+      "priority_crop_rank": 2,
+      "score": 3.212863,
+      "reason": "candidate labels find almost no plant (total-miss risk); the two backends disagree most here",
+      "components": {
+        "plant_fraction": 0.007018055555555555,
+        "nonplant_fraction": 0.24255833333333332,
+        "thin_fraction": 0.05323570156342767,
+        "white_support_fraction": 0.0,
+        "disagreement_fraction": 0.043429861111111114,
+        "plant_absence": 1.0
+      }
+    },
+    {
+      "task_id": "Cabbage_20260328-9_97",
+      "crop": "Cabbage",
+      "priority_rank": 6,
+      "priority_crop_rank": 1,
+      "score": 2.386813,
+      "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here",
+      "components": {
+        "plant_fraction": 0.07327569444444444,
+        "nonplant_fraction": 0.1725611111111111,
+        "thin_fraction": 0.023389595989271872,
+        "white_support_fraction": 0.9760467380720546,
+        "disagreement_fraction": 0.17978055555555555,
+        "plant_absence": 0.0
+      }
+    },
+    {
+      "task_id": "Cabbage_20260328-9_69",
+      "crop": "Cabbage",
+      "priority_rank": 7,
+      "priority_crop_rank": 2,
+      "score": 2.366858,
+      "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here",
+      "components": {
+        "plant_fraction": 0.10755208333333334,
+        "nonplant_fraction": 0.15820694444444444,
+        "thin_fraction": 0.006534301856335754,
+        "white_support_fraction": 0.9945149563109892,
+        "disagreement_fraction": 0.16191597222222223,
+        "plant_absence": 0.0
+      }
+    },
+    {
+      "task_id": "Sunflower_1_10",
+      "crop": "Sunflower",
+      "priority_rank": 8,
+      "priority_crop_rank": 1,
+      "score": 2.232755,
+      "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here",
+      "components": {
+        "plant_fraction": 0.08503249446902655,
+        "nonplant_fraction": 0.12024336283185841,
+        "thin_fraction": 0.003748241741265621,
+        "white_support_fraction": 0.972406669617825,
+        "disagreement_fraction": 0.12406042588495575,
+        "plant_absence": 0.0
+      }
+    },
+    {
+      "task_id": "Sunflower_1_13",
+      "crop": "Sunflower",
+      "priority_rank": 9,
+      "priority_crop_rank": 2,
+      "score": 2.152349,
+      "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here",
+      "components": {
+        "plant_fraction": 0.10247441924778761,
+        "nonplant_fraction": 0.12234098451327434,
+        "thin_fraction": 0.006868215276044232,
+        "white_support_fraction": 0.9603135717785399,
+        "disagreement_fraction": 0.0940756360619469,
+        "plant_absence": 0.0
+      }
+    },
+    {
+      "task_id": "Cotton_1_82",
+      "crop": "Cotton",
+      "priority_rank": 10,
+      "priority_crop_rank": 2,
+      "score": 1.963085,
+      "reason": "bright/desaturated plant tissue labelled support; most of the plant label is thin structure",
+      "components": {
+        "plant_fraction": 0.031889518805309734,
+        "nonplant_fraction": 0.04813329646017699,
+        "thin_fraction": 0.09051490514905149,
+        "white_support_fraction": 0.8905109489051095,
+        "disagreement_fraction": 0.038554341814159294,
+        "plant_absence": 0.0
+      }
+    },
+    {
+      "task_id": "Broccoli_20260327-10_100",
+      "crop": "Broccoli",
+      "priority_rank": 11,
+      "priority_crop_rank": 1,
+      "score": 1.923972,
+      "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here",
+      "components": {
+        "plant_fraction": 0.1483695394112061,
+        "nonplant_fraction": 0.06022851377018044,
+        "thin_fraction": 0.0006960751761190208,
+        "white_support_fraction": 0.901278215936905,
+        "disagreement_fraction": 0.051325379867046536,
+        "plant_absence": 0.0
+      }
+    },
+    {
+      "task_id": "Broccoli_20260327-10_79",
+      "crop": "Broccoli",
+      "priority_rank": 12,
+      "priority_crop_rank": 2,
+      "score": 1.915449,
+      "reason": "bright/desaturated plant tissue labelled support; the two backends disagree most here",
+      "components": {
+        "plant_fraction": 0.02832977207977208,
+        "nonplant_fraction": 0.13439636752136752,
+        "thin_fraction": 0.03540750052377959,
+        "white_support_fraction": 0.8507862759113652,
+        "disagreement_fraction": 0.0690752611585945,
+        "plant_absence": 0.0
+      }
+    }
+  ]
 }
