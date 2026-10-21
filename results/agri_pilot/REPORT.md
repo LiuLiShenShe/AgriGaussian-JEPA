@@ -1,5 +1,8 @@
 # Stage 3 — Small-Scale Plant Gaussian-JEPA Pilot
 
+<!-- Historical output: interpreter paths below are the ones actually used at the time. The project now uses uv (env/bootstrap.sh); re-run with $AGRI_PY_GS / $AGRI_PY_JEPA. -->
+
+
 生成时间：2026-10-15（Asia/Shanghai）  
 实验分支：`agri/plant-gs-experiments`  
 数据范围：`/fj/AgriGaussian-JEPA/data/plant_gs/F2DMAS_fg_20261014/manifest.json`  

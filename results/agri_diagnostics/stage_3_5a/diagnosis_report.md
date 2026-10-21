@@ -1,5 +1,8 @@
 # Stage 3.5-A：真实植物表征与检索协议诊断
 
+<!-- Historical output: interpreter paths below are the ones actually used at the time. The project now uses uv (env/bootstrap.sh); re-run with $AGRI_PY_GS / $AGRI_PY_JEPA. -->
+
+
 本报告仅使用已有的真实植物 PLY 和冻结 checkpoint 做推理。没有训练、修复模型或进入 Stage 3.5-B。
 
 ## 数据、模型与复现

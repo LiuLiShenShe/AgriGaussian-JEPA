@@ -28,9 +28,9 @@
 先在仓库根目录、已激活环境中运行。以下命令只下载一个类别归档，不下载完整数据集：
 
 ```bash
-conda activate gaussian_jepa
-export CUDA_HOME="$CONDA_PREFIX"
-export PATH="$CONDA_PREFIX/bin:$PATH"
+source env/activate.sh
+export CUDA_HOME="$AGRI_ENVS_ROOT/toolchain/cuda-11.8"
+export PATH="$AGRI_ENVS_ROOT/toolchain/gcc-11/usr/bin:$CUDA_HOME/bin:$PATH"
 nvcc --version
 
 hf download ShapeNet/ShapeSplatsV1 02954340.zip \
@@ -61,7 +61,7 @@ export SHAPENET55GS_SPLIT_ROOT="$PWD/data/shapenet_smoke_split"
 之后直接构造官方 train Dataset 并读取一个样本（这是数据检查，不是训练）：
 
 ```bash
-conda run -n gaussian_jepa python -c '
+"$AGRI_PY_JEPA" -c '
 import torch
 from utils.config import cfg_from_yaml_file
 from datasets.build import build_dataset_from_cfg
@@ -83,9 +83,9 @@ print("loader PASS", sample[0], sample[1], tuple(x.shape))
 
 ```bash
 cd /fj/AgriGaussian-JEPA/Gaussian-JEPA
-conda activate gaussian_jepa
-export CUDA_HOME="$CONDA_PREFIX"
-export PATH="$CONDA_PREFIX/bin:$PATH"
+source env/activate.sh
+export CUDA_HOME="$AGRI_ENVS_ROOT/toolchain/cuda-11.8"
+export PATH="$AGRI_ENVS_ROOT/toolchain/gcc-11/usr/bin:$CUDA_HOME/bin:$PATH"
 export CUDA_VISIBLE_DEVICES=0,1
 export SHAPENET55GS_PLY_ROOT="$PWD/data/shapesplat_ply"
 export SHAPENET55GS_SPLIT_ROOT="$PWD/datasets/shapenet_split"

@@ -2,7 +2,7 @@
 """Frozen-checkpoint, real-PLY diagnosis. Refuses to overwrite any output directory.
 
 Run from Gaussian-JEPA:
-  /home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m \
+  $AGRI_PY_JEPA -m \
       agri.plant_gs.jepa.diagnose_stage35a --device cuda:0
 Reproduce into a fresh directory with --output /absolute/fresh/directory.
 No optimizer, backward, checkpoint write, or training-mode forward is used.

@@ -1,5 +1,8 @@
 # Stage 3.5-C：误检对象离线诊断
 
+<!-- Historical output: interpreter paths below are the ones actually used at the time. The project now uses uv (env/bootstrap.sh); re-run with $AGRI_PY_GS / $AGRI_PY_JEPA. -->
+
+
 本阶段只读取 Stage 3.5-A 已保存的检索记录、特征和原语索引；没有模型前向、训练、重采样或新增候选规模实验。官方 Mean+Max 读出保持不变。
 
 ## 范围与复现

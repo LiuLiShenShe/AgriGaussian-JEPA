@@ -154,13 +154,13 @@ def render_report(experiment_dir: Path, result_dir: Path) -> str:
     model = run['model_config']
     transformer = model['transformer_config']
     train_command = (
-        '/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -u '
+        '$AGRI_PY_JEPA -u '
         'agri/plant_gs/jepa/pilot_train.py --stage pilot --epochs 20 '
         '--initial-checkpoint experiments/agri_pilot/initial_random.pt '
         '--output experiments/agri_pilot/pilot --device cuda:0'
     )
     eval_command = (
-        '/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -u '
+        '$AGRI_PY_JEPA -u '
         'agri/plant_gs/jepa/pilot_eval.py '
         '--baseline experiments/agri_pilot/initial_random.pt '
         '--trained experiments/agri_pilot/pilot/checkpoint_last.pt '

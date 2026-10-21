@@ -89,16 +89,28 @@ and transfer. Detailed settings and complete metrics are available in
 
 ## Installation
 
-The reference environment uses Python 3.9, PyTorch 2.0.1, and CUDA 11.8.
-`pointnet2_ops` and `knn_cuda` are compiled during installation, so the CUDA
-toolkit exposed by `nvcc` must be compatible with the installed PyTorch build.
+Two independent environments are used, because they need different Python and
+PyTorch versions:
+
+| purpose | Python | PyTorch | compiled extensions |
+|---|---|---|---|
+| 3DGS reconstruction / PLY / semantics | 3.13 | 2.9.1+cu128 | gsplat |
+| Gaussian-JEPA forward/backward | 3.9 | 2.0.1+cu118 | `pointnet2_ops`, `knn_cuda` |
+
+They are managed with [uv](https://docs.astral.sh/uv/) and **not** conda:
 
 ```bash
 git clone https://github.com/Amazingren/Gaussian-JEPA.git
 cd Gaussian-JEPA
-conda env create -f environment.yml
-conda activate gaussian_jepa
+bash env/bootstrap.sh all      # creates envs/, fetches gcc-11 + CUDA 11.8, builds
+source env/activate.sh         # exports AGRI_PY_GS / AGRI_PY_JEPA / CUDA_HOME
 ```
+
+`env/bootstrap.sh` needs no root and no conda: gcc-11 comes from the distro
+archive via `apt-get download`, and the CUDA 11.8 toolkit from NVIDIA's runfile.
+The pinned dependency sets are `env/requirements-{gs,jepa}.lock.txt`; see
+[`env/README.md`](env/README.md) for the one-time build notes and for how to
+verify an existing install instead of rebuilding it.
 
 See [`docs/getting_started.md`](docs/getting_started.md) for dataset layouts,
 configuration details, and the complete evaluation workflow.

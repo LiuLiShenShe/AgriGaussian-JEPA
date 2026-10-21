@@ -9,13 +9,16 @@ otherwise.
 ```bash
 git clone https://github.com/Amazingren/Gaussian-JEPA.git
 cd Gaussian-JEPA
-conda env create -f environment.yml
-conda activate gaussian_jepa
+bash env/bootstrap.sh all      # uv venvs + gcc-11 + CUDA 11.8 + extensions
+source env/activate.sh
 ```
 
-The two CUDA extensions in `environment.yml` are compiled during installation.
-Confirm that `nvcc --version` reports CUDA 11.8 and that the target GPU is
-visible before starting an experiment.
+Two environments are created under `envs/`: `agri-gs` (Python 3.13,
+PyTorch 2.9.1+cu128, gsplat) and `agri-jepa` (Python 3.9, PyTorch 2.0.1+cu118,
+`pointnet2_ops` + `knn_cuda`). `env/bootstrap.sh verify` checks both by
+importing them and by running the release smoke test. No conda is involved;
+`env/README.md` documents what the bootstrap fetches and how to reproduce the
+build without root.
 
 ## 2. Configure data
 

@@ -13,8 +13,13 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-env/
+# NOTE: `env/` used to be ignored here as a virtualenv directory, but this
+# repository now keeps its *environment definitions* (uv requirements, lock
+# files, bootstrap script) in env/. The venvs themselves live outside the
+# repository, under AGRI_ENVS_ROOT (default <repo>/envs/), and are ignored by
+# the `envs/` rule below.
 .venv
+envs/
 build/
 develop-eggs/
 dist/

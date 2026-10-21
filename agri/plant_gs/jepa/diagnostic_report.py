@@ -150,17 +150,17 @@ def write_report(output, summary):
 运行命令（在 `/fj/AgriGaussian-JEPA/Gaussian-JEPA` 下）：
 
 ```bash
-/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m agri.plant_gs.jepa.diagnose_stage35a --device cuda:0
+$AGRI_PY_JEPA -m agri.plant_gs.jepa.diagnose_stage35a --device cuda:0
 
 # 独立核对已保存的真实植物特征、索引、检索分数及防覆盖行为
-/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m agri.plant_gs.jepa.verify_stage35a --input results/agri_diagnostics/stage_3_5a
+$AGRI_PY_JEPA -m agri.plant_gs.jepa.verify_stage35a --input results/agri_diagnostics/stage_3_5a
 
 # 新进程完整复现（该输出目录也必须尚不存在）与逐文件/逐数组核对
-/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m agri.plant_gs.jepa.diagnose_stage35a --device cuda:0 --output /tmp/agri-stage35a-reproduction-20261015
-/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m agri.plant_gs.jepa.verify_stage35a --input results/agri_diagnostics/stage_3_5a --reference /tmp/agri-stage35a-reproduction-20261015
+$AGRI_PY_JEPA -m agri.plant_gs.jepa.diagnose_stage35a --device cuda:0 --output /tmp/agri-stage35a-reproduction-20261015
+$AGRI_PY_JEPA -m agri.plant_gs.jepa.verify_stage35a --input results/agri_diagnostics/stage_3_5a --reference /tmp/agri-stage35a-reproduction-20261015
 
 # 仅从已有诊断数值重建本报告和逐植株汇总，不再次推理
-/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m agri.plant_gs.jepa.diagnostic_report --input results/agri_diagnostics/stage_3_5a
+$AGRI_PY_JEPA -m agri.plant_gs.jepa.diagnostic_report --input results/agri_diagnostics/stage_3_5a
 ```
 
 原目录存在时脚本明确拒绝覆盖。重新运行请加 `--output /绝对路径/全新目录`。全部输入索引见 `sampling_indices.npz`，协议元数据见 `sampling_plan.json`；原始 Token、中心位置、空间匹配索引和未归一化 Pooling 向量见 `*_features.npz`，逐 Query 检索结果见 `retrieval_per_query.csv`。

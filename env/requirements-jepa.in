@@ -1,0 +1,25 @@
+# Gaussian-JEPA environment (forward/backward, optimizer probe, extension tests).
+# Python 3.9. torch+cu118 wheels come from the PyTorch index. The two compiled
+# CUDA extensions (pointnet2_ops, knn_cuda) are built by env/bootstrap.sh.
+torch==2.0.1
+torchvision==0.15.2
+numpy==1.26.4
+plyfile==1.1.3
+scipy==1.13.1
+matplotlib==3.3.2
+Pillow==9.4.0
+tensorboardX==2.6.5
+timm==0.9.16
+easydict
+scikit-learn
+pyyaml
+h5py
+pandas
+tqdm
+termcolor
+wandb
+opencv-python-headless
+ninja
+setuptools<81
+wheel
+pytest==8.3.4

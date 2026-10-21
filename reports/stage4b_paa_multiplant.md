@@ -1,5 +1,7 @@
 # Stage 4B — 跨植株 PAA 重建、纯植物资产与 JEPA 采样分析
 
+> **环境说明（迁移后补注，2026-10-21）：** 本文件是历史运行的记录，正文保留当时的真实环境路径。项目已改用 uv 管理环境（`env/bootstrap.sh`），不再使用 conda；复现时请先 `source env/activate.sh`，用 `$AGRI_PY_GS` / `$AGRI_PY_JEPA` 代替文中的旧解释器路径。
+
 **状态：本报告的部分结论已被 `stage4b_fix_repro.md` 取代（见下方「修订说明」）**
 
 > ## ⚠ 修订说明（Stage 4B-Fix，2026-10-20 追加）

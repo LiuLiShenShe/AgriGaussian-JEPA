@@ -1,5 +1,7 @@
 # Stage 4A — PAA 单株 3DGS 重建及 Gaussian-JEPA 接入验证
 
+> **环境说明（迁移后补注，2026-10-21）：** 本文件是历史运行的记录，正文保留当时的真实环境路径。项目已改用 uv 管理环境（`env/bootstrap.sh`），不再使用 conda；复现时请先 `source env/activate.sh`，用 `$AGRI_PY_GS` / `$AGRI_PY_JEPA` 代替文中的旧解释器路径。
+
 **状态：完成（含 7 项已知遗留问题，见 §11）**
 
 - 执行日期：2026-10-19

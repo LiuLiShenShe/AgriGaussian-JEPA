@@ -62,7 +62,7 @@ From `/fj/AgriGaussian-JEPA/Gaussian-JEPA`:
 
 ```bash
 CUDA_VISIBLE_DEVICES=1 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 \
-/home/test/biosoft/enter/envs/gaussian_jepa/bin/python \
+"$AGRI_PY_JEPA" \
   agri/plant_gs/jepa/smoke_real_plant.py \
   --ply /fj/AgriGaussian-JEPA/data/plant_gs/XianKeLai1_fg_20261014/final/point_cloud.ply \
   --normalization pretrain --num-gaussians 1024 --seed 0 --model-seed 0 \

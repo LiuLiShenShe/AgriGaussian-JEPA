@@ -1,5 +1,8 @@
 # Stage 3.5-B：冻结 Encoder 的全局 Pooling 单变量验证
 
+<!-- Historical output: interpreter paths below are the ones actually used at the time. The project now uses uv (env/bootstrap.sh); re-run with $AGRI_PY_GS / $AGRI_PY_JEPA. -->
+
+
 固定 checkpoint：`/fj/AgriGaussian-JEPA/Gaussian-JEPA/experiments/agri_pilot/pilot/checkpoint_last.pt`；SHA256 `2f0c5b372db37d40308640f0c89a1cc9327ca037a4c94e26a21ff55b6f3c065c`。
 协议在推理前固定于 `2026-10-15T08:43:07.767599+00:00`；SHA256 `080136e4fe121617de0b65c03f0dae745d32618fd07c37f7c4820b80dadf2cb0`。
 

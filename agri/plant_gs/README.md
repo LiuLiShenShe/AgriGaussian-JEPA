@@ -121,7 +121,7 @@ Two environment quirks are baked in, both of which fail loudly otherwise:
 ### Step 3 — dataset
 
 ```bash
-python build_dataset.py
+"$AGRI_PY_GS" build_dataset.py
 ```
 
 * Undistorts **images and masks** from OPENCV to PINHOLE. COLMAP's
@@ -137,7 +137,7 @@ python build_dataset.py
 ### Step 4 — train
 
 ```bash
-python train_plant_gsplat.py --max-steps 30000
+"$AGRI_PY_GS" train_plant_gsplat.py --max-steps 30000
 ```
 
 A standard, *unmasked* 3DGS fit with gsplat: L1 + SSIM over the whole frame,
@@ -147,7 +147,7 @@ blur filter described above.
 ### Step 5 — extract the plant
 
 ```bash
-python extract_plant.py --min-score 0.5 --min-visible 2 --min-opacity 0.01 \
+"$AGRI_PY_GS" extract_plant.py --min-score 0.5 --min-visible 2 --min-opacity 0.01 \
                         --prune-floater-mult 6
 ```
 
@@ -159,8 +159,8 @@ on inside-silhouette MAE (does the plant still reproduce?) against outside-ink
 ### Step 6 — validate
 
 ```bash
-python validate_ply.py point_cloud.ply
-python verify_gsjepa_compatible.py point_cloud.ply
+"$AGRI_PY_GS" validate_ply.py point_cloud.ply
+"$AGRI_PY_GS" verify_gsjepa_compatible.py point_cloud.ply
 ```
 
 ---
@@ -271,16 +271,16 @@ feature vector (3 xyz + 1 opacity + 3 scale + 4 rotation + 3 SH), matching the
 ## 7. Reproducing
 
 ```bash
-conda activate wheat3dgs          # torch 2.5.1+cu124, gsplat 1.5.3
+source env/activate.sh           # sets AGRI_PY_GS / AGRI_PY_JEPA (uv, no conda)
 cd <this directory>
-python prepare_frames.py
+"$AGRI_PY_GS" prepare_frames.py
 ./run_colmap.sh
-python build_dataset.py
-python train_plant_gsplat.py --max-steps 30000
-python extract_plant.py --min-score 0.5 --min-visible 2 --min-opacity 0.01 \
+"$AGRI_PY_GS" build_dataset.py
+"$AGRI_PY_GS" train_plant_gsplat.py --max-steps 30000
+"$AGRI_PY_GS" extract_plant.py --min-score 0.5 --min-visible 2 --min-opacity 0.01 \
                         --prune-floater-mult 6
-python validate_ply.py point_cloud.ply
-python verify_gsjepa_compatible.py point_cloud.ply
+"$AGRI_PY_GS" validate_ply.py point_cloud.ply
+"$AGRI_PY_GS" verify_gsjepa_compatible.py point_cloud.ply
 ```
 
 `colmap_io.py` is a self-contained reader for COLMAP's binary sparse format,

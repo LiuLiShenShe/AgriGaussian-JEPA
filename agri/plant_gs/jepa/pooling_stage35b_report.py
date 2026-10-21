@@ -273,12 +273,12 @@ def make_report(protocol, summary, tables):
              '## 运行和复现命令', '',
              '工作目录 `/fj/AgriGaussian-JEPA/Gaussian-JEPA`，分支 `agri/plant-gs-experiments`。', '',
              '```bash',
-             '/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m agri.plant_gs.jepa.pooling_stage35b --prepare',
-             '/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m agri.plant_gs.jepa.pooling_stage35b --run --device cuda:0',
-             '/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m agri.plant_gs.jepa.verify_stage35b --output results/agri_diagnostics/stage_3_5b',
-             '/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m agri.plant_gs.jepa.pooling_stage35b --replay-from results/agri_diagnostics/stage_3_5b --output /tmp/agri-stage35b-reproduction-20261015 --device cuda:0',
-             '/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m agri.plant_gs.jepa.verify_stage35b --output /tmp/agri-stage35b-reproduction-20261015',
-             '/home/test/biosoft/enter/envs/gaussian_jepa/bin/python -m agri.plant_gs.jepa.verify_stage35b --output results/agri_diagnostics/stage_3_5b --reference /tmp/agri-stage35b-reproduction-20261015',
+             '$AGRI_PY_JEPA -m agri.plant_gs.jepa.pooling_stage35b --prepare',
+             '$AGRI_PY_JEPA -m agri.plant_gs.jepa.pooling_stage35b --run --device cuda:0',
+             '$AGRI_PY_JEPA -m agri.plant_gs.jepa.verify_stage35b --output results/agri_diagnostics/stage_3_5b',
+             '$AGRI_PY_JEPA -m agri.plant_gs.jepa.pooling_stage35b --replay-from results/agri_diagnostics/stage_3_5b --output /tmp/agri-stage35b-reproduction-20261015 --device cuda:0',
+             '$AGRI_PY_JEPA -m agri.plant_gs.jepa.verify_stage35b --output /tmp/agri-stage35b-reproduction-20261015',
+             '$AGRI_PY_JEPA -m agri.plant_gs.jepa.verify_stage35b --output results/agri_diagnostics/stage_3_5b --reference /tmp/agri-stage35b-reproduction-20261015',
              '```', '',
              'prepare 只用于尚不存在的目录；run 只接受仅含固定协议与保护清单的目录，拒绝覆盖已有结果。'
              '复现采用原 protocol.json，复制到新目录后重新加载真实 PLY 和 checkpoint，重新采样、重新推理。'
