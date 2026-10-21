@@ -9,6 +9,7 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 import textwrap
 from pathlib import Path
 
@@ -23,12 +24,12 @@ def bash(script: str, *args, cwd=None):
     return subprocess.run(
         ['bash', '-c', script, '_', *map(str, args)],
         capture_output=True, text=True,
-        env={**os.environ, 'PY_GS': 'python', 'REPO': str(REPO)},
+        env={**os.environ, 'PY_GS': sys.executable, 'REPO': str(REPO)},
         cwd=str(cwd or REPO), timeout=120)
 
 
 def source_stages(body: str):
-    return f'set -euo pipefail\nsource "{STAGES}"\nPY_GS=python\nREPO="{REPO}"\n{body}'
+    return f'set -euo pipefail\nsource "{STAGES}"\nPY_GS={sys.executable}\nREPO="{REPO}"\n{body}'
 
 
 def test_runner_declares_two_separate_stage_directories():
@@ -134,8 +135,9 @@ def test_a_completed_stage_is_never_re_run(tmp_path):
     _stage(run, status='complete')
     before = (run / 'splats.pt').stat().st_mtime_ns
     body = (
-        'WS="%s"\nRESUME=0\nPY_GS=python\nFG=/nonexistent\nREPO="%s"\nSEED=0\n'
-        'run_stage train_7k 7000 1000 2000\necho RETURNED\n' % (tmp_path, REPO))
+        f'WS="{tmp_path}"\nRESUME=0\nPY_GS={sys.executable}\nFG=/nonexistent\n'
+        f'REPO="{REPO}"\nSEED=0\n'
+        'run_stage train_7k 7000 1000 2000\necho RETURNED\n')
     result = bash(source_stages(body))
     assert result.returncode == 0, result.stderr
     assert 'already complete; skipping' in result.stdout
@@ -148,8 +150,9 @@ def test_an_incomplete_stage_is_refused_without_resume(tmp_path):
     _stage(run, status='training', splats=False, history=True)
     before = (run / 'history.jsonl').read_bytes()
     body = (
-        'WS="%s"\nRESUME=0\nPY_GS=python\nFG=/nonexistent\nREPO="%s"\nSEED=0\n'
-        'run_stage train_7k 7000 1000 2000\n' % (tmp_path, REPO))
+        f'WS="{tmp_path}"\nRESUME=0\nPY_GS={sys.executable}\nFG=/nonexistent\n'
+        f'REPO="{REPO}"\nSEED=0\n'
+        'run_stage train_7k 7000 1000 2000\n')
     result = bash(source_stages(body))
     assert result.returncode != 0
     assert 'INCOMPLETE run' in result.stderr

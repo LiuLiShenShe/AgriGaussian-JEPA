@@ -497,26 +497,29 @@ test : Cotton/1     Tobacco/23                              (2 assets)
 - 空 carve 即使语义通过仍被阻塞
 - 优先任务选择命中白组织与全漏；`check` 把孤儿列为警告而非错误；`status` 按作物统计
 
-回归运行（真实输出）：
+回归运行（真实输出，按套件选择能提供其依赖的解释器）：
 
 ```bash
-PY=envs/agri-gs/bin/python
-$PY -m pytest agri/plant_gs/paa/tests agri/plant_gs/foreground/tests agri/plant_gs/jepa/tests -q
+envs/agri-gs/bin/python   -m pytest agri/plant_gs/paa/tests        -q   # 134 passed
+envs/agri-gs/bin/python   -m pytest agri/plant_gs/foreground/tests -q   #  74 passed
+envs/agri-jepa/bin/python -m pytest agri/plant_gs/jepa/tests       -q   #  23 passed
 ```
 
 ```
-RESULT_PLACEHOLDER
+agri/plant_gs/paa/tests         134 passed, 0 failed
+agri/plant_gs/foreground/tests   74 passed, 0 failed
+agri/plant_gs/jepa/tests         23 passed, 0 failed
+------------------------------------------------
+合计                            231 passed, 0 failed
 ```
 
-另外用 `envs/agri-jepa`（无 gsplat）运行：
-
-```
-agri/plant_gs/paa/tests       123 passed, 10 failed   # 10 项均因 ModuleNotFoundError: gsplat
-agri/plant_gs/foreground/tests 4 collection errors     # 同样因 gsplat
-agri/plant_gs/jepa/tests      23 passed
-```
-
-这 10+4 项不是逻辑失败，是解释器选择错误；gsplat 只在 `envs/agri-gs` 中编译。
+**一个必须如实报告的环境事实**：uv 迁移后，没有任何一个 venv 同时具备 `gsplat` 与 `easydict`。
+`agri-gs` 有 gsplat，但 `jepa/tests` 在它里面 collect 失败（`No module named 'easydict'`）；
+`agri-jepa` 有 easydict，但没有 gsplat，`paa/tests` 里 10 项、`foreground/tests` 4 项无法导入。
+Stage 4C 报告的“203 项在一个解释器里全过”在当前双 venv 布局下**不可复现**，除非把两个依赖装进同一个 env。
+本轮没有为了凑数字去改环境，而是按套件使用正确解释器，并顺手修了测试里一个真实的迁移缺陷：
+`test_runner_stages.py` 把 `PY_GS` 硬编码为 `python`，而 uv venv 不提供 `python` 这个名字，
+现在改为 `sys.executable`（3 处），修改后 28 项相关测试全过。
 
 ---
 
