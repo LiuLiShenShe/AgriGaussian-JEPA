@@ -1,6 +1,6 @@
 {
   "schema_version": "paa-stage4d-tomatomap-unit-1",
-  "generated_utc": "2026-10-21T05:43:49Z",
+  "generated_utc": "2026-10-21T06:26:14Z",
   "unit": {
     "directory": "/fj/AgriGaussian-JEPA/Gaussian-JEPA/data/external/TomatoMAP/plant1_20230816",
     "plant_id": 1,
@@ -920,6 +920,9 @@
   },
   "poses": {
     "turntable_model": "12 poses at 30-degree increments (pose_id 1..12, pose_degrees 0..330); 4 fixed cameras at nominal elevations 45/90/135/180 degrees",
+    "equivalent_camera_motion": "the plant rotates by +theta about the vertical axis while the cameras stay fixed; in the plant frame this is equivalent to each camera orbiting by -theta about the same axis, i.e. 12 camera positions on a circle at 30-degree steps per camera. It is NOT a single moving camera: the four cameras have four different intrinsics and four unknown poses, so the equivalence gives a rotation-only constraint and leaves the four translation vectors and the rig geometry unconstrained",
+    "distortion_provided": true,
+    "distortion_note": "each npz carries a 1x5 distortion vector; pi2's values (k1=92.3, k2=2.88, p1=-113.9, p2=-66.7) are of the same implausible scale as its focal length, so pi2 is not usable",
     "extrinsics_provided": false,
     "extrinsics_evidence": "metadata.json has empty camera_intrinsics and empty static_transforms; the dataset card states 'no extrinsic rig calibration is provided'",
     "intrinsics_provided": true,
